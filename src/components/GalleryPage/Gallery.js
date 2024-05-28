@@ -48,15 +48,15 @@ function Gallery({ items }) {
   };
 
   return (
-    <div className="bg-[#ACACAC] py-12">
+    <div className="bg-[#ACACAC] py-6">
       <div className="flex flex-wrap justify-center gap-4">
         <button
           className="text-[1.2rem] capitalize font-medium px-6 py-2 hover:bg-[#29422C] hover:text-white rounded-sm"
           value={"all"}
-          // style={{
-          //   background: isAll ? "#4b92d9" : "",
-          //   color: isAll ? "white" : "black",
-          // }}
+          style={{
+            background: isAll ? "#29422C" : "",
+            color: isAll ? "white" : "",
+          }}
           onClick={(e) => {
             handleClick(e);
           }}
@@ -69,12 +69,10 @@ function Gallery({ items }) {
               <button
                 value={i.Category}
                 className="text-[1.2rem] capitalize font-medium px-3 py-2 hover:bg-[#29422C] hover:!text-white rounded-sm"
-                style={
-                  {
-                    //   background: ind === index ? "#4b92d9" : "",
-                    //   color: ind === index ? "white" : "black",
-                  }
-                }
+                style={{
+                  background: ind === index ? "#29422C" : "",
+                  color: ind === index ? "white" : "black",
+                }}
                 onClick={(e) => {
                   handleClick(e, ind);
                 }}
@@ -86,9 +84,9 @@ function Gallery({ items }) {
         })}
       </div>
 
-      <div className="mt-8  max-w-5xl px-3 mx-auto">
+      <div className="max-w-5xl px-3 mx-auto">
         {!isFilter && (
-          <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-5 mt-16">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-5 mt-6">
             {allImages.map((item, index) => (
               <div>
                 <div className="relative w-full aspect-[4/3]" key={index}>
