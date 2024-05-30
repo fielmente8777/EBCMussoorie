@@ -4,6 +4,7 @@ import { useState } from "react";
 import test from "../../../public/images/01 Picnic_11zon.jpg";
 import ebclogo from "../../../public/images/ebclogo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const blogData = [
   {
@@ -93,7 +94,7 @@ const page = () => {
           (item, index) =>
             item.Category == currentTab && (
               <div className="flex flex-col gap-2">
-                {item.items.map((itm) => (
+                {item.items.map((itm, ind) => (
                   <div className="border border-gray-400 grid grid-cols-5 gap-6">
                     <div className="col-span-2">
                       <div className="w-full">
@@ -105,7 +106,10 @@ const page = () => {
                       </div>
                     </div>
 
-                    <div className="col-span-3 py-2">
+                    <Link
+                      href={`/blog/${itm.title}`}
+                      className="col-span-3 py-2"
+                    >
                       <div className="flex gap-4 items-center">
                         <Image
                           src={ebclogo}
@@ -127,7 +131,7 @@ const page = () => {
                         <p className="text-black">{itm.subtitle}</p>
                         <p>{itm.lastupdate}</p>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 ))}
               </div>
