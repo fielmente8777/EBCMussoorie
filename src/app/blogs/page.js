@@ -95,8 +95,8 @@ const page = () => {
             item.Category == currentTab && (
               <div className="flex flex-col gap-2">
                 {item.items.map((itm, ind) => (
-                  <div className="border border-gray-400 grid grid-cols-5 gap-6">
-                    <div className="col-span-2">
+                  <div className="border border-gray-400 grid lg:grid-cols-5 gap-6">
+                    <div className="lg:col-span-2 col-span-1 w-full">
                       <div className="w-full">
                         <Image
                           src={itm.image}
@@ -107,8 +107,8 @@ const page = () => {
                     </div>
 
                     <Link
-                      href={`/blog/${itm.title}`}
-                      className="col-span-3 py-2"
+                      href={`/blogs/${itm.title}`}
+                      className="lg:col-span-3 p-2"
                     >
                       <div className="flex gap-4 items-center">
                         <Image

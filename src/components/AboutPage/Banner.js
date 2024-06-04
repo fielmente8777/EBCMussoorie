@@ -64,7 +64,7 @@ const Banner = ({ data, order }) => {
                         {data.images?.map((roomImage, index) => {
                             return (
                                 <SwiperSlide key={index} className="">
-                                    <Image src={roomImage} className="h-full object-cover" />
+                                    <Image src={roomImage} className="w-full md:h-[460px] h-[280px] object-cover" />
                                 </SwiperSlide>
                             );
                         })}

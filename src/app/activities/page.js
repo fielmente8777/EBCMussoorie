@@ -1,10 +1,10 @@
-import AddOn from "@/components/Activities/AddOn";
-import IndoorActivities from "@/components/Activities/IndoorActivities";
-import InstaGrid from "@/components/Activities/InstaGrid";
-import OutdoorActivities from "@/components/Activities/OutdoorActivities";
-import WhatInstaButton from "@/utils/WhatInstaButton";
+import AddOn from "../../components/Activities/AddOn";
+import IndoorActivities from "../../components/Activities/IndoorActivities";
+import InstaGrid from "../../components/Activities/InstaGrid";
+import OutdoorActivities from "../../components/Activities/OutdoorActivities";
+import WhatInstaButton from "../../utils/WhatInstaButton";
 import BannerImage from "../../../public/images/00 Cover_11zon.jpg"
-import Banner from "@/components/landingpage/Banner";
+import Banner from "../../components/landingpage/Banner";
 
 
 

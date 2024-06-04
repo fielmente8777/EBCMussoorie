@@ -1,6 +1,9 @@
 "use client"
 import SpecilizationCard from "./SpecilizationCard"
 import c1 from "../../../public/images/01 Picnic_11zon.jpg"
+import img1 from "../../../public/images/_MG_1465.jpg"
+import img2 from "../../../public/images/_MG_2878.jpg"
+
 import { usePathname } from "next/navigation"
 
 const OurSpecialization = () => {
@@ -11,7 +14,7 @@ const OurSpecialization = () => {
         {
             "heading": "Blissful Picnics with the Nature",
             "para": "Enjoy a peaceful picnic amidst the beauty of nature, with a basket brimming with delightful snacks and refreshing beverages. Our idyllic property offers the ideal setting for a relaxing afternoon, spent cherishing moments with friends and family.",
-            "images": [c1, c1, c1, c1, c1, c1, c1],
+            "images": [img1,img2],
             "button": ""
         },
         {

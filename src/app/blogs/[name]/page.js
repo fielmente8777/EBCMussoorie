@@ -70,7 +70,7 @@ blogData.unshift(obj);
 export default function page() {
   return (
     <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
-      <div className="flex gap-4 items-center">
+      <div className="flex flex-wrap gap-4 items-center">
         {blogData.map((item) => {
           return (
             <button
@@ -122,7 +122,7 @@ export default function page() {
         </div>
 
         <div className="mt-2">
-          <div className="w-full h-[450px]">
+          <div className="w-full sm:h-[450px] h-[300px]">
             <Image
               src={test}
               alt="image"
@@ -188,7 +188,7 @@ export default function page() {
           </p>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <Link href={"/"} className="px-4  border border-gray-400">
             Musssorie
           </Link>
@@ -221,7 +221,7 @@ export default function page() {
           <Link href={"/"}>See All</Link>
         </div>
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-4 gap-4">
           <div className="border rounded-md border-gray-500">
             <div className="w-full">
               <Image
@@ -265,7 +265,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="border border-gray-600 flex justify-center items-center mt-8 py-5">
+        <div className="border border-gray-600 flex justify-center items-center mt-8 p-5">
           <div className="max-w-2xl w-full mx-auto">
             <div className="pb-2 border-b border-b-gray-600">
               <p>Comments</p>

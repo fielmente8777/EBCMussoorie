@@ -1,4 +1,4 @@
-import Roomscard from "@/components/Card/roomscard";
+import Roomscard from "../../components/Card/roomscard";
 import Room1 from "../../../public/images/20 Bedroom 4_11zon.jpg";
 import Room2 from "../../../public/images/20 Bedroom 4_11zon.jpg";
 import {
@@ -11,7 +11,7 @@ import {
   PlateWithSpoon,
   Verified,
   Wifi,
-} from "@/icons/icons";
+} from "../../icons/icons";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,9 +22,10 @@ const RoomsAccomodationData = {
 
   items: [
     {
-      title: "Premium Suite",
+      title: "The Camper",
+      description:"Homely Haven  | 1-3 people  | 280sqft",
       subtitle:
-        "Take a splash into the infinity pool right as you walk out of your room. Premium Suites have spacious living and bedroom space with full height glass windows and doors and three- side nature view. These suites have custom-made furniture, created for total comfort, handpicked flooring and matte finished sanitaryware that makes the entire space opulently cozy styling them for a delightful experience.",
+        "Experience a cozy retreat in our Camper rooms, perfectly suited for couples seeking a luxurious holiday getaway. Nestled amidst the serene surroundings, these heat-insulated rooms provide unparalleled comfort and warmth. Step out onto your private balcony to soak in the breathtaking views of the Deodar forest while savoring delicious coffee.",
       accomodation: [
         {
           icon: <FoodService />,
@@ -84,9 +85,136 @@ const RoomsAccomodationData = {
       },
     },
     {
-      title: "Superior Suite",
+      title: "The Glamper",
+      description:"Opulent Nature  | 1-3 people  | 375sqft",
       subtitle:
-        "Uplifted from the ground level, with a pleasing view throughout, Superior Suites have great sit-out area with fully airconditioned bedroom and humungous private balcony that are designed to provide an excellent view of the dam and magnificent scenery of the nature around. Luxury and lifestyle are defined differently here.",
+        "Glamper combines sophistication and style, providing a luxurious glamping experience in the wilderness of Everest Base Camp, Mussoorie. Enjoy plush interiors and exclusive luxury rooms for a truly indulgent retreat. Step into a world of extravagance and nature as you sip on delicious hot chocolate and admire the beauty of the Deodar forest. Best suited for small groups. Don't miss our special netted balcony space, perfect for capturing Instagram-worthy moments.",
+      accomodation: [
+        {
+          icon: <FoodService />,
+          isTrue: true,
+        },
+        {
+          icon: <BedService />,
+          isTrue: true,
+        },
+        {
+          icon: <Verified />,
+          isTrue: true,
+        },
+        {
+          icon: <Lotus />,
+          isTrue: true,
+        },
+        {
+          icon: <Cup />,
+          isTrue: true,
+        },
+        {
+          icon: <Wifi />,
+          isTrue: true,
+        },
+        {
+          icon: <Heater />,
+          isTrue: true,
+        },
+        {
+          icon: <PlateWithSpoon />,
+          isTrue: true,
+        },
+        {
+          icon: <Cloth />,
+          isTrue: true,
+        },
+      ],
+      images: [
+        {
+          src: Room2,
+          alt: "document1",
+        },
+        {
+          src: Room2,
+          alt: "document1",
+        },
+        {
+          src: Room2,
+          alt: "document1",
+        },
+      ],
+
+      link: {
+        label: "Book now",
+        href: "/",
+      },
+    },
+    {
+      title: "The Surveyor",
+      description:"Meadow view Cabins  | 1-3 people  | 450sqft",
+      subtitle:
+        "Experience in the ultimate wilderness retreat amidst our expansive 20 acres of spacious tents, offering the best views of a lush green forest meadow. After a day of exploration, find solace and rejuvenate your senses in the serene surroundings, surrounded by breathtaking views of the Deodar forest. Best Suited for families or small friend groups. Enjoy utmost privacy and comfort in our tranquil ambiance, inviting you to rediscover yourself amidst nature's embrace.",
+      accomodation: [
+        {
+          icon: <FoodService />,
+          isTrue: true,
+        },
+        {
+          icon: <BedService />,
+          isTrue: true,
+        },
+        {
+          icon: <Verified />,
+          isTrue: true,
+        },
+        {
+          icon: <Lotus />,
+          isTrue: true,
+        },
+        {
+          icon: <Cup />,
+          isTrue: true,
+        },
+        {
+          icon: <Wifi />,
+          isTrue: true,
+        },
+        {
+          icon: <Heater />,
+          isTrue: true,
+        },
+        {
+          icon: <PlateWithSpoon />,
+          isTrue: true,
+        },
+        {
+          icon: <Cloth />,
+          isTrue: true,
+        },
+      ],
+      images: [
+        {
+          src: Room1,
+          alt: "document1",
+        },
+        {
+          src: Room1,
+          alt: "document1",
+        },
+        {
+          src: Room1,
+          alt: "document1",
+        },
+      ],
+
+      link: {
+        label: "Book now",
+        href: "/",
+      },
+    },
+    {
+      title: "The Surveyor Suit",
+      description:"Opulent Wilderness  | 1-4 people | 600sqft",
+      subtitle:
+        "Experience unparalleled luxury amidst nature in our Surveyor Suite at Everest Base Camp, Mussoorie. Immerse yourself in a meticulously designed tent featuring spacious living areas, extravagant amenities, and breathtaking forest views. Relax in style with a king-sized bed and the option to set up a queen-sized sofa bed, accommodating up to four people. Perfect for families or friend groups of 4. Enjoy the utmost privacy and seclusion in our most premium and spacious room, offering tranquility and indulgence like never before.",
       accomodation: [
         {
           icon: <FoodService />,
@@ -185,13 +313,36 @@ const page = () => {
             alt="test"
             className="object-cover w-full h-full"
           />
-        </div>
+        </div> 
       </div>
 
-      <div className="flex flex-col gap-10 maxwidth mx-auto mt-10">
+      <div className="flex flex-col gap-10 maxwidth mx-auto mt-10 px-4">
         {RoomsAccomodationData.items.map((item, index) => (
           <Roomscard {...item} index={index} />
         ))}
+      </div>
+
+
+      <div className="bg-[#BCD0B8] py-12 mt-10">
+          <div className="grid md:grid-cols-2 gap-8 maxwidth px-6 mx-auto items-center">
+              <div>
+                   <h2 className="md:text-4xl text-2xl">Home Alone with Nature!</h2>
+                   <p className="mt-2 text-lg">
+                   You’re in for a wild time! The experiences and activities that await you at the campsite are nothing less than a love affair with deodars, magpies, and untouched serenity.
+                   </p>
+              </div>
+
+              <div className="grid grid-cols-5 gap-4 items-center">
+                <div className="col-span-3">
+                 <input placeholder="Email Address " className="w-full py-3 px-2 bg-transparent border-b  border-b-gray-500 outline-none"/>
+
+                </div>
+                <div className="col-span-2">
+
+                 <button className="bg-[#29422C] py-3 text-white w-full">Subscribe</button>
+                </div>
+              </div>
+          </div>
       </div>
     </section>
   );

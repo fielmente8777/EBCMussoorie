@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
-import Grid1 from "../../../public/images/38 Bonfire_11zon.jpg"
-import Grid3 from "../../../public/images/01 Picnic_11zon.jpg"
+import Grid1 from "../../../public/landingpage/23 Facade_11zon.jpg"
+import Grid2 from "../../../public/landingpage/00 Cover_11zon.jpg"
+import Grid3 from "../../../public/images/30 Games area_11zon.jpg"
+import Grid4 from "../../../public/images/01 Picnic_11zon.jpg"
+import Grid5 from "../../../public/landingpage/Surevyor Facade.jpg" 
+
 
 const Grid = () => {
     return (
@@ -14,16 +18,16 @@ const Grid = () => {
                         <Image src={Grid1} alt='bonfire' className='h-full object-cover' />
                     </div>
                     <div className=''>
-                        <Image src={Grid1} alt='bonfire' className='h-full object-cover' />
+                        <Image src={Grid2} alt='bonfire' className='h-full object-cover' />
                     </div>
                     <div className='md:row-span-2 '>
-                        <Image src={Grid1} alt='bonfire' className='h-full object-cover' />
-                    </div>
-                    <div className=' '>
                         <Image src={Grid3} alt='bonfire' className='h-full object-cover' />
                     </div>
+                    <div className=' '>
+                        <Image src={Grid4} alt='bonfire' className='h-full object-cover' />
+                    </div>
                     <div className='  '>
-                        <Image src={Grid1} alt='bonfire' className='h-full object-cover' />
+                        <Image src={Grid5} alt='bonfire' className='h-full object-cover' />
                     </div>
 
                 </div>
