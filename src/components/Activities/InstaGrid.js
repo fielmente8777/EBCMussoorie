@@ -12,10 +12,9 @@ const InstaGrid = () => {
 
     const images = [img1,img2,img3,img4,img5,img6]
     return (
-        <div className='max-w-[1600px] mx-auto grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 md:h-[200px] sm:px-0 px-4 sm:gap-0 gap-2'>
+        <div className='max-w-[1600px] mx-auto grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 sm:px-0 px-4 sm:gap-0 gap-2'>
             {images?.map((roomImage, index) => {
                 return (
-
                     <Image key={index} src={roomImage} className="h-full object-cover" />
                 );
             })}

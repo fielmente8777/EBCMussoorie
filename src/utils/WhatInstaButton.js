@@ -6,7 +6,6 @@ import { FaInstagram } from "react-icons/fa";
 
 const WhatInstaButton = ({ button, link }) => {
     return (
-
         <div className='flex justify-center md:mt-10'>
 
             {button === "whatsapp" ?
