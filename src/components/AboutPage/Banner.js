@@ -8,25 +8,25 @@ import Link from 'next/link'
 import React from 'react'
 import Image from "next/image";
 
-const Banner = ({ data, order }) => {
+const Banner = ({ data, order, color }) => {
 
 
     return (
-        <div className='bg-[#D5D5D5]'>
+        <div className={`bg-[${color ? color : ""}]`}>
 
-            <div className="grid grid-cols-1  lg:grid-cols-2 gap-10 maxwidth mx-auto">
+            <div className="grid grid-cols-1  lg:grid-cols-2 gap-5 md:gap-10 maxwidth mx-auto">
                 <div className={`flex flex-col items-start max-md:order-1 ${order === "1" ? "md:order-2" : " "} justify-center w-full text-lg max-md:px-3 max-md:max-w-full`}>
-                    <div className=" text-[32px] font-bold text-[#29422C] leading-[57px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px]">
+                    <div className={`text-[32px] font-bold ${color ? "text-[#29422C]" : "text-white"} leading-[57px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px]`}>
                         {data.heading}
                     </div>
-                    {data.subheading && <div className="mt-4 leading-7 text-[22px] text-justify text-[#29422C] max-md:max-w-full">
+                    {data.subheading && <div className={`mt-4 leading-7 text-[22px] text-justify  ${color ? "text-[#29422C]" : "text-white"} max-md:max-w-full`}>
                         {data.subheading}
                     </div>
                     }
-                    <div className="mt-4 leading-7 text-justify text-[#29422C] max-md:max-w-full">
+                    <div className={`mt-4 leading-7 text-justify  ${color ? "text-[#29422C]" : "text-white"} max-md:max-w-full`}>
                         {data.paragraph}
                     </div>
-                    {data.subPara && <div className="mt-4 leading-7 text-justify text-[#29422C] max-md:max-w-full">
+                    {data.subPara && <div className={`mt-4 leading-7 text-justify  ${color ? "text-[#29422C]" : "text-white"} max-md:max-w-full`}>
                         {data.subPara}
                     </div>}
                     {/* <Link href={""} className="flex justify-center px-8 py-2 mt-8 rounded-sm font-semibold tracking-normal text-white bg-[#29422C] leading-[144%] max-md:ml-2.5">

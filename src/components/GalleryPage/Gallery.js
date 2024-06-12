@@ -9,7 +9,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import GallerData from "../../utils/GalleryData"
+import GallerData from "@/utils/GalleryData"
 
 
 const Gallery = () => {

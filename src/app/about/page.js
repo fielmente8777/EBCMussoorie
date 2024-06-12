@@ -28,10 +28,11 @@ const page = () => {
 
     return (
         <div className="flex flex-col gap-10">
-            <Banner data={datas[0]} order={"1"} />
+            <Banner data={datas[0]} order={"1"} color="#D5D5D5" />
 
             <GeorgeEverest />
-            <Banner data={datas[1]} order={"2"} />
+
+            <Banner data={datas[1]} order={"2"} color="#D5D5D5" />
 
         </div>
     )
