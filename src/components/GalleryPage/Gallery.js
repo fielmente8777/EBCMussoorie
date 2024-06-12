@@ -73,6 +73,7 @@ function Gallery({ items }) {
                   background: ind === index ? "#29422C" : "",
                   color: ind === index ? "white" : "black",
                 }}
+                key={ind}
                 onClick={(e) => {
                   handleClick(e, ind);
                 }}
@@ -88,7 +89,7 @@ function Gallery({ items }) {
         {!isFilter && (
           <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-5 mt-6">
             {allImages.map((item, index) => (
-              <div>
+              <div key={index}>
                 <div className="relative w-full aspect-[4/3]" key={index}>
                   <Image src={item} fill className="object-cover" />
                 </div>
@@ -102,7 +103,13 @@ function Gallery({ items }) {
             {filterGallery[0]?.Images?.map((i, index) => {
               return (
                 <div className="relative w-full aspect-[4/3]" key={index}>
-                  <Image src={i} fill className="object-cover" />
+                  <Image
+                    src={i}
+                    fill
+                    className="object-cover"
+                    width={600}
+                    height={400}
+                  />
                 </div>
               );
             })}

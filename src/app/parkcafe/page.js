@@ -116,7 +116,7 @@ const testimonal = [
   },
 ];
 
-const page = () => {
+function Peakage() {
   const pathname = usePathname();
   return (
     <div>
@@ -126,6 +126,8 @@ const page = () => {
             src={BannerImage}
             alt="banner"
             className="h-full w-full object-cover object-bottom-[10%]"
+            width={600}
+            height={400}
           />
         </div>
 
@@ -135,9 +137,9 @@ const page = () => {
               Welcome to Park Café! One of the best cafes in Mussoorie.
             </h2>
             <p class="text-center md:text-2xl mt-4 text-white">
-              Our culinary gem seamlessly combines nature's beauty with
+              {` Our culinary gem seamlessly combines nature's beauty with
               exquisite flavors, offering a unique dining experience against the
-              backdrop of breathtaking natural wonders.
+              backdrop of breathtaking natural wonders.`}
             </p>
           </div>
         </div>
@@ -160,10 +162,10 @@ const page = () => {
             special dinners served with hot cocoa.
           </p>
           <p className="text-xl text-[#29422C]">
-            We're proud to serve a variety of delicious dishes that celebrate
+            {`   We're proud to serve a variety of delicious dishes that celebrate
             Mussoorie's culinary heritage. Our cafe is situated where Sir George
             Everest once had his stables and rode around, along with the George
-            Everest Museum just a few minutes walk away. Book Now
+            Everest Museum just a few minutes walk away. Book Now`}
           </p>
 
           <div className="flex">
@@ -180,6 +182,8 @@ const page = () => {
             src={parkcafe}
             alt="test"
             className="object-cover w-full h-full"
+            width={600}
+            height={400}
           />
         </div>
       </div>
@@ -189,7 +193,10 @@ const page = () => {
           <div className=" col-span-3 grid grid-cols-5 gap-3">
             <div className="col-span-3">
               <Image
+                alt="image"
                 src={parkcafereachus1}
+                width={600}
+                height={400}
                 className="w-full md:h-[600px] h-[280px] object-cover"
               />
             </div>
@@ -197,6 +204,8 @@ const page = () => {
             <div className="col-span-2">
               <Image
                 src={parkcafereachus2}
+                width={600}
+                height={400}
                 className="w-full md:h-[600px] h-[280px] object-cover"
               />
             </div>
@@ -204,19 +213,19 @@ const page = () => {
           <div className="col-span-2 flex flex-col gap-4">
             <h2 class="text-white md:text-3xl text-2xl ">How to reach us?</h2>
             <p class="text-white text-lg">
-              Nestled amidst nature at the Everest Base Camp in Mussoorie, Park
+              {` Nestled amidst nature at the Everest Base Camp in Mussoorie, Park
               Cafe offers a convenient location just a stone's throw away from
               the George Everest Museum. To enhance your experience, you can
               come by yourself or give us a call to make a reservation and get a
-              pass that lets you drive straight up to the cafe.
+              pass that lets you drive straight up to the cafe.`}
             </p>
             <p class="text-white text-lg">
-              Don't miss the chance to explore the historical significance of
+              {`   Don't miss the chance to explore the historical significance of
               our location, where Sir George Everest once had his stables and
               rode around.Plus, the George Everest Museum is just a couple of
               minutes' walk from our café. Conveniently, visitors can park their
               vehicles at the Park Café grounds before heading to the museum,
-              ensuring a seamless and enjoyable visit.
+              ensuring a seamless and enjoyable visit.`}
             </p>
 
             <div>
@@ -272,7 +281,13 @@ const page = () => {
             {images?.map((item, index) => {
               return (
                 <SwiperSlide key={index} className="">
-                  <Image src={item.img} className="md:h-[360px] object-cover" />
+                  <Image
+                    alt="image"
+                    src={item.img}
+                    width={600}
+                    height={400}
+                    className="md:h-[360px] object-cover"
+                  />
                   <h2 className="text-center capitalize mt-2 text-2xl">
                     {item.title}
                   </h2>
@@ -296,6 +311,8 @@ const page = () => {
             <div className="">
               <Image
                 src={chooseus1}
+                width={600}
+                height={400}
                 className="w-[520px] md:h-[400px] h-[280px] object-cover"
               />
             </div>
@@ -303,6 +320,8 @@ const page = () => {
             <div className="absolute right-0 -bottom-12 md:block hidden">
               <Image
                 src={chooseus2}
+                width={600}
+                height={400}
                 className="w-[400px] h-[300px] object-cover"
               />
             </div>
@@ -310,13 +329,13 @@ const page = () => {
           <div className="flex flex-col gap-4">
             <h2 class="text-white md:text-5xl text-2xl ">Why Choose Us ?</h2>
             <p class="text-white text-lg">
-              Discover what makes us the most unique cafe in Mussoorie – our
+              {`  Discover what makes us the most unique cafe in Mussoorie – our
               unwavering commitment to a memorable dining experience that
               transcends the ordinary. At EBC, indulge in more than just a meal;
               it's a taste of home amidst the breathtaking beauty of nature.
               Nestled beside a beautiful meadow, our cafe offers a diverse range
               of offerings, from delightful tea and snacks to exquisite dining
-              experiences.
+              experiences.`}
             </p>
             <p class="text-white text-lg">
               Experience curated events and experiences that promise to elevate
@@ -356,6 +375,8 @@ const page = () => {
           <Image
             src={milestonebg}
             alt="banner"
+            width={600}
+            height={400}
             className="h-full w-full object-cover object-center"
           />
         </div>
@@ -417,6 +438,8 @@ const page = () => {
                   <div className="bg-[#bcd0b8] p-5">
                     <div className="flex items-center gap-3">
                       <Image
+                        width={600}
+                        height={400}
                         src={item.img}
                         className="w-10 h-10 rounded-full object-cover"
                       />
@@ -454,6 +477,6 @@ const page = () => {
       </div>
     </div>
   );
-};
+}
 
-export default page;
+export default Peakage;

@@ -775,7 +775,7 @@ export default function page({ params }) {
   return (
     <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
       <div className="flex flex-wrap gap-4 items-center">
-        {blogData.map((item) => {
+        {blogData.map((item, index) => {
           return (
             <Link
               href={"/blogs"}
@@ -783,6 +783,7 @@ export default function page({ params }) {
               onClick={() => {
                 setCurrentTab(item.Category);
               }}
+              key={index}
               className="hover:bg-[#29422C] px-4 py-1 hover:text-white capitalize"
             >
               {item.Category}
@@ -861,19 +862,23 @@ export default function page({ params }) {
           </div>
         )}
 
-        {singleBlog[0].content?.map((item) => {
+        {singleBlog[0].content?.map((item, index) => {
           return (
-            <div>
+            <div key={index}>
               <h2 className="text-2xl font-bold">{item.title}</h2>
               <div className="flex flex-col gap-4 mt-2">
-                {item?.subtitle?.map((itm) => {
-                  return <p className="text-md">{itm}</p>;
+                {item?.subtitle?.map((itm, index) => {
+                  return (
+                    <p key={index} className="text-md">
+                      {itm}
+                    </p>
+                  );
                 })}
               </div>
 
               <ul className="flex flex-col gap-2 list-inside list-disc mt-4">
-                {item?.items?.map((item) => {
-                  return <li>{item}</li>;
+                {item?.items?.map((item, index) => {
+                  return <li key={index}>{item}</li>;
                 })}
               </ul>
             </div>
@@ -939,7 +944,12 @@ export default function page({ params }) {
 
           <div className="border rounded-md border-gray-500">
             <div>
-              <Image src={familyadventure} alt="family adventure" />
+              <Image
+                src={familyadventure}
+                alt="family adventure"
+                width={600}
+                height={400}
+              />
             </div>
 
             <div className="p-4">

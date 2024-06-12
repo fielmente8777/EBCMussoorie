@@ -788,14 +788,15 @@ const obj = {
 
 blogData.unshift(obj);
 
-const page = () => {
+function Page() {
   const [currentTab, setCurrentTab] = useState("all");
   return (
     <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
       <div className="flex gap-4 items-center">
-        {blogData.map((item) => {
+        {blogData.map((item, index) => {
           return (
             <button
+              key={index}
               value={item.Category}
               onClick={() => {
                 setCurrentTab(item.Category);
@@ -812,14 +813,19 @@ const page = () => {
         {blogData.map(
           (item, index) =>
             item.Category == currentTab && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2" key={index}>
                 {item.items.map((itm, ind) => (
-                  <div className="border border-gray-400 grid lg:grid-cols-5 gap-6">
+                  <div
+                    className="border border-gray-400 grid lg:grid-cols-5 gap-6"
+                    key={ind}
+                  >
                     <div className="lg:col-span-2 col-span-1 w-full">
                       <div className="w-full">
                         <Image
                           src={itm.image}
                           alt="image"
+                          width={600}
+                          height={400}
                           className="object-cover w-full h-full"
                         />
                       </div>
@@ -861,6 +867,6 @@ const page = () => {
       </div>
     </div>
   );
-};
+}
 
-export default page;
+export default Page;

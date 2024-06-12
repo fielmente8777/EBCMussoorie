@@ -66,17 +66,20 @@ const Navbar = () => {
                 <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
                   <div className="w-[20%]"></div>
                   <div className="flex gap-3 px-5 my-auto">
-                    <img
+                    <Image
+                      alt="img"
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf5ed5930caa39e43a1df132120331034f55619238fe1167bafa85863bc51b72?"
                       className="shrink-0 w-10 aspect-square"
                     />
-                    <img
+                    <Image
+                      alt="img"
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/2149fce7a5c8e41e1538ff8d7f3f16e4fd1fba1ab57416d769c107ce83375c5a?"
                       className="shrink-0 w-10 aspect-square"
                     />
-                    <img
+                    <Image
+                      alt="img"
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/085422748aa9b8d746e45e1f9749849a27dd3ebfef8b43b8b4dd62612f2759b7?"
                       className="shrink-0 w-10 aspect-square"
@@ -138,7 +141,7 @@ const Navbar = () => {
                 href={"/glamper"}
                 className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
               >
-                A Glamper's Guide
+                {`A Glamper's Guide`}
               </Link>
               <Link
                 href={"/blogs"}
@@ -210,7 +213,7 @@ const HomeNav = () => {
               href={"/glamper"}
               className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
             >
-              A Glamper's Guide
+              {`A Glamper's Guide`}
             </Link>
             <Link
               href={"/blogs"}
@@ -309,7 +312,7 @@ const MobileNav = ({ open }) => {
           href={"/glamper"}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
-          A Glamper's Guide
+          {`A Glamper's Guide`}
         </Link>
         <Link
           href={"/blogs"}

@@ -50,7 +50,7 @@ const Footer = () => {
                 <Link href=""> Activities Contact</Link>
                 <Link href="">Our Rooms Gallery</Link>
                 <Link href="">Park Cafe</Link>
-                <Link href="">A Glamper's Guide</Link>
+                <Link href="">{`A Glamper's Guide`}</Link>
               </div>
             </div>
           </div>

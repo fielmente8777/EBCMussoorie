@@ -29,6 +29,8 @@ function Roomscard({ title, subtitle, link, images, accomodation, index,descript
                   <Image
                     src={item.src}
                     alt="test"
+                    width={600}
+                    height={400}
                     // fill
                     className="object-cover w-full h-full hover:scale-105 duration-500"
                   />

@@ -21,7 +21,7 @@ const list = [
     answer: [
       "Deposit: 100% deposit is required at the time of confirmed booking. This deposit is equivalent to the total price of accommodation on a per person basis or as specified.",
       "If the reservation is not made online through our website, then the deposit must be paid within 15 days from the date of initial booking for confirmation of the reservation. A credit card number must be given to guarantee your reservation even if the deposit has been paid.",
-      'Bank details:',
+      "Bank details:",
       "Base Camp Hospitality",
       "48, Dispensary Road (also known as 136/74, Ajmal Khan Road), Dehradun. Uttarakhand, 248001",
       "Current A/C",
@@ -29,8 +29,6 @@ const list = [
       "56 Rajpur Road, Dehradun- 248001. IFSC Code HDFC0000225",
       "A/C No - 50200046651725",
       "If payment is not made by the deadline, Everest Base Camp shall be entitled to cancel the contract and demand a cancellation fee in accordance with section 4.",
-
-
     ],
   },
   {
@@ -43,7 +41,6 @@ const list = [
       "For cancellations made in writing (email or post): the cancellation date will be deemed as the date of receipt of the cancellation document.",
       "If you are unable to come yourself and assign your confirmed booking to another person, no extra costs shall be incurred on such assignment.",
       "If due to any fault on the part of Everest Base Camp, your booked accommodation is not available at the exact period for which it was booked, EBC shall refund the equivalent value for the booked accommodation for as long as the room is unavailable during your booking period.",
-
     ],
   },
   {
@@ -51,7 +48,6 @@ const list = [
     answer: [
       "Arrival and departure timings and dates have to be adhered to by the guests. In case of late arrivals, whether due to disturbances in public or private transport or for personal reasons, the full room-price is payable.",
       "In the event of premature departure, the guest will be charged for the entire duration of confirmed booking.",
-    
     ],
   },
   {
@@ -59,8 +55,6 @@ const list = [
     answer: [
       "Check-in timing is 2 pm to 5 pm. Check-out timing is 10 am.",
       "If your arrival is delayed beyond 6 pm, you are required to inform Everest Base Camp in advance to retain your booking for the day.",
-    
-
     ],
   },
   {
@@ -69,9 +63,6 @@ const list = [
       "In the rare event of any complaint, please notify Everest Base Camp manager, so that any problems, faults or errors can be resolved as quickly as possible.",
       "Please email to info@ebcmussoorie.com",
       "For all legal matters, the Indian laws are applicable. For any disputes, jurisdiction of courts of Dehradun will apply.",
-
-      
-
     ],
   },
 ];
@@ -82,15 +73,15 @@ function page() {
       <h2 className="text-center text-2xl">Terms & Conditions</h2>
 
       <div className="flex flex-col gap-4">
-        {list.map((item) => (
-          <Accordin {...item} />
+        {list.map((item, index) => (
+          <Accordin {...item} key={index} />
         ))}
       </div>
     </div>
   );
 }
 
-export const Accordin = ({ questoin, answer }) => {
+const Accordin = ({ questoin, answer }) => {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -107,8 +98,10 @@ export const Accordin = ({ questoin, answer }) => {
           transition: "all 1.6s ease-in-out",
         }}
       >
-        {answer.map((item) => (
-          <p className="pb-4">{item}</p>
+        {answer.map((item, index) => (
+          <p className="pb-4" key={index}>
+            {item}
+          </p>
         ))}
       </div>
     </div>
