@@ -107,8 +107,8 @@ function Gallery({ items }) {
                     src={i}
                     fill
                     className="object-cover"
-                    width={600}
-                    height={400}
+                  // width={600}
+                  // height={400}
                   />
                 </div>
               );

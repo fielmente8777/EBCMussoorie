@@ -832,7 +832,7 @@ export default function page({ params }) {
                 alt="image"
                 width={1000}
                 height={100}
-                className="w-full h-full"
+                className="w-full h-full object-cover "
               />
             </div>
 
@@ -852,7 +852,7 @@ export default function page({ params }) {
                     alt="image"
                     width={1000}
                     height={100}
-                    className="w-full h-full"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 

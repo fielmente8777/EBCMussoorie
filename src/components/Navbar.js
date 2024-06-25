@@ -46,7 +46,7 @@ const Navbar = () => {
                 )}
               </div>
               <Link
-                href="tel+918595274861"
+                href={"tel:+918595274861"}
                 className="hidden xl:flex items-center gap-2 px-5 my-auto text-lg leading-7 text-[#acacac]"
               >
                 <MdCall size={20} />
@@ -66,9 +66,11 @@ const Navbar = () => {
                 <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
                   <div className="w-[20%]"></div>
                   <div className="flex gap-3 px-5 my-auto">
-                    <FaceBook />
-                    <InstaGram />
-                    <Tri />
+                    <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"><FaceBook /></Link>
+                    <Link href={"https://www.instagram.com/ebcmussoorie/"} target="_blank"> <InstaGram /></Link>
+                    <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"> <Tri /></Link>
+
+
                   </div>
                   <button className="rounded-sm flex-1 justify-center w-[50px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-stone-300">
                     Book Now
@@ -78,7 +80,7 @@ const Navbar = () => {
 
               <div className="xl:hidden flex justify-end">
                 <Link
-                  href="tel+918595274861"
+                  href={"tel:+918595274861"}
                   className="flex items-center gap-2 px-5 my-auto text-lg leading-7 text-[#acacac]"
                 >
                   <MdCall size={20} />
@@ -151,8 +153,8 @@ const HomeNav = () => {
       <div className="maxwidth mx-auto flex flex-col px-8 xl:py-2 py-6">
         <div className="flex justify-between items-center gap-5 w-full max-md:flex-wrap max-md:max-w-full">
           <Link
-            href="tel+918595274861"
-            className="flex items-center gap-2 px-5 my-auto text-lg leading-7 text-[#acacac]"
+            href={"tel:+918595274861"}
+            className="flex items-center gap-2 md:px-5 my-auto text-lg leading-7 text-[#acacac]"
           >
             <MdCall size={20} />
             <div className="my-auto text-[#acacac] xl:block hidden">

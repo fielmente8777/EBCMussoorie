@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import React from 'react'
 
 const RoomSwiperCard = ({ roomData }) => {
     return (
         <div className='rounded-lg overflow-hidden bg-[#D5D5D5] min-h-[470px] h-[470px] '>
             <div className=''>
-                <img srcSet={roomData.image} alt='roomImage' className='' />
+                <Image src={roomData.image} alt='roomImage' className='' />
 
             </div>
             <div className='flex flex-col gap-2 p-3 md:p-4 text-center'>

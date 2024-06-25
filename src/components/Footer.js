@@ -66,10 +66,10 @@ const Footer = () => {
                   Mussoorie, Uttarakhand, 248179
                 </div>
               </div>
-              <div className="flex  items-center gap-3.5 mt-5 tracking-wider whitespace-nowrap leading-[145%]">
+              <Link href={"tel:+918595274861"} className="flex  items-center gap-3.5 mt-5 tracking-wider whitespace-nowrap leading-[145%]">
                 <MdCall size={20} />
                 <div className="flex-auto my-auto">+91-8595274861</div>
-              </div>
+              </Link>
               <Link
                 href="https://www.google.com/maps/place/Everest+Base+Camp,+Near+George+Everest+House/@30.4592973,78.0227301,17z/data=!3m1!4b1!4m9!3m8!1s0x3908d170d61d91cb:0x84607e0d71c4450f!5m2!4m1!1i2!8m2!3d30.4592927!4d78.025305!16s%2Fg%2F11fp31k5lj?hl=en&entry=ttu"
                 target="_blank"

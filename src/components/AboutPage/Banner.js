@@ -13,9 +13,8 @@ const Banner = ({ data, order }) => {
     <div className="bg-[#D5D5D5]">
       <div className="grid grid-cols-1  lg:grid-cols-2 gap-10 maxwidth mx-auto">
         <div
-          className={`flex flex-col items-start max-md:order-1 ${
-            order === "1" ? "md:order-2" : " "
-          } justify-center w-full text-lg max-md:px-3 max-md:max-w-full`}
+          className={`flex flex-col items-start max-md:order-1 ${order === "1" ? "md:order-2" : " "
+            } justify-center w-full text-lg max-md:px-3 max-md:max-w-full`}
         >
           <div className=" text-[32px] font-bold text-[#29422C] leading-[57px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px]">
             {data.heading}
@@ -72,8 +71,8 @@ const Banner = ({ data, order }) => {
                   <Image
                     src={roomImage}
                     className="w-full md:h-[460px] h-[280px] object-cover"
-                    width={600}
-                    height={400}
+                  // width={600}
+                  // height={400}
                   />
                 </SwiperSlide>
               );

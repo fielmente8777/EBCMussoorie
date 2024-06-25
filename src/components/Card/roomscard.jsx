@@ -7,10 +7,10 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-function Roomscard({ title, subtitle, link, images, accomodation, index,description }) {
+function Roomscard({ title, subtitle, link, images, accomodation, index, description }) {
   return (
     <div
-      className="grid lg:grid-cols-2 grid-cols-1 gap-6 bg-[#bcd0b8] items-center rounded-lg shadow-inner"
+      className="grid lg:grid-cols-2 grid-cols-1 bg-[#bcd0b8] items-center rounded-lg shadow-inner"
       style={{
         top: `${(index + 1) * 0.8}%`,
       }}
@@ -28,10 +28,10 @@ function Roomscard({ title, subtitle, link, images, accomodation, index,descript
                 <div className="w-full h-full overflow-hidden shadow-xl">
                   <Image
                     src={item.src}
-                    alt="test"
-                    width={600}
-                    height={400}
-                    // fill
+                    alt={item.alt}
+                    // width={600}
+                    // height={400}
+                    fill
                     className="object-cover w-full h-full hover:scale-105 duration-500"
                   />
                 </div>
@@ -42,14 +42,13 @@ function Roomscard({ title, subtitle, link, images, accomodation, index,descript
       </div>
 
       <div
-        className={`flex flex-col gap-6 px-4 py-6 ${
-          index % 2 == 0 ? "md:order-1" : ""
-        }`}
+        className={`flex flex-col gap-6 px-4 py-6 ${index % 2 == 0 ? "md:order-1" : ""
+          }`}
       >
         <h2 className="text-5xl font-semibold text-[#29422C]">{title}</h2>
-        <p className="text-2xl text-[#063333]">{description}</p>
+        <p className="text-xl text-[#063333]">{description}</p>
 
-        <p className="text-2xl text-[#063333]">{subtitle}</p>
+        <p className="text-xl text-[#063333]">{subtitle}</p>
 
         <div className="grid md:grid-cols-9 grid-cols-5 gap-6 border-y border-y-[#29422c] px-3 py-5">
           {accomodation?.map(

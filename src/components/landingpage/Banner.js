@@ -8,8 +8,8 @@ const Banner = ({ BannerImage }) => {
           src={BannerImage}
           alt="banner"
           className="h-full w-full object-cover object-bottom-[10%]"
-          width={600}
-          height={400}
+        // width={600}
+        // height={400}
         />
       </div>
     </div>

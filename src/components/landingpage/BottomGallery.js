@@ -4,11 +4,14 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import React from "react";
-import c1 from "../../../public/images/01 Picnic_11zon.jpg";
+import insta4 from "../../../public/Instagram/02 Breakfast-min.jpg";
+import insta1 from "../../../public/Instagram/08 Facade-min.jpg";
+import insta2 from "../../../public/Instagram/DJI_0378-min.JPG";
+import insta3 from "../../../public/Instagram/36 Dining_11zon.jpg";
 import Image from "next/image";
 
 const BottomGallery = () => {
-  const data = [c1, c1, c1, c1, c1, c1, c1];
+  const data = [insta1, insta2, insta3, insta4];
   return (
     <div className="w-full overflow-hidden  ">
       <Swiper
@@ -42,8 +45,9 @@ const BottomGallery = () => {
                 src={roomData}
                 alt={`img${index}`}
                 className="h-[100%] object-cover"
-                width={600}
-                height={400}
+                fill
+              // width={600}
+              // height={400}
               />
             </SwiperSlide>
           );

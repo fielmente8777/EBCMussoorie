@@ -1,6 +1,5 @@
 import Roomscard from "../../components/Card/roomscard";
-import Room1 from "../../../public/images/20 Bedroom 4_11zon.jpg";
-import Room2 from "../../../public/images/20 Bedroom 4_11zon.jpg";
+
 import {
   BedService,
   Cloth,
@@ -14,6 +13,21 @@ import {
 } from "../../icons/icons";
 import Link from "next/link";
 import Image from "next/image";
+
+
+import Room1 from "../../../public/rooms/20 Bedroom 4_11zon.jpg";
+import Room2 from "../../../public/rooms/20 Bedroom 4_11zon.jpg";
+
+
+import Surveyor1 from "../../../public/Surveyor Room/_MG_2465.JPG"
+import Surveyor2 from "../../../public/Surveyor Room/_MG_2475.JPG"
+import Surveyor3 from "../../../public/Surveyor Room/_MG_2477.JPG"
+import Surveyor4 from "../../../public/Surveyor Room/_MG_2505.JPG"
+
+import SurveyorSuite1 from "../../../public/Surveyor Suite Room/_MG_2601.JPG"
+import SurveyorSuite2 from "../../../public/Surveyor Suite Room/_MG_2602.JPG"
+import SurveyorSuite3 from "../../../public/Surveyor Suite Room/_MG_2603.JPG"
+import SurveyorSuite4 from "../../../public/Surveyor Suite Room/_MG_2605.JPG"
 
 const RoomsAccomodationData = {
   title: "Rooms and Accomodation",
@@ -66,16 +80,24 @@ const RoomsAccomodationData = {
       ],
       images: [
         {
-          src: Room1,
-          alt: "document1",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/F841F57F-16A6-403E-BA7F-6A9C46F5B2FA_1_105_c.jpeg",
+          alt: "Clamperroom1",
         },
         {
-          src: Room1,
-          alt: "document1",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/60fee30b-cbab-4c0f-a1b4-7e5ac13e2596.jpg",
+          alt: "Clamperroom2",
         },
         {
-          src: Room1,
-          alt: "document1",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/48fa811c-9e74-4660-a133-dfc9876ce533.jpg",
+          alt: "Clamperroom3",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/49f951c7-c0eb-4d65-ab06-55ac8d75729f.jpg",
+          alt: "Clamperroom4",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/cd99b055-be35-41fe-b324-4cb6e3e91b18.jpg",
+          alt: "Clamperroom5",
         },
       ],
 
@@ -129,17 +151,30 @@ const RoomsAccomodationData = {
       ],
       images: [
         {
-          src: Room2,
-          alt: "document1",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Glamper+Room/_MG_2556.JPG",
+          alt: "glamper",
         },
         {
-          src: Room2,
-          alt: "document1",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Glamper+Room/_MG_2557.JPG",
+          alt: "glamper",
         },
         {
-          src: Room2,
-          alt: "document1",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper.webp",
+          alt: "glamper",
         },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper1.webp",
+          alt: "glamper",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper2.webp",
+          alt: "glamper",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper4.webp",
+          alt: "glamper",
+        },
+
       ],
 
       link: {
@@ -192,15 +227,27 @@ const RoomsAccomodationData = {
       ],
       images: [
         {
-          src: Room1,
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/cda949b0-cc7a-44de-98f9-8c09ef920fbc.jpg",
           alt: "document1",
         },
         {
-          src: Room1,
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6438.jpg",
           alt: "document1",
         },
         {
-          src: Room1,
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6442.jpg",
+          alt: "document1",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6610.jpg",
+          alt: "document1",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/f15de0f9-399f-4636-aa75-30d7ee073bc4.jpg",
+          alt: "document1",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/be707a6e-7a36-45cb-a4ae-458d225c2eac.jpg",
           alt: "document1",
         },
       ],
@@ -255,17 +302,14 @@ const RoomsAccomodationData = {
       ],
       images: [
         {
-          src: Room2,
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2605.JPG",
           alt: "document1",
         },
         {
-          src: Room2,
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2611.JPG",
           alt: "document1",
         },
-        {
-          src: Room2,
-          alt: "document1",
-        },
+
       ],
 
       link: {
@@ -280,7 +324,7 @@ const page = () => {
   return (
     <section>
       <div className="grid lg:grid-cols-5 mt-8 items-center">
-        <div className="col-span-2 h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-6">
+        <div className="col-span-2 h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-5">
           <h2 className="text-5xl font-bold text-[#29422C]">
             Escape from the Urban Hustle!
           </h2>
@@ -312,8 +356,9 @@ const page = () => {
             src={Room1}
             alt="test"
             className="object-cover w-full h-full"
-            width={600}
-            height={400}
+          // fill
+          // width={100}
+          // height={100}
           />
         </div>
       </div>

@@ -5,10 +5,13 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import OutdoorActivitiesCard from "./OutdoorActivitiesCard";
-import c1 from "../../../public/images/01 Picnic_11zon.jpg";
+import activity1 from "../../../public/activity/activity2.png";
+import activity2 from "../../../public/activity/activity_3.jpg";
+
+
 import Image from "next/image";
 const OutdoorActivities = () => {
-  const Images = [c1, c1, c1, c1, c1, c1, c1];
+  const Images = [activity1, activity2];
   return (
     <div className="maxwidth mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:gap-5 max-md:px-3">
       <div className="max-md:order-2">
@@ -50,8 +53,9 @@ const OutdoorActivities = () => {
                   src={image}
                   alt="outdoor"
                   className="h-full object-cover"
-                  width={600}
-                  height={400}
+                  fill
+                // width={600}
+                // height={400}
                 />
               </SwiperSlide>
             );

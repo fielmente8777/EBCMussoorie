@@ -18,13 +18,13 @@ import picnic1 from "../../../public/images/picnic1.JPG";
 import picnic2 from "../../../public/images/picnic2.JPG";
 
 import barque1 from "../../../public/images/Barbecue1.webp";
-import barque2 from "../../../public/images/Barbecue2.webp";
+// import barque2 from "../../../public/images/Barbecue2.webp";
 
 import milestonebg from "../../../public/images/milestonebg.jpg";
 
 import c1 from "../../../public/images/01 Picnic_11zon.jpg";
-import img1 from "../../../public/images/_MG_1465.jpg";
-import img2 from "../../../public/images/_MG_2878.jpg";
+import img1 from "../../../public/picnic/_MG_1465.JPG";
+import img2 from "../../../public/picnic/_MG_2878.JPG";
 import SpecilizationCard from ".././../components/landingpage/SpecilizationCard";
 
 import { usePathname } from "next/navigation";
@@ -41,7 +41,7 @@ const datas = [
     para: `Join us for "Barbeque in the Shadows," a cozy fireside evening filled with delicious bite-sized treats and treasured memories. Our serene property, acclaimed as the finest eatery in Mussoorie, sets the perfect stage for intimate celebrations and relaxation, enhancing the pleasure of unwinding together.
 
         Enjoy a private bonfire, a beautifully decorated candlelight table, and personalized butler service, all while selecting from a rich and varied menu under the flicker of Mashal torches.`,
-    images: [barque1, barque2],
+    images: [barque1,],
     button: "book now",
   },
   {
@@ -121,13 +121,15 @@ function Peakage() {
   return (
     <div>
       <div className="max-w-[1600px] w-full mx-auto relative">
-        <div className="bg-[#D5D5D5] max-h-[700px] md:h-[700px] overflow-hidden">
+        <div className="bg-[#D5D5D5] max-h-[700px] h-[300px] md:h-[700px] overflow-hidden">
           <Image
             src={BannerImage}
             alt="banner"
             className="h-full w-full object-cover object-bottom-[10%]"
-            width={600}
-            height={400}
+            // fill
+            layout="fill"
+          // width={600}
+          // height={400}
           />
         </div>
 
@@ -148,7 +150,7 @@ function Peakage() {
       </div>
 
       <div className="grid lg:grid-cols-2 mt-8 items-center maxwidth mx-auto py-12">
-        <div className=" h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-6">
+        <div className=" h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-5">
           <h2 className="text-5xl font-bold text-[#29422C]">
             Welcome to Park Cafe!·
           </h2>
@@ -182,14 +184,14 @@ function Peakage() {
             src={parkcafe}
             alt="test"
             className="object-cover w-full h-full"
-            width={600}
-            height={400}
+          // width={600}
+          // height={400}
           />
         </div>
       </div>
 
-      <div className="py-12">
-        <div className="grid lg:grid-cols-5 items-center maxwidth mx-auto px-6 gap-6">
+      <div className="py-8">
+        <div className="grid lg:grid-cols-5 items-center maxwidth mx-auto px-5 gap-6">
           <div className=" col-span-3 grid grid-cols-5 gap-3">
             <div className="col-span-3">
               <Image
@@ -284,8 +286,8 @@ function Peakage() {
                   <Image
                     alt="image"
                     src={item.img}
-                    width={600}
-                    height={400}
+                    // width={600}
+                    // height={400}
                     className="md:h-[360px] object-cover"
                   />
                   <h2 className="text-center capitalize mt-2 text-2xl">
@@ -306,7 +308,7 @@ function Peakage() {
       </div>
 
       <div className="py-12">
-        <div className="grid md:grid-cols-2 items-center maxwidth mx-auto px-6 gap-6">
+        <div className="grid md:grid-cols-2 items-center maxwidth mx-auto px-5 gap-6">
           <div className="relative">
             <div className="">
               <Image
@@ -321,7 +323,7 @@ function Peakage() {
               <Image
                 src={chooseus2}
                 width={600}
-                height={400}
+                height={100}
                 className="w-[400px] h-[300px] object-cover"
               />
             </div>
@@ -375,8 +377,9 @@ function Peakage() {
           <Image
             src={milestonebg}
             alt="banner"
-            width={600}
-            height={400}
+            fill
+            // width={600}
+            // height={400}
             className="h-full w-full object-cover object-center"
           />
         </div>
@@ -438,8 +441,8 @@ function Peakage() {
                   <div className="bg-[#bcd0b8] p-5">
                     <div className="flex items-center gap-3">
                       <Image
-                        width={600}
-                        height={400}
+                        // width={600}
+                        // height={400}
                         src={item.img}
                         className="w-10 h-10 rounded-full object-cover"
                       />

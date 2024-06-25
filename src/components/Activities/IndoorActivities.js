@@ -5,10 +5,13 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import c1 from "../../../public/images/01 Picnic_11zon.jpg";
+import indoor1 from "../../../public/activity/activity3.png"
+import indoor2 from "../../../public/activity/activity4.png"
+import indoor3 from "../../../public/activity/boardgame.jpg"
+
 import Image from "next/image";
 const IndoorActivities = () => {
-  const images = [c1, c1, c1];
+  const images = [indoor1, indoor2, indoor3];
   return (
     <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 overflow-hidden w-full">
       <div className="flex flex-col gap-5  items-center">
@@ -55,8 +58,8 @@ const IndoorActivities = () => {
               <Image
                 src={roomImage}
                 className="h-full object-cover"
-                width={600}
-                height={400}
+              // width={600}
+              // height={400}
               />
             </SwiperSlide>
           );

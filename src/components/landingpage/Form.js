@@ -3,6 +3,7 @@ import { FaUser } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
+import Link from 'next/link';
 
 const Form = () => {
     return (
@@ -24,14 +25,14 @@ const Form = () => {
                             </div>
                         </div>
                         <div className="flex flex-col md:flex-row gap-5 justify-between self-start mt-4">
-                            <div className="flex items-center gap-3">
+                            <Link href={"tel:+918595274861"} className="flex items-center gap-3">
                                 <FaPhone size={16} color='#29422C' />
                                 <div>+91 85952 74861</div>
-                            </div>
-                            <div className="flex items-center gap-2.5 self-start mt-1 whitespace-nowrap">
+                            </Link>
+                            <Link href={"mailto:info@ebcmussoorie.com"} className="flex items-center gap-2.5 self-start mt-1 whitespace-nowrap">
                                 <MdEmail size={18} color='#29422C' />
                                 <div>info@ebcmussoorie.com</div>
-                            </div>
+                            </Link>
                         </div>
 
 
@@ -77,7 +78,7 @@ const Form = () => {
                             </div>
                             <div className="flex flex-col justify-center items-start px-4 py-3.5 mt-4 w-full whitespace-nowrap bg-white rounded-sm max-md:pr-5">
                                 <div className="flex justify-start items-start gap-3 w-full">
-                                    <div className="flex justify-start items-start my-auto text-base font-black leading-7 text-[#29422C]">
+                                    <div className="flex justify-start items-start text-base font-black leading-7 text-[#29422C]">
                                         <IoIosSend size={20} color='#29422C' />
                                     </div>
                                     <textarea placeholder='Queries*' className="text-lg leading-6 w-full  outline-none" />
