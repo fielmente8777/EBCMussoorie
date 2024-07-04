@@ -46,9 +46,9 @@ function Roomscard({ title, subtitle, link, images, accomodation, index, descrip
           }`}
       >
         <h2 className="text-5xl font-semibold text-[#29422C]">{title}</h2>
-        <p className="text-xl text-[#063333]">{description}</p>
+        <p className="text-xl text-[#063333] ">{description}</p>
 
-        <p className="text-xl text-[#063333]">{subtitle}</p>
+        <p className="text-xl text-[#063333] text-justify">{subtitle}</p>
 
         <div className="grid md:grid-cols-9 grid-cols-5 gap-6 border-y border-y-[#29422c] px-3 py-5">
           {accomodation?.map(

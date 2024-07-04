@@ -18,7 +18,7 @@ const page = () => {
     return (
         <div className="flex flex-col">
             <div className="flex flex-col gap-5  items-center max-md:px-3 mb-10">
-                <h2 className="text-[42px] max-md:text-center text-white font-medium leading-[45px]">A Glamper's Guide</h2>
+                <h2 className="text-[42px] max-md:text-center text-white font-medium leading-[45px]">A Glamper&apos;s Guide</h2>
                 {/* <p className=" text-center max-md:text-justify text-white">Experience luxury amidst the serene hills at Everest Base Camp with a range of
                 to choose from, including a fine dining restaurant, outdoor activities, and luxury accommodations,
                 we provide the perfect escape from the hustle and bustle of everyday life.</p> */}

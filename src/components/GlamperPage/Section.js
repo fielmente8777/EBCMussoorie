@@ -15,8 +15,8 @@ const Section = () => {
     return (
         <div className=' bg-[#D5D5D5]'>
             <div className='max-w-[900px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 py-5 px-5'>
-                <div className='h-full w-full'>
-                    <Image src={c1} alt="checklist" className="h-full w-full object-cover" />
+                <div className=''>
+                    <Image src={c1} alt="checklist" className="h-full w-full" />
                 </div>
                 <div>
                     {para.map((p, index) => (

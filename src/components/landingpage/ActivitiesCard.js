@@ -41,6 +41,7 @@ const ActivitiesCard = ({ activitiesData, index }) => {
               <SwiperSlide key={index} className="rounded-sm overflow-hidden">
                 <Image
                   src={roomImage}
+                  alt="roomImage"
                   className="h-full object-cover"
                   width={600}
                   height={400}

@@ -18,8 +18,9 @@ const InstaGrid = () => {
             key={index}
             src={roomImage}
             className="h-full object-cover"
-          // width={600}
-          // height={400}
+            alt={`room${index}`}
+            width={600}
+            height={400}
           />
         );
       })}

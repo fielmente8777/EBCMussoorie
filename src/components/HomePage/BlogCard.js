@@ -13,6 +13,7 @@ const BlogCard = ({ data }) => {
         <Image
           loading="lazy"
           src={data.image}
+          alt="blog card"
           width={600}
           height={400}
           className="grow w-full aspect-[1.3] max-md:mt-3"

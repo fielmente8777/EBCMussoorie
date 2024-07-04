@@ -4,6 +4,7 @@ import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
 import Link from 'next/link';
+import { Face, Insta, Trip } from '../../icons/icons';
 
 const Form = () => {
     return (
@@ -92,21 +93,15 @@ const Form = () => {
                 </div>
             </div>
             <div className="flex justify-center gap-5 w-full mt-10">
-                <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/e3110552dcb21701bd4044028619c8f0eaf928be27b89cd2a6d50edc3222ed28?"
-                    className="shrink-0 w-12 aspect-square"
-                />
-                <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/52e54574d0b369b90397ae4af7f179f0e1b7a47dd8d198870752cf78adcd2fd3?"
-                    className="shrink-0 w-12 aspect-square"
-                />
-                <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bca4b58a0832f1e9578d761b28262c2bf37cae7a333a4d7a0bdedd6853db5d0?"
-                    className="shrink-0 w-12 aspect-square"
-                />
+                <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"> <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                    <Face />
+                </div></Link>
+                <Link href={"https://www.instagram.com/ebcmussoorie/"} target="_blank">  <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                    <Insta />
+                </div></Link>
+                <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"><div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                    <Trip />
+                </div></Link>
             </div>
 
         </div>

@@ -71,6 +71,7 @@ const Banner = ({ data, order }) => {
                   <Image
                     src={roomImage}
                     className="w-full md:h-[460px] h-[280px] object-cover"
+                    alt="roomImage"
                   // width={600}
                   // height={400}
                   />

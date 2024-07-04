@@ -40,23 +40,23 @@ const SpecilizationCard = ({ cardData, index }) => {
               //   },
             }
           }
-          className="w-full h-full"
+          className="relative h-[480px] max-md:h-[300px]"
         >
           {cardData?.images?.map((roomImage, index) => {
             return (
               <SwiperSlide key={index} className="">
                 <Image
                   src={roomImage}
-                  className="h-full object-cover"
-                  width={600}
-                  height={400}
+                  className="h-full w-full object-cover"
+                  alt={`Room image ${index}`}
+                // fill
                 />
               </SwiperSlide>
             );
           })}
         </Swiper>
       </div>
-      <div className="flex flex-col bg-[#D5D5D5] p-3 md:px-10 md:py-24">
+      <div className="flex flex-col justify-center bg-[#D5D5D5] p-3 md:px-10 md:py-24">
         <div className="w-full text-3xl text-[#29422C] font-semibold tracking-wider leading-8 max-md:max-w-full">
           {cardData.heading}
         </div>

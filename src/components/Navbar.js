@@ -5,6 +5,7 @@ import Image from "next/image";
 import { MdCall } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Face, Insta, Trip } from "../icons/icons";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -12,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      {pathname === "/" ? (
+      {pathname === "" ? (
         <HomeNav />
       ) : (
         <div className="maxwidth mx-auto flex flex-col">
@@ -59,6 +60,7 @@ const Navbar = () => {
                 <Image
                   loading="lazy"
                   src={Logo}
+                  alt="ebc"
                   className="grow shrink-0 max-w-full aspect-[1.64] w-[308px] max-md:mt-10"
                 />
               </Link>
@@ -66,9 +68,15 @@ const Navbar = () => {
                 <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
                   <div className="w-[20%]"></div>
                   <div className="flex gap-3 px-5 my-auto">
-                    <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"><FaceBook /></Link>
-                    <Link href={"https://www.instagram.com/ebcmussoorie/"} target="_blank"> <InstaGram /></Link>
-                    <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"> <Tri /></Link>
+                    <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"> <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                      <Face />
+                    </div></Link>
+                    <Link href={"https://www.instagram.com/ebcmussoorie/"} target="_blank">  <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                      <Insta />
+                    </div></Link>
+                    <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"><div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                      <Trip />
+                    </div></Link>
 
 
                   </div>
@@ -324,8 +332,8 @@ const HamMenu = () => {
       <path
         d="M2 18H26M2 10H26M2 2H26"
         stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
     </svg>
@@ -345,8 +353,8 @@ const FaceBook = () => {
       <path
         d="M20 4.5H17C15.6739 4.5 14.4021 5.02678 13.4645 5.96447C12.5268 6.90215 12 8.17392 12 9.5V12.5H9V16.5H12V24.5H16V16.5H19L20 12.5H16V9.5C16 9.23478 16.1054 8.98043 16.2929 8.79289C16.4804 8.60536 16.7348 8.5 17 8.5H20V4.5Z"
         stroke="#29422C"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
     </svg>
@@ -366,20 +374,20 @@ const InstaGram = () => {
       <path
         d="M14.0009 18.0554C14.9439 18.0554 15.8482 17.6808 16.515 17.014C17.1818 16.3473 17.5564 15.4429 17.5564 14.4999C17.5564 13.5569 17.1818 12.6525 16.515 11.9857C15.8482 11.3189 14.9439 10.9443 14.0009 10.9443C13.0579 10.9443 12.1535 11.3189 11.4867 11.9857C10.8199 12.6525 10.4453 13.5569 10.4453 14.4999C10.4453 15.4429 10.8199 16.3473 11.4867 17.014C12.1535 17.6808 13.0579 18.0554 14.0009 18.0554Z"
         stroke="#29422C"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M6 18.0556V10.9444C6 9.7657 6.46825 8.63524 7.30175 7.80175C8.13524 6.96825 9.2657 6.5 10.4444 6.5H17.5556C18.7343 6.5 19.8648 6.96825 20.6983 7.80175C21.5317 8.63524 22 9.7657 22 10.9444V18.0556C22 19.2343 21.5317 20.3648 20.6983 21.1983C19.8648 22.0317 18.7343 22.5 17.5556 22.5H10.4444C9.2657 22.5 8.13524 22.0317 7.30175 21.1983C6.46825 20.3648 6 19.2343 6 18.0556Z"
         stroke="#29422C"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <path
         d="M18.8906 9.62135L18.9006 9.61035"
         stroke="#29422C"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
     </svg>

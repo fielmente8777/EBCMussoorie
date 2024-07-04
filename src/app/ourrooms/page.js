@@ -324,11 +324,11 @@ const page = () => {
   return (
     <section>
       <div className="grid lg:grid-cols-5 mt-8 items-center">
-        <div className="col-span-2 h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-5">
+        <div className="col-span-2 h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-4">
           <h2 className="text-5xl font-bold text-[#29422C]">
             Escape from the Urban Hustle!
           </h2>
-          <p className="text-xl text-[#29422C]">
+          <p className="text-xl text-justify text-[#29422C]">
             {` Feeling drained by the hustle and bustle of city life? Escape to EBC
             Mussoorie and rediscover your connection with nature. Rejuvenate
             your mind and soul amidst the serene beauty of our glamping
@@ -336,7 +336,7 @@ const page = () => {
             all-weather tents ensure comfort and shelter, whether it's rain,
             snow, hail, or sun.`}
           </p>
-          <p className="text-xl text-[#29422C]">
+          <p className="text-xl text-justify text-[#29422C]">
             Experience the rich legacy of Sir George Everest, the esteemed
             former Surveyor General of India, and embark on a journey of
             relaxation and rejuvenation like never before.

@@ -2,6 +2,8 @@ import { MdCall } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import Link from "next/link";
 
+import { Insta, Face } from "../icons/icons"
+
 const Footer = () => {
   return (
     <div className="flex flex-col py-10">
@@ -21,21 +23,17 @@ const Footer = () => {
                   href={"https://www.facebook.com/ebcmussoorie/"}
                   target="_blank"
                 >
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf5ed5930caa39e43a1df132120331034f55619238fe1167bafa85863bc51b72?"
-                    className="shrink-0 w-10 aspect-square"
-                  />
+                  <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                    <Face />
+                  </div>
                 </Link>
                 <Link
                   href={"https://www.instagram.com/ebcmussoorie/"}
                   target="_blank"
                 >
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2149fce7a5c8e41e1538ff8d7f3f16e4fd1fba1ab57416d769c107ce83375c5a?"
-                    className="shrink-0 w-10 aspect-square"
-                  />
+                  <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                    <Insta />
+                  </div>
                 </Link>
               </div>
             </div>
@@ -85,12 +83,8 @@ const Footer = () => {
       <div className="bg-neutral-900 py-5 mt-9">
         <div className="flex gap-5 max-w-[1280px] mx-auto justify-between  w-full text-sm tracking-wider leading-4 text-white  max-md:flex-wrap max-md:px-5 max-md:max-w-full">
           <div className="flex gap-2">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8f6efe96f6a0500617a91ec790ee323c5c70b008cec2b8c9fefa5fe9c9c9459?"
-              className="shrink-0 self-start w-3 aspect-square fill-zinc-100"
-            />
-            <div className="flex-auto">Copyright content here</div>
+
+            <div className="flex-auto">&#169;Copyright content here</div>
           </div>
           <div className="flex gap-5 justify-between self-start whitespace-nowrap">
             <div>COMPLIANCE</div>

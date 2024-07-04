@@ -21,7 +21,7 @@ const Momories = () => {
           &quot;Stay with a lifetime of memories with EBC Mussoorie&quot;
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8 max-md:flex-wrap max-md:max-w-full">
-          <div className="md:w-[300px] md:h-[500px] rounded-3xl border-[10px] border-black  flex items-start justify-start">
+          <div className="md:w-[300px] h-[500px] md:h-[500px] rounded-3xl border-[10px] border-black  flex items-start justify-start">
             <Swiper
               loop={true}
               autoplay={{
@@ -52,9 +52,10 @@ const Momories = () => {
               {image.map((roomData, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <img
-                      srcSet={roomData}
+                    <Image
+                      src={roomData}
                       alt="slider"
+                      fill
                       className="w-full h-full object-cover rounded-[14px]"
                     />
                   </SwiperSlide>

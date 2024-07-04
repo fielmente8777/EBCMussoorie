@@ -91,7 +91,7 @@ function Gallery({ items }) {
             {allImages.map((item, index) => (
               <div key={index}>
                 <div className="relative w-full aspect-[4/3]" key={index}>
-                  <Image src={item} fill className="object-cover" />
+                  <Image src={item} alt={`image${index}`} fill className="object-cover" />
                 </div>
               </div>
             ))}
@@ -107,6 +107,7 @@ function Gallery({ items }) {
                     src={i}
                     fill
                     className="object-cover"
+                    alt={`image${index}`}
                   // width={600}
                   // height={400}
                   />

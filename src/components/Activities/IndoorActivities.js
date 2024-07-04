@@ -58,6 +58,7 @@ const IndoorActivities = () => {
               <Image
                 src={roomImage}
                 className="h-full object-cover"
+                alt="roomImage"
               // width={600}
               // height={400}
               />

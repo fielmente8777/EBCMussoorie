@@ -127,9 +127,9 @@ function Peakage() {
             alt="banner"
             className="h-full w-full object-cover object-bottom-[10%]"
             // fill
-            layout="fill"
-          // width={600}
-          // height={400}
+            // layout="fill"
+            width={600}
+            height={400}
           />
         </div>
 
@@ -182,10 +182,10 @@ function Peakage() {
         <div className="w-full h-full">
           <Image
             src={parkcafe}
-            alt="test"
+            alt="parkcafe3"
             className="object-cover w-full h-full"
-          // width={600}
-          // height={400}
+            width={600}
+            height={400}
           />
         </div>
       </div>
@@ -195,7 +195,7 @@ function Peakage() {
           <div className=" col-span-3 grid grid-cols-5 gap-3">
             <div className="col-span-3">
               <Image
-                alt="image"
+                alt="parkcafe1"
                 src={parkcafereachus1}
                 width={600}
                 height={400}
@@ -206,6 +206,7 @@ function Peakage() {
             <div className="col-span-2">
               <Image
                 src={parkcafereachus2}
+                alt="parkcafe2"
                 width={600}
                 height={400}
                 className="w-full md:h-[600px] h-[280px] object-cover"
@@ -286,8 +287,8 @@ function Peakage() {
                   <Image
                     alt="image"
                     src={item.img}
-                    // width={600}
-                    // height={400}
+                    width={600}
+                    height={400}
                     className="md:h-[360px] object-cover"
                   />
                   <h2 className="text-center capitalize mt-2 text-2xl">
@@ -315,6 +316,7 @@ function Peakage() {
                 src={chooseus1}
                 width={600}
                 height={400}
+                alt="service"
                 className="w-[520px] md:h-[400px] h-[280px] object-cover"
               />
             </div>
@@ -324,6 +326,7 @@ function Peakage() {
                 src={chooseus2}
                 width={600}
                 height={100}
+                alt="service2"
                 className="w-[400px] h-[300px] object-cover"
               />
             </div>
@@ -377,9 +380,9 @@ function Peakage() {
           <Image
             src={milestonebg}
             alt="banner"
-            fill
-            // width={600}
-            // height={400}
+            // fill
+            width={600}
+            height={400}
             className="h-full w-full object-cover object-center"
           />
         </div>
@@ -441,9 +444,10 @@ function Peakage() {
                   <div className="bg-[#bcd0b8] p-5">
                     <div className="flex items-center gap-3">
                       <Image
-                        // width={600}
-                        // height={400}
+                        width={600}
+                        height={400}
                         src={item.img}
+                        alt={`testimonal${index}`}
                         className="w-10 h-10 rounded-full object-cover"
                       />
 
