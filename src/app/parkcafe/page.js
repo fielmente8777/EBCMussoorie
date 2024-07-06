@@ -482,6 +482,7 @@ function Peakage() {
           />
         </div>
       </div>
+      <hr class="h-px my-4 bg-[#D5D5D5] border-0" />
     </div>
   );
 }

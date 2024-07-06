@@ -791,81 +791,84 @@ blogData.unshift(obj);
 function Page() {
   const [currentTab, setCurrentTab] = useState("all");
   return (
-    <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
-      <div className="flex gap-4 items-center">
-        {blogData.map((item, index) => {
-          return (
-            <button
-              key={index}
-              value={item.Category}
-              onClick={() => {
-                setCurrentTab(item.Category);
-              }}
-              className="hover:bg-[#29422C] px-4 py-1 hover:text-white capitalize"
-            >
-              {item.Category}
-            </button>
-          );
-        })}
-      </div>
+    <>
+      <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
+        <div className="flex gap-4 items-center">
+          {blogData.map((item, index) => {
+            return (
+              <button
+                key={index}
+                value={item.Category}
+                onClick={() => {
+                  setCurrentTab(item.Category);
+                }}
+                className="hover:bg-[#29422C] px-4 py-1 hover:text-white capitalize"
+              >
+                {item.Category}
+              </button>
+            );
+          })}
+        </div>
 
-      <div className="mt-6 flex flex-col gap-12">
-        {blogData.map(
-          (item, index) =>
-            item.Category == currentTab && (
-              <div className="flex flex-col gap-2" key={index}>
-                {item.items.map((itm, ind) => (
-                  <div
-                    className="border border-gray-400 grid lg:grid-cols-5 gap-6"
-                    key={ind}
-                  >
-                    <div className="lg:col-span-2 col-span-1 w-full">
-                      <div className="w-full">
-                        <Image
-                          src={itm.image}
-                          alt="image"
-                          width={600}
-                          height={400}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                    </div>
-
-                    <Link
-                      href={`/blogs/${itm.title.trim()}`}
-                      className="lg:col-span-3 p-2"
+        <div className="mt-6 flex flex-col gap-12">
+          {blogData.map(
+            (item, index) =>
+              item.Category == currentTab && (
+                <div className="flex flex-col gap-2" key={index}>
+                  {item.items.map((itm, ind) => (
+                    <div
+                      className="border border-gray-400 grid lg:grid-cols-5 gap-6"
+                      key={ind}
                     >
-                      <div className="flex gap-4 items-center">
-                        <Image
-                          src={ebclogo}
-                          alt="logo"
-                          width={35}
-                          height={20}
-                        />
-
-                        <div className="flex flex-col">
-                          <div>
-                            <h2>EBC Mussorie</h2>
-                          </div>
-                          <p className="text-sm">{itm.date}</p>
+                      <div className="lg:col-span-2 col-span-1 w-full">
+                        <div className="w-full">
+                          <Image
+                            src={itm.image}
+                            alt="image"
+                            width={600}
+                            height={400}
+                            className="object-cover w-full h-full"
+                          />
                         </div>
                       </div>
 
-                      <div className="space-y-2 mt-3">
-                        <h2 className="text-2xl font-bold">{itm.title}</h2>
-                        <p className="text-black">
-                          {itm.subtitle.substring(0, 150)}............
-                        </p>
-                        <p>{itm.lastupdate}</p>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            )
-        )}
+                      <Link
+                        href={`/blogs/${itm.title.trim()}`}
+                        className="lg:col-span-3 p-2"
+                      >
+                        <div className="flex gap-4 items-center">
+                          <Image
+                            src={ebclogo}
+                            alt="logo"
+                            width={35}
+                            height={20}
+                          />
+
+                          <div className="flex flex-col">
+                            <div>
+                              <h2>EBC Mussorie</h2>
+                            </div>
+                            <p className="text-sm">{itm.date}</p>
+                          </div>
+                        </div>
+
+                        <div className="space-y-2 mt-3">
+                          <h2 className="text-2xl font-bold">{itm.title}</h2>
+                          <p className="text-black">
+                            {itm.subtitle.substring(0, 150)}............
+                          </p>
+                          <p>{itm.lastupdate}</p>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )
+          )}
+        </div>
       </div>
-    </div>
+      <hr class="h-px my-4 mt-10 bg-[#D5D5D5] border-0" />
+    </>
   );
 }
 
