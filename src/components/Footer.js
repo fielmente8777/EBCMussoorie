@@ -159,7 +159,7 @@ const Footer = () => {
 
                     </Link>
                     <Link href={"/glamper"}>
-                      A Glamper's Guide
+                      A Glamper &#39 s Guide
                     </Link>
                     <Link href={"/blogs"}>
                       Blogs
@@ -213,6 +213,7 @@ const Footer = () => {
               <div className="flex gap-5 maxwidth mx-auto justify-between px-5 py-5 w-full text-xs tracking-wider leading-5 text-white  max-md:flex-wrap max-md:px-5 max-md:max-w-full">
                 <div className="flex gap-3 font-medium">
                   <img
+                    alt="icon"
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f2ebd1425476a83f9785a32d2e5632db68bf9f8db8e123ca89682af54513cec?"
                     className="shrink-0 my-auto w-3 aspect-square fill-white"
