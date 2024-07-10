@@ -74,7 +74,7 @@ const Momories = () => {
                             yourself in nature's tranquility at our resort.`}
             </div>
             <Link
-              href={"/ourrooms"}
+              href={"/rooms"}
               className="flex justify-center self-center px-8 py-2 rounded-sm mt-9 italic bg-[#29422C] leading-[140%] text-[#D5D5D5]"
             >
               Our Rooms

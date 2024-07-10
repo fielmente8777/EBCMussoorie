@@ -115,7 +115,7 @@ const Navbar = () => {
                                     Contact Us
                                 </Link> */}
               <Link
-                href={"/ourrooms"}
+                href={"/rooms"}
                 className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
               >
                 Our Rooms
@@ -187,7 +187,7 @@ const HomeNav = () => {
                             Contact Us
                         </Link> */}
             <Link
-              href={"/ourrooms"}
+              href={"/rooms"}
               className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
             >
               Our Rooms
@@ -286,7 +286,7 @@ const MobileNav = ({ open }) => {
                                     Contact Us
                                 </Link> */}
         <Link
-          href={"/ourrooms"}
+          href={"/rooms"}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           Our Rooms

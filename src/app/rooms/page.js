@@ -14,20 +14,25 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-
 import Room1 from "../../../public/rooms/20 Bedroom 4_11zon.jpg";
 import Room2 from "../../../public/rooms/20 Bedroom 4_11zon.jpg";
 
+import Surveyor1 from "../../../public/Surveyor Room/_MG_2465.JPG";
+import Surveyor2 from "../../../public/Surveyor Room/_MG_2475.JPG";
+import Surveyor3 from "../../../public/Surveyor Room/_MG_2477.JPG";
+import Surveyor4 from "../../../public/Surveyor Room/_MG_2505.JPG";
 
-import Surveyor1 from "../../../public/Surveyor Room/_MG_2465.JPG"
-import Surveyor2 from "../../../public/Surveyor Room/_MG_2475.JPG"
-import Surveyor3 from "../../../public/Surveyor Room/_MG_2477.JPG"
-import Surveyor4 from "../../../public/Surveyor Room/_MG_2505.JPG"
+import SurveyorSuite1 from "../../../public/Surveyor Suite Room/_MG_2601.JPG";
+import SurveyorSuite2 from "../../../public/Surveyor Suite Room/_MG_2602.JPG";
+import SurveyorSuite3 from "../../../public/Surveyor Suite Room/_MG_2603.JPG";
+import SurveyorSuite4 from "../../../public/Surveyor Suite Room/_MG_2605.JPG";
 
-import SurveyorSuite1 from "../../../public/Surveyor Suite Room/_MG_2601.JPG"
-import SurveyorSuite2 from "../../../public/Surveyor Suite Room/_MG_2602.JPG"
-import SurveyorSuite3 from "../../../public/Surveyor Suite Room/_MG_2603.JPG"
-import SurveyorSuite4 from "../../../public/Surveyor Suite Room/_MG_2605.JPG"
+export const metadata = {
+  title:
+    "Glamping Near Mussoorie | Glamping Near Rishikesh, Dehradun, Delhi - EBC",
+  description:
+    "Experience luxury glamping in Mussoorie, near Rishikesh, Dehradun, Delhi, and Gurugram at EBC. Enjoy tent house in mussoorie with us!",
+};
 
 const RoomsAccomodationData = {
   title: "Rooms and Accomodation",
@@ -174,7 +179,6 @@ const RoomsAccomodationData = {
           src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper4.webp",
           alt: "glamper",
         },
-
       ],
 
       link: {
@@ -309,7 +313,6 @@ const RoomsAccomodationData = {
           src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2611.JPG",
           alt: "document1",
         },
-
       ],
 
       link: {
@@ -356,9 +359,9 @@ const page = () => {
             src={Room1}
             alt="test"
             className="object-cover w-full h-full"
-          // fill
-          // width={100}
-          // height={100}
+            // fill
+            // width={100}
+            // height={100}
           />
         </div>
       </div>
