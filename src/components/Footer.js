@@ -146,7 +146,7 @@ const Footer = () => {
                       Contact Us
 
                     </Link> */}
-                    <Link href={"/ourrooms"}>
+                    <Link href={"/rooms"}>
                       Our Rooms
 
                     </Link>
@@ -159,7 +159,7 @@ const Footer = () => {
 
                     </Link>
                     <Link href={"/glamper"}>
-                      A Glamper &#39 s Guide
+                      A Glamper&apos;s Guide
                     </Link>
                     <Link href={"/blogs"}>
                       Blogs

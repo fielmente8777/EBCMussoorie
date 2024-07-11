@@ -18,7 +18,7 @@ const Navbar = () => {
       ) : (
         <div className="maxwidth mx-auto flex flex-col">
           <>
-            <div className="grid items-center px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
+            <div className="grid items-center pt-2 px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
               <div
                 className="xl:hidden z-40"
                 onClick={() => {
@@ -61,7 +61,7 @@ const Navbar = () => {
                   loading="lazy"
                   src={Logo}
                   alt="ebc"
-                  className="grow shrink-0 max-w-full aspect-[1.64] w-[308px] max-md:mt-10"
+                  className="grow shrink-0 max-w-full aspect-[1.64] w-[308px]"
                 />
               </Link>
               <div className="hidden xl:flex flex-col items-end max-md:ml-0">
@@ -115,7 +115,7 @@ const Navbar = () => {
                                     Contact Us
                                 </Link> */}
               <Link
-                href={"/ourrooms"}
+                href={"/rooms"}
                 className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
               >
                 Our Rooms
@@ -187,7 +187,7 @@ const HomeNav = () => {
                             Contact Us
                         </Link> */}
             <Link
-              href={"/ourrooms"}
+              href={"/rooms"}
               className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
             >
               Our Rooms
@@ -286,7 +286,7 @@ const MobileNav = ({ open }) => {
                                     Contact Us
                                 </Link> */}
         <Link
-          href={"/ourrooms"}
+          href={"/rooms"}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           Our Rooms

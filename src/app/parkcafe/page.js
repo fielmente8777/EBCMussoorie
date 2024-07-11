@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import BannerImage from "../../../public/images/parkcafebg.jpg";
 import Link from "next/link";
@@ -27,13 +26,18 @@ import img1 from "../../../public/picnic/_MG_1465.JPG";
 import img2 from "../../../public/picnic/_MG_2878.JPG";
 import SpecilizationCard from ".././../components/landingpage/SpecilizationCard";
 
-import { usePathname } from "next/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+
 import InstaGrid from "../../components/Activities/InstaGrid";
 import WhatInstaButton from "../../utils/WhatInstaButton";
+import OurCuisine from "./OurCuisine.jsx";
+import HappyCustomers from "./HappyCustomers.jsx";
+import OurAmenities from './OurAmenities'
+
+export const metadata = {
+  title: "Best Cafe in Mussoorie | Green Restaurant Mussoorie - EBC",
+  description:
+    "GFind the best cafe in Mussoorie at EBC! Enjoy delicious food, stunning views, and a cozy atmosphere. Perfect for relaxing and unwinding. Visit us today!",
+};
 
 const datas = [
   {
@@ -41,7 +45,7 @@ const datas = [
     para: `Join us for "Barbeque in the Shadows," a cozy fireside evening filled with delicious bite-sized treats and treasured memories. Our serene property, acclaimed as the finest eatery in Mussoorie, sets the perfect stage for intimate celebrations and relaxation, enhancing the pleasure of unwinding together.
 
         Enjoy a private bonfire, a beautifully decorated candlelight table, and personalized butler service, all while selecting from a rich and varied menu under the flicker of Mashal torches.`,
-    images: [barque1,],
+    images: [barque1],
     button: "book now",
   },
   {
@@ -117,7 +121,6 @@ const testimonal = [
 ];
 
 function Peakage() {
-  const pathname = usePathname();
   return (
     <div>
       <div className="max-w-[1600px] w-full mx-auto relative">
@@ -246,67 +249,7 @@ function Peakage() {
         </div>
       </div>
 
-      <div className="bg-[#BCD0B8] py-12">
-        <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 overflow-hidden w-full ">
-          <div className="flex flex-col gap-5  items-center">
-            <h2 className="text-[42px] max-md:text-center text-[#29422C] font-medium leading-[45px]">
-              Our Cuisine
-            </h2>
-          </div>
-
-          {/* <div className="w-full rounded-lg overflow-hidden"> */}
-          <Swiper
-            loop={true}
-            autoplay={{
-              delay: 2000,
-            }}
-            pagination={{
-              el: "#bullets-Portfolio",
-            }}
-            slidesPerView={1}
-            navigation={{
-              prevEl: ".prev-btn",
-              nextEl: ".next-btn",
-            }}
-            modules={[Pagination, Autoplay, Navigation]}
-            breakpoints={{
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-              //   1024: {
-              //     slidesPerView: 3,
-              //     spaceBetween: 20,
-              //   },
-            }}
-            className="w-full"
-          >
-            {images?.map((item, index) => {
-              return (
-                <SwiperSlide key={index} className="">
-                  <Image
-                    alt="image"
-                    src={item.img}
-                    width={600}
-                    height={400}
-                    className="md:h-[360px] object-cover"
-                  />
-                  <h2 className="text-center capitalize mt-2 text-2xl">
-                    {item.title}
-                  </h2>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-          {/* </div> */}
-
-          <div className=" flex justify-center mt-5">
-            <Link className="bg-[#29422C] text-white px-4 py-2" href={"/"}>
-              Download menu
-            </Link>
-          </div>
-        </div>
-      </div>
+      <OurCuisine images={images} />
 
       <div className="py-12">
         <div className="grid md:grid-cols-2 items-center maxwidth mx-auto px-5 gap-6">
@@ -353,20 +296,7 @@ function Peakage() {
       </div>
 
       <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 py-12">
-        {pathname === "/landingpage" && (
-          <div className="flex flex-col gap-5  items-center">
-            <h2 className="text-[42px] max-md:text-center text-white font-medium leading-[45px]">
-              OUR AMENITIES
-            </h2>
-            <p className=" text-center max-md:text-justify text-white">
-              Experience luxury amidst the serene hills at Everest Base Camp
-              with a range of to choose from, including a fine dining
-              restaurant, outdoor activities, and luxury accommodations, we
-              provide the perfect escape from the hustle and bustle of everyday
-              life.
-            </p>
-          </div>
-        )}
+        <OurAmenities />
 
         <div className="rounded-lg overflow-hidden">
           {datas.map((data, index) => (
@@ -403,67 +333,7 @@ function Peakage() {
         </div>
       </div>
 
-      <div className="py-12 px-6">
-        <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 overflow-hidden w-full ">
-          <div className="flex flex-col gap-5  items-center">
-            <h2 className="text-[42px] max-md:text-center text-white font-medium leading-[45px]">
-              Happy Customers!
-            </h2>
-          </div>
-
-          {/* <div className="w-full rounded-lg overflow-hidden"> */}
-          <Swiper
-            loop={true}
-            autoplay={{
-              delay: 2000,
-            }}
-            pagination={{
-              el: "#bullets-Portfolio",
-            }}
-            slidesPerView={1}
-            navigation={{
-              prevEl: ".prev-btn",
-              nextEl: ".next-btn",
-            }}
-            modules={[Pagination, Autoplay, Navigation]}
-            breakpoints={{
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-              //   1024: {
-              //     slidesPerView: 3,
-              //     spaceBetween: 20,
-              //   },
-            }}
-            className="w-full"
-          >
-            {testimonal?.map((item, index) => {
-              return (
-                <SwiperSlide key={index} className="">
-                  <div className="bg-[#bcd0b8] p-5">
-                    <div className="flex items-center gap-3">
-                      <Image
-                        width={600}
-                        height={400}
-                        src={item.img}
-                        alt={`testimonal${index}`}
-                        className="w-10 h-10 rounded-full object-cover"
-                      />
-
-                      <h2 className="text-center capitalize mt-2 text-lg">
-                        {item.title}
-                      </h2>
-                    </div>
-                    <p className="text-lg mt-4">{item.subtle}</p>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-          {/* </div> */}
-        </div>
-      </div>
+      <HappyCustomers testimonal={testimonal} />
 
       <div className="py-12 px-6">
         <InstaGrid />
