@@ -137,11 +137,11 @@ function Peakage() {
         </div>
 
         <div className="absolute top-0 left-0 z-20 w-full h-full flex items-center justify-center">
-          <div class="max-w-3xl mx-auto">
-            <h2 class="text-center md:text-5xl text-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-center md:text-5xl text-white">
               Welcome to Park Café! One of the best cafes in Mussoorie.
             </h2>
-            <p class="text-center md:text-2xl mt-4 text-white">
+            <p className="text-center md:text-2xl mt-4 text-white">
               {` Our culinary gem seamlessly combines nature's beauty with
               exquisite flavors, offering a unique dining experience against the
               backdrop of breathtaking natural wonders.`}
@@ -217,15 +217,15 @@ function Peakage() {
             </div>
           </div>
           <div className="col-span-2 flex flex-col gap-4">
-            <h2 class="text-white md:text-3xl text-2xl ">How to reach us?</h2>
-            <p class="text-white text-lg">
+            <h2 className="text-white md:text-3xl text-2xl ">How to reach us?</h2>
+            <p className="text-white text-lg">
               {` Nestled amidst nature at the Everest Base Camp in Mussoorie, Park
               Cafe offers a convenient location just a stone's throw away from
               the George Everest Museum. To enhance your experience, you can
               come by yourself or give us a call to make a reservation and get a
               pass that lets you drive straight up to the cafe.`}
             </p>
-            <p class="text-white text-lg">
+            <p className="text-white text-lg">
               {`   Don't miss the chance to explore the historical significance of
               our location, where Sir George Everest once had his stables and
               rode around.Plus, the George Everest Museum is just a couple of
@@ -275,8 +275,8 @@ function Peakage() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <h2 class="text-white md:text-5xl text-2xl ">Why Choose Us ?</h2>
-            <p class="text-white text-lg">
+            <h2 className="text-white md:text-5xl text-2xl ">Why Choose Us ?</h2>
+            <p className="text-white text-lg">
               {`  Discover what makes us the most unique cafe in Mussoorie – our
               unwavering commitment to a memorable dining experience that
               transcends the ordinary. At EBC, indulge in more than just a meal;
@@ -285,7 +285,7 @@ function Peakage() {
               of offerings, from delightful tea and snacks to exquisite dining
               experiences.`}
             </p>
-            <p class="text-white text-lg">
+            <p className="text-white text-lg">
               Experience curated events and experiences that promise to elevate
               your visit. As a must-visit cafe in Mussoorie, EBC ensures an
               unforgettable culinary journey that celebrates nature and
@@ -318,11 +318,11 @@ function Peakage() {
         </div>
 
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-6">
-          <div class="max-w-[400px] bg-[#ACACAC] p-5 mx-auto">
-            <h2 class="text-center md:text-4xl text-[#29422C]">
+          <div className="max-w-[400px] bg-[#ACACAC] p-5 mx-auto">
+            <h2 className="text-center md:text-4xl text-[#29422C]">
               Mark Your Milestones with Us!
             </h2>
-            <p class="text-center md:text-lg mt-4 text-[#29422C]">
+            <p className="text-center md:text-lg mt-4 text-[#29422C]">
               Experience unforgettable celebrations at Everest Base Camp
               ,Mussoorie. We customize every element to match your vision, from
               anniversaries to birthdays. With our attention to detail, your
@@ -352,7 +352,7 @@ function Peakage() {
           />
         </div>
       </div>
-      <hr class="h-px my-4 bg-[#D5D5D5] border-0" />
+      <hr className="h-px my-4 bg-[#D5D5D5] border-0" />
     </div>
   );
 }

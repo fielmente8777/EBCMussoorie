@@ -15,10 +15,10 @@ const page = () => {
         <div className="flex flex-col gap-10 overflow-hidden">
             <Banner BannerImage={BannerImage} />
             <Grid />
-            <hr class=" h-px my-8 bg-[white]" />
+            <hr className=" h-px my-8 bg-[white]" />
 
             <RoomSwiper />
-            <hr class="h-px my-8 bg-[white]" />
+            <hr className="h-px my-8 bg-[white]" />
 
             <YouTube />
 

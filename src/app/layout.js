@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
 
         {/* End Google Tag Manager */}
       </head>
-      <body className={ebGaramond.className}>
+      <body suppressHydrationWarning={true} className={ebGaramond.className}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

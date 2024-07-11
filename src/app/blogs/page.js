@@ -9,7 +9,7 @@ function Page() {
   return (
     <>
       <BlogComponent />
-      <hr class="h-px my-4 mt-10 bg-[#D5D5D5] border-0" />
+      <hr className="h-px my-4 mt-10 bg-[#D5D5D5] border-0" />
     </>
   );
 }

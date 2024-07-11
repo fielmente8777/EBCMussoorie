@@ -833,6 +833,7 @@ const BlogComponent = () => {
 
                                         <Link
                                             href={`/blogs/${itm.title.trim()}`}
+                                            
                                             className="lg:col-span-3 p-2"
                                         >
                                             <div className="flex gap-4 items-center">

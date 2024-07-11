@@ -20,7 +20,7 @@ const page = () => {
             <InstaGrid />
             <WhatInstaButton button={"insta"} link="https://instagram.com" />
 
-            <hr class="h-px my-4 bg-[#D5D5D5] border-0" />
+            <hr className="h-px my-4 bg-[#D5D5D5] border-0" />
         </div>
     )
 }

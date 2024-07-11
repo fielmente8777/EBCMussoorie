@@ -334,7 +334,7 @@ const HamMenu = () => {
         stroke="white"
         strokeWidth="3"
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -355,7 +355,7 @@ const FaceBook = () => {
         stroke="#29422C"
         strokeWidth="1.5"
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -376,7 +376,7 @@ const InstaGram = () => {
         stroke="#29422C"
         strokeWidth="1.5"
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
       <path
         d="M6 18.0556V10.9444C6 9.7657 6.46825 8.63524 7.30175 7.80175C8.13524 6.96825 9.2657 6.5 10.4444 6.5H17.5556C18.7343 6.5 19.8648 6.96825 20.6983 7.80175C21.5317 8.63524 22 9.7657 22 10.9444V18.0556C22 19.2343 21.5317 20.3648 20.6983 21.1983C19.8648 22.0317 18.7343 22.5 17.5556 22.5H10.4444C9.2657 22.5 8.13524 22.0317 7.30175 21.1983C6.46825 20.3648 6 19.2343 6 18.0556Z"
@@ -388,7 +388,7 @@ const InstaGram = () => {
         stroke="#29422C"
         strokeWidth="1.5"
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
