@@ -87,7 +87,7 @@ const DynamicPage = ({params,id}) => {
 
         {data.imgItems && (
           <div className="flex flex-col gap-12 mt-4">
-            {Blog?.imgItems?.map((item, index) => (
+            {data?.imgItems?.map((item, index) => (
               <div key={index}>
                 <p className="text-center mt-4">{item.title}</p>
 

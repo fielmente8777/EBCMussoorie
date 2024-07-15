@@ -144,6 +144,7 @@ const Footer = () => {
                   <Link href={"/parkcafe"}>Park Cafe</Link>
                   <Link href={"/glamper"}>A Glamper&apos;s Guide</Link>
                   <Link href={"/blogs"}>Blogs</Link>
+                  <Link href={"/ebclanding"}>EBC</Link>
                 </div>
               </div>
             </div>
