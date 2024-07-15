@@ -94,8 +94,6 @@ export default function RootLayout({ children }) {
           }}
         />
 
-       
-
         {/* End Google Tag Manager */}
       </head>
       <body className={ebGaramond.className} suppressHydrationWarning={true}>
