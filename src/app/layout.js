@@ -18,6 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="vKQyk75wG0kfB4x60GCRAmVeErtPS9rgcM9-YNRAvLw"
+        />
         {/* Clarity Script */}
         <Script
           id="clarity-script"
@@ -71,9 +75,30 @@ export default function RootLayout({ children }) {
           }}
         />
 
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PVZG7NGGMG"
+        ></Script>
+        <Script
+          id="google-analytics-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-PVZG7NGGMG');
+        `,
+          }}
+        />
+
+       
+
         {/* End Google Tag Manager */}
       </head>
-      <body className={ebGaramond.className} suppressHydrationWarning={true} >
+      <body className={ebGaramond.className} suppressHydrationWarning={true}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

@@ -10,47 +10,39 @@ import blogData from "../utils/blogData"
 
 const BlogComponent = () => {
 
-    const [activeCategory, setActiveCategory] = React.useState("All");
     const [data, setData] = React.useState(blogData);
 
-    const category = ["All", ...new Set(blogData.map((item) => item.Category))]
+    const category = [...new Set(blogData.map((item) => item.Category))]
 
 
 
     const filterData = React.useCallback((category) => {
 
-        if (category === "ALL") {
-            setData(blogData);
-        } else {
-            const filteredData = blogData.filter(
-                (item) => item.Category === category
-            )
+        if (category) {
+            const filteredData = blogData.filter((item) => item.Category === category);
             setData(filteredData);
+        }else{
+                setData(blogData);
         }
-        setActiveCategory(category);
     }, [])
 
-    // React.useEffect(() => {
-    //     filterData("All");
-    // }, [filterData]);
+   
 
     return (
         <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
             <div className="flex gap-4 items-center">
-                {/* <button
+                <button
                     onClick={() => filterData(null)}
                     className="hover:bg-[#29422C] px-4 py-1 hover:text-white capitalize"
                 >
                     All
-                </button> */}
+                </button>
                 {category.map((item, index) => (
                     <button
                         key={index}
                         onClick={() => filterData(item)}
-                        className={`px-4 py-1 capitalize ${activeCategory === item
-                                ? "bg-[#29422C] text-white"
-                                : "hover:bg-[#29422C] hover:text-white"
-                            }`}
+                        
+                        className="hover:bg-[#29422C] px-4 py-1 hover:text-white capitalize"
                     >
                         {item}
                     </button>
