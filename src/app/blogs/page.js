@@ -1,4 +1,4 @@
-import BlogComponent from "./BlogComponent";
+import BlogComponent from "../../components/BlogComponent";
 export const metadata = {
   title: "Blog - EBC Mussoorie",
   description:

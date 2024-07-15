@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const OutdoorActivitiesCard = () => {
@@ -10,9 +11,9 @@ const OutdoorActivitiesCard = () => {
         {`     Discover thrilling outdoor activities like badminton, archery, mountain biking, and hooping. Join the brave for haunted walks around the campsite or witness the stunning sunrise at Mussoorie's Lal Tibba. For a unique challenge, partake in a momo-eating contest and unite with fellow birdwatchers at Benog Wildlife Sanctuary. Explore numerous hikes and trails for an unforgettable adventure.`}
       </div>
 
-      <button className="justify-center self-start px-8 py-2 mt-6 text-lg font-medium tracking-normal text-white bg-[#29422C] rounded-sm leading-[144%]">
+      <Link href={"https://live.ipms247.com/booking/book-rooms-everestbasecamp"} target="_blank" className="justify-center self-start px-8 py-2 mt-6 text-lg font-medium tracking-normal text-white bg-[#29422C] rounded-sm leading-[144%]">
         Book Now
-      </button>
+      </Link>
     </div>
   );
 };

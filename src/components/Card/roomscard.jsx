@@ -67,6 +67,7 @@ function Roomscard({ title, subtitle, link, images, accomodation, index, descrip
         <div className="flex">
           <Link
             href={link.href}
+            target="_blank"
             className="text-2xl border border-[#29422c] bg-[#29422c] text-md px-8 py-2 text-white rounded-sm hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-black"
           >
             {link.label}

@@ -5,6 +5,7 @@ import Grid2 from "../../../public/landingpage/00 Cover_11zon.jpg";
 import Grid3 from "../../../public/images/30 Games area_11zon.jpg";
 import Grid4 from "../../../public/images/01 Picnic_11zon.jpg";
 import Grid5 from "../../../public/landingpage/Surevyor Facade.jpg";
+import Link from "next/link";
 
 const Grid = () => {
   return (
@@ -67,9 +68,9 @@ const Grid = () => {
           </p>
 
           <div>
-            <button className="px-5 py-1 bg-[#29422C] text-[#acacac] rounded-sm">
+            <Link href={"#contact"} className="px-5 py-1 bg-[#29422C] text-[#acacac] rounded-sm">
               Contact us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

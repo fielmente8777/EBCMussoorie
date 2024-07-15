@@ -175,7 +175,8 @@ function Peakage() {
 
           <div className="flex">
             <Link
-              href={"/"}
+            target="_blank"
+              href={"https://live.ipms247.com/booking/book-rooms-everestbasecamp"}
               className="text-2xl border border-[#29422c] bg-[#29422c] text-md px-8 py-2 text-white rounded-sm hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-black"
             >
               Book Now
@@ -338,7 +339,7 @@ function Peakage() {
       <div className="py-12 px-6">
         <InstaGrid />
         <div className="mt-10">
-          <WhatInstaButton button={"insta"} link="https://instagram.com" />
+          <WhatInstaButton button={"insta"} link="https://www.instagram.com/ebcmussoorie/" />
         </div>
 
         <div className="maxwidth mx-auto mt-10">
@@ -346,9 +347,9 @@ function Peakage() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.5263208281!2d76.76357549901144!3d28.643684629087268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1717564178551!5m2!1sen!2sin"
             width="100%"
             height="450"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
       </div>

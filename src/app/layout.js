@@ -2,6 +2,9 @@ import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Script from "next/script";
+import { FaPhone } from "react-icons/fa6";
+import Link from "next/link";
 
 const ebGaramond = EB_Garamond({ subsets: ["latin"] });
 
@@ -15,9 +18,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Clarity Script */}
+        <Script
+          id="clarity-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "n65gwfsc82");
+            `,
+          }}
+        />
         {/* Google Tag Manager */}
         {/* Google Tag Manager */}
-        <script
+        <Script
+          id="google-tag-manager-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -29,7 +48,9 @@ export default function RootLayout({ children }) {
           }}
         />
         {/* Kiwi SDK */}
-        <script
+        <Script
+          id="kiwi-sdk-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
           (function(w,d,s,c,r,a,m){
@@ -52,7 +73,7 @@ export default function RootLayout({ children }) {
 
         {/* End Google Tag Manager */}
       </head>
-      <body suppressHydrationWarning={true} className={ebGaramond.className}>
+      <body className={ebGaramond.className} suppressHydrationWarning={true} >
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -66,6 +87,22 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <Link
+          href={"tel:+918595274861"}
+          target="_blank"
+          className="whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#12c665] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+        >
+          <span className="sr-only">whats app</span>
+          <FaPhone className="transform" />
+        </Link>
+        {/* <Link
+          href={"tel:+918595274861"}
+          target="_blank"
+          className="whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#29422C] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+        >
+          <span className="sr-only">whats app</span>
+          <FaPhone className="transform" />
+        </Link> */}
       </body>
     </html>
   );

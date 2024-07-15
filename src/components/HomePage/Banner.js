@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../../public/logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 const Banner = () => {
   return (
     <div className="max-w-[1600px] w-full mx-auto h-screen md:max-h-[800px]">
@@ -20,9 +21,9 @@ const Banner = () => {
                 Discover Your Mountain Oasis: Experience Luxury Camping at
                 Everest Base Camp Mussoorie!
               </div>
-              <button className="justify-center self-center px-8 py-2 rounded-sm mt-5 text-base italic leading-6 text-[#29422c] bg-[#D5D5D5]">
+              <Link href={"https://live.ipms247.com/booking/book-rooms-everestbasecamp"} target="_blank" className="justify-center self-center px-8 py-2 rounded-sm mt-5 text-base italic leading-6 text-[#29422c] bg-[#D5D5D5]">
                 Book Now
-              </button>
+              </Link>
             </div>
           </div>
         </div>

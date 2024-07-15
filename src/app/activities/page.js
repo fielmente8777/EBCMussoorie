@@ -18,7 +18,7 @@ const page = () => {
             <AddOn />
             <WhatInstaButton button={"whatsapp"} link="https://google.com" />
             <InstaGrid />
-            <WhatInstaButton button={"insta"} link="https://instagram.com" />
+            <WhatInstaButton button={"insta"} link="https://www.instagram.com/ebcmussoorie/" />
 
             <hr className="h-px my-4 bg-[#D5D5D5] border-0" />
         </div>

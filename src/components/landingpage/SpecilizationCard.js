@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const SpecilizationCard = ({ cardData, index }) => {
   return (
@@ -64,9 +65,9 @@ const SpecilizationCard = ({ cardData, index }) => {
           {cardData.para}
         </div>
         {cardData.button && (
-          <button className="justify-center self-start px-8 py-2 mt-6 text-lg font-medium tracking-normal text-white bg-[#29422C] rounded-sm leading-[144%]">
+          <Link href={"https://live.ipms247.com/booking/book-rooms-everestbasecamp"} target="_blank" className="justify-center self-start px-8 py-2 mt-6 text-lg font-medium tracking-normal text-white bg-[#29422C] rounded-sm leading-[144%]">
             Book Now
-          </button>
+          </Link>
         )}
       </div>
     </div>

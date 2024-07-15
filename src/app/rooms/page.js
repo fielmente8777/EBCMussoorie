@@ -108,7 +108,7 @@ const RoomsAccomodationData = {
 
       link: {
         label: "Book now",
-        href: "/",
+        href: "https://live.ipms247.com/booking/book-rooms-everestbasecamp",
       },
     },
     {
@@ -183,7 +183,7 @@ const RoomsAccomodationData = {
 
       link: {
         label: "Book now",
-        href: "/",
+        href: "https://live.ipms247.com/booking/book-rooms-everestbasecamp",
       },
     },
     {
@@ -258,7 +258,7 @@ const RoomsAccomodationData = {
 
       link: {
         label: "Book now",
-        href: "/",
+        href: "https://live.ipms247.com/booking/book-rooms-everestbasecamp",
       },
     },
     {
@@ -317,7 +317,7 @@ const RoomsAccomodationData = {
 
       link: {
         label: "Book now",
-        href: "/",
+        href: "https://live.ipms247.com/booking/book-rooms-everestbasecamp",
       },
     },
   ],

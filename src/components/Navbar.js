@@ -18,7 +18,7 @@ const Navbar = () => {
       ) : (
         <div className="maxwidth mx-auto flex flex-col">
           <>
-            <div className="grid items-center px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
+            <div className="grid items-center pt-2 px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
               <div
                 className="xl:hidden z-40"
                 onClick={() => {
@@ -61,28 +61,44 @@ const Navbar = () => {
                   loading="lazy"
                   src={Logo}
                   alt="ebc"
-                  className="grow shrink-0 max-w-full aspect-[1.64] w-[308px] max-md:mt-10"
+                  className="grow shrink-0 max-w-full aspect-[1.64] w-[308px]"
                 />
               </Link>
               <div className="hidden xl:flex flex-col items-end max-md:ml-0">
                 <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
                   <div className="w-[20%]"></div>
                   <div className="flex gap-3 px-5 my-auto">
-                    <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"> <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                    <Link
+                      href={"https://www.facebook.com/ebcmussoorie/"}
+                      target="_blank"
+                      className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
+                    >
                       <Face />
-                    </div></Link>
-                    <Link href={"https://www.instagram.com/ebcmussoorie/"} target="_blank">  <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                    </Link>
+                    <Link
+                      href={"https://www.instagram.com/ebcmussoorie/"}
+                      target="_blank"
+                      className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
+                    >
                       <Insta />
-                    </div></Link>
-                    <Link href={"https://www.facebook.com/ebcmussoorie/"} target="_blank"><div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
+                    </Link>
+                    <Link
+                      href={"https://www.facebook.com/ebcmussoorie/"}
+                      target="_blank"
+                      className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
+                    >
                       <Trip />
-                    </div></Link>
-
-
+                    </Link>
                   </div>
-                  <button className="rounded-sm flex-1 justify-center w-[50px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-stone-300">
+                  <Link
+                    href={
+                      "https://live.ipms247.com/booking/book-rooms-everestbasecamp"
+                    }
+                    target="_blank"
+                    className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-stone-300"
+                  >
                     Book Now
-                  </button>
+                  </Link>
                 </div>
               </div>
 
@@ -219,9 +235,15 @@ const HomeNav = () => {
           </div>
 
           <div className="hidden xl:block">
-            <button className="rounded-sm flex-1 justify-center  px-10 py-2 text-lg font-semibold tracking-normal leading-7 text-[] bg-stone-300">
+            <Link
+              href={
+                "https://live.ipms247.com/booking/book-rooms-everestbasecamp"
+              }
+              target="_blank"
+              className="rounded-sm flex items-center justify-center  px-10 py-2 text-lg font-semibold tracking-normal leading-7 text-[] bg-stone-300"
+            >
               Book Now
-            </button>
+            </Link>
           </div>
 
           <div

@@ -16,6 +16,24 @@
   }
 }
 
+body::-webkit-scrollbar{
+  width: .7rem;
+}
+body::-webkit-scrollbar-track{
+  background-color: #D5D5D5;
+  border-radius: 100vw;
+  border: 0.2rem solid rgba(97, 137, 102, .5);
+  margin-block: .3rem;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: hsl(148, 25%, 23%);
+  border-radius: 1rem;
+  &:hover{
+    background-color: hsl(148, 83%, 42%,.5);
+  }
+}
+
 body {
   font-family: "eb garamond", serif;
   background-color: #29422C;

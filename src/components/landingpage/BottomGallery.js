@@ -9,6 +9,7 @@ import insta1 from "../../../public/Instagram/08 Facade-min.jpg";
 import insta2 from "../../../public/Instagram/DJI_0378-min.JPG";
 import insta3 from "../../../public/Instagram/36 Dining_11zon.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 const BottomGallery = () => {
   const data = [insta1, insta2, insta3, insta4];
@@ -55,9 +56,9 @@ const BottomGallery = () => {
       </Swiper>
 
       <div className="flex justify-center mt-8">
-        <button className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-[20px]">
+        <Link href={"https://www.instagram.com/ebcmussoorie/"} target="_blank" className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-[20px]">
           Instagram
-        </button>
+        </Link>
       </div>
     </div>
   );
