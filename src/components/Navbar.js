@@ -18,7 +18,7 @@ const Navbar = () => {
       ) : (
         <div className="maxwidth mx-auto flex flex-col">
           <>
-            <div className="grid items-center pt-2 px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
+            <div className="grid items-center py-3 px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
               <div
                 className="xl:hidden z-40"
                 onClick={() => {
@@ -42,7 +42,7 @@ const Navbar = () => {
                       transition: "all 0.4s",
                     }}
                   >
-                    <HamMenu />
+                    {pathname === "/ebclanding" ? "" : <HamMenu />}
                   </div>
                 )}
               </div>
@@ -114,7 +114,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <div className="hidden xl:flex gap-5 justify-between self-center px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
+            {pathname!== "/ebclanding" ?<div className="hidden xl:flex gap-5 justify-between self-center px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
               <Link
                 href={"/about"}
                 className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
@@ -160,7 +160,7 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-            </div>
+            </div>:""}
             <MobileNav open={open} />
           </>
         </div>
