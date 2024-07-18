@@ -21,7 +21,7 @@ const Banner = () => {
                 Discover Your Mountain Oasis: Experience Luxury Camping at
                 Everest Base Camp Mussoorie!
               </div>
-              <Link href={"https://live.ipms247.com/booking/book-rooms-everestbasecamp"} target="_blank" className="justify-center self-center px-8 py-2 rounded-sm mt-5 text-base italic leading-6 text-[#29422c] bg-[#D5D5D5]">
+              <Link href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"} target="_blank" className="justify-center self-center px-8 py-2 rounded-sm mt-5 text-base italic leading-6 text-[#29422c] bg-[#D5D5D5]">
                 Book Now
               </Link>
             </div>

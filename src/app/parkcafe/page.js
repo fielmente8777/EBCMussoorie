@@ -176,7 +176,7 @@ function Peakage() {
           <div className="flex">
             <Link
             target="_blank"
-              href={"https://live.ipms247.com/booking/book-rooms-everestbasecamp"}
+              href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
               className="text-2xl border border-[#29422c] bg-[#29422c] text-md px-8 py-2 text-white rounded-sm hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-black"
             >
               Book Now

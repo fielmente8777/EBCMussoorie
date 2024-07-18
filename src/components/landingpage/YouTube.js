@@ -225,7 +225,7 @@ const YouTube = () => {
       <div className="flex justify-center">
         <Link
           target="_blank"
-          href={"https://live.ipms247.com/booking/book-rooms-everestbasecamp"}
+          href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
           className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-xl"
         >
           Book

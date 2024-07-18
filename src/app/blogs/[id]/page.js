@@ -8,6 +8,12 @@ export async function generateStaticParams() {
     id: id.toString(), // Convert id to string
   }));
 }
+// export async function generateStaticParams() {
+//   const ids = blogData.map((blog) => blog.id);
+//   return ids.map((id) => ({
+//     id: id.toString(), // Convert id to string
+//   }));
+// }
 
 const page = ({ params }) => {
   const id = params.id;

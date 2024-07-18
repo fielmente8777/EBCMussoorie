@@ -92,7 +92,7 @@ const Navbar = () => {
                   </div>
                   <Link
                     href={
-                      "https://live.ipms247.com/booking/book-rooms-everestbasecamp"
+                      "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
                     }
                     target="_blank"
                     className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-stone-300"
@@ -237,7 +237,7 @@ const HomeNav = () => {
           <div className="hidden xl:block">
             <Link
               href={
-                "https://live.ipms247.com/booking/book-rooms-everestbasecamp"
+                "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
               }
               target="_blank"
               className="rounded-sm flex items-center justify-center  px-10 py-2 text-lg font-semibold tracking-normal leading-7 text-[] bg-stone-300"

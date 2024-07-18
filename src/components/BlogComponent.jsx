@@ -21,12 +21,17 @@ const BlogComponent = () => {
         if (category) {
             const filteredData = blogData.filter((item) => item.Category === category);
             setData(filteredData);
-        }else{
-                setData(blogData);
+        } else {
+            setData(blogData);
         }
     }, [])
 
-   
+
+    const handleBlog = (title) => {
+        // console.log(`/blogs/${item.title}`)
+
+        alert(title)
+    }
 
     return (
         <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
@@ -41,7 +46,7 @@ const BlogComponent = () => {
                     <button
                         key={index}
                         onClick={() => filterData(item)}
-                        
+
                         className="hover:bg-[#29422C] px-4 py-1 hover:text-white capitalize"
                     >
                         {item}
@@ -66,7 +71,11 @@ const BlogComponent = () => {
                             </div>
 
                             <Link
-                                href={`/blog/${item.id}`}
+                                // href="#"
+                                href={`/blogs/${item.id}`}
+                                // href={`/blogs/${item.title}`}
+
+                                // onClick={() => handleBlog(item.title)}
                                 className="lg:col-span-3 p-2"
                             >
                                 <div className="flex gap-4 items-center">
