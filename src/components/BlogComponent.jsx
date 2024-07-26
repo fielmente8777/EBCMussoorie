@@ -71,11 +71,7 @@ const BlogComponent = () => {
                             </div>
 
                             <Link
-                                // href="#"
-                                href={`/blogs/${item.id}`}
-                                // href={`/blogs/${item.title}`}
-
-                                // onClick={() => handleBlog(item.title)}
+                                href={`/blogs/${item.slug}`}
                                 className="lg:col-span-3 p-2"
                             >
                                 <div className="flex gap-4 items-center">

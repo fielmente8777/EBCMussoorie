@@ -9,14 +9,14 @@ import geopark from "../../public/blog/georgepeak.webp";
 import blogData from '@/utils/blogData';
 
 
-const DynamicPage = ({params,id ,path}) => {
+const DynamicPage = ({data}) => {
 
   const category = ["All", ...new Set(blogData.map((item) => item.Category))]
 
   
 
   // const data = blogData.find((item) => item.title === path);
-  const data = blogData.find((item) => item.id == id);
+  // const data = blogData.find((item) => item.id == id);
   
   return (
     <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">

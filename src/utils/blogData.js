@@ -12,6 +12,7 @@ const blogData = [
   {
     id: 1,
     Category: "EBC",
+    slug:"Unleashing-Adventure-Exploring-the-Thrilling-Trekking-Trails-at-Everest-Base-Camp",
     title: `Unleashing Adventure: Exploring the Thrilling Trekking Trails at Everest Base Camp`,
     subtitle:
       "Get your backpack ready as we dive into the world of trekking trails at Everest Base Camp",
@@ -31,6 +32,7 @@ const blogData = [
   {
     id: 2,
     Category: "EBC",
+    slug:"Unplugging-in-Nature-The-Healing-Power-of-a-Digital-Detox-Retreat",
     title: `Unplugging in Nature: The Healing Power of a Digital Detox Retreat`,
     subtitle:
       "In today's fast-paced world, where technology reigns supreme, there's a growing need to unplug and reconnect with the natural world. That's where the concept of a digital detox retreat comes in. Imagine a getaway where the incessant pings of notifications are replaced by the soothing sounds of nature. Welcome to Everest Base Camp Mussoorie, a sanctuary for those seeking a break from the digital chaos.",
@@ -76,6 +78,7 @@ const blogData = [
   {
     id: 3,
     Category: "EBC",
+    slug:"Planning-a-Romantic-Getaway-Creating-Memories-at-Everest-Base-Camp-Mussoorie",
     title: `Planning a Romantic Getaway: Creating Memories at Everest Base Camp Mussoorie`,
     subtitle: `Imagine a romantic escape where every moment feels like a cherished memory in the making. Welcome to Everest Base Camp Mussoorie, where the magic of the hills meets the intimacy of a romantic getaway. Whether you're celebrating an anniversary, planning a proposal, or simply nurturing your love, our luxury resort offers an enchanting setting for couples to create unforgettable moments.
             `,
@@ -127,6 +130,7 @@ const blogData = [
   {
     id: 4,
     Category: "EBC",
+    slug:"Family-Adventure-Making-Mussoorie-a-Fun-Filled-Destination-for-All-Ages",
     title: `Family Adventure: Making Mussoorie a Fun-Filled Destination for All Ages`,
     subtitle: `When it comes to family vacations, finding a destination that caters to the interests of every member can be a challenge. Look no further than Everest Base Camp Mussoorie, a paradise where adventure, relaxation, and bonding come together to create the perfect family getaway.`,
     lastupdate: "Last updated 3 mins ago",
@@ -188,6 +192,7 @@ const blogData = [
   {
     id: 5,
     Category: "EBC",
+    slug:"Exploring-Mussoorie-Must-Visit-Attractions-and-Hidden-Gems",
     title: `Exploring Mussoorie: Must-Visit Attractions and Hidden Gems`,
     subtitle: `Mussoorie, the "Queen of Hills," is a captivating destination that offers a mix of iconic attractions and hidden gems waiting to be discovered. From breathtaking viewpoints to serene nature spots, there's something for every traveler in this hill station. Let's take you on a journey through the must-visit attractions and lesser-known treasures that Mussoorie has to offer which you and your entire family can enjoy while exploring Mussoorie.`,
 
@@ -276,6 +281,7 @@ const blogData = [
   {
     id: 6,
     Category: "EBC",
+    slug: "enjoying-the-best-luxury-camping-in-mussoorie-a-comprehensive-guide-to-ebc-mussoorie",
     title: `Enjoying The Best Luxury Camping in Mussoorie: A Comprehensive Guide to EBC Mussoorie`,
     subtitle: `When you think of luxury camping, what comes to mind? An idyllic getaway to a picturesque destination, perhaps? Look no further than EBC Mussoorie, a camping paradise nestled in the foothills of the Himalayas that offers an unforgettable experience. With stunning views, sun-filled skies, and an abundance of activities, EBC Mussoorie is the perfect place to enjoy a luxurious camping holiday. From thrilling adventure activities to cozy campfire nights, EBC Mussoorie has something for everyone.`,
 
@@ -385,6 +391,7 @@ const blogData = [
   {
     id: 7,
     Category: "EBC",
+    slug:"the-best-restaurant-in-the-hills-a-guide-to-the-park-cafe",
     title: `The Best Restaurant in the Hills: A Guide to the Park Cafe`,
     subtitle: `looking for an unforgettable dining experience in the hills, the Park Cafe at EBC Mussoorie is the perfect destination.`,
 
@@ -396,6 +403,7 @@ const blogData = [
   {
     id: 8,
     Category: "EBC",
+    slug:"sustainable-tourism-preserving-the-beauty-of-mussoorie-for-future-generations",
     title: `Sustainable Tourism: Preserving the Beauty of Mussoorie for Future Generations`,
     subtitle: `Enjoy Mussoorie while minimizing our impact on the environment. Join us on a journey toward responsible travel!.`,
     lastupdate: "Last updated 3 mins ago",
@@ -406,6 +414,7 @@ const blogData = [
   {
     id: 9,
     Category: "EBC",
+    slug:"george-Everest-peak-one-of-the-most-legendary-places-in-mussoorie",
     title: `George Everest Peak, one of the most Legendary places in Mussoorie`,
     subtitle: `Discovering the historic legacy of Sir George Everest and the breathtaking beauty of Mussoorie near EBC Mussoorie`,
 
@@ -417,6 +426,7 @@ const blogData = [
   {
     id: 10,
     Category: "Sustainablity",
+    slug:"sustainable-tourism-preserving-the-beauty-of-mussoorie-for-future-generations",
     title: `
           Sustainable Tourism: Preserving the Beauty of Mussoorie for Future Generations`,
     subtitle:
@@ -438,6 +448,7 @@ const blogData = [
   {
     id: 11,
     Category: "Activity",
+    slug:"unleashing-adventure-exploring-the-thrilling-trekking-trails-at-Everest-base-camp",
     title: `
           Unleashing Adventure: Exploring the Thrilling Trekking Trails at Everest Base Camp`,
     subtitle:
@@ -476,6 +487,7 @@ const blogData = [
   {
     id: 12,
     Category: "Activity",
+    slug:"Enjoying-the-best-luxury-camping-in-mussoorie-a-comprehensive-guide-to-ebc-mussoorie",
     title: `
           Enjoying The Best Luxury Camping in Mussoorie: A Comprehensive Guide to EBC Mussoorie`,
 
@@ -587,6 +599,7 @@ const blogData = [
   {
     id: 13,
     Category: "Activity",
+    slug:"george-Everest-peak-one-of-the-most-legendary-places-in-mussoorie",
     title: `
           George Everest Peak, one of the most Legendary places in Mussoorie`,
     subtitle:
@@ -601,6 +614,7 @@ const blogData = [
   {
     id: 14,
     Category: "Park Cafe",
+    slug:"the-best-restaurant-in-the-hills-a-guide-to-the-park-cafe",
     title: `
           The Best Restaurant in the Hills: A Guide to the Park Cafe`,
     subtitle:
@@ -613,6 +627,7 @@ const blogData = [
   {
     id: 15,
     Category: "Mussoorie",
+    slug:"unplugging-in-nature-the-healing-power-of-a-digital-detox-retreat",
     title: `
           Unplugging in Nature: The Healing Power of a Digital Detox Retreat`,
     subtitle:
@@ -660,6 +675,7 @@ const blogData = [
   {
     id: 16,
     Category: "Mussoorie",
+    slug:"Family-Adventure-Making-Mussoorie-a-Fun-Filled-Destination-for-All-Ages",
     title: `Family Adventure: Making Mussoorie a Fun-Filled Destination for All Ages`,
     subtitle: `When it comes to family vacations, finding a destination that caters to the interests of every member can be a challenge. Look no further than Everest Base Camp Mussoorie, a paradise where adventure, relaxation, and bonding come together to create the perfect family getaway.`,
     lastupdate: "Last updated 3 mins ago",
@@ -722,6 +738,7 @@ const blogData = [
   {
     id: 17,
     Category: "couples",
+    slug:"Planning-a-Romantic-Getaway-Creating-Memories-at-Everest-Base-Camp-Mussoorie",
     title: `Planning a Romantic Getaway: Creating Memories at Everest Base Camp Mussoorie`,
     subtitle: `Imagine a romantic escape where every moment feels like a cherished memory in the making. Welcome to Everest Base Camp Mussoorie, where the magic of the hills meets the intimacy of a romantic getaway. Whether you're celebrating an anniversary, planning a proposal, or simply nurturing your love, our luxury resort offers an enchanting setting for couples to create unforgettable moments.
             `,
