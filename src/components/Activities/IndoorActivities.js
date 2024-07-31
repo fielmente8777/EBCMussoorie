@@ -5,20 +5,21 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import indoor1 from "../../../public/activity/activity3.png"
-import indoor2 from "../../../public/activity/activity4.png"
-import indoor3 from "../../../public/activity/boardgame.jpg"
+import indoor1 from "../../../public/activity/activity3.png";
+import indoor2 from "../../../public/activity/activity4.png";
+import indoor3 from "../../../public/activity/boardgame.jpg";
 
 import Image from "next/image";
+import Link from "next/link";
 const IndoorActivities = () => {
   const images = [indoor1, indoor2, indoor3];
   return (
-    <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 overflow-hidden w-full">
+    <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 overflow-hidden w-full py-16">
       <div className="flex flex-col gap-5  items-center">
         <h2 className="text-[42px] max-md:text-center text-white font-medium leading-[45px]">
           Indoor Activities
         </h2>
-        <p className=" text-center max-md:text-justify text-white">
+        <p className=" text-center max-md:text-justify text-white max-w-2xl">
           Explore our diverse range of board games perfect for a cosy indoor
           adventure. Join us for a relaxing day of strategic fun and friendly
           competition.
@@ -59,14 +60,24 @@ const IndoorActivities = () => {
                 src={roomImage}
                 className="h-full object-cover"
                 alt="roomImage"
-              // width={600}
-              // height={400}
+                // width={600}
+                // height={400}
               />
             </SwiperSlide>
           );
         })}
       </Swiper>
       {/* </div> */}
+
+      <div className="flex justify-center">
+        <Link
+          target="_blank"
+          href="https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
+          className="px-5 py-2 text-lg text-[#29422C] bg-[#E5E7EB] capitalize hover:bg-[#D5D5D5]"
+        >
+          Book Now
+        </Link>
+      </div>
     </div>
   );
 };

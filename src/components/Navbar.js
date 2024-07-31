@@ -5,7 +5,7 @@ import Image from "next/image";
 import { MdCall } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Face, Insta, Trip } from "../icons/icons";
+import { Face, Insta, Trip } from "../icons/icons.jsx";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -16,7 +16,7 @@ const Navbar = () => {
       {pathname === "" ? (
         <HomeNav />
       ) : (
-        <div className="maxwidth mx-auto flex flex-col">
+        <div className="maxwidth mx-auto flex flex-col lg:pb-3">
           <>
             <div className="grid items-center py-3 px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
               <div
@@ -95,7 +95,7 @@ const Navbar = () => {
                       "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
                     }
                     target="_blank"
-                    className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-stone-300"
+                    className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
                   >
                     Book Now
                   </Link>

@@ -1,3 +1,4 @@
+import PressReleases from "@/components/HomePage/PressReleases";
 import About from "../components/HomePage/About";
 import Aminities from "../components/HomePage/Aminities";
 import Banner from "../components/HomePage/Banner";
@@ -6,6 +7,7 @@ import Momories from "../components/HomePage/Momories";
 
 import OurSpecialization from "../components/landingpage/OurSpecialization";
 import Testimonial from "../components/landingpage/Testimonial";
+import OurPartners from "@/components/HomePage/OurPartners";
 
 const page = () => {
   return (
@@ -14,9 +16,12 @@ const page = () => {
       <About />
       <Momories />
       <Aminities />
-      <OurSpecialization />
+      {/* <OurSpecialization /> */}
+      <PressReleases />
+      <OurPartners />
+      <div className="lg:py-2"></div>
       <Blog />
-      <Testimonial />
+      {/* <Testimonial /> */}
     </div>
   );
 };

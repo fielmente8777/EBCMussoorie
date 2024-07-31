@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 const ActivitiesCard = ({ activitiesData, index }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-3 bg-[#D5D5D5] rounded-sm min-h-[400px] ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-6 py-7 bg-[#D5D5D5] rounded-xl min-h-[400px] ">
       <div
         className={`col-span-2  ${index === 1 || index === 3 ? "order-2" : ""}`}
       >
@@ -42,7 +42,7 @@ const ActivitiesCard = ({ activitiesData, index }) => {
                 <Image
                   src={roomImage}
                   alt="roomImage"
-                  className="h-full object-cover"
+                  className="h-full object-cover rounded-xl"
                   width={600}
                   height={400}
                 />

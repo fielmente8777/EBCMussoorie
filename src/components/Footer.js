@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "../../public/logo.svg";
 import Image from "next/image";
-import { Face, Insta, Trip } from "../icons/icons";
+import { Face, Insta, Trip } from "../icons/icons.jsx";
 import { IoMail } from "react-icons/io5";
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       {pathname === "/landingpage" ? (
-        <div className="flex flex-col py-10">
+        <div className="flex flex-col pt-10">
           <div className="self-center max-md:px-3 w-full max-w-[1280px] max-md:max-w-full">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
               <div className="flex flex-col w-[41%] max-md:ml-0 max-md:w-full">
@@ -105,7 +105,7 @@ const Footer = () => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col py-10">
+        <div className="flex flex-col pt-10">
           <div className="flex justify-between gap-20  maxwidth mx-auto max-md:flex-wrap max-md:max-w-full  px-5">
             <div className="flex flex-col md:w-[39%] w-full">
               <div className="flex flex-col  text-white max-md:mt-10 max-md:max-w-full">

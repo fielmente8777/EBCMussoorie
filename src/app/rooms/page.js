@@ -9,6 +9,7 @@ import {
   Lotus,
   PlateWithSpoon,
   Verified,
+  Whatsapp,
   Wifi,
 } from "../../icons/icons";
 import Link from "next/link";
@@ -115,7 +116,10 @@ const RoomsAccomodationData = {
       title: "The Glamper",
       description: "Opulent Nature  | 1-3 people  | 375sqft",
       subtitle:
-        "Glamper combines sophistication and style, providing a luxurious glamping experience in the wilderness of Everest Base Camp, Mussoorie. Enjoy plush interiors and exclusive luxury rooms for a truly indulgent retreat. Step into a world of extravagance and nature as you sip on delicious hot chocolate and admire the beauty of the Deodar forest. Best suited for small groups. Don't miss our special netted balcony space, perfect for capturing Instagram-worthy moments.",
+        "Glamper combines sophistication and style, providing a luxurious glamping experience in the wilderness of Everest Base Camp, Mussoorie. Enjoy plush interiors and exclusive luxury rooms for a truly indulgent retreat. Step into a world of extravagance and nature as you sip on delicious hot chocolate and admire the beauty of the Deodar forest. Best suited for small groups. ",
+
+      subtitle2:
+        "Don't miss our special netted balcony space, perfect for capturing Instagram-worthy moments.",
       accomodation: [
         {
           icon: <FoodService />,
@@ -190,7 +194,9 @@ const RoomsAccomodationData = {
       title: "The Surveyor",
       description: "Meadow view Cabins  | 1-3 people  | 450sqft",
       subtitle:
-        "Experience in the ultimate wilderness retreat amidst our expansive 20 acres of spacious tents, offering the best views of a lush green forest meadow. After a day of exploration, find solace and rejuvenate your senses in the serene surroundings, surrounded by breathtaking views of the Deodar forest. Best Suited for families or small friend groups. Enjoy utmost privacy and comfort in our tranquil ambiance, inviting you to rediscover yourself amidst nature's embrace.",
+        "Experience in the ultimate wilderness retreat amidst our expansive 20 acres of spacious tents, offering the best views of a lush green forest meadow. After a day of exploration, find solace and rejuvenate your senses in the serene surroundings, surrounded by breathtaking views of the Deodar forest. Best Suited for families or small friend groups. ",
+      subtitle2:
+        "Enjoy utmost privacy and comfort in our tranquil ambiance, inviting you to rediscover yourself amidst nature's embrace.",
       accomodation: [
         {
           icon: <FoodService />,
@@ -265,7 +271,9 @@ const RoomsAccomodationData = {
       title: "The Surveyor Suit",
       description: "Opulent Wilderness  | 1-4 people | 600sqft",
       subtitle:
-        "Experience unparalleled luxury amidst nature in our Surveyor Suite at Everest Base Camp, Mussoorie. Immerse yourself in a meticulously designed tent featuring spacious living areas, extravagant amenities, and breathtaking forest views. Relax in style with a king-sized bed and the option to set up a queen-sized sofa bed, accommodating up to four people. Perfect for families or friend groups of 4. Enjoy the utmost privacy and seclusion in our most premium and spacious room, offering tranquility and indulgence like never before.",
+        "Experience unparalleled luxury amidst nature in our Surveyor Suite at Everest Base Camp, Mussoorie. Immerse yourself in a meticulously designed tent featuring spacious living areas, extravagant amenities, and breathtaking forest views. Relax in style with a king-sized bed and the option to set up a queen-sized sofa bed, accommodating up to four people. Perfect for families or friend groups of 4.",
+      subtitle2:
+        " Enjoy the utmost privacy and seclusion in our most premium and spacious room, offering tranquility and indulgence like never before.",
       accomodation: [
         {
           icon: <FoodService />,
@@ -326,7 +334,7 @@ const RoomsAccomodationData = {
 const page = () => {
   return (
     <section>
-      <div className="grid lg:grid-cols-5 mt-8 items-center">
+      <div className="lg:grid lg:grid-cols-5 mt-8 items-center flex flex-col-reverse">
         <div className="col-span-2 h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-4">
           <h2 className="text-5xl font-bold text-[#29422C]">
             Escape from the Urban Hustle!
@@ -366,12 +374,22 @@ const page = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 maxwidth mx-auto mt-10 px-4">
+     <div className="mt-10">
+     <div className="flex flex-col gap-10 maxwidth mx-auto px-4">
         {RoomsAccomodationData.items.map((item, index) => (
           <Roomscard {...item} index={index} key={index} />
         ))}
       </div>
-
+     </div>
+      <div className="w-full flex justify-center mt-10">
+        <Link
+          href={"https://api.whatsapp.com/send?phone=918595274861&text=Hi"}
+          target="_blank"
+          className="text-[#29422C] text-xl font-semibold px-5 py-2 bg-[#BCD0B8] rounded-sm hover:bg-[#E5E7EB]/70  duration-300 active:scale-75 hover:scale-105  flex items-center gap-2"
+        >
+          WhatsApp Us <Whatsapp />
+        </Link>
+      </div>
       <div className="bg-[#BCD0B8] py-12 mt-10">
         <div className="grid md:grid-cols-2 gap-8 maxwidth px-6 mx-auto items-center">
           <div>

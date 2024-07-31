@@ -22,12 +22,15 @@ const OurCuisine = ({ images }) => {
                 <Swiper
                     loop={true}
                     autoplay={{
-                        delay: 2000,
+                        delay: 2500,
+                        disableOnInteraction: false,
                     }}
+                    speed={1000}
                     pagination={{
                         el: "#bullets-Portfolio",
                     }}
                     slidesPerView={1}
+                    spaceBetween={20}
                     navigation={{
                         prevEl: ".prev-btn",
                         nextEl: ".next-btn",
@@ -38,23 +41,24 @@ const OurCuisine = ({ images }) => {
                             slidesPerView: 3,
                             spaceBetween: 20,
                         },
-                        //   1024: {
-                        //     slidesPerView: 3,
-                        //     spaceBetween: 20,
-                        //   },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
                     }}
                     className="w-full"
                 >
                     {images?.map((item, index) => {
                         return (
                             <SwiperSlide key={index} className="">
-                                <Image
-                                    alt="image"
-                                    src={item.img}
-                                    width={600}
-                                    height={400}
-                                    className="md:h-[360px] object-cover"
-                                />
+                                <div className="w-full h-[300px] relative aspect-[1/1]">
+                                    <Image
+                                        alt="image"
+                                        src={item.img}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
                                 <h2 className="text-center capitalize mt-2 text-2xl">
                                     {item.title}
                                 </h2>

@@ -20,7 +20,7 @@ const BlogCard = ({ data }) => {
         />
       </div>
 
-      <div className="flex flex-col  max-md:w-full h-full">
+      <div className="flex flex-col  max-md:w-full h-full border-t border-transparent">
         <div className="flex flex-col grow gap-3 px-4 py-4 mx-auto w-full text-xs bg-[#29422C] text-neutral-400">
           <div className="self-start">EBC Mussoorie</div>
           <div className="flex gap-2.5 self-start">

@@ -9,9 +9,9 @@ import Link from "next/link";
 
 const Grid = () => {
   return (
-    <div className="maxwidth mx-auto secBack ">
-      <div className="flex flex-col lg:flex-row p-3 gap-3   ">
-        <div className="w-full lg:w-[70%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3    ">
+    <div className="maxwidth lg:px-0 px-3 py-4">
+      <div className="flex flex-col lg:flex-row p-5 gap-3 secBack rounded-xl">
+        <div className="w-full lg:w-[65%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3    ">
           <div className=" ">
             <Image
               src={Grid1}
@@ -58,17 +58,20 @@ const Grid = () => {
             />
           </div>
         </div>
-        <div className="w-full lg:w-[30%] flex flex-col gap-4">
-          <h1 className="text-[42px] font-medium text-center leading-[45px] md:px-5 text-[#29422C]">
+        <div className="w-full lg:w-[35%] flex flex-col gap-4">
+          <h1 className="lg:text-5xl text-3xl font-medium leading-[45px] text-[#29422C]">
             Relax & Rejuvenate with us at Everest Base Camp!
           </h1>
 
-          <p className="text-[20px] text-[#29422c] text-justify">
+          <p className="text-lg text-[#29422c] text-justify">
             {`Escape the urban chaos and embrace a tranquil retreat in nature's embrace. Join us for a unique glamping experience that transcends the ordinary. Immerse yourself in the serenity of the great outdoors, where city stress fades away, replaced by the soothing symphony of rustling leaves and chirping birds. Be our guest, unwind, and rediscover the joy of simplicity. It's time to trade skyscrapers for star-studded skies. Your adventure in nature awaits – let the relaxation begin!`}
           </p>
 
           <div>
-            <Link href={"#contact"} className="px-5 py-1 bg-[#29422C] text-[#acacac] rounded-sm">
+            <Link
+              href={"#contact"}
+              className="px-8 flex justify-center items-center w-max py-2 rounded-xl bg-[#29422C] text-[#fff] capitalize text-lg"
+            >
               Contact us
             </Link>
           </div>

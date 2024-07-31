@@ -22,6 +22,9 @@ const Momories = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8 max-md:flex-wrap max-md:max-w-full">
           <div className="md:w-[300px] h-[500px] md:h-[500px] rounded-3xl border-[10px] border-black  flex items-start justify-start">
+            {/* <button className="inline-flex items-center justify-center px-8 py-4">
+              <PrevBtn />
+            </button> */}
             <Swiper
               loop={true}
               autoplay={{
@@ -65,13 +68,13 @@ const Momories = () => {
           </div>
           <div className="flex flex-col self-stretch my-auto text-base">
             <div className="text-[18px] leading-6 text-justify text-[#29422C]">
-              {`Each of our five spacious rooms has a distinctive and quirky feel
-                            inspired by nature. Equipped with top-of-the-range bed and bath
-                            fittings, the rooms provide uninterrupted views of the hill ranges
-                            and lush forests. A long corridor adjoining the rooms and a cozy
-                            patio overlooking the jungle provide ample space to relax and
-                            unwind. Come experience a songbird wake-up call and immerse
-                            yourself in nature's tranquility at our resort.`}
+              Each of our five spacious rooms has a distinctive and quirky feel
+              inspired by nature. Equipped with top-of-the-range bed and bath
+              fittings, the rooms provide uninterrupted views of the hill ranges
+              and lush forests. A long corridor adjoining the rooms and a cozy
+              patio overlooking the jungle provide ample space to relax and
+              unwind. Come experience a songbird wake-up call and immerse
+              yourself in nature&apos;s tranquility at our resort.
             </div>
             <Link
               href={"/rooms"}
@@ -87,3 +90,41 @@ const Momories = () => {
 };
 
 export default Momories;
+
+export const PrevBtn = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="39"
+      viewBox="0 0 22 39"
+      fill="none"
+    >
+      <path
+        d="M19.3989 36.8937L2 19.5001L19.3989 2.10645L19.9988 2.70623L3.11421 19.5001L19.9988 36.2939L19.3989 36.8937Z"
+        fill="#8CA18F"
+        stroke="#8CA18F"
+        stroke-width="2"
+      />
+    </svg>
+  );
+};
+
+export const NextBtn = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="39"
+      viewBox="0 0 22 39"
+      fill="none"
+    >
+      <path
+        d="M2 36.8937L19.3989 19.5001L2 2.10645L2.60006 2.70623L20.4857 19.5001L2.60006 36.2939L2 36.8937Z"
+        fill="#8CA18F"
+        stroke="#8CA18F"
+        stroke-width="2"
+      />
+    </svg>
+  );
+};

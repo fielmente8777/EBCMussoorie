@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: #d5d5d5;
+  border-radius: 100vw;
+  border: 0.2rem solid rgba(97, 137, 102, 0.5);
+  margin-block: 0.3rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(148, 25%, 23%);
+  border-radius: 1rem;
+  &:hover {
+    background-color: hsl(148, 83%, 42%, 0.5);
+  }
+}
+
+body {
+  font-family: "eb garamond", serif;
+  background-color: #29422c;
+}
+
+.maxwidth {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.secBack {
+  background-color: #d5d5d5;
+}
+
+.back {
+  background-image: url("../../public/images//mountain.png");
+}
+
+.banner {
+  background-image: url("../../public/images/image1 1.png");
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@layer utilities {
+  .no-spinner::-webkit-outer-spin-button,
+  .no-spinner::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+
+  .no-spinner {
+    @apply appearance-none;
+  }
+}
+
+.press {
+  .bullets-Portfolio {
+    .swiper-pagination-bullet {
+      border: 2px solid #ffffff;
+      background-color: transparent;
+      width: 1rem;
+      height: 1rem;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #fff;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+.slide_page_indicator {
+  .swiper-pagination-bullet {
+    border: 2px solid #29422C;
+    background-color: transparent;
+    width: 1rem;
+    height: 1rem;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #29422C;
+    width: 1rem;
+    height: 1rem;
+  }
+}

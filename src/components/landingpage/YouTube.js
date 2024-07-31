@@ -4,7 +4,7 @@ import React from "react";
 const YouTube = () => {
   return (
     <>
-      <div className="maxwidth mx-auto flex flex-col md:flex-row gap-10 md:h-[400px] overflow-hidden max-md:px-3 ">
+      <div className="maxwidth mx-auto flex flex-col md:flex-row gap-10 md:h-[400px] overflow-hidden max-md:px-3 py-10">
         <div className="flex flex-col gap-4 w-full md:w-[40%] lg:w-[40%]">
           <h2 className="text-[42px] text-white font-medium leading-[45px]">
             OUR AMENITIES
@@ -211,7 +211,7 @@ const YouTube = () => {
           </ul>
         </div>
         <div className="w-full h-[100%] md:w-[60%] lg:w-[60%]">
-          <div className="img-container">
+          <div className="img-container rounded-xl overflow-hidden">
             <iframe
               width="100%"
               height="400px"
@@ -226,9 +226,9 @@ const YouTube = () => {
         <Link
           target="_blank"
           href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
-          className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-xl"
+          className="px-8 py-2 rounded-md bg-[#D5D5D5] text-xl"
         >
-          Book
+          Book Now
         </Link>
       </div>
     </>

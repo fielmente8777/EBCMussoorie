@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-function Roomscard({ title, subtitle, link, images, accomodation, index, description }) {
+function Roomscard({ title, subtitle, link, images, accomodation, index, description ,subtitle2}) {
   return (
     <div
       className="grid lg:grid-cols-2 grid-cols-1 bg-[#bcd0b8] items-center rounded-lg shadow-inner"
@@ -49,6 +49,7 @@ function Roomscard({ title, subtitle, link, images, accomodation, index, descrip
         <p className="text-xl text-[#063333] ">{description}</p>
 
         <p className="text-xl text-[#063333] text-justify">{subtitle}</p>
+       {subtitle2 && <p className="text-xl text-[#063333] text-justify">{subtitle2}</p>}
 
         <div className="grid md:grid-cols-9 grid-cols-5 gap-6 border-y border-y-[#29422c] px-3 py-5">
           {accomodation?.map(

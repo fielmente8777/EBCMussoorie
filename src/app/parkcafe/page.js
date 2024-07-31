@@ -26,12 +26,12 @@ import img1 from "../../../public/picnic/_MG_1465.JPG";
 import img2 from "../../../public/picnic/_MG_2878.JPG";
 import SpecilizationCard from ".././../components/landingpage/SpecilizationCard";
 
-
 import InstaGrid from "../../components/Activities/InstaGrid";
 import WhatInstaButton from "../../utils/WhatInstaButton";
 import OurCuisine from "./OurCuisine.jsx";
 import HappyCustomers from "./HappyCustomers.jsx";
-import OurAmenities from './OurAmenities'
+import OurAmenities from "./OurAmenities";
+import { FillCall } from "@/icons/icons";
 
 export const metadata = {
   title: "Best Cafe in Mussoorie | Green Restaurant Mussoorie - EBC",
@@ -42,17 +42,17 @@ export const metadata = {
 const datas = [
   {
     heading: "Barbeque in the Shadows!",
-    para: `Join us for "Barbeque in the Shadows," a cozy fireside evening filled with delicious bite-sized treats and treasured memories. Our serene property, acclaimed as the finest eatery in Mussoorie, sets the perfect stage for intimate celebrations and relaxation, enhancing the pleasure of unwinding together.
-
-        Enjoy a private bonfire, a beautifully decorated candlelight table, and personalized butler service, all while selecting from a rich and varied menu under the flicker of Mashal torches.`,
+    para: `Join us for "Barbeque in the Shadows," a cozy fireside evening filled with delicious bite-sized treats and treasured memories. Our serene property, acclaimed as the finest eatery in Mussoorie, sets the perfect stage for intimate celebrations and relaxation, enhancing the pleasure of unwinding together.`,
+    para2:
+      "Enjoy a private bonfire, a beautifully decorated candlelight table, and personalized butler service, all while selecting from a rich and varied menu under the flicker of Mashal torches.",
     images: [barque1],
     button: "book now",
   },
   {
     heading: "Picnic in the Meadows!",
-    para: `Experience an enchanting outdoor gathering surrounded by the wonders of nature, complemented by an Instagram-worthy picnic in the meadows. With vibrant pop color cutlery and chinaware, luxurious cushioned seating on carpets, and the option of tables and chairs under a picnic umbrella, every moment becomes a picture-perfect celebration.
-
-        Savor in our multi-cuisine menu, offering a range of delectable options, perfect for a unique day dining experience in the mountains with your loved ones.  `,
+    para: `Experience an enchanting outdoor gathering surrounded by the wonders of nature, complemented by an Instagram-worthy picnic in the meadows. With vibrant pop color cutlery and chinaware, luxurious cushioned seating on carpets, and the option of tables and chairs under a picnic umbrella, every moment becomes a picture-perfect celebration.`,
+    para2:
+      "Savor in our multi-cuisine menu, offering a range of delectable options, perfect for a unique day dining experience in the mountains with your loved ones.",
     images: [picnic1, picnic2],
     button: "book now",
   },
@@ -75,56 +75,114 @@ const images = [
     title: "chai/coffee",
     img: chai,
   },
-];
-
-const testimonal = [
   {
     title: "Pasta Alfredo",
-    subtle: `  The property feels almost enigmatic, the location is
-    surreal, and the view of the forest as soon as you wake up
-    is something to die for. It's so mellow and peaceful here,
-    the rooms are luxurious but it also feels like an
-    adventure. Would 11/10 recommend this to everybody who are
-    looking for a pristine and peaceful`,
-    img: c1,
+    img: pasta,
   },
   {
     title: "crispy veg burger",
-    subtle: `  The property feels almost enigmatic, the location is
-    surreal, and the view of the forest as soon as you wake up
-    is something to die for. It's so mellow and peaceful here,
-    the rooms are luxurious but it also feels like an
-    adventure. Would 11/10 recommend this to everybody who are
-    looking for a pristine and peaceful`,
-    img: c1,
+    img: burger,
   },
   {
     title: "butter chicken",
-    subtle: `  The property feels almost enigmatic, the location is
-    surreal, and the view of the forest as soon as you wake up
-    is something to die for. It's so mellow and peaceful here,
-    the rooms are luxurious but it also feels like an
-    adventure. Would 11/10 recommend this to everybody who are
-    looking for a pristine and peaceful`,
-    img: c1,
+    img: butterchicken,
   },
   {
     title: "chai/coffee",
-    subtle: `  The property feels almost enigmatic, the location is
-    surreal, and the view of the forest as soon as you wake up
-    is something to die for. It's so mellow and peaceful here,
-    the rooms are luxurious but it also feels like an
-    adventure. Would 11/10 recommend this to everybody who are
-    looking for a pristine and peaceful`,
-    img: c1,
+    img: chai,
   },
 ];
 
+// const testimonal = [
+//   {
+//     title: "Pasta Alfredo",
+//     date: "3 weeks ago on Google",
+//     subtle: `  The property feels almost enigmatic, the location is
+//     surreal, and the view of the forest as soon as you wake up
+//     is something to die for. It's so mellow and peaceful here,
+//     the rooms are luxurious but it also feels like an
+//     adventure. Would 11/10 recommend this to everybody who are
+//     looking for a pristine and peaceful`,
+//     img: c1,
+//   },
+//   {
+//     title: "crispy veg burger",
+//     date: "3 weeks ago on Google",
+//     subtle: `  The property feels almost enigmatic, the location is
+//     surreal, and the view of the forest as soon as you wake up
+//     is something to die for. It's so mellow and peaceful here,
+//     the rooms are luxurious but it also feels like an
+//     adventure. Would 11/10 recommend this to everybody who are
+//     looking for a pristine and peaceful`,
+//     img: c1,
+//   },
+//   {
+//     title: "butter chicken",
+//     date: "3 weeks ago on Google",
+//     subtle: `  The property feels almost enigmatic, the location is
+//     surreal, and the view of the forest as soon as you wake up
+//     is something to die for. It's so mellow and peaceful here,
+//     the rooms are luxurious but it also feels like an
+//     adventure. Would 11/10 recommend this to everybody who are
+//     looking for a pristine and peaceful`,
+//     img: c1,
+//   },
+//   {
+//     title: "chai/coffee",
+//     date: "3 weeks ago on Google",
+//     subtle: `  The property feels almost enigmatic, the location is
+//     surreal, and the view of the forest as soon as you wake up
+//     is something to die for. It's so mellow and peaceful here,
+//     the rooms are luxurious but it also feels like an
+//     adventure. Would 11/10 recommend this to everybody who are
+//     looking for a pristine and peaceful`,
+//     img: c1,
+//   },
+// ];
+
+const testimonal = [
+  {
+    title: "Tina Thilyani",
+    date: "3 weeks ago on Google",
+    subtle: `I highly commend Park Cafe in Mussoorie for it's exceptional food and delightful ambiance.The culinary experience was superb, and the inviting atmosphere added to the overall enjoyment. A most-visit for those seeking both quality cuisine and pleasant during environment`,
+    img: c1,
+  },
+  {
+    title: "Kshitij Mishra",
+    date: "3 weeks ago on Google",
+    subtle: `Recently visited the Park Cafe and was impressed by the ambiance and lush outdoor seating. The cafe's location within the park  added to its appeal, providing a serene setting for enjoying a meal. Overall,I highly recommended.`,
+    img: c1,
+  },
+  {
+    title: "Shweta Gyanchandani",
+    date: "3 weeks ago on Google",
+    subtle: `Park Cafe in Mussoorie is a cozy spot with delicious food and friendly service. It's near beautiful picnic spot, making it great peace and relax and enjoy a meal with stunning views.`,
+    img: c1,
+  },
+  {
+    title: "Tina Thilyani",
+    date: "3 weeks ago on Google",
+    subtle: `I highly commend Park Cafe in Mussoorie for it's exceptional food and delightful ambiance.The culinary experience was superb, and the inviting atmosphere added to the overall enjoyment. A most-visit for those seeking both quality cuisine and pleasant during environment`,
+    img: c1,
+  },
+  {
+    title: "Kshitij Mishra",
+    date: "3 weeks ago on Google",
+    subtle: `Recently visited the Park Cafe and was impressed by the ambiance and lush outdoor seating. The cafe's location within the park  added to its appeal, providing a serene setting for enjoying a meal. Overall,I highly recommended.`,
+    img: c1,
+  },
+  {
+    title: "Shweta Gyanchandani",
+    date: "3 weeks ago on Google",
+    subtle: `Park Cafe in Mussoorie is a cozy spot with delicious food and friendly service. It's near beautiful picnic spot, making it great peace and relax and enjoy a meal with stunning views.`,
+    img: c1,
+  },
+];
 function Peakage() {
   return (
     <div>
       <div className="max-w-[1600px] w-full mx-auto relative">
-        <div className="bg-[#D5D5D5] max-h-[700px] h-[300px] md:h-[700px] overflow-hidden">
+        <div className="bg-[#000] max-h-[700px] h-[300px] md:h-[700px] overflow-hidden ">
           <Image
             src={BannerImage}
             alt="banner"
@@ -136,25 +194,27 @@ function Peakage() {
           />
         </div>
 
-        <div className="absolute top-0 left-0 z-20 w-full h-full flex items-center justify-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-center md:text-5xl text-white">
-              Welcome to Park Café! One of the best cafes in Mussoorie.
+        <div className="lg:absolute top-0 left-0 z-20 w-full h-full lg:bg-black/40 flex items-center justify-center lg:py-0 pt-8">
+          <div className="max-w-5xl mx-auto lg:px-0 px-4">
+            <h2 className="text-center md:text-5xl/[3.5rem] text-4xl text-white">
+              Welcome to Park Café!
+              <br className="lg:block hidden" /> One of the best cafes in
+              Mussoorie.
             </h2>
-            <p className="text-center md:text-2xl mt-4 text-white">
-              {` Our culinary gem seamlessly combines nature's beauty with
+            <p className="lg:text-center text-justify md:text-2xl text-xl mt-4 text-white">
+              Our culinary gem seamlessly combines nature&apos;s beauty with
               exquisite flavors, offering a unique dining experience against the
-              backdrop of breathtaking natural wonders.`}
+              backdrop of breathtaking natural wonders.
             </p>
           </div>
         </div>
 
-        <div className="absolute top-0 left-0 bg-black/30 z-10 w-full h-full"></div>
+        {/* <div className="absolute top-0 left-0 bg-black/30 z-10 w-full h-full"></div> */}
       </div>
 
-      <div className="grid lg:grid-cols-2 mt-8 items-center maxwidth mx-auto py-12">
+      <div className="lg:grid lg:grid-cols-2 flex flex-col-reverse lg:mt-8 items-center maxwidth mx-auto py-12 lg:px-0 px-4">
         <div className=" h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-5">
-          <h2 className="text-5xl font-bold text-[#29422C]">
+          <h2 className="md:text-5xl text-3xl font-bold text-[#29422C]">
             Welcome to Park Cafe!·
           </h2>
           <p className="text-xl text-[#29422C]">
@@ -167,16 +227,18 @@ function Peakage() {
             special dinners served with hot cocoa.
           </p>
           <p className="text-xl text-[#29422C]">
-            {`   We're proud to serve a variety of delicious dishes that celebrate
+            {`We're proud to serve a variety of delicious dishes that celebrate
             Mussoorie's culinary heritage. Our cafe is situated where Sir George
             Everest once had his stables and rode around, along with the George
-            Everest Museum just a few minutes walk away. Book Now`}
+            Everest Museum just a few minutes walk away.`}
           </p>
 
           <div className="flex">
             <Link
-            target="_blank"
-              href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
+              target="_blank"
+              href={
+                "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
+              }
               className="text-2xl border border-[#29422c] bg-[#29422c] text-md px-8 py-2 text-white rounded-sm hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-black"
             >
               Book Now
@@ -195,38 +257,40 @@ function Peakage() {
       </div>
 
       <div className="py-8">
-        <div className="grid lg:grid-cols-5 items-center maxwidth mx-auto px-5 gap-6">
-          <div className=" col-span-3 grid grid-cols-5 gap-3">
+        <div className="lg:grid lg:grid-cols-5 items-center maxwidth mx-auto px-5 gap-6">
+          <div className=" col-span-3 lg:grid grid-cols-5 gap-3">
             <div className="col-span-3">
               <Image
                 alt="parkcafe1"
                 src={parkcafereachus1}
                 width={600}
                 height={400}
-                className="w-full md:h-[600px] h-[280px] object-cover"
+                className="w-full md:h-[450px] h-[280px] object-cover"
               />
             </div>
 
-            <div className="col-span-2">
+            <div className="col-span-2 lg:block hidden">
               <Image
                 src={parkcafereachus2}
                 alt="parkcafe2"
                 width={600}
                 height={400}
-                className="w-full md:h-[600px] h-[280px] object-cover"
+                className="w-full md:h-[450px] h-[280px] object-cover"
               />
             </div>
           </div>
-          <div className="col-span-2 flex flex-col gap-4">
-            <h2 className="text-white md:text-3xl text-2xl ">How to reach us?</h2>
-            <p className="text-white text-lg">
+          <div className="col-span-2 flex flex-col gap-4 lg:mt-0 mt-6">
+            <h2 className="text-white md:text-3xl text-2xl ">
+              How to reach us?
+            </h2>
+            <p className="text-white text-lg lg:text-start text-justify">
               {` Nestled amidst nature at the Everest Base Camp in Mussoorie, Park
               Cafe offers a convenient location just a stone's throw away from
               the George Everest Museum. To enhance your experience, you can
               come by yourself or give us a call to make a reservation and get a
               pass that lets you drive straight up to the cafe.`}
             </p>
-            <p className="text-white text-lg">
+            <p className="text-white text-lg lg:text-start text-justify">
               {`   Don't miss the chance to explore the historical significance of
               our location, where Sir George Everest once had his stables and
               rode around.Plus, the George Everest Museum is just a couple of
@@ -235,7 +299,7 @@ function Peakage() {
               ensuring a seamless and enjoyable visit.`}
             </p>
 
-            <div>
+            <div className="flex justify-center lg:justify-start">
               <Link
                 target="_blank"
                 href={
@@ -261,11 +325,11 @@ function Peakage() {
                 width={600}
                 height={400}
                 alt="service"
-                className="w-[520px] md:h-[400px] h-[280px] object-cover"
+                className="md:h-[400px] h-[280px] object-cover"
               />
             </div>
 
-            <div className="absolute right-0 -bottom-12 md:block hidden">
+            <div className="absolute right-0 -bottom-12  hidden">
               <Image
                 src={chooseus2}
                 width={600}
@@ -276,8 +340,10 @@ function Peakage() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <h2 className="text-white md:text-5xl text-2xl ">Why Choose Us ?</h2>
-            <p className="text-white text-lg">
+            <h2 className="text-white md:text-5xl text-2xl ">
+              Why Choose Us ?
+            </h2>
+            <p className="text-white text-lg text-justify">
               {`  Discover what makes us the most unique cafe in Mussoorie – our
               unwavering commitment to a memorable dining experience that
               transcends the ordinary. At EBC, indulge in more than just a meal;
@@ -286,22 +352,30 @@ function Peakage() {
               of offerings, from delightful tea and snacks to exquisite dining
               experiences.`}
             </p>
-            <p className="text-white text-lg">
+            <p className="text-white text-lg text-justify">
               Experience curated events and experiences that promise to elevate
               your visit. As a must-visit cafe in Mussoorie, EBC ensures an
               unforgettable culinary journey that celebrates nature and
               community.
             </p>
+            <div className="lg:flex hidden justify-center lg:justify-start">
+              <Link href={"/"} className="bg-[#bcd0be] px-6 py-2 text-lg">
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 py-12">
+      <div className="maxwidth mx-auto flex flex-col lg:gap-10 gap-4 max-md:px-3 py-12">
+        <h2 className="text-center md:text-5xl text-2xl text-white">
+          Add-on Experience
+        </h2>
         <OurAmenities />
 
         <div className="rounded-lg overflow-hidden">
           {datas.map((data, index) => (
-            <SpecilizationCard key={index} cardData={data} index={index} />
+            <SpecilizationCard key={index} cardData={data} index={index} aspectRatio={"lg:aspect-[2/1.78] aspect-[2/1.5]"} />
           ))}
         </div>
       </div>
@@ -318,31 +392,43 @@ function Peakage() {
           />
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-6">
-          <div className="max-w-[400px] bg-[#ACACAC] p-5 mx-auto">
-            <h2 className="text-center md:text-4xl text-[#29422C]">
+        <div className="lg:absolute top-0 left-0 w-full h-full flex items-center justify-center lg:px-6">
+          <div className="max-w-[440px] bg-[#ACACAC] p-5 mx-auto">
+            <h2 className="text-center md:text-4xl text-2xl text-[#29422C]">
               Mark Your Milestones with Us!
             </h2>
-            <p className="text-center md:text-lg mt-4 text-[#29422C]">
+            <p className="text-center text-lg mt-4 text-[#29422C]">
               Experience unforgettable celebrations at Everest Base Camp
               ,Mussoorie. We customize every element to match your vision, from
               anniversaries to birthdays. With our attention to detail, your
               event will run seamlessly, letting you cherish every moment. Come
               celebrate with us and create memories to last a lifetime!
             </p>
+
+            <div className="flex justify-center">
+              <Link
+                href="href"
+                className="bg-[#29422C] px-6 py-2 text-white mt-4"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
       <HappyCustomers testimonal={testimonal} />
 
-      <div className="py-12 px-6">
+      <div className="py-12">
         <InstaGrid />
         <div className="mt-10">
-          <WhatInstaButton button={"insta"} link="https://www.instagram.com/ebcmussoorie/" />
+          <WhatInstaButton
+            button={"insta"}
+            link="https://www.instagram.com/ebcmussoorie/"
+          />
         </div>
 
-        <div className="maxwidth mx-auto mt-10">
+        {/* <div className="maxwidth mx-auto mt-10">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.5263208281!2d76.76357549901144!3d28.643684629087268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1717564178551!5m2!1sen!2sin"
             width="100%"
@@ -351,6 +437,30 @@ function Peakage() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
+        </div> */}
+      </div>
+      <div className="py-12">
+        <div className="relative w-full lg:h-[400px] h-80 aspect-[4/3]">
+          <Image
+            src="/images/empty.png"
+            alt="alt"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center flex-col bg-black/50">
+            <p className="text-center lg:text-4xl text-3xl text-white/70">
+              Call us to make a reservation!
+            </p>
+            <Link
+              href="tel:+91-8595274861"
+              className="text-center mt-3 lg:text-4xl text-3xl text-white/70 flex items-center justify-center gap-1"
+            >
+              <span className="mt-1">
+                <FillCall />
+              </span>
+              +91-8595274861
+            </Link>
+          </div>
         </div>
       </div>
       <hr className="h-px my-4 bg-[#D5D5D5] border-0" />

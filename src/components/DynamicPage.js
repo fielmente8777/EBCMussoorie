@@ -1,23 +1,19 @@
-"use client"
-import React from 'react'
+"use client";
+import React from "react";
 import ebclogo from "../../public/images/ebclogo.png";
 import Image from "next/image";
 import Link from "next/link";
 
 import familyadventure from "../../public/blog/familyadvanture.webp";
 import geopark from "../../public/blog/georgepeak.webp";
-import blogData from '@/utils/blogData';
+import blogData from "@/utils/blogData";
 
-
-const DynamicPage = ({data}) => {
-
-  const category = ["All", ...new Set(blogData.map((item) => item.Category))]
-
-  
+const DynamicPage = ({ data }) => {
+  const category = ["All", ...new Set(blogData.map((item) => item.Category))];
 
   // const data = blogData.find((item) => item.title === path);
   // const data = blogData.find((item) => item.id == id);
-  
+
   return (
     <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
       <div className="flex flex-wrap gap-4 items-center">
@@ -139,7 +135,7 @@ const DynamicPage = ({data}) => {
             Adventure
           </Link>
           <Link href={"/"} className="px-4 py-1  border border-gray-400">
-            Thinks to do
+            Things to do
           </Link>
         </div>
 
@@ -239,7 +235,7 @@ const DynamicPage = ({data}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DynamicPage
+export default DynamicPage;

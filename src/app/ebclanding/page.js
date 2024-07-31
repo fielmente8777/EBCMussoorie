@@ -7,7 +7,7 @@
 // import RoomSwiper from "../../../../components/landingpage/RoomSwiper";
 // import Testimonial from "../../../../components/landingpage/Testimonial";
 // import YouTube from "../../../../components/landingpage/YouTube";
-import BannerImage from "../../../public/images/00 Cover_11zon.jpg"
+import BannerImage from "../../../public/images/00 Cover_11zon.jpg";
 
 import Activities from "@/components/landingpage/Activities";
 import Banner from "@/components/landingpage/Banner";
@@ -19,26 +19,35 @@ import RoomSwiper from "@/components/landingpage/RoomSwiper";
 import Testimonial from "@/components/landingpage/Testimonial";
 import YouTube from "@/components/landingpage/YouTube";
 
-
 const page = () => {
-    return (
-        <div className="flex flex-col gap-10 overflow-hidden">
-            <Banner BannerImage={BannerImage} />
-            <Grid />
-            <hr className=" h-px my-8 bg-[white]" />
+  return (
+    <div className="flex flex-col gap-10 overflow-hidden">
+      <Banner BannerImage={BannerImage} />
+      <Grid />
+      {/* <hr className=" h-px my-8 bg-[white]" /> */}
 
-            <RoomSwiper />
-            <hr className="h-px my-8 bg-[white]" />
+      <RoomSwiper />
+      {/* <hr className="h-px my-8 bg-[white]" /> */}
 
-            <YouTube />
-
-            <OurSpecialization />
-            <Activities />
-            <Testimonial />
-            <BottomGallery />
-            <Form />
-        </div>
-    )
-}
+      <YouTube />
+      <div className="maxwidth py-8">
+        <h2 className="lg:text-5xl text-3xl text-center text-[#E5E7EB] font-bold">
+          Our Specialization
+        </h2>
+        <p className="text-center lg:text-xl text-lg text-[#E5E7EB] font-normal mt-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <OurSpecialization />
+      <Activities />
+      <Testimonial />
+      <BottomGallery />
+      <Form />
+    </div>
+  );
+};
 
 export default page;

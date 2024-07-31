@@ -6,10 +6,10 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import Rooms1 from "../../../public/rooms/Glamper 1 Bedroom pic 1.jpg"
-import Rooms2 from "../../../public/rooms/Camper Bedroom Pic 3.jpg"
-import Rooms3 from "../../../public/rooms/Suite Bedroom 1.jpg"
-import Rooms4 from "../../../public/rooms/Surevyor Bedroom pic 2.jpg"
+import Rooms1 from "../../../public/rooms/Glamper 1 Bedroom pic 1.jpg";
+import Rooms2 from "../../../public/rooms/Camper Bedroom Pic 3.jpg";
+import Rooms3 from "../../../public/rooms/Suite Bedroom 1.jpg";
+import Rooms4 from "../../../public/rooms/Surevyor Bedroom pic 2.jpg";
 
 const RoomSwiper = () => {
   const Roomdata = [
@@ -39,21 +39,22 @@ const RoomSwiper = () => {
     },
   ];
   return (
-    <div className="maxwidth mx-auto flex flex-col justify-between max-md:px-3 md:flex-row w-full ">
+    <div className="maxwidth mx-auto flex flex-col-reverse justify-between max-md:px-3 md:flex-row w-full py-7">
       <div className="w-full md:w-[60%]">
         <Swiper
           loop={true}
           autoplay={{
             delay: 2000,
           }}
-          pagination={{
-            el: "#bullets-Portfolio",
-          }}
           slidesPerView={1}
           spaceBetween={20}
           navigation={{
             prevEl: ".prev-btn",
             nextEl: ".next-btn",
+          }}
+          pagination={{
+            clickable: true,
+            el: ".slide_page_indicator",
           }}
           modules={[Pagination, Autoplay, Navigation]}
           breakpoints={{
@@ -78,11 +79,13 @@ const RoomSwiper = () => {
         </Swiper>
       </div>
 
-      <div className="w-full md:w-[40%] flex flex-col justify-center items-center text-white">
-        <h1 className="text-[52px] text-center font-semibold">Our Rooms</h1>
-        <p className="text-[26px] text-center">
-          glamping and
-          <br />
+      <div className="w-full md:w-[40%] flex flex-col justify-center items-center text-white lg:mb-0 mb-5">
+        <h1 className="lg:text-3xl text-xl text-center font-semibold">
+          Our Rooms
+        </h1>
+        <p className="lg:text-5xl/[3.8rem] text-3xl tracking-wide text-center mt-3">
+          Camping and
+          <br className="lg:block hidden" />
           Comfort Redefined
         </p>
       </div>

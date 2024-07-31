@@ -35,25 +35,25 @@ const OurSpecialization = () => {
             "heading": "Blissful Picnics with the Nature",
             "para": "Enjoy a peaceful picnic amidst the beauty of nature, with a basket brimming with delightful snacks and refreshing beverages. Our idyllic property offers the ideal setting for a relaxing afternoon, spent cherishing moments with friends and family.",
             "images": [Picnic1, Picnic2, Picnic3, Picnic4],
-            "button": ""
+            "button": "Book Now"
         },
         {
             "heading": "Gather 'Round for a BBQ Feast!",
             "para": "Join us for an enchanting evening of grilling under the stars. Surrounded by the tranquil beauty of our property, enjoy a memorable night filled with warmth and camaraderie. As the fire crackles, savour a delightful array of your favourite grilled meats and vegetables, creating the perfect backdrop for relaxation and connection with family and friends.",
             "images": [BBQ1, BBQ2, BBQ3],
-            "button": ""
+            "button": "Book Now"
         },
         {
             "heading": "Stories & S'mores by the Bonfire",
             "para": "Experience crackling fire under the starlit sky and share stories and quiet moments with your loved ones. It's an ideal way to unwind after a day of exploring Mussoorie's natural beauty, providing a warm, communal setting that embodies the spirit of adventure and relaxation.",
             "images": [BornFire1, BornFire4, BornFire2, BornFire3],
-            "button": ""
+            "button": "Book Now"
         },
         {
             "heading": "Explore the Wilderness",
             "para": "Situated in the serene hills of Mussoorie, explore the spectacular views of the Himalayas from the George Everest Peak trek. The trek promises an immersive experience in nature's tranquillity, complemented by luxury camping facilities. It's an ideal getaway for those looking to blend outdoor adventure with comfortable amenities in a picturesque mountain setting.",
             "images": [Wilderness1, Wilderness2],
-            "button": ""
+            "button": "Book Now"
         },
     ]
 
@@ -70,7 +70,7 @@ const OurSpecialization = () => {
             <div className="rounded-lg overflow-hidden">
                 {
                     datas.map((data, index) => (
-                        <SpecilizationCard key={index} cardData={data} index={index} />
+                        <SpecilizationCard key={index} cardData={data} index={index} aspectRatio={"lg:aspect-[2/1.3] aspect-[2/1.5]"} />
                     ))
                 }
             </div>

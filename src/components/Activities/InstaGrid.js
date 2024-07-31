@@ -11,7 +11,7 @@ import Image from "next/image";
 const InstaGrid = () => {
   const images = [img1, img2, img3, img4, img5, img6];
   return (
-    <div className="max-w-[1600px] mx-auto grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 sm:px-0 px-4 sm:gap-0 gap-2">
+    <div className="max-w-[1900px] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 pt-16 pb-10">
       {images?.map((roomImage, index) => {
         return (
           <Image
