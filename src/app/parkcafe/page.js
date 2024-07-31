@@ -215,7 +215,7 @@ function Peakage() {
       <div className="lg:grid lg:grid-cols-2 flex flex-col-reverse lg:mt-8 items-center maxwidth mx-auto py-12 lg:px-0 px-4">
         <div className=" h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-5">
           <h2 className="md:text-5xl text-3xl font-bold text-[#29422C]">
-            Welcome to Park Cafe!·
+            Welcome to Park Cafe!
           </h2>
           <p className="text-xl text-[#29422C]">
             To create a dining oasis in the middle of the wilderness, we at Park
@@ -373,7 +373,7 @@ function Peakage() {
         </h2>
         <OurAmenities />
 
-        <div className="rounded-lg overflow-hidden">
+        <div className="lg:rounded-lg overflow-hidden">
           {datas.map((data, index) => (
             <SpecilizationCard key={index} cardData={data} index={index} aspectRatio={"lg:aspect-[2/1.78] aspect-[2/1.5]"} />
           ))}

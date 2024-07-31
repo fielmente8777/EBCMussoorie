@@ -47,7 +47,7 @@ const SpecilizationCard = ({ cardData, index, aspectRatio }) => {
         </Swiper>
       </div>
       <div className="flex items-center justify-center">
-        <div className="flex flex-col gap-6 lg:px-14 lg:py-12 p-4 ">
+        <div className="flex flex-col lg:gap-6 gap-4 lg:px-14 lg:py-12 p-4 ">
           <h3 className="lg:text-[2rem]/[2.35rem] font-bold text-2xl text-[#29422C]">
             {cardData.heading}
           </h3>
