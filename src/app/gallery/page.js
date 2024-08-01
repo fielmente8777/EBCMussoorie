@@ -12,6 +12,8 @@ import camper6 from "../../../public/gallery/camper6.jpg"
 import camper7 from "../../../public/Camper Room/Camper Bedroom pic 2.jpg"
 import camper8 from "../../../public/Camper Room/Camper Bedroom pic 3.jpg"
 import camper9 from "../../../public/Camper Room/Camper Bathroom.jpg"
+import camper10 from "../../../public/Camper Room/Camper Balcony.jpg"
+
 
 import glamper1 from "../../../public/gallery/glamper1.jpg"
 import glamper2 from "../../../public/gallery/theglamper2.jpg"
@@ -67,7 +69,7 @@ const galleryData = {
   items: [
     {
       Category: "camper room",
-      Images: [camper1,camper2,camper3,camper4,camper5,camper6,camper7,camper8,camper9],
+      Images: [camper1,camper2,camper3,camper4,camper5,camper6,camper7,camper8,camper9,camper10],
       Required: true,
     },
     {
