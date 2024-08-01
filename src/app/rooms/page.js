@@ -268,7 +268,7 @@ const RoomsAccomodationData = {
       },
     },
     {
-      title: "The Surveyor Suit",
+      title: "The Surveyor Suite",
       description: "Opulent Wilderness  | 1-4 people | 600sqft",
       subtitle:
         "Experience unparalleled luxury amidst nature in our Surveyor Suite at Everest Base Camp, Mussoorie. Immerse yourself in a meticulously designed tent featuring spacious living areas, extravagant amenities, and breathtaking forest views. Relax in style with a king-sized bed and the option to set up a queen-sized sofa bed, accommodating up to four people. Perfect for families or friend groups of 4.",

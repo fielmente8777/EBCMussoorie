@@ -114,53 +114,85 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            {pathname!== "/ebclanding" ?<div className="hidden xl:flex gap-5 justify-between self-center px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
-              <Link
-                href={"/about"}
-                className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-              >
-                About Us
-              </Link>
-              <Link
-                href={"/activities"}
-                className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-              >
-                Activities
-              </Link>
-              {/* <Link href={"/contact"} className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1">
+            {pathname !== "/ebclanding" ? (
+              <div className="hidden xl:flex gap-5 justify-between self-center px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
+                <Link
+                  href={"/about"}
+                  className={`${
+                    pathname === "/about"
+                      ? "text-[#29422c] bg-[#D5D5D5]"
+                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
+                  } py-1 px-2`}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href={"/activities"}
+                  className={`${
+                    pathname === "/activities"
+                      ? "text-[#29422c] bg-[#D5D5D5]"
+                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
+                  } py-1 px-2`}
+                >
+                  Activities
+                </Link>
+                {/* <Link href={"/contact"} className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1">
                                     Contact Us
                                 </Link> */}
-              <Link
-                href={"/rooms"}
-                className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-              >
-                Our Rooms
-              </Link>
-              <Link
-                href={"/gallery"}
-                className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-              >
-                Gallery
-              </Link>
-              <Link
-                href={"/parkcafe"}
-                className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-              >
-                Park Cafe
-              </Link>
-              <Link
-                href={"/glamper"}
-                className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-              >
-                {`A Glamper's Guide`}
-              </Link>
-              <Link
-                href={"/blogs"}
-                className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-              >
-                Blog
-              </Link>
-            </div>:""}
+                <Link
+                  href={"/rooms"}
+                  className={`${
+                    pathname === "/rooms"
+                      ? "text-[#29422c] bg-[#D5D5D5]"
+                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
+                  } py-1 px-2`}
+                >
+                  Our Rooms
+                </Link>
+                <Link
+                  href={"/gallery"}
+                  className={`${
+                    pathname === "/gallery"
+                      ? "text-[#29422c] bg-[#D5D5D5]"
+                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
+                  } py-1 px-2`}
+                >
+                  Gallery
+                </Link>
+                <Link
+                  href={"/parkcafe"}
+                  className={`${
+                    pathname === "/parkcafe"
+                      ? "text-[#29422c] bg-[#D5D5D5]"
+                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
+                  } py-1 px-2`}
+                >
+                  Park Cafe
+                </Link>
+                <Link
+                  href={"/glamper"}
+                  className={`${
+                    pathname === "/glamper"
+                      ? "text-[#29422c] bg-[#D5D5D5]"
+                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
+                  } py-1 px-2`}
+                >
+                  {`A Glamper's Guide`}
+                </Link>
+                <Link
+                  href={"/blogs"}
+                  className={`${
+                    pathname === "/blogs"
+                      ? "text-[#29422c] bg-[#D5D5D5]"
+                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
+                  } py-1 px-2`}
+                >
+                  Blog
+                </Link>
+              </div>
+            ) : (
+              ""
+            )}
             <MobileNav open={open} />
           </>
         </div>

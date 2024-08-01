@@ -9,7 +9,9 @@ import camper3 from "../../../public/gallery/camper3.jpg"
 import camper4 from "../../../public/gallery/camper4.jpg"
 import camper5 from "../../../public/gallery/camper5.jpg"
 import camper6 from "../../../public/gallery/camper6.jpg"
-
+import camper7 from "../../../public/Camper Room/Camper Bedroom pic 2.jpg"
+import camper8 from "../../../public/Camper Room/Camper Bedroom pic 3.jpg"
+import camper9 from "../../../public/Camper Room/Camper Bathroom.jpg"
 
 import glamper1 from "../../../public/gallery/glamper1.jpg"
 import glamper2 from "../../../public/gallery/theglamper2.jpg"
@@ -52,8 +54,11 @@ import bar4 from "../../../public/gallery/bar4.jpg"
 
 
 
-
-
+import park1 from "../../../public/images/34 Barbeque_11zon.jpg"
+import park2 from "../../../public/images/DJI_0352_11zon.jpg"
+import park3 from "../../../public/images/01 Picnic_11zon.jpg"
+import park4 from "../../../public/images/32 Closeup_11zon.jpg"
+import park5 from "../../../public/landingpage/36 Dining.jpg"
 
 
 
@@ -62,7 +67,7 @@ const galleryData = {
   items: [
     {
       Category: "camper room",
-      Images: [camper1,camper2,camper3,camper4,camper5,camper6],
+      Images: [camper1,camper2,camper3,camper4,camper5,camper6,camper7,camper8,camper9],
       Required: true,
     },
     {
@@ -78,6 +83,7 @@ const galleryData = {
     { Category: `Surveyor Suite Room`, Images: [surveysuite1,surveysuite2,surveysuite3], Required: true },
     { Category: "Picnic", Images: [picnic1,picnic2,picnic3,picnic4,picnic5,picnic6,picnic7,picnic8,picnic9,picnic10], Required: true },
     { Category: "Barbeque", Images: [bar1,bar2,bar3,bar4], Required: true },
+    { Category: "Park cafe", Images: [test,test3,park1,park2,park3,park4,park5], Required: true },
   ],
 };
 

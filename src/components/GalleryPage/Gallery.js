@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import FullScreenImageViewPopUP from "./FullScreenImageViewPopUP";
 
 function Gallery({ items }) {
   const [gallery, setGallery] = useState([]);
@@ -47,6 +48,14 @@ function Gallery({ items }) {
     }
   };
 
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (src) => {
+    setSelectedImage(src);
+    setShowModal(true);
+  };
+
   return (
     <div className="bg-[#ACACAC] py-6">
       <div className="flex flex-wrap justify-center gap-4">
@@ -90,8 +99,14 @@ function Gallery({ items }) {
           <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-5 mt-6">
             {allImages.map((item, index) => (
               <div key={index}>
-                <div className="relative w-full aspect-[4/3]" key={index}>
-                  <Image src={item} alt={`image${index}`} fill className="object-cover" />
+                <div className="relative w-full aspect-[4/3] overflow-hidden" key={index}>
+                  <Image
+                    src={item}
+                    alt={`image${index}`}
+                    fill
+                    className="object-cover cursor-pointer hover:shadow-2xl shadow-[#29422C] hover:-translate-y-1 transition duration-1000 "
+                    onClick={() => handleImageClick(item)}
+                  />
                 </div>
               </div>
             ))}
@@ -102,14 +117,15 @@ function Gallery({ items }) {
           <div className="grid md:grid-cols-3 gap-5 mt-16">
             {filterGallery[0]?.Images?.map((i, index) => {
               return (
-                <div className="relative w-full aspect-[4/3]" key={index}>
+                <div className="relative w-full aspect-[4/3] overflow-hidden" key={index}>
                   <Image
                     src={i}
                     fill
-                    className="object-cover"
+                    className="object-cover cursor-pointer hover:shadow-2xl shadow-[#29422C] hover:-translate-y-1 transition duration-1000 "
                     alt={`image${index}`}
-                  // width={600}
-                  // height={400}
+                    // width={600}
+                    // height={400}
+                    onClick={() => handleImageClick(i)}
                   />
                 </div>
               );
@@ -117,6 +133,13 @@ function Gallery({ items }) {
           </div>
         )}
       </div>
+      {showModal && selectedImage && (
+        <FullScreenImageViewPopUP
+          setShowModal={setShowModal}
+          src={selectedImage}
+          showModal={showModal}
+        />
+      )}
     </div>
   );
 }
