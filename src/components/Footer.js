@@ -17,9 +17,35 @@ import {
   Trip,
 } from "../icons/icons.jsx";
 import { IoMail } from "react-icons/io5";
+import { useState } from "react";
 
 const Footer = () => {
   const pathname = usePathname();
+
+  const host = "https://eazotel.eazotel.com/api/dashboard/editnewsletter";
+
+  const [email, setEmail] = useState("");
+
+  const handleNewsletter = async () => {
+    const data = {
+      Domain: "eb112233",
+      email: email,
+    };
+    try {
+      const response = await fetch(host, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+
+    setEmail("");
+  };
+
   return (
     <>
       {pathname === "/ebclanding" ? (
@@ -29,7 +55,7 @@ const Footer = () => {
               <Line />
             </div>
             <div className="lg:grid grid-cols-3 lg:gap-20 py-10 flex flex-col gap-7">
-              <div className="relative aspect-[3/1.45]">
+              <div className="relative lg:aspect-[3/1.45] aspect-[3/1]">
                 <Image src={Logo} alt="logo" fill className="object-contain" />
               </div>
               <div className="flex flex-col text-white gap-3 tracking-wide">
@@ -70,10 +96,18 @@ const Footer = () => {
                 <h2 className="lg:text-4xl text-3xl font-bold capitalize">
                   Subscribe our newsletter
                 </h2>
-                <div className="w-full border border-[#BCD0B8] px-4 py-3 rounded-lg m-1">
+                <div className="w-full border border-[#BCD0B8] px-4 py-3 rounded-lg m-1 shadow-sm shadow-[#BCD0B8]">
                   <input
                     type="email"
                     placeholder="Enter email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleNewsletter();
+                      }
+                    }}
+                    
                     className="outline-none w-full focus:outline-none text-xl bg-transparent placeholder:text-white text-white"
                   />
                 </div>

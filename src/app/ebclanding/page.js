@@ -21,7 +21,7 @@ import YouTube from "@/components/landingpage/YouTube";
 
 const page = () => {
   return (
-    <div className="flex flex-col gap-10 overflow-hidden">
+    <div className="">
       <Banner BannerImage={BannerImage} />
       <Grid />
       {/* <hr className=" h-px my-8 bg-[white]" /> */}
@@ -31,15 +31,15 @@ const page = () => {
 
       <YouTube />
       <div className="maxwidth py-8">
-        <h2 className="lg:text-5xl text-3xl text-center text-[#E5E7EB] font-bold">
+        <h2 className="lg:text-5xl text-3xl text-center text-[#E5E7EB] font-bold mb-5">
           Our Specialization
         </h2>
-        <p className="text-center lg:text-xl text-lg text-[#E5E7EB] font-normal mt-4">
+        {/* <p className="text-center lg:text-xl text-lg text-[#E5E7EB] font-normal mt-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
-        </p>
+        </p> */}
       </div>
       <OurSpecialization />
       <Activities />

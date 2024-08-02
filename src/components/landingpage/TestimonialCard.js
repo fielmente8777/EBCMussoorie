@@ -30,15 +30,15 @@ const TestimonialCard = () => {
     },
   ];
   return (
-    <div className="flex flex-col px-11 py-3 rounded-sm bg-[#D5D5D5] bg-opacity-70 max-w-[610px] max-md:w-full max-md:px-5">
+    <div className="flex flex-col px-11 py-3 rounded-xl bg-[#D5D5D5] bg-opacity-70 max-w-[610px] max-md:w-full max-md:px-5">
       <div className="self-center text-5xl font-bold text-center text-[#29422C] leading-[56.16px] max-md:text-4xl">
         Testimonials
       </div>
-      <div className="mt-4 text-lg leading-7 text-center text-[#29422C] max-md:max-w-full">
+      {/* <div className="mt-4 text-lg leading-7 text-center text-[#29422C] max-md:max-w-full">
         {" "}
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliqu.
-      </div>
+      </div> */}
 
       <Swiper
         loop={true}

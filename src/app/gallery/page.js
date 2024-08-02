@@ -21,7 +21,8 @@ import glamper3 from "../../../public/gallery/theglamper3.jpg"
 import glamper4 from "../../../public/gallery/theglamper4.jpg"
 import glamper5 from "../../../public/gallery/theglamer5.jpg"
 import glamper6 from "../../../public/gallery/theglamer6.jpg"
-
+import glamper7 from "../../../public/Glamper Room/Glamper 1 Bedroom pic 1.jpg"
+import glamper8 from "../../../public/Glamper Room/Glamper 1 Bedroom pic 2.jpg"
 
 import survey1 from "../../../public/gallery/survey1.jpg"
 import survey2 from "../../../public/gallery/survery2.jpg"
@@ -74,7 +75,7 @@ const galleryData = {
     },
     {
       Category: "glamper room",
-      Images: [glamper1,glamper2,glamper3,glamper4,glamper5,glamper6],
+      Images: [glamper1,glamper2,glamper3,glamper4,glamper5,glamper6,glamper7,glamper8],
       Required: true,
     },
     {

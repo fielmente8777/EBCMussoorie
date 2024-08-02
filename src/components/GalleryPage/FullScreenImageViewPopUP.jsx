@@ -3,12 +3,7 @@ import { ZoomInIcon, ZoomOutIcon } from "@/icons/icons";
 import Image, { StaticImageData } from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
-
-const FullScreenImageViewPopUP = ({
-  setShowModal,
-  src,
-  showModal,
-}) => {
+const FullScreenImageViewPopUP = ({ setShowModal, src, showModal }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleKeydown = useCallback(
@@ -53,9 +48,16 @@ const FullScreenImageViewPopUP = ({
 
   return (
     <section
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#29422C] bg-opacity-75 transition duration-1000 ease"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#29422C] bg-opacity-75 transition duration-1000 ease py-5"
       onClick={() => setShowModal(false)}
     >
+      <button
+        onClick={() => setShowModal(false)}
+        className="inline-flex items-center justify-center px-4 py-4 text-white bg-[#D5D5D5]/70 hover:bg-[#D5D5D5] rounded-lg mb-3"
+      >
+        <CloseIcon />
+      </button>
+
       <div
         className="relative w-full max-w-3xl aspect-[4/3.5] image-container"
         onClick={(e) => e.stopPropagation()}
@@ -66,13 +68,16 @@ const FullScreenImageViewPopUP = ({
           fill
           className="object-cover cursor-pointer"
           onClick={toggleFullscreen}
+          qulity={100}
         />
         <div className="absolute top-0 left-0 w-full h-full">
           <div
             className="w-full h-full cursor-pointer show flex items-end justify-end"
             onClick={toggleFullscreen}
           >
-            <div className="p-7 hover:bg-[#D1BA97] bg-[#D1BA97]/60 w-max rounded-tl-[3rem]">{isFullscreen ? <ZoomOutIcon /> : <ZoomInIcon />}</div>
+            <div className="p-7 hover:bg-[#D1BA97] bg-[#D1BA97]/60 w-max rounded-tl-[3rem]">
+              {isFullscreen ? <ZoomOutIcon /> : <ZoomInIcon />}
+            </div>
           </div>
         </div>
       </div>
@@ -81,3 +86,30 @@ const FullScreenImageViewPopUP = ({
 };
 
 export default FullScreenImageViewPopUP;
+
+export const CloseIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 6L6 18"
+        stroke="green"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M6 6L18 18"
+        stroke="green"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

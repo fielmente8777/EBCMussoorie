@@ -14,7 +14,7 @@ import Link from "next/link";
 const BottomGallery = () => {
   const data = [insta1, insta2, insta3, insta4];
   return (
-    <div className="w-full overflow-hidden  ">
+    <div className="w-full overflow-hidden  py-10">
       <Swiper
         loop={true}
         autoplay={{

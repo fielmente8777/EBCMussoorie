@@ -19,12 +19,17 @@ const Activities = () => {
         },
     ]
     return (
-        <div className="maxwidth mx-auto flex flex-col gap-5 ">
+        <div className="maxwidth mx-auto max-md:px-4 py-10 lg:py-16">
+            <div className="flex flex-col gap-5">
+            <h2 className="lg:text-5xl text-2xl font-bold text-center text-[#E5E7EB] py-8">
+            Our Activities
+            </h2>
             {
                 ActivitiesData.map((data, index) => (
                     <ActivitiesCard key={index} index={index} activitiesData={data} />
                 ))
             }
+            </div>
         </div>
     )
 }

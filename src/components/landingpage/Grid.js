@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Grid1 from "../../../public/landingpage/23 Facade_11zon.jpg";
@@ -6,12 +7,15 @@ import Grid3 from "../../../public/images/30 Games area_11zon.jpg";
 import Grid4 from "../../../public/images/01 Picnic_11zon.jpg";
 import Grid5 from "../../../public/landingpage/Surevyor Facade.jpg";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const Grid = () => {
   return (
     <div className="maxwidth lg:px-0 px-3 py-4">
       <div className="flex flex-col lg:flex-row p-5 gap-3 secBack rounded-xl">
-        <div className="w-full lg:w-[65%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3    ">
+        <div className="w-full lg:w-[65%] lg:grid  lg:grid-cols-3 gap-3 hidden    ">
           <div className=" ">
             <Image
               src={Grid1}
@@ -57,6 +61,33 @@ const Grid = () => {
               height={400}
             />
           </div>
+        </div>
+        <div className="lg:hidden">
+          <Swiper
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            speed={900}
+            
+            modules={[Autoplay]}
+            className="w-full h-full"
+            >
+            {[Grid1, Grid2, Grid3, Grid4, Grid5].map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative aspect-[3/1.8]">
+                  <Image
+                    src={item}
+                    alt="bonfire"
+                    className="h-full object-cover"
+                    fill
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
         <div className="w-full lg:w-[35%] flex flex-col gap-4">
           <h1 className="lg:text-5xl text-3xl font-medium leading-[45px] text-[#29422C]">
