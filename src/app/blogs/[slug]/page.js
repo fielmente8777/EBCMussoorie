@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const data = blogData.find((blog) => blog.slug === params.slug);
   return {
-    title: data.slug,
+    title: data.title,
+    description: data.subtitle,
   };
 }
 
