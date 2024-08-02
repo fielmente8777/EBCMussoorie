@@ -35,7 +35,7 @@ const BlogComponent = () => {
 
     return (
         <div className="max-w-[1024px] w-full mx-auto bg-[#BCD0BE] px-4 py-2">
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-center flex-wrap">
                 <button
                     onClick={() => filterData(null)}
                     className="hover:bg-[#29422C] px-4 py-1 hover:text-white capitalize"

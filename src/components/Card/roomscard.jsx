@@ -25,14 +25,12 @@ function Roomscard({ title, subtitle, link, images, accomodation, index, descrip
           {images?.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="w-full h-full overflow-hidden shadow-xl">
+                <div className="relative aspect-[3/2.5] h-full overflow-hidden shadow-xl">
                   <Image
                     src={item.src}
                     alt={item.alt}
-                    // width={600}
-                    // height={400}
                     fill
-                    className="object-cover w-full h-full hover:scale-105 duration-500"
+                    className="object-cover hover:scale-105 duration-500"
                   />
                 </div>
               </SwiperSlide>

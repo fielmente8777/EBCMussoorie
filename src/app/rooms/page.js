@@ -374,13 +374,15 @@ const page = () => {
         </div>
       </div>
 
-     <div className="mt-10">
-     <div className="flex flex-col gap-10 maxwidth mx-auto px-4">
-        {RoomsAccomodationData.items.map((item, index) => (
-          <Roomscard {...item} index={index} key={index} />
-        ))}
+      <div className="mt-10">
+        <div className="maxwidth mx-auto px-4">
+          <div className="flex flex-col gap-10">
+            {RoomsAccomodationData.items.map((item, index) => (
+              <Roomscard {...item} index={index} key={index} />
+            ))}
+          </div>
+        </div>
       </div>
-     </div>
       <div className="w-full flex justify-center mt-10">
         <Link
           href={"https://api.whatsapp.com/send?phone=918595274861&text=Hi"}

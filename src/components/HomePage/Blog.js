@@ -34,7 +34,7 @@ const Blog = () => {
     ]
     return (
         <div className='bg-[#D5D5D5] py-10'>
-            <div className='max-w-[1060px] mx-auto'>
+            <div className='max-w-[1060px] mx-auto max-md:px-4'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
 
                     {

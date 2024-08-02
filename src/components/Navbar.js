@@ -108,7 +108,7 @@ const Navbar = () => {
                   className="flex items-center gap-2 px-5 my-auto text-lg leading-7 text-[#acacac]"
                 >
                   {/* <MdCall size={20} /> */}
-                  <CallNavIcon/>
+                  <CallNavIcon />
                   <div className="my-auto text-[#acacac] xl:block hidden">
                     +91-85952 74861
                   </div>
@@ -307,7 +307,7 @@ const HomeNav = () => {
             )}
           </div>
         </div>
-        <MobileNav open={open} />
+        <MobileNav open={open} setOpen={setOpen} />
       </div>
     </div>
   );
@@ -315,7 +315,7 @@ const HomeNav = () => {
 
 export default Navbar;
 
-const MobileNav = ({ open }) => {
+const MobileNav = ({ open, setOpen }) => {
   return (
     <div
       className="fixed top-0 z-30 w-full h-screen flex justify-center items-center bg-[#29422C]"
@@ -327,12 +327,14 @@ const MobileNav = ({ open }) => {
       <div className="flex items-center flex-col gap-4">
         <Link
           href={"/about"}
+          onClick={() => setOpen(false)}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           About Us
         </Link>
         <Link
           href={"/activities"}
+          onClick={() => setOpen(false)}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           Activities
@@ -342,30 +344,35 @@ const MobileNav = ({ open }) => {
                                 </Link> */}
         <Link
           href={"/rooms"}
+          onClick={() => setOpen(false)}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           Our Rooms
         </Link>
         <Link
           href={"/gallery"}
+          onClick={() => setOpen(false)}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           Gallery
         </Link>
         <Link
           href={"/parkcafe"}
+          onClick={() => setOpen(false)}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           Park Cafe
         </Link>
         <Link
           href={"/glamper"}
+          onClick={() => setOpen(false)}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           {`A Glamper's Guide`}
         </Link>
         <Link
           href={"/blogs"}
+          onClick={() => setOpen(false)}
           className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
         >
           Blog
@@ -483,8 +490,8 @@ const CallNavIcon = () => {
       <path
         d="M15.3702 1.00012C17.8237 1.25877 20.1155 2.34751 21.8665 4.08629C23.6176 5.82507 24.723 8.10973 25 10.5624M15.3702 5.81741C16.5541 6.05097 17.6404 6.63517 18.4883 7.4942C19.3362 8.35322 19.9064 9.44739 20.1249 10.6347M24.9398 18.9686V22.5816C24.9412 22.917 24.8725 23.249 24.7382 23.5563C24.6039 23.8636 24.4069 24.1395 24.1599 24.3662C23.9129 24.593 23.6212 24.7656 23.3036 24.873C22.9861 24.9805 22.6496 25.0204 22.3157 24.9902C18.6116 24.5875 15.0536 23.3212 11.9276 21.293C9.01915 19.4439 6.55333 16.9769 4.7052 14.067C2.67088 10.9252 1.40488 7.34809 1.00977 3.62554C0.97969 3.29251 1.01925 2.95685 1.12593 2.63995C1.23261 2.32305 1.40408 2.03185 1.62941 1.78488C1.85474 1.53791 2.129 1.34059 2.43473 1.20548C2.74046 1.07037 3.07096 1.00043 3.40518 1.00012H7.01636C7.60053 0.994364 8.16687 1.20133 8.6098 1.58245C9.05273 1.96356 9.34204 2.49281 9.4238 3.07155C9.57622 4.22778 9.85889 5.36305 10.2664 6.4557C10.4284 6.88675 10.4634 7.35522 10.3674 7.8056C10.2714 8.25597 10.0484 8.66938 9.72474 8.99682L8.19601 10.5263C9.90957 13.5414 12.4048 16.0378 15.4184 17.7522L16.9471 16.2228C17.2744 15.899 17.6876 15.6758 18.1377 15.5798C18.5879 15.4837 19.0561 15.5188 19.4869 15.6808C20.579 16.0885 21.7138 16.3713 22.8694 16.5238C23.4541 16.6064 23.9882 16.901 24.3699 17.3518C24.7516 17.8026 24.9545 18.378 24.9398 18.9686Z"
         stroke="white"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
