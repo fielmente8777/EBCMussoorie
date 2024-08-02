@@ -28,7 +28,7 @@ const YouTube = () => {
                 everyday life.
               </p>
             </div>
-            <div className="lg:mt-10 mt-5">
+            <div className="mt-5">
               <ul className="flex flex-col gap-4">
                 {dataList.map((item, index) => (
                   <li
@@ -48,7 +48,7 @@ const YouTube = () => {
                 <div className="img-container rounded-xl overflow-hidden">
                   <iframe
                     width="100%"
-                    height="400px"
+                    height="430px"
                     src="https://www.youtube.com/embed/8RejDC67L_I?loop=1&mute=1&autoplay=1"
                     frameBorder="0"
                     allowFullScreen
