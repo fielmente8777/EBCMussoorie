@@ -128,8 +128,8 @@ const Form = () => {
                 Contact Details
               </div>
               <div className="flex gap-1 items-start mt-6">
-                <span className="max-md:w-10 mt-1"><OutlineLocation /></span>
-                <p className="max-md:max-w-full text-xl">
+                <span className="max-md:w-10 mt-0"><OutlineLocation /></span>
+                <p className="max-md:max-w-full text-lg">
                   Everest Base Camp Mussoorie, Park Estate, Hathipaon Road,
                   Mussoorie, Uttarakhand, 248179
                 </p>
