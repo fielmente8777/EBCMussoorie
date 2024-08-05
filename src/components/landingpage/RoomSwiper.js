@@ -12,6 +12,7 @@ import Rooms3 from "../../../public/rooms/Suite Bedroom 1.jpg";
 import Rooms4 from "../../../public/rooms/Surevyor Bedroom pic 2.jpg";
 
 const RoomSwiper = () => {
+  
   const Roomdata = [
     {
       image: Rooms1,
