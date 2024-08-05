@@ -8,6 +8,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import star from "../../../public/images/start.svg";
+import quotes from "../../../public/quotes.png";
 const TestimonialCard = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -74,20 +75,13 @@ const TestimonialCard = () => {
         {TestimonialData.map((data, index) => {
           return (
             <SwiperSlide key={index} className="">
-              <div className="flex flex-col justify-center px-2.5 py-4 mt-3 bg-white rounded-xl max-md:pr-5 max-md:max-w-full">
+              <div className="flex flex-col justify-center px-4 py-4 mt-3 bg-white rounded-xl max-md:pr-5 max-md:max-w-full">
                 <div className="flex gap-2 max-md:flex-wrap">
-                  {/* <div className="flex gap-1 self-start">
-                                        <img
-                                            loading="lazy"
-                                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/58e9ab03b5b29dc74710d7063b7350c7967648676364b11de1c651dd3a122198?"
-                                            className="shrink-0 w-5 aspect-[0.63] fill-[#29422C] "
-                                        />
-                                        <img
-                                            loading="lazy"
-                                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/68a7126518b574c205af5adf0fb4f195088fe0ef287b4d9eeada8c643c7cc945?"
-                                            className="shrink-0 w-5 aspect-[0.63] fill-[#29422C]"
-                                        />
-                                    </div> */}
+                  <div className="flex gap-1 max-md:justify-center max-md:w-full">
+                    <div className="relative aspect-[1/1] w-10 h-8">
+                      <Image src={quotes} alt="alt" fill className="object-cover" />
+                    </div>
+                  </div>
                   <div className="flex flex-col items-center max-md:max-w-full">
                     <div className="self-stretch text-lg leading-7 text-center text-[#29422C] max-md:max-w-full">
                       <span className="">{data.text}...</span>
@@ -105,7 +99,6 @@ const TestimonialCard = () => {
                           key={index}
                           loading="lazy"
                           src={star}
-                          // src="https://cdn.builder.io/api/v1/image/assets/TEMP/af5ad73c4ed989f30fafc7d18f2563595f5629a7d6ee837a82835c0fba8c06c1?"
                           className="shrink-0 w-4 aspect-square fill-[#29422C]"
                           width={600}
                           height={400}

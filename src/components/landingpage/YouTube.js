@@ -52,6 +52,8 @@ const YouTube = () => {
                     src="https://www.youtube.com/embed/8RejDC67L_I?loop=1&mute=1&autoplay=1"
                     frameBorder="0"
                     allowFullScreen
+                    title="Eve Base Camp"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;"
                   ></iframe>
                 </div>
               </div>

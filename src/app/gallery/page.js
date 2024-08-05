@@ -10,7 +10,7 @@ import camper4 from "../../../public/gallery/camper4.jpg"
 import camper5 from "../../../public/gallery/camper5.jpg"
 import camper6 from "../../../public/gallery/camper6.jpg"
 import camper7 from "../../../public/Camper Room/Camper Bedroom pic 2.jpg"
-import camper8 from "../../../public/Camper Room/Camper Bedroom pic 3.jpg"
+import camper8 from "../../../public/Camper Room/Camper Bedroom Pic 3.jpg"
 import camper9 from "../../../public/Camper Room/Camper Bathroom.jpg"
 import camper10 from "../../../public/Camper Room/Camper Balcony.jpg"
 

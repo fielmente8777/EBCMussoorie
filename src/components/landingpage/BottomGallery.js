@@ -57,7 +57,7 @@ const BottomGallery = () => {
 
       <div className="flex justify-center mt-8">
         <Link href={"https://www.instagram.com/ebcmussoorie/"} target="_blank" className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-[20px]">
-          Instagram
+        Visit Instagram
         </Link>
       </div>
     </div>
