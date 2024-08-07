@@ -104,7 +104,7 @@ export const PrevBtn = () => {
         d="M19.3989 36.8937L2 19.5001L19.3989 2.10645L19.9988 2.70623L3.11421 19.5001L19.9988 36.2939L19.3989 36.8937Z"
         fill="#8CA18F"
         stroke="#8CA18F"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );
@@ -123,7 +123,7 @@ export const NextBtn = () => {
         d="M2 36.8937L19.3989 19.5001L2 2.10645L2.60006 2.70623L20.4857 19.5001L2.60006 36.2939L2 36.8937Z"
         fill="#8CA18F"
         stroke="#8CA18F"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );

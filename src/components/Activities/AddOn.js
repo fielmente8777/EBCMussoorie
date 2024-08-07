@@ -9,13 +9,13 @@ import BBQ1 from "../../../public/images/Barbecue1.webp";
 import BBQ2 from "../../../public/images/34 Barbeque_11zon.jpg";
 import BBQ3 from "../../../public/images/about1.jpg";
 
-import BornFire1 from "../../../public/bornfire/dji_fly_20230402_033354_140_1680447488677_photo.jpg";
-import BornFire2 from "../../../public/bornfire/bornfire.jpg";
-import BornFire3 from "../../../public/bornfire/bornfire.png";
-import BornFire4 from "../../../public/bornfire/38 Bonfire_11zon.jpg";
+import BornFire1 from "../../../public/bornfire/dji_fly_20230402_033354_140_1680447488677_photo.webp";
+import BornFire2 from "../../../public/bornfire/bornfire.webp";
+import BornFire3 from "../../../public/bornfire/bornfire.webp";
+import BornFire4 from "../../../public/bornfire/38Bonfire_11zon.webp";
 
-import Wilderness1 from "../../../public/bornfire/33 Bonfire_11zon.jpg";
-import Wilderness2 from "../../../public/bornfire/treking.png";
+import Wilderness1 from "../../../public/bornfire/33Bonfire_11zon.webp";
+import Wilderness2 from "../../../public/bornfire/treking.webp";
 
 import SpecilizationCard from "../landingpage/SpecilizationCard";
 

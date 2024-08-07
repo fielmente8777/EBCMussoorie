@@ -96,7 +96,7 @@ const Footer = () => {
                 <h2 className="lg:text-4xl text-3xl font-bold capitalize">
                   Subscribe our newsletter
                 </h2>
-                <div className="w-full border border-[#BCD0B8] px-4 py-3 rounded-lg m-1 shadow-sm shadow-[#BCD0B8]">
+                <div className="w-full border border-[#BCD0B8] px-4 py-3 rounded-lg shadow-sm shadow-[#BCD0B8]">
                   <input
                     type="email"
                     placeholder="Enter email address"
@@ -107,14 +107,13 @@ const Footer = () => {
                         handleNewsletter();
                       }
                     }}
-                    
                     className="outline-none w-full focus:outline-none text-xl bg-transparent placeholder:text-white text-white"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className="text-white text-center text-xl bg-[#152116] capitalize py-4 lg:flex gap-2 justify-center items-center max-md:px-4 tracking-wider">
+          <div className="text-white text-center text-lg bg-[#152116] capitalize py-4 lg:flex gap-2 justify-center items-center max-md:px-4 tracking-wider">
             <span className="flex gap-2 justify-center items-center">
               <CopyRightIcon />
               Copyright EBC Mussoorie

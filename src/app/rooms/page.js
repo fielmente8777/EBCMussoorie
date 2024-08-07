@@ -15,8 +15,8 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-import Room1 from "../../../public/rooms/20 Bedroom 4_11zon.jpg";
-import Room2 from "../../../public/rooms/20 Bedroom 4_11zon.jpg";
+import Room1 from "../../../public/rooms/20Bedroom4_11zon.webp";
+import Room2 from "../../../public/rooms/20Bedroom4_11zon.webp";
 
 import Surveyor1 from "../../../public/Surveyor Room/_MG_2465.JPG";
 import Surveyor2 from "../../../public/Surveyor Room/_MG_2475.JPG";

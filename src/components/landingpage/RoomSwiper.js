@@ -6,10 +6,10 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import Rooms1 from "../../../public/rooms/Glamper 1 Bedroom pic 1.jpg";
-import Rooms2 from "../../../public/rooms/CamperBedroomPic3.jpg";
-import Rooms3 from "../../../public/rooms/Suite Bedroom 1.jpg";
-import Rooms4 from "../../../public/rooms/Surevyor Bedroom pic 2.jpg";
+import Rooms1 from "../../../public/rooms/Glamper1Bedroompic1.webp";
+import Rooms2 from "../../../public/rooms/CamperBedroomPic3.webp";
+import Rooms3 from "../../../public/rooms/SuiteBedroom1.webp";
+import Rooms4 from "../../../public/rooms/SurevyorBedroompic2.webp";
 
 const RoomSwiper = () => {
   
