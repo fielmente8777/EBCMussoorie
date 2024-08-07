@@ -3,7 +3,7 @@ import React from "react";
 
 const OutdoorActivitiesCard = () => {
   return (
-    <div className="flex flex-col justify-center bg-[#D5D5D5] px-3 py-5 md:px-10 min-h-[500px]">
+    <div className="flex flex-col justify-center bg-[#D5D5D5] px-3 lg:py-5 md:py-4 py-3 md:px-10 lg:min-h-[500px]">
       <div className="w-full text-3xl text-[#29422C] font-semibold tracking-wider leading-8 max-md:max-w-full">
         Outdoor Activities
       </div>

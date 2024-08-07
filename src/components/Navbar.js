@@ -83,7 +83,7 @@ const Navbar = () => {
                       <Insta />
                     </Link>
                     <Link
-                      href={"https://www.facebook.com/ebcmussoorie/"}
+                      href={"https://www.tripadvisor.in/Hotel_Review-g297689-d23292009-Reviews-Everest_Base_Camp_Mussoorie-Mussoorie_Dehradun_District_Uttarakhand.html"}
                       target="_blank"
                       className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
                     >
