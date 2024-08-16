@@ -13,7 +13,7 @@ const dataList = [
 ]
 const YouTube = () => {
   return (
-    <div className="lg:py-12 py-10">
+    <div className="lg:py-12 pb-4">
       <div className="maxwidth mx-auto max-md:px-4">
         <div className="lg:grid grid-cols-2 gap-4 mb-10 flex flex-col-reverse">
           <div className="lg:me-20">
