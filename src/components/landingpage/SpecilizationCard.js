@@ -1,9 +1,10 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -17,20 +18,18 @@ const SpecilizationCard = ({ cardData, index, aspectRatio }) => {
         }`}
       >
         <Swiper
-          loop={true}
-          autoplay={{
-            delay: 2000,
-          }}
+          // loop={true}
+          // autoplay={{
+          //   delay: 2000,
+          // }}
           speed={1000}
           pagination={{
             el: "#bullets-Portfolio",
           }}
           slidesPerView={1}
-          navigation={{
-            prevEl: ".prev-btn",
-            nextEl: ".next-btn",
-          }}
-          modules={[Pagination, Autoplay, Navigation]}
+          navigation={true}
+          modules={[Navigation]}
+          className="card_swiper"
         >
           {cardData?.images?.map((item, index) => (
             <SwiperSlide key={index}>

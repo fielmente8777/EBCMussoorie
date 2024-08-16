@@ -1,6 +1,7 @@
 import { RelishConveniently, SomethingForEveryone, StaywithLuxury, UnmatchedViews } from "@/icons/icons";
 import Link from "next/link";
 import React from "react";
+import SEOVideo from "../SEOVideo";
 
 
 
@@ -45,16 +46,14 @@ const YouTube = () => {
           <div className="lg:-ms-20">
             <div className=" flex flex-col">
               <div className="">
-                <div className="img-container rounded-xl overflow-hidden">
-                  <iframe
-                    width="100%"
-                    height="430px"
-                    src="https://www.youtube.com/embed/8RejDC67L_I?loop=1&mute=1&autoplay=1"
-                    frameBorder="0"
-                    allowFullScreen
-                    title="Eve Base Camp"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;"
-                  ></iframe>
+                <div className="w-full h-full rounded-xl overflow-hidden relative aspect-[4/2.5]">
+                  <SEOVideo src="https://eazotel-client-images.s3.ap-south-1.amazonaws.com/Everest+Base+Camp%2C+Mussoorie.+%23uttarakhand+%23everestbasecamp+%23mussoorie.mp4"
+                    title="Everest Base Camp, Mussoorie. #uttarakhand #everestbasecamp #mussoorie"
+                    controls={false}
+                    muted={true}
+                    autoPlay={true}
+                    loop={true}
+                  />
                 </div>
               </div>
             </div>

@@ -20,21 +20,16 @@ const OutdoorActivities = () => {
 
         <div className="w-full md:col-span-2 md:h-[500px]">
           <Swiper
-            loop={true}
-            autoplay={{
-              delay: 2000,
-            }}
+            // loop={true}
+            // autoplay={{
+            //   delay: 2000,
+            // }}
             speed={1000}
-            pagination={{
-              el: "#bullets-Portfolio",
-            }}
+            navigation={true}
+            
             slidesPerView={1}
             spaceBetween={20}
-            navigation={{
-              prevEl: ".prev-btn",
-              nextEl: ".next-btn",
-            }}
-            modules={[Pagination, Autoplay, Navigation]}
+            modules={[Navigation]}
             breakpoints={{
               768: {
                 slidesPerView: 2,
@@ -45,7 +40,7 @@ const OutdoorActivities = () => {
               //     spaceBetween: 20,
               //   },
             }}
-            className="w-full h-full"
+            className="w-full h-full card_swiper"
           >
             {Images.map((image, index) => {
               return (

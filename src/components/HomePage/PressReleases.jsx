@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import paper1 from "../../../public/images/paper1.png";
-import paper2 from "../../../public/images/paper2.png";
-import paper3 from "../../../public/images/paper3.png";
+import Link from "next/link";
+import paper1 from "../../../public/images/PressReleases1.webp";
+import paper2 from "../../../public/images/PressReleases2.webp";
+import paper3 from "../../../public/images/pressreleases3.webp";
 const PressReleases = () => {
     return (
         <section>
@@ -30,7 +31,7 @@ const PressReleases = () => {
                         }}
                         slidesPerView={1}
                         spaceBetween={14}
-                        modules={[Pagination, Autoplay, Navigation]}
+                        modules={[Pagination, Autoplay]}
                         breakpoints={{
                             768: {
                                 slidesPerView: 2,
@@ -47,9 +48,10 @@ const PressReleases = () => {
                             <SwiperSlide key={index} className="py-4">
                                 <PressReleasesComp
                                     src={item.src}
-                                    date={item.date}
                                     title={item.title}
                                     description={item.description}
+                                    urlText={item.urlText}
+                                    link={item.link}
                                 />
                             </SwiperSlide>
                         ))}
@@ -65,16 +67,18 @@ const PressReleases = () => {
 
 export default PressReleases;
 
-const PressReleasesComp = ({ src, date, title, description }) => {
+const PressReleasesComp = ({ src, urlText, link, title, description }) => {
     return (
         <div className="flex flex-col gap-4 p-4 bg-[#E5E7EB] shadow-lg">
             <div className="w-full relative aspect-[3/1.8]">
                 <Image src={src} alt="alt" fill className="object-cover" />
             </div>
             <div className="flex flex-col gap-2 text-[#29422C]">
-                <p className="text-sm text-[#29422C]">{date}</p>
-                <h3 className="text-xl font-semibold">{title}</h3>
-                <p className="text-base font-normal">{description}</p>
+                <Link href={link} className="text-base text-[#29422C] underline" target="_blank" >{urlText}</Link>
+                <h3 className="text-[1.4rem]/[2rem] font-semibold">{title}</h3>
+                <p className="text-base font-normal">{description}...
+                    <Link href={link} className="text-sm text-[#29422C] underline font-bold uppercase" target="_blank">Read More</Link>
+                </p>
             </div>
         </div>
     );
@@ -83,50 +87,56 @@ const PressReleasesComp = ({ src, date, title, description }) => {
 const data = [
     {
         src: paper1,
-        date: "16 December 2023",
+        urlText: "LBB.in",
+        link: "https://lbb.in/delhi/away-from-the-city-around-all-things-pretty-ebc-mussoorie/",
         title:
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "Away From The City, Around All Things Pretty: Everest Base Camp in Mussoorie!",
         description:
-            "It is a long established fact that a reader will be the be distracted by the readable content of a page when the looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter",
+            "Nature lovers, this one’s for y’all! If you are looking to get away from the hustle and bustle of your daily life and want to escape to somewhere peaceful and quiet, we have discovered just the place for you! Surrounded by forest trails, well-marked trekking lines, pristine views",
     },
     {
         src: paper2,
-        date: "16 December 2023",
+        urlText: "tripoto.com",
+        link: "https://www.tripoto.com/india/trips/did-you-know-that-just-8-hours-from-delhi-there-s-an-everest-base-camp-no-we-re-not-kidding-3aea3a54f8628a1c8",
         title:
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "Did You Know That Just 7 Hours From Delhi, There's An Everest Base Camp? No, We're Not Kidding!",
         description:
-            "It is a long established fact that a reader will be the be distracted by the readable content of a page when the looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter",
+            "Did you know that the person after whom Mount Everest is named was a resident of the quaint town of Mussourie also known as “Queen of The Hills”? Just a 4-minute walk from George Everest’s house (after whom the highest peak is named!), lies this glamping camp",
     },
     {
         src: paper3,
-        date: "16 December 2023",
+        urlText: "curlytales.com",
+        link: "https://curlytales.com/dine-under-the-sky-and-even-stay-inside-dreamy-glamps-at-mussoories-everest-base-camp-resort/",
         title:
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "Dine Under The Sky And Even Stay Inside Dreamy Glamps At Mussoorie’s Everest Base Camp Resort.",
         description:
-            "It is a long established fact that a reader will be the be distracted by the readable content of a page when the looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter",
+            "Welcome to the enchanting realm of Everest Base Camp, where luxury meets the untamed spirit of nature in a symphony orchestrated by the echoes of history. Tucked amidst the breathtaking landscapes of Mussoorie, this isn’t just a glamping site. It’s a vivid tapestry",
     },
     {
         src: paper1,
-        date: "16 December 2023",
+        urlText: "LBB.in",
+        link: "https://lbb.in/delhi/away-from-the-city-around-all-things-pretty-ebc-mussoorie/",
         title:
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "Away From The City, Around All Things Pretty: Everest Base Camp in Mussoorie!",
         description:
-            "It is a long established fact that a reader will be the be distracted by the readable content of a page when the looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter",
+            "Nature lovers, this one’s for y’all! If you are looking to get away from the hustle and bustle of your daily life and want to escape to somewhere peaceful and quiet, we have discovered just the place for you! Surrounded by forest trails, well-marked trekking lines, pristine views",
     },
     {
         src: paper2,
-        date: "16 December 2023",
+        urlText: "tripoto.com",
+        link: "https://www.tripoto.com/india/trips/did-you-know-that-just-8-hours-from-delhi-there-s-an-everest-base-camp-no-we-re-not-kidding-3aea3a54f8628a1c8",
         title:
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "Did You Know That Just 7 Hours From Delhi, There's An Everest Base Camp? No, We're Not Kidding!",
         description:
-            "It is a long established fact that a reader will be the be distracted by the readable content of a page when the looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter",
+            "Did you know that the person after whom Mount Everest is named was a resident of the quaint town of Mussourie also known as “Queen of The Hills”? Just a 4-minute walk from George Everest’s house (after whom the highest peak is named!), lies this glamping camp",
     },
     {
         src: paper3,
-        date: "16 December 2023",
+        urlText: "curlytales.com",
+        link: "https://curlytales.com/dine-under-the-sky-and-even-stay-inside-dreamy-glamps-at-mussoories-everest-base-camp-resort/",
         title:
-            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "Dine Under The Sky And Even Stay Inside Dreamy Glamps At Mussoorie’s Everest Base Camp Resort.",
         description:
-            "It is a long established fact that a reader will be the be distracted by the readable content of a page when the looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter",
+            "Welcome to the enchanting realm of Everest Base Camp, where luxury meets the untamed spirit of nature in a symphony orchestrated by the echoes of history. Tucked amidst the breathtaking landscapes of Mussoorie, this isn’t just a glamping site. It’s a vivid tapestry",
     },
 ];

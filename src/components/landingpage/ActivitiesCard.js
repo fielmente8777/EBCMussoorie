@@ -1,8 +1,8 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Image from "next/image";
 const ActivitiesCard = ({ activitiesData, index }) => {
   return (
@@ -11,19 +11,14 @@ const ActivitiesCard = ({ activitiesData, index }) => {
         className={`col-span-2  ${index === 1 || index === 3 ? "order-2" : ""}`}
       >
         <Swiper
-          loop={true}
-          autoplay={{
-            delay: 2000,
-          }}
-          pagination={{
-            el: "#bullets-Portfolio",
-          }}
+          // loop={true}
+          // autoplay={{
+          //   delay: 2000,
+          // }}
+
           slidesPerView={1}
-          navigation={{
-            prevEl: ".prev-btn",
-            nextEl: ".next-btn",
-          }}
-          modules={[Pagination, Autoplay, Navigation]}
+          navigation={true}
+          modules={[Navigation]}
           breakpoints={{
             768: {
               slidesPerView: 2,
@@ -34,7 +29,7 @@ const ActivitiesCard = ({ activitiesData, index }) => {
             //     spaceBetween: 20,
             // },
           }}
-          className="w-full h-full"
+          className="w-full h-full card_swiper"
         >
           {activitiesData?.images?.map((roomImage, index) => {
             return (

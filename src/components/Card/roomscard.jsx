@@ -6,6 +6,8 @@ import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Navigation } from "swiper/modules";
+import "swiper/css/navigation";
 
 function Roomscard({ title, subtitle, link, images, accomodation, index, description ,subtitle2}) {
   return (
@@ -17,10 +19,12 @@ function Roomscard({ title, subtitle, link, images, accomodation, index, descrip
     >
       <div className={`${index % 2 != 0 ? "md:order-2" : ""} h-full`}>
         <Swiper
-          spaceBetween={10}
+          spaceBetween={0}
           slidesPerView={1}
           speed={900}
-          className="w-full h-full"
+          navigation={true}
+          modules={[Navigation]}
+          className="w-full h-full card_swiper"
         >
           {images?.map((item, index) => {
             return (

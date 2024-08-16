@@ -1,9 +1,9 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import indoor1 from "../../../public/activity/activity3.png";
 import indoor2 from "../../../public/activity/activity4.png";
@@ -28,19 +28,13 @@ const IndoorActivities = () => {
 
       {/* <div className="w-full rounded-lg overflow-hidden"> */}
       <Swiper
-        loop={true}
-        autoplay={{
-          delay: 2000,
-        }}
-        pagination={{
-          el: "#bullets-Portfolio",
-        }}
+        // loop={true}
+        // autoplay={{
+        //   delay: 2000,
+        // }}
         slidesPerView={1}
-        navigation={{
-          prevEl: ".prev-btn",
-          nextEl: ".next-btn",
-        }}
-        modules={[Pagination, Autoplay, Navigation]}
+        navigation={true}
+        modules={[Autoplay, Navigation]}
         breakpoints={{
           768: {
             slidesPerView: 3,
@@ -51,7 +45,7 @@ const IndoorActivities = () => {
           //     spaceBetween: 20,
           //   },
         }}
-        className="w-full h-[250px] md:h-[500px] rounded-sm"
+        className="w-full h-[250px] md:h-[500px] rounded-sm card_swiper shadow-2xl"
       >
         {images?.map((roomImage, index) => {
           return (

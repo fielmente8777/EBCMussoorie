@@ -43,10 +43,10 @@ const RoomSwiper = () => {
     <div className="maxwidth mx-auto flex flex-col-reverse justify-between max-md:px-3 md:flex-row w-full py-7">
       <div className="w-full md:w-[60%]">
         <Swiper
-          loop={true}
-          autoplay={{
-            delay: 2000,
-          }}
+          // loop={true}
+          // autoplay={{
+          //   delay: 2000,
+          // }}
           slidesPerView={1}
           spaceBetween={20}
           navigation={{

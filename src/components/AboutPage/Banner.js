@@ -1,9 +1,9 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
@@ -38,19 +38,13 @@ const Banner = ({ data, order }) => {
         </div>
         <div className=" flex flex-col max-md:w-full">
           <Swiper
-            loop={true}
-            autoplay={{
-              delay: 2000,
-            }}
-            pagination={{
-              el: "#bullets-Portfolio",
-            }}
+            // loop={true}
+            // autoplay={{
+            //   delay: 2000,
+            // }}
             slidesPerView={1}
-            navigation={{
-              prevEl: ".prev-btn",
-              nextEl: ".next-btn",
-            }}
-            modules={[Pagination, Autoplay, Navigation]}
+            navigation={true}
+            modules={[Autoplay, Navigation]}
             breakpoints={
               {
                 // 768: {
@@ -63,7 +57,7 @@ const Banner = ({ data, order }) => {
                 //   },
               }
             }
-            className="w-full h-full"
+            className="w-full h-full card_swiper"
           >
             {data.images?.map((roomImage, index) => {
               return (
