@@ -6,6 +6,33 @@ import { MdCall } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Face, Insta, Trip } from "../icons/icons.jsx";
+
+const navLinks = [
+  { name: "About", href: "/about" },
+  { name: "Activities", href: "/activities" },
+  { name: "Our Rooms", href: "/rooms" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Park Cafe", href: "/parkcafe" },
+  { name: "Blog", href: "/blogs" },
+];
+
+export const socialLinks = [
+  {
+    icon: <Face />,
+    name: "Facebook",
+    href: "https://www.facebook.com/ebc.mussoorie/",
+  },
+  {
+    icon: <Trip />,
+    name: "Tripadvisor",
+    href: "https://www.tripadvisor.in/Hotel_Review-g297689-d23292009-Reviews-Everest_Base_Camp_Mussoorie-Mussoorie_Dehradun_District_Uttarakhand.html",
+  },
+  {
+    icon: <Insta />,
+    name: "Instagram",
+    href: "https://www.instagram.com/ebcmussoorie/",
+  },
+];
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -48,10 +75,11 @@ const Navbar = () => {
               </div>
               <Link
                 href={"tel:+918595274861"}
-                className="hidden xl:flex items-center gap-2 px-5 my-auto text-lg leading-7 text-[#acacac]"
+                className="hidden xl:flex items-center gap-2 px-5 my-auto text-lg w-max text-[#acacac]"
               >
                 <MdCall size={20} />
-                <div className="my-auto text-[#acacac]">+91-85952 74861</div>
+                <span className="sr-only">call us on : +9185952 74861</span>
+                <span className="my-auto text-[#acacac]">+91-85952 74861</span>
               </Link>
               <Link
                 href={"/"}
@@ -63,32 +91,23 @@ const Navbar = () => {
                   alt="ebc"
                   className="grow shrink-0 max-w-full aspect-[1.64] w-[308px]"
                 />
+                <span className="sr-only">home</span>
               </Link>
               <div className="hidden xl:flex flex-col items-end max-md:ml-0">
                 <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
-                  <div className="w-[20%]"></div>
+                  {/* <div className="w-[20%]"></div> */}
                   <div className="flex gap-3 px-5 my-auto">
-                    <Link
-                      href={"https://www.facebook.com/ebcmussoorie/"}
-                      target="_blank"
-                      className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
-                    >
-                      <Face />
-                    </Link>
-                    <Link
-                      href={"https://www.instagram.com/ebcmussoorie/"}
-                      target="_blank"
-                      className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
-                    >
-                      <Insta />
-                    </Link>
-                    <Link
-                      href={"https://www.tripadvisor.in/Hotel_Review-g297689-d23292009-Reviews-Everest_Base_Camp_Mussoorie-Mussoorie_Dehradun_District_Uttarakhand.html"}
-                      target="_blank"
-                      className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
-                    >
-                      <Trip />
-                    </Link>
+                    {socialLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        target="_blank"
+                        className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
+                      >
+                        <span className="sr-only">{link.name}</span>
+                        {link.icon}
+                      </Link>
+                    ))}
                   </div>
                   <Link
                     href={
@@ -109,87 +128,28 @@ const Navbar = () => {
                 >
                   {/* <MdCall size={20} /> */}
                   <CallNavIcon />
-                  <div className="my-auto text-[#acacac] xl:block hidden">
+                  <span className="sr-only">call us on : +9185952 74861</span>
+                  <span className="my-auto text-[#acacac] xl:block hidden">
                     +91-85952 74861
-                  </div>
+                  </span>
                 </Link>
               </div>
             </div>
             {pathname !== "/ebclanding" ? (
               <div className="hidden xl:flex gap-5 justify-between self-center px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
-                <Link
-                  href={"/about"}
-                  className={`${
-                    pathname === "/about"
-                      ? "text-[#29422c] bg-[#D5D5D5]"
-                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
-                  } py-1 px-2`}
-                >
-                  About Us
-                </Link>
-                <Link
-                  href={"/activities"}
-                  className={`${
-                    pathname === "/activities"
-                      ? "text-[#29422c] bg-[#D5D5D5]"
-                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
-                  } py-1 px-2`}
-                >
-                  Activities
-                </Link>
-                {/* <Link href={"/contact"} className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1">
-                                    Contact Us
-                                </Link> */}
-                <Link
-                  href={"/rooms"}
-                  className={`${
-                    pathname === "/rooms"
-                      ? "text-[#29422c] bg-[#D5D5D5]"
-                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
-                  } py-1 px-2`}
-                >
-                  Our Rooms
-                </Link>
-                <Link
-                  href={"/gallery"}
-                  className={`${
-                    pathname === "/gallery"
-                      ? "text-[#29422c] bg-[#D5D5D5]"
-                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
-                  } py-1 px-2`}
-                >
-                  Gallery
-                </Link>
-                <Link
-                  href={"/parkcafe"}
-                  className={`${
-                    pathname === "/parkcafe"
-                      ? "text-[#29422c] bg-[#D5D5D5]"
-                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
-                  } py-1 px-2`}
-                >
-                  Park Cafe
-                </Link>
-                <Link
-                  href={"/glamper"}
-                  className={`${
-                    pathname === "/glamper"
-                      ? "text-[#29422c] bg-[#D5D5D5]"
-                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
-                  } py-1 px-2`}
-                >
-                  {`A Glamper's Guide`}
-                </Link>
-                <Link
-                  href={"/blogs"}
-                  className={`${
-                    pathname === "/blogs"
-                      ? "text-[#29422c] bg-[#D5D5D5]"
-                      : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
-                  } py-1 px-2`}
-                >
-                  Blog
-                </Link>
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`${
+                      pathname === link.href
+                        ? "text-[#29422c] bg-[#D5D5D5]"
+                        : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
+                    } py-1 px-2`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             ) : (
               ""
@@ -214,57 +174,22 @@ const HomeNav = () => {
             className="flex items-center gap-2 md:px-5 my-auto text-lg leading-7 text-[#acacac]"
           >
             <MdCall size={20} />
-            <div className="my-auto text-[#acacac] xl:block hidden">
+            <span className="sr-only">call us on : +9185952 74861</span>
+            <span className="my-auto text-[#acacac] xl:block hidden">
               +91-85952 74861
-            </div>
+            </span>
           </Link>
 
           <div className="hidden xl:flex gap-5 justify-between self-center px-5 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
-            <Link
-              href={"/about"}
-              className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-            >
-              About Us
-            </Link>
-            <Link
-              href={"/activities"}
-              className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-            >
-              Activities
-            </Link>
-            {/* <Link href={"/contact"} className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1">
-                            Contact Us
-                        </Link> */}
-            <Link
-              href={"/rooms"}
-              className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-            >
-              Our Rooms
-            </Link>
-            <Link
-              href={"/gallery"}
-              className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-            >
-              Gallery
-            </Link>
-            <Link
-              href={"/parkcafe"}
-              className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-            >
-              Park Cafe
-            </Link>
-            <Link
-              href={"/glamper"}
-              className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-            >
-              {`A Glamper's Guide`}
-            </Link>
-            <Link
-              href={"/blogs"}
-              className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-            >
-              Blog
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
 
           <div className="hidden xl:block">
@@ -275,6 +200,7 @@ const HomeNav = () => {
               target="_blank"
               className="rounded-sm flex items-center justify-center  px-10 py-2 text-lg font-semibold tracking-normal leading-7 text-[] bg-stone-300"
             >
+              <span className="sr-only">book now</span>
               Book Now
             </Link>
           </div>
@@ -325,58 +251,16 @@ const MobileNav = ({ open, setOpen }) => {
       }}
     >
       <div className="flex items-center flex-col gap-4">
-        <Link
-          href={"/about"}
-          onClick={() => setOpen(false)}
-          className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-        >
-          About Us
-        </Link>
-        <Link
-          href={"/activities"}
-          onClick={() => setOpen(false)}
-          className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-        >
-          Activities
-        </Link>
-        {/* <Link href={"/contact"} className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1">
-                                    Contact Us
-                                </Link> */}
-        <Link
-          href={"/rooms"}
-          onClick={() => setOpen(false)}
-          className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-        >
-          Our Rooms
-        </Link>
-        <Link
-          href={"/gallery"}
-          onClick={() => setOpen(false)}
-          className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-        >
-          Gallery
-        </Link>
-        <Link
-          href={"/parkcafe"}
-          onClick={() => setOpen(false)}
-          className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-        >
-          Park Cafe
-        </Link>
-        <Link
-          href={"/glamper"}
-          onClick={() => setOpen(false)}
-          className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-        >
-          {`A Glamper's Guide`}
-        </Link>
-        <Link
-          href={"/blogs"}
-          onClick={() => setOpen(false)}
-          className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
-        >
-          Blog
-        </Link>
+        {navLinks.map((link) => (
+          <Link
+            key={link.name}
+            href={link.href}
+            onClick={() => setOpen(!open)}
+            className="px-2 text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
     </div>
   );

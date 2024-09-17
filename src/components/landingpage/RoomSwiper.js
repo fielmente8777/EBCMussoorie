@@ -46,8 +46,9 @@ const RoomSwiper = () => {
           // autoplay={{
           //   delay: 2000,
           // }}
-          // slidesPerView={1}
-          // spaceBetween={20}
+          slidesPerView={2}
+          spaceBetween={20}
+          centeredSlides={true}
           navigation={{
             prevEl: ".prev",
             nextEl: ".next",
@@ -58,14 +59,10 @@ const RoomSwiper = () => {
           }}
           modules={[Pagination, Autoplay, Navigation]}
           breakpoints={{
-            // 320: {
-            //   slidesPerView: 2,
-            //   spaceBetween: 5,
-            //   centeredSlides: true,
-            // },
             768: {
               slidesPerView: 2,
               spaceBetween: 20,
+              centeredSlides: false,
             },
             //   1024: {
             //     slidesPerView: 3,
@@ -76,7 +73,7 @@ const RoomSwiper = () => {
         >
           {Roomdata.map((roomData, index) => {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="min-w-[200px] max-md:-ml-2">
                 <RoomSwiperCard key={index} roomData={roomData} />
               </SwiperSlide>
             );

@@ -104,6 +104,8 @@ function Gallery({ items }) {
                     src={item}
                     alt={`image${index}`}
                     fill
+                    placeholder="blur"
+                    priority={true}
                     className="object-cover cursor-pointer hover:shadow-2xl shadow-[#29422C] hover:-translate-y-1 transition duration-1000 "
                     onClick={() => handleImageClick(item)}
                   />
@@ -125,6 +127,8 @@ function Gallery({ items }) {
                     alt={`image${index}`}
                     // width={600}
                     // height={400}
+                    placeholder="blur"
+                    priority={true}
                     onClick={() => handleImageClick(i)}
                   />
                 </div>

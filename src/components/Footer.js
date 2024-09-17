@@ -18,6 +18,7 @@ import {
 } from "../icons/icons.jsx";
 import { IoMail } from "react-icons/io5";
 import { useState } from "react";
+import { socialLinks } from "./Navbar";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -189,32 +190,17 @@ const Footer = () => {
                 <div className="my-auto">+91-85952 74861</div>
               </Link>
               <div className="flex gap-4 pr-20 mt-4 max-md:pr-5">
-                <Link
-                  href={"https://www.facebook.com/ebcmussoorie/"}
-                  target="_blank"
-                >
-                  {" "}
-                  <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
-                    <Face />
-                  </div>
-                </Link>
-                <Link
-                  href={"https://www.instagram.com/ebcmussoorie/"}
-                  target="_blank"
-                >
-                  {" "}
-                  <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
-                    <Insta />
-                  </div>
-                </Link>
-                <Link
-                  href={"https://www.facebook.com/ebcmussoorie/"}
-                  target="_blank"
-                >
-                  <div className="h-10 w-10 flex justify-center items-center rounded-full bg-white">
-                    <Trip />
-                  </div>
-                </Link>
+                {socialLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
+                  >
+                    <span className="sr-only">{link.name}</span>
+                    {link.icon}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

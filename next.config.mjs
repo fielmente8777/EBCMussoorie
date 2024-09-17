@@ -7,6 +7,9 @@ const nextConfig = {
   //     "cdn.builder.io",
   //   ],
   // },
+  // trailingSlash: true,
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     unoptimized: true,
     remotePatterns: [

@@ -78,7 +78,10 @@ const HappyCustomers = ({ testimonal }) => {
                 {/* </div> */}
 
                 <div className="flex justify-center items-center gap-6 press lg:mt-5">
-                    <button className="bullets-Portfolio"></button>
+
+                    <button className="bullets-Portfolio">
+                        <span className="sr-only">swiper bullet</span>
+                    </button>
                 </div>
             </div>
         </div>

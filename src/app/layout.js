@@ -103,6 +103,7 @@ export default function RootLayout({ children }) {
             src="https://www.googletagmanager.com/ns.html?id=GTM-55R39KSH"
             height="0"
             width="0"
+            title="Google Tag Manager (noscript)"
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>

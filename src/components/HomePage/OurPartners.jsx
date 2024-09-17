@@ -15,7 +15,7 @@ import goibibo from "../../../public/partners/goibibo-logo.png";
 const OurPartners = () => {
     return (
         <section className="bg-[#E5E7EB]">
-            <div className="max-w-7xl mx-auto px-4  lg:pt-12 lg:pb-8 py-8">
+            <div className="max-w-7xl mx-auto px-4  lg:pt-12 lg:pb-20 py-8">
                 <div>
                     <h2 className="md:text-4xl text-3xl text-center font-bold text-[#29422C]">
                         Our Partners
@@ -61,9 +61,6 @@ const OurPartners = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div className="flex justify-center items-center gap-6 press lg:mt-11">
-                        <button className="bullets-Portfolio"></button>
-                    </div>
                 </div>
             </div>
         </section>
