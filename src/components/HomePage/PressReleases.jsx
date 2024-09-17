@@ -22,7 +22,7 @@ const PressReleases = () => {
         {
             src: "/images/hotelier_inda.png",
             name: "Hotelier India",
-            link: "https://www.hotelierindia.com/",
+            link: "https://www.hotelierindia.com/operations/experience-tranquil-adventure-in-the-heart-of-mussoorie-with-ebc-mussoorie",
         },
         {
             src: "/images/tripoto.png",
