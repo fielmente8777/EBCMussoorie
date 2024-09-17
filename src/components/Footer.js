@@ -136,7 +136,7 @@ const Footer = () => {
                     className="self-center max-w-full "
                   />
                 </div>
-                <div className="mt-4 text-3xl font-bold tracking-wider leading-10 max-md:max-w-full">
+                <div className="mt-4 text-3xl font-normal tracking-wider leading-10 max-md:max-w-full">
                   Everest Base Camp Mussoorie
                 </div>
                 <div className="mt-4 text-lg leading-7 text-justify max-md:max-w-full">
@@ -147,7 +147,7 @@ const Footer = () => {
             </div>
             <div className="flex md:items-center flex-col md:w-[30%] w-full ">
               <div className="flex flex-col grow text-white">
-                <div className="text-3xl font-bold tracking-wider leading-10">
+                <div className="text-3xl font-normal tracking-wider leading-10">
                   Links
                 </div>
                 <div className="flex flex-col gap-1 mt-4 text-lg leading-7">
@@ -167,7 +167,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col  md:w-[30%] w-full ">
-              <div className="text-3xl font-bold tracking-wider leading-10 text-white">
+              <div className="text-3xl font-normal tracking-wider leading-10 text-white">
                 Reach Out
               </div>
               <div className="mt-4 text-lg leading-7 text-white">
