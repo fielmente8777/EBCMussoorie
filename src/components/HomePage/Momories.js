@@ -68,7 +68,7 @@ const Momories = () => {
           </div>
           <div className="flex flex-col self-stretch my-auto text-base">
             <div className="text-[18px] leading-6 text-justify text-[#29422C]">
-              Each of our five spacious rooms has a distinctive and quirky feel
+              Each of our seven spacious rooms has a distinctive and quirky feel
               inspired by nature. Equipped with top-of-the-range bed and bath
               fittings, the rooms provide uninterrupted views of the hill ranges
               and lush forests. A long corridor adjoining the rooms and a cozy

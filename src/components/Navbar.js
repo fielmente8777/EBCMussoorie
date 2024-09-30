@@ -89,7 +89,8 @@ const Navbar = () => {
                   loading="lazy"
                   src={Logo}
                   alt="ebc"
-                  className="grow shrink-0 max-w-full aspect-[1.64] w-[308px]"
+                  
+                  className="grow shrink-0 max-w-full w-[400px]"
                 />
                 <span className="sr-only">home</span>
               </Link>
