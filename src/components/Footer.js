@@ -49,7 +49,7 @@ const Footer = () => {
 
   return (
     <>
-      {pathname === "/ebclanding" ? (
+      {pathname === "/ebclanding/" ? (
         <div className="pt-10">
           <div className="maxwidth mx-auto max-md:px-4">
             <div className="flex justify-center items-center w-full">
@@ -136,10 +136,10 @@ const Footer = () => {
                     className="self-center max-w-full "
                   />
                 </div>
-                <div className="mt-4 text-3xl font-normal tracking-wider leading-10 max-md:max-w-full">
+                <div className="mt-4 text-2xl font-normal tracking-wider leading-10 max-md:max-w-full">
                   Everest Base Camp Mussoorie
                 </div>
-                <div className="mt-4 text-lg leading-7 text-justify max-md:max-w-full">
+                <div className="mt-4 text-lg leading-7 font-normal text-justify max-md:max-w-full">
                   Discover Your Mountain Oasis: Experience Luxury Camping at
                   Everest Base Camp Mussoorie!
                 </div>
@@ -147,7 +147,7 @@ const Footer = () => {
             </div>
             <div className="flex md:items-center flex-col md:w-[30%] w-full ">
               <div className="flex flex-col grow text-white">
-                <div className="text-3xl font-normal tracking-wider leading-10">
+                <div className="text-2xl font-normal tracking-wider leading-10">
                   Links
                 </div>
                 <div className="flex flex-col gap-1 mt-4 text-lg leading-7">
@@ -167,10 +167,10 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col  md:w-[30%] w-full ">
-              <div className="text-3xl font-normal tracking-wider leading-10 text-white">
+              <div className="text-2xl font-normal tracking-wider leading-10 text-white">
                 Reach Out
               </div>
-              <div className="mt-4 text-lg leading-7 text-white">
+              <div className="mt-4 text-base leading-7 text-white">
                 Everest Base Camp Mussoorie, Park Estate, Hathipaon Road,
                 Mussoorie, Uttarakhand, 248179
               </div>

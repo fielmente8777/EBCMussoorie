@@ -136,7 +136,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            {pathname !== "/ebclanding" ? (
+            {pathname !== "/ebclanding/" ? (
               <div className="hidden xl:flex gap-5 justify-between self-center px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
                 {navLinks.map((link) => (
                   <Link
