@@ -36,7 +36,7 @@ const page = () => {
             paragraph:
                 "At our resort, guests always leave with new friends - the local birds, trees, and wildlife. Our property is an extension of their natural habitat, and we encourage our guests to embrace the outdoors and connect with the land. Listen to the songs of the magpies and capture the beauty of the deodar and pine trees. And when it's time to retreat indoors, our luxurious accommodations provide the perfect sanctuary to unwind and relax. Embrace nature's beauty and enjoy the best of both worlds at our camp.",
             subPara: "",
-            images: [aroundcapm1, aroundcapm2],
+            images: [aroundcapm1],
         },
     ];
 
