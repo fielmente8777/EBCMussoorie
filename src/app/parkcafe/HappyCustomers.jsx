@@ -13,7 +13,7 @@ const HappyCustomers = ({ testimonal }) => {
             <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 w-full ">
                 <div className="flex flex-col gap-5  items-center">
                     <h2 className="lg:text-[42px] text-3xl max-md:text-center text-white font-medium leading-[45px]">
-                        Happy Customers!
+                        Guest Experiences
                     </h2>
                 </div>
 

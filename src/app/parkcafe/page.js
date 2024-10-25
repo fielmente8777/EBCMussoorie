@@ -2,7 +2,7 @@ import Image from "next/image";
 import BannerImage from "../../../public/images/parkcafebg.jpg";
 import Link from "next/link";
 import parkcafe from "../../../public/images/parkcafe.jpg";
-import parkcafereachus1 from "../../../public/images/parkcafereachus1.jpg";
+import parkcafereachus1 from "../../../public/images/DSC_6324.jpg";
 import parkcafereachus2 from "../../../public/images/parkcafereachus2.jpg";
 
 import burger from "../../../public/images/crispy_veg_burger.webp";
@@ -442,7 +442,8 @@ function Peakage() {
       <div className="py-12">
         <div className="relative w-full lg:h-[400px] h-80 aspect-[4/3]">
           <Image
-            src="/images/empty.png"
+            src={parkcafe}
+            // src="/images/empty.png"
             alt="alt"
             fill
             className="object-cover"

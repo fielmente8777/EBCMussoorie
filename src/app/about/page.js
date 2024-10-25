@@ -1,7 +1,7 @@
 import Banner from "../../components/AboutPage/Banner";
 import c1 from "../../../public/images/01 Picnic_11zon.jpg";
-import about1 from "../../../public/images/about1.jpg";
-import about2 from "../../../public/images/about2.jpg";
+import about1 from "../../../public/images/DSC_6549.jpg";
+import about2 from "../../../public/images/DSC_6498.jpg";
 import about3 from "../../../public/images/about3.jpg";
 
 import aroundcapm1 from "../../../public/images/aroundcamp1.jpg";
