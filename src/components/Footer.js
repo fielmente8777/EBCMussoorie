@@ -205,24 +205,27 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="bg-neutral-900 mt-8">
+          <div className="bg-neutral-900 mt-8 ">
             <div className="flex gap-5 maxwidth mx-auto justify-between px-5 py-5 w-full text-xs tracking-wider leading-5 text-white  max-md:flex-wrap max-md:px-5 max-md:max-w-full">
-              <div className="flex gap-3 font-medium">
-                <Image
-                  alt="icon"
-                  width={100}
-                  height={100}
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f2ebd1425476a83f9785a32d2e5632db68bf9f8db8e123ca89682af54513cec?"
-                  className="shrink-0 my-auto w-3 aspect-square fill-white"
-                />
-                <div>Copyright EBC Mussoorie</div>
+              <div className="flex gap-2 font-medium">
+                <div className="relative w-3 aspect-square">
+                  <Image
+                    alt="icon"
+                    fill
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f2ebd1425476a83f9785a32d2e5632db68bf9f8db8e123ca89682af54513cec?"
+                    className="object-contain"
+                  />
+                </div>
+                <div className=" text-white">
+                  Copyright EBC Mussoorie
+                </div>
               </div>
-              <div className="flex gap-3 whitespace-nowrap">
+              <div className="flex gap-3 whitespace-nowrap  text-white">
                 <div className="">
-                  <Link href={"/privacy"}>Privacy</Link>
+                  <Link href={"/privacy"}>Privacy Policy</Link>
                 </div>
                 <div className="">
-                  <Link href={"/terms"}>Terms</Link>
+                  <Link href={"/terms"}>Terms and Conditions</Link>
                 </div>
               </div>
             </div>

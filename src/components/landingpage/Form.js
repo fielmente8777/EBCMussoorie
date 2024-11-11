@@ -54,6 +54,7 @@ const Form = () => {
         "https://nexon.eazotel.com/eazotel/addcontacts",
         {
           Domain: "eb112233", // Replace with your actual domain value// eb112233
+          // Domain: "sumit",
           email: userEmail,
           Name: userName,
           Contact: userPhone,
