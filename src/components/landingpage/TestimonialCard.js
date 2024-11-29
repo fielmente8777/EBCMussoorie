@@ -44,8 +44,9 @@ const TestimonialCard = () => {
       <Swiper
         loop={true}
         autoplay={{
-          delay: 2000,
+          delay: 3000,
         }}
+        speed={1000}
         pagination={{
           el: "#bullets-Portfolio",
           bulletActiveClass: "swiper-pagination-bullet-active",

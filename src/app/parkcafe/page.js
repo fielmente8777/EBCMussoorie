@@ -375,7 +375,12 @@ function Peakage() {
 
         <div className="lg:rounded-lg overflow-hidden">
           {datas.map((data, index) => (
-            <SpecilizationCard key={index} cardData={data} index={index} aspectRatio={"lg:aspect-[2/1.78] aspect-[2/1.5]"} />
+            <SpecilizationCard
+              key={index}
+              cardData={data}
+              index={index}
+              aspectRatio={"lg:aspect-[2/1.78] aspect-[2/1.5]"}
+            />
           ))}
         </div>
       </div>
@@ -453,13 +458,13 @@ function Peakage() {
               Call us to make a reservation!
             </p>
             <Link
-              href="tel:+91-8595274861"
+              href="tel:+919119001126"
               className="text-center mt-3 lg:text-4xl text-3xl text-white/70 flex items-center justify-center gap-1"
             >
               <span className="mt-1">
                 <FillCall />
               </span>
-              +91-8595274861
+              +91-9119001126
             </Link>
           </div>
         </div>

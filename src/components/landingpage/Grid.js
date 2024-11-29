@@ -1,17 +1,19 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Grid1 from "../../../public/landingpage/23 Facade_11zon.jpg";
-import Grid2 from "../../../public/landingpage/00 Cover_11zon.jpg";
+import Grid1 from "../../../public/landingpage/23 Facade_11zon.webp";
+import Grid2 from "../../../public/landingpage/00 Cover_11zon.webp";
 import Grid3 from "../../../public/images/30 Games area_11zon.jpg";
 import Grid4 from "../../../public/images/01 Picnic_11zon.jpg";
-import Grid5 from "../../../public/landingpage/Surevyor Facade.jpg";
+import Grid5 from "../../../public/landingpage/Surevyor Facade.webp";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import PopupForm from "../PopupForm";
 
 const Grid = () => {
+  const [showModal, setShowModal] = React.useState(false);
   return (
     <div className="maxwidth lg:px-0 px-3 py-4">
       <div className="flex flex-col lg:flex-row p-5 gap-3 secBack rounded-xl">
@@ -99,14 +101,16 @@ const Grid = () => {
           </p>
 
           <div>
-            <Link
-              href={"#contact"}
+            <button
+              // href={"#contact"}
+              onClick={() => setShowModal(true)}
               className="px-8 flex justify-center items-center w-max py-2 rounded-xl bg-[#29422C] text-[#fff] capitalize text-lg"
             >
               Contact us
-            </Link>
+            </button>
           </div>
         </div>
+        {showModal && <PopupForm setShowModal={setShowModal} showModal={showModal} />}
       </div>
     </div>
   );

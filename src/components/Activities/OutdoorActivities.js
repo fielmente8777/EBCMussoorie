@@ -5,8 +5,8 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import OutdoorActivitiesCard from "./OutdoorActivitiesCard";
-import activity1 from "../../../public/activity/activity2.png";
-import activity2 from "../../../public/activity/activity_3.jpg";
+import activity1 from "../../../public/activity/activity2.webp";
+import activity2 from "../../../public/activity/activity_3.webp";
 
 import Image from "next/image";
 const OutdoorActivities = () => {

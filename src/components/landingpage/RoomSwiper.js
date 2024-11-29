@@ -6,33 +6,78 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import Rooms1 from "../../../public/rooms/Glamper1Bedroompic1.webp";
-import Rooms2 from "../../../public/rooms/CamperBedroomPic3.webp";
-import Rooms3 from "../../../public/rooms/SuiteBedroom1.webp";
-import Rooms4 from "../../../public/rooms/SurevyorBedroompic2.webp";
+import camper1 from "../../../public/gallery/camper1.webp";
+import camper2 from "../../../public/gallery/camper2.webp";
+import camper3 from "../../../public/gallery/camper3.webp";
+import camper4 from "../../../public/gallery/camper4.webp";
+import camper5 from "../../../public/gallery/camper5.webp";
+import camper6 from "../../../public/gallery/camper6.webp";
+import camper7 from "../../../public/CamperRoom/CamperBedroompic2.webp";
+import camper8 from "../../../public/CamperRoom/CamperBedroomPic3.webp";
+import camper9 from "../../../public/CamperRoom/CamperBathroom.webp";
+import camper10 from "../../../public/CamperRoom/CamperBalcony.webp";
+import camper11 from "../../../public/gallery/CamperFacade.webp";
+
+import glamper1 from "../../../public/gallery/glamper1.webp";
+import glamper2 from "../../../public/gallery/theglamper2.webp";
+import glamper3 from "../../../public/gallery/theglamper3.webp";
+import glamper4 from "../../../public/gallery/theglamper4.webp";
+import glamper5 from "../../../public/gallery/theglamer5.webp";
+import glamper6 from "../../../public/gallery/theglamer6.webp";
+import glamper7 from "../../../public/GlamperRoom/Glamper1Bedroompic1.webp";
+import glamper8 from "../../../public/GlamperRoom/Glamper1Bedroompic2.webp";
+import glamper9 from "../../../public/gallery/Glamper1Balcony.webp";
+import glamper10 from "../../../public/gallery/Glamper2Balcony.webp";
+import glamper11 from "../../../public/gallery/Glamper1Bathroom.webp";
+import glamper12 from "../../../public/gallery/Glamper1Facade.webp";
+
+import survey1 from "../../../public/gallery/survey1.webp";
+import survey2 from "../../../public/gallery/survery2.webp";
+import survey3 from "../../../public/gallery/survey3.webp";
+import survey4 from "../../../public/gallery/survey4.webp";
+import survey5 from "../../../public/gallery/survey5.webp";
+import survey6 from "../../../public/gallery/survey6.webp";
+import survey7 from "../../../public/gallery/survery7.webp";
+import survey8 from "../../../public/gallery/survey8.webp";
+import survey9 from "../../../public/gallery/23Facade_11zon.webp";
+import survey10 from "../../../public/Surveyor Room/SurevyorBedroompic2.webp";
+import survey11 from "../../../public/Surveyor Room/SurveyorBedroompic1.webp";
+import survey12 from "../../../public/Surveyor Room/SurevyorFacade.webp";
+import survey13 from "../../../public/Surveyor Room/Surveyorbalcony.webp";
+
+import surveysuite1 from "../../../public/gallery/surveysuite1.webp";
+import surveysuite2 from "../../../public/gallery/surveysuite2.webp";
+import surveysuite3 from "../../../public/gallery/surveysuite3.webp";
+import surveysuite4 from "../../../public/gallery/SuiteBalcony.webp";
+import surveysuite5 from "../../../public/gallery/SuiteBathroom.webp";
+import surveysuite6 from "../../../public/gallery/SuiteBedroom2.webp";
+import surveysuite7 from "../../../public/gallery/SuiteBedroom1.webp";
+import surveysuite8 from "../../../public/gallery/SuiteFacade.webp";
+
+
 
 const RoomSwiper = () => {
   const Roomdata = [
     {
-      image: Rooms1,
+      image: [glamper1, glamper2, glamper3, glamper4, glamper5, glamper6, glamper7, glamper8, glamper9, glamper10, glamper11, glamper12],
       roomName: "The Glamper",
       description:
         " Our Glamper rooms promise relaxation and rejuvenation like no other, ideal for small groups, making unforgettable moments on our exclusive netted balcony space, perfect for creating Instagram-worthy memories.",
     },
     {
-      image: Rooms2,
+      image: [camper1, camper2, camper3, camper4, camper5, camper6, camper7, camper8, camper9, camper10, camper11],
       roomName: "The Clamper",
       description:
         "Treat yourself to a relaxing getaway in our Camper rooms, perfect for couplesseeking a lavish vacation experience, providing unparalleled comfort and coziness in a peaceful setting.",
     },
     {
-      image: Rooms3,
+      image: [survey1, survey2, survey3, survey4, survey5, survey6, survey7, survey8, survey9, survey10, survey11, survey12, survey13],
       roomName: "The Surveyor",
       description:
         "Experience luxury in our Surveyor Suite at Everest Base Camp, Mussoorie. Enjoy spacious tents, stunning forest views, and a king-sized bed. Perfect for families or friends.",
     },
     {
-      image: Rooms4,
+      image: [surveysuite1, surveysuite2, surveysuite3, surveysuite4, surveysuite5, surveysuite6, surveysuite7, surveysuite8],
       roomName: "The Surveyor Suite",
       description:
         "Relax and recharge in the peaceful Surveyor rooms, surrounded by Deodar forest scenery. Perfect for families or small groups, our serene atmosphere ensures privacy and comfort, allowing you to reconnect with nature.",

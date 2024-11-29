@@ -48,25 +48,25 @@ const FullScreenImageViewPopUP = ({ setShowModal, src, showModal }) => {
 
   return (
     <section
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#29422C] bg-opacity-75 transition duration-1000 ease py-5"
+      className="fixed inset-0 z-50 flex  justify-center gap-1  bg-[#29422C] bg-opacity-75 transition duration-1000 ease py-5"
       onClick={() => setShowModal(false)}
     >
       <button
         onClick={() => setShowModal(false)}
-        className="inline-flex items-center justify-center px-4 py-4 text-white bg-[#D5D5D5]/70 hover:bg-[#D5D5D5] rounded-lg mb-3"
+        className="inline-flex items-center w-fit h-fit justify-center px-4 py-4 text-white bg-[#D5D5D5]/70 hover:bg-[#D5D5D5] rounded-lg mb-3"
       >
         <CloseIcon />
       </button>
 
       <div
-        className="relative w-full max-w-3xl aspect-[4/3.5] image-container"
+        className="relative w-full max-w-6xl aspect-[4/2] image-container"
         onClick={(e) => e.stopPropagation()}
       >
         <Image
           src={src}
           alt="Full screen view"
           fill
-          className="object-cover cursor-pointer"
+          className="object-resize cursor-pointer"
           onClick={toggleFullscreen}
           qulity={100}
         />

@@ -8,15 +8,20 @@ import "swiper/css/navigation";
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import PopupForm from "../PopupForm";
+import { useState } from "react";
 
 const SpecilizationCard = ({ cardData, index, aspectRatio }) => {
+  const pathName = usePathname();
+  const [showModal, setShowModal] = useState(false);
   return (
-    <div className={`lg:grid grid-cols-2 flex ${index % 2 === 0 ? "flex-col" : "flex-col-reverse"} bg-[#D5D5D5] overflow-hidden lg:mb-0 mb-5`}>
-      <div
-        className={`${
-          index === 1 || index === 3 ? "order-2" : ""
-        }`}
-      >
+    <div
+      className={`lg:grid grid-cols-2 flex ${
+        index % 2 === 0 ? "flex-col" : "flex-col-reverse"
+      } bg-[#D5D5D5] overflow-hidden lg:mb-0 mb-5`}
+    >
+      <div className={`${index === 1 || index === 3 ? "order-2" : ""}`}>
         <Swiper
           // loop={true}
           // autoplay={{
@@ -59,18 +64,36 @@ const SpecilizationCard = ({ cardData, index, aspectRatio }) => {
             </p>
           )}
           {cardData.button && (
-            <Link
-              href={
-                "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
-              }
-              target="_blank"
-              className="justify-center self-start px-8 py-2 mt-6 text-lg font-medium tracking-normal text-white bg-[#29422C] rounded-sm leading-[144%]"
-            >
-              Book Now
-            </Link>
+            <>
+              {pathName !== "/ebclanding/" ? (
+                <Link
+                  href={
+                    "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
+                  }
+                  target="_blank"
+                  className="justify-center self-start px-8 py-2 mt-6 text-lg font-medium tracking-normal text-white bg-[#29422C] rounded-sm leading-[144%]"
+                >
+                  Book Now
+                </Link>
+              ) : (
+                <button
+                  // href={
+                  //   "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
+                  // }
+                  // target="_blank"
+                  onClick={() => setShowModal(true)}
+                  className="justify-center self-start px-8 py-2 mt-6 text-lg font-medium tracking-normal text-white bg-[#29422C] rounded-sm leading-[144%]"
+                >
+                  Book Now
+                </button>
+              )}
+            </>
           )}
         </div>
       </div>
+      {showModal && (
+        <PopupForm setShowModal={setShowModal} showModal={showModal} />
+      )}
     </div>
   );
 };

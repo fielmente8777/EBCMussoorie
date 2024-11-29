@@ -1,8 +1,8 @@
 import ActivitiesCard from "./ActivitiesCard"
-import Activities2 from "../../../public/activity/DSC04128_11zon.jpg"
+import Activities2 from "../../../public/activity/DSC04128_11zon.webp"
 import Activities1 from "../../../public/activity/activitydiv1.webp"
-import indoor1 from "../../../public/activity/indoor1.png"
-import indoor2 from "../../../public/activity/indoor2.png"
+import indoor1 from "../../../public/activity/indoor1.webp"
+import indoor2 from "../../../public/activity/indoor2.webp"
 const Activities = () => {
 
 

@@ -112,7 +112,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <Link
-          href={"tel:+918595274861"}
+          href={"tel:+919119001126"}
           target="_blank"
           className="whatsapp-button inline-block fixed bottom-12 left-[20px] w-[50px] h-[50px] bg-[#12c665] p-[12px]  rounded-full text-white z-40 text-[25px] overflow-hidden"
         >

@@ -1,17 +1,23 @@
-import { RelishConveniently, SomethingForEveryone, StaywithLuxury, UnmatchedViews } from "@/icons/icons";
+"use client";
+import {
+  RelishConveniently,
+  SomethingForEveryone,
+  StaywithLuxury,
+  UnmatchedViews,
+} from "@/icons/icons";
 import Link from "next/link";
 import React from "react";
 import SEOVideo from "../SEOVideo";
-
-
+import PopupForm from "../PopupForm";
 
 const dataList = [
-  {icon: <StaywithLuxury />, text: "Stay with Luxury"},
-  {icon: <RelishConveniently />, text: "Relish Conveniently"},
-  {icon: <SomethingForEveryone />, text: "Something for everyone"},
-  {icon: <UnmatchedViews />, text: "Unmatched Views"},
-]
+  { icon: <StaywithLuxury />, text: "Stay with Luxury" },
+  { icon: <RelishConveniently />, text: "Relish Conveniently" },
+  { icon: <SomethingForEveryone />, text: "Something for everyone" },
+  { icon: <UnmatchedViews />, text: "Unmatched Views" },
+];
 const YouTube = () => {
+  const [showModal, setShowModal] = React.useState(false);
   return (
     <div className="lg:py-12 pb-4">
       <div className="maxwidth mx-auto max-md:px-4">
@@ -47,7 +53,8 @@ const YouTube = () => {
             <div className=" flex flex-col">
               <div className="">
                 <div className="w-full h-full rounded-xl overflow-hidden relative aspect-[4/2.5]">
-                  <SEOVideo src="https://eazotel-client-images.s3.ap-south-1.amazonaws.com/Everest+Base+Camp%2C+Mussoorie.+%23uttarakhand+%23everestbasecamp+%23mussoorie.mp4"
+                  <SEOVideo
+                    src="https://eazotel-client-images.s3.ap-south-1.amazonaws.com/Everest+Base+Camp%2C+Mussoorie.+%23uttarakhand+%23everestbasecamp+%23mussoorie.mp4"
                     title="Everest Base Camp, Mussoorie. #uttarakhand #everestbasecamp #mussoorie"
                     controls={false}
                     muted={true}
@@ -60,21 +67,21 @@ const YouTube = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <Link
-            target="_blank"
-            href={
-              "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
-            }
+          <button
+            onClick={() => setShowModal(true)}
+            // target="_blank"
+            // href={
+            //   "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
+            // }
             className="px-8 py-2 rounded-md bg-[#D5D5D5] text-xl"
           >
             Book Now
-          </Link>
+          </button>
         </div>
       </div>
+      {showModal && <PopupForm showModal={showModal} setShowModal={setShowModal} />}
     </div>
   );
 };
 
 export default YouTube;
-
-

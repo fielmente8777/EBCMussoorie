@@ -6,6 +6,7 @@ import { MdCall } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Face, Insta, Trip } from "../icons/icons.jsx";
+import PopupForm from "./PopupForm";
 
 const navLinks = [
   { name: "About", href: "/about" },
@@ -35,7 +36,7 @@ export const socialLinks = [
 ];
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
+  const [showModal, setShowModal] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -46,40 +47,49 @@ const Navbar = () => {
         <div className="maxwidth mx-auto flex flex-col lg:pb-3">
           <>
             <div className="grid items-center py-3 px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
-              <div
-                className="xl:hidden z-40"
-                onClick={() => {
-                  setOpen(!open);
-                }}
-              >
-                {open ? (
-                  <div
-                    // style={{
-                    //   rotate: open ? "180deg" : "0deg",
-                    //   transition: "all 0.4s",
-                    // }}
-                    className="text-white font-bold text-xl"
-                  >
-                    X
-                  </div>
-                ) : (
-                  <div
-                    style={{
-                      rotate: open ? "45deg" : "0deg",
-                      transition: "all 0.4s",
-                    }}
-                  >
-                    {pathname === "/ebclanding" ? "" : <HamMenu />}
-                  </div>
-                )}
-              </div>
+              {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+                ""
+              ) : (
+                <div
+                  className="xl:hidden z-40"
+                  onClick={() => {
+                    setOpen(!open);
+                  }}
+                >
+                  {open ? (
+                    <div
+                      // style={{
+                      //   rotate: open ? "180deg" : "0deg",
+                      //   transition: "all 0.4s",
+                      // }}
+                      className="text-white font-bold text-xl"
+                    >
+                      X
+                    </div>
+                  ) : (
+                    <div
+                      style={{
+                        rotate: open ? "45deg" : "0deg",
+                        transition: "all 0.4s",
+                      }}
+                    >
+                      {pathname === "/ebclanding/" ||
+                      pathname === "/thank-you/" ? (
+                        ""
+                      ) : (
+                        <HamMenu />
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
               <Link
-                href={"tel:+918595274861"}
+                href={"tel:+919119001126"}
                 className="hidden xl:flex items-center gap-2 px-5 my-auto text-lg w-max text-[#acacac]"
               >
                 <MdCall size={20} />
-                <span className="sr-only">call us on : +9185952 74861</span>
-                <span className="my-auto text-[#acacac]">+91-85952 74861</span>
+                <span className="sr-only">call us on : +9191190 01126</span>
+                <span className="my-auto text-[#acacac]">+91-91190 01126</span>
               </Link>
               <Link
                 href={"/"}
@@ -89,7 +99,6 @@ const Navbar = () => {
                   loading="lazy"
                   src={Logo}
                   alt="ebc"
-                  
                   className="grow shrink-0 max-w-full w-[400px]"
                 />
                 <span className="sr-only">home</span>
@@ -110,33 +119,42 @@ const Navbar = () => {
                       </Link>
                     ))}
                   </div>
-                  <Link
-                    href={
-                      "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
-                    }
-                    target="_blank"
-                    className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
-                  >
-                    Book Now
-                  </Link>
+                  {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+                    <button
+                      className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
+                      onClick={() => setShowModal(!open)}
+                    >
+                      Book Now
+                    </button>
+                  ) : (
+                    <Link
+                      href={
+                        "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
+                      }
+                      target="_blank"
+                      className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
+                    >
+                      Book Now
+                    </Link>
+                  )}
                 </div>
               </div>
 
               <div className="xl:hidden flex justify-end">
                 <Link
-                  href={"tel:+918595274861"}
+                  href={"tel:+919119001126"}
                   className="flex items-center gap-2 px-5 my-auto text-lg leading-7 text-[#acacac]"
                 >
                   {/* <MdCall size={20} /> */}
                   <CallNavIcon />
-                  <span className="sr-only">call us on : +9185952 74861</span>
+                  <span className="sr-only">call us on : +9191190 01126</span>
                   <span className="my-auto text-[#acacac] xl:block hidden">
-                    +91-85952 74861
+                    +91-91190 01126
                   </span>
                 </Link>
               </div>
             </div>
-            {pathname !== "/ebclanding/" ? (
+            {pathname !== "/ebclanding/" && pathname !== "/thank-you/" ? (
               <div className="hidden xl:flex gap-5 justify-between self-center px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
                 {navLinks.map((link) => (
                   <Link
@@ -159,6 +177,9 @@ const Navbar = () => {
           </>
         </div>
       )}
+      {showModal && (
+        <PopupForm setShowModal={setShowModal} showModal={showModal} />
+      )}
     </>
   );
 };
@@ -171,13 +192,13 @@ const HomeNav = () => {
       <div className="maxwidth mx-auto flex flex-col px-8 xl:py-2 py-6">
         <div className="flex justify-between items-center gap-5 w-full max-md:flex-wrap max-md:max-w-full">
           <Link
-            href={"tel:+918595274861"}
+            href={"tel:+91 91190 01126"}
             className="flex items-center gap-2 md:px-5 my-auto text-lg leading-7 text-[#acacac]"
           >
             <MdCall size={20} />
-            <span className="sr-only">call us on : +9185952 74861</span>
+            <span className="sr-only">call us on : +91 91190 01126</span>
             <span className="my-auto text-[#acacac] xl:block hidden">
-              +91-85952 74861
+              +91-91190 01126
             </span>
           </Link>
 

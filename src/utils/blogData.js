@@ -381,7 +381,7 @@ const blogData = [
       {
         title: "To Book:",
         subtitle: [
-          "Website- https://ebcmussoorie.com/park-cafe/ Phone number-+91 8595274861 Address- Everest Base Camp Mussoorie Park Estate, Hathi Paon, Mussoorie 248179 Dehradun (Uttarakhand)",
+          "Website- https://ebcmussoorie.com/park-cafe/ Phone number-+91 91190 01126 Address- Everest Base Camp Mussoorie Park Estate, Hathi Paon, Mussoorie 248179 Dehradun (Uttarakhand)",
         ],
       },
     ],
@@ -590,7 +590,7 @@ const blogData = [
       {
         title: "To Book:",
         subtitle: [
-          "Website- https://ebcmussoorie.com/park-cafe/ Phone number-+91 8595274861 Address- Everest Base Camp Mussoorie Park Estate, Hathi Paon, Mussoorie 248179 Dehradun (Uttarakhand)",
+          "Website- https://ebcmussoorie.com/park-cafe/ Phone number-+91 91190 01126 Address- Everest Base Camp Mussoorie Park Estate, Hathi Paon, Mussoorie 248179 Dehradun (Uttarakhand)",
         ],
       },
     ],

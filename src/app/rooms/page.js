@@ -18,15 +18,15 @@ import Image from "next/image";
 import Room1 from "../../../public/rooms/20Bedroom4_11zon.webp";
 import Room2 from "../../../public/rooms/20Bedroom4_11zon.webp";
 
-import Surveyor1 from "../../../public/Surveyor Room/_MG_2465.JPG";
-import Surveyor2 from "../../../public/Surveyor Room/_MG_2475.JPG";
-import Surveyor3 from "../../../public/Surveyor Room/_MG_2477.JPG";
-import Surveyor4 from "../../../public/Surveyor Room/_MG_2505.JPG";
+import Surveyor1 from "../../../public/Surveyor Room/_MG_2465.webp";
+import Surveyor2 from "../../../public/Surveyor Room/_MG_2475.webp";
+import Surveyor3 from "../../../public/Surveyor Room/_MG_2477.webp";
+import Surveyor4 from "../../../public/Surveyor Room/_MG_2505.webp";
 
-import SurveyorSuite1 from "../../../public/Surveyor Suite Room/_MG_2601.JPG";
-import SurveyorSuite2 from "../../../public/Surveyor Suite Room/_MG_2602.JPG";
-import SurveyorSuite3 from "../../../public/Surveyor Suite Room/_MG_2603.JPG";
-import SurveyorSuite4 from "../../../public/Surveyor Suite Room/_MG_2605.JPG";
+import SurveyorSuite1 from "../../../public/Surveyor Suite Room/_MG_2601.webp";
+import SurveyorSuite2 from "../../../public/Surveyor Suite Room/_MG_2602.webp";
+import SurveyorSuite3 from "../../../public/Surveyor Suite Room/_MG_2603.webp";
+import SurveyorSuite4 from "../../../public/Surveyor Suite Room/_MG_2605.webp";
 
 export const metadata = {
   title:

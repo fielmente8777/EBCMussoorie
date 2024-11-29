@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../../public/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import bannerImg from "../../../public/DJI_0378.JPG";
+import bannerImg from "../../../public/DJI_0378.webp";
 const Banner = () => {
   return (
     <section className="">

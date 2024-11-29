@@ -4,10 +4,10 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import React from "react";
-import insta4 from "../../../public/Instagram/02 Breakfast-min.jpg";
-import insta1 from "../../../public/Instagram/08 Facade-min.jpg";
-import insta2 from "../../../public/Instagram/DJI_0378-min.JPG";
-import insta3 from "../../../public/Instagram/36 Dining_11zon.jpg";
+import insta4 from "../../../public/Instagram/02 Breakfast-min.webp";
+import insta1 from "../../../public/Instagram/08 Facade-min.webp";
+import insta2 from "../../../public/Instagram/DJI_0378-min.webp";
+import insta3 from "../../../public/Instagram/36 Dining_11zon.webp";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,9 +56,12 @@ const BottomGallery = () => {
       </Swiper>
 
       <div className="flex justify-center mt-8">
-        <Link href={"https://www.instagram.com/ebcmussoorie/"} target="_blank" className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-[20px]">
-        Visit Instagram
-        </Link>
+        <span 
+        // href={"https://www.instagram.com/ebcmussoorie/"} target="_blank" 
+        className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-[20px]">
+        {/* Visit Instagram */}
+        Our Gallery
+        </span>
       </div>
     </div>
   );

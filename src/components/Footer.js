@@ -49,14 +49,14 @@ const Footer = () => {
 
   return (
     <>
-      {pathname === "/ebclanding/" ? (
+      {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
         <div className="pt-10">
           <div className="maxwidth mx-auto max-md:px-4">
             <div className="flex justify-center items-center w-full">
               <Line />
             </div>
-            <div className="lg:grid grid-cols-3 lg:gap-20 py-10 flex flex-col gap-7">
-              <div className="relative lg:aspect-[3/1.45] aspect-[3/1]">
+            <div className="lg:grid grid-cols-2 lg:gap-20 py-10 flex flex-col gap-7">
+              <div className="relative lg:aspect-[5/1.45] aspect-[3/1] w-full">
                 <Image src={Logo} alt="logo" fill className="object-contain" />
               </div>
               <div className="flex flex-col text-white gap-3 tracking-wide">
@@ -75,13 +75,13 @@ const Footer = () => {
                   </span>
                 </Link>
                 <Link
-                  href="tel:+918595274861"
+                  href="tel:+919119001126"
                   className="flex items-center gap-2"
                 >
                   <span className="mt-1">
                     <OutlineCallWhite />
                   </span>
-                  <span className="text-xl">+91 85952 74861</span>
+                  <span className="text-xl">+91 91190 01126</span>
                 </Link>
                 <Link
                   href="mailto:info@ebcmussoorie.com"
@@ -93,7 +93,7 @@ const Footer = () => {
                   <span className="text-xl">info@ebcmussoorie.com</span>
                 </Link>
               </div>
-              <div className="flex flex-col text-white gap-3 tracking-wider">
+              {/* <div className="flex flex-col text-white gap-3 tracking-wider">
                 <h2 className="lg:text-4xl text-3xl font-bold capitalize">
                   Subscribe our newsletter
                 </h2>
@@ -111,7 +111,7 @@ const Footer = () => {
                     className="outline-none w-full focus:outline-none text-xl bg-transparent placeholder:text-white text-white"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="text-white text-center text-lg bg-[#152116] capitalize py-4 lg:flex gap-2 justify-center items-center max-md:px-4 tracking-wider">
@@ -183,11 +183,11 @@ const Footer = () => {
                 <div className="my-auto">info@ebcmussoorie.com</div>
               </Link>
               <Link
-                href={"tel:+918595274861"}
+                href={"tel:+919119001126"}
                 className="flex items-center gap-3 mt-2 text-lg leading-7 text-white whitespace-nowrap"
               >
                 <MdCall size={20} />
-                <div className="my-auto">+91-85952 74861</div>
+                <div className="my-auto">+91 91190 01126</div>
               </Link>
               <div className="flex gap-4 pr-20 mt-4 max-md:pr-5">
                 {socialLinks.map((link) => (

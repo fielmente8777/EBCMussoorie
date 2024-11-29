@@ -5,9 +5,9 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import indoor1 from "../../../public/activity/activity3.png";
-import indoor2 from "../../../public/activity/activity4.png";
-import indoor3 from "../../../public/activity/boardgame.jpg";
+import indoor1 from "../../../public/activity/activity3.webp";
+import indoor2 from "../../../public/activity/activity4.webp";
+import indoor3 from "../../../public/activity/boardgame.webp";
 
 import Image from "next/image";
 import Link from "next/link";
