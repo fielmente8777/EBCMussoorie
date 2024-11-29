@@ -15,6 +15,18 @@ const BottomGallery = () => {
   const data = [insta1, insta2, insta3, insta4];
   return (
     <div className="w-full overflow-hidden  py-10">
+      <div className="flex justify-center mb-8">
+        {/* <span
+          // href={"https://www.instagram.com/ebcmussoorie/"} target="_blank"
+          className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-[20px]"
+        > */}
+        {/* Visit Instagram */}
+        {/* Our Gallery
+        </span> */}
+        <h2 className="lg:text-5xl text-2xl font-bold text-center text-[#E5E7EB] py-1">
+          Our Gallery
+        </h2>
+      </div>
       <Swiper
         loop={true}
         autoplay={{
@@ -47,22 +59,13 @@ const BottomGallery = () => {
                 alt={`img${index}`}
                 className="h-[100%] object-cover"
                 fill
-              // width={600}
-              // height={400}
+                // width={600}
+                // height={400}
               />
             </SwiperSlide>
           );
         })}
       </Swiper>
-
-      <div className="flex justify-center mt-8">
-        <span 
-        // href={"https://www.instagram.com/ebcmussoorie/"} target="_blank" 
-        className="px-8 py-1 bg-[#D5D5D5] rounded-sm text-[20px]">
-        {/* Visit Instagram */}
-        Our Gallery
-        </span>
-      </div>
     </div>
   );
 };

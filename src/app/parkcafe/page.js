@@ -22,8 +22,8 @@ import barque1 from "../../../public/images/Barbecue1.webp";
 import milestonebg from "../../../public/images/milestonebg.jpg";
 
 import c1 from "../../../public/images/01 Picnic_11zon.jpg";
-import img1 from "../../../public/picnic/_MG_1465.JPG";
-import img2 from "../../../public/picnic/_MG_2878.JPG";
+import img1 from "../../../public/picnic/_MG_1465.webp";
+import img2 from "../../../public/picnic/_MG_2878.webp";
 import SpecilizationCard from ".././../components/landingpage/SpecilizationCard";
 
 import InstaGrid from "../../components/Activities/InstaGrid";

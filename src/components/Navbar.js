@@ -106,19 +106,23 @@ const Navbar = () => {
               <div className="hidden xl:flex flex-col items-end max-md:ml-0">
                 <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
                   {/* <div className="w-[20%]"></div> */}
-                  <div className="flex gap-3 px-5 my-auto">
-                    {socialLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        target="_blank"
-                        className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
-                      >
-                        <span className="sr-only">{link.name}</span>
-                        {link.icon}
-                      </Link>
-                    ))}
-                  </div>
+                  {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+                    ""
+                  ) : (
+                    <div className="flex gap-3 px-5 my-auto">
+                      {socialLinks.map((link) => (
+                        <Link
+                          key={link.name}
+                          href={link.href}
+                          target="_blank"
+                          className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
+                        >
+                          <span className="sr-only">{link.name}</span>
+                          {link.icon}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                   {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
                     <button
                       className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"

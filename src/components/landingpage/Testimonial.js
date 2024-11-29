@@ -3,7 +3,7 @@ import TestimonialCard from './TestimonialCard'
 
 const Testimonial = () => {
     return (
-        <div className='bg-cover bg-center bg-no-repeat back '>
+        <div className='bg-cover bg-center bg-no-repeat back max-md:mt-4'>
 
 
 

@@ -92,8 +92,8 @@ const RoomSwiper = () => {
           //   delay: 2000,
           // }}
           slidesPerView={2}
-          spaceBetween={20}
-          centeredSlides={true}
+          // spaceBetween={20}
+          // centeredSlides={true}
           navigation={{
             prevEl: ".prev",
             nextEl: ".next",
@@ -118,13 +118,13 @@ const RoomSwiper = () => {
         >
           {Roomdata.map((roomData, index) => {
             return (
-              <SwiperSlide key={index} className="min-w-[200px] max-md:-ml-2">
+              <SwiperSlide key={index} className="min-w-[200px] max-md:ml-8">
                 <RoomSwiperCard key={index} roomData={roomData} />
               </SwiperSlide>
             );
           })}
         </Swiper>
-        <div className="w-full flex justify-center items-center gap-3 py-3 lg:hidden mt-3">
+        <div className="w-full flex justify-center items-center gap-3 py-3 lg:hidden mt-1">
         <button className="prev">
           <PrevBtn height={"35"} width={"35"} />
         </button>
@@ -135,10 +135,10 @@ const RoomSwiper = () => {
       </div>
 
       <div className="w-full md:w-[40%] flex flex-col justify-center items-center text-white lg:mb-0 mb-5">
-        <h1 className="lg:text-3xl text-xl text-center font-semibold">
+        <h1 className="lg:text-3xl text-xl text-center font-semibold max-md:mt-5">
           Our Rooms
         </h1>
-        <p className="lg:text-5xl/[3.8rem] text-3xl tracking-wide text-center mt-3">
+        <p className="lg:text-5xl/[3.8rem] text-3xl tracking-wide text-center mt-3 max-md:mt-1">
           Camping and
           <br className="lg:block hidden" />
           Comfort Redefined

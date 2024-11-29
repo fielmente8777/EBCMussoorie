@@ -4,7 +4,7 @@ import ContactUsForm from "../ContactUsForm";
 const Banner = ({ BannerImage }) => {
   return (
     <div className="max-w-[1600px] w-full mx-auto ">
-      <div className="bg-[#D5D5D5] relative lg:aspect-[4/1.45] w-full aspect-[2/3.6] overflow-hidden">
+      <div className="bg-[#D5D5D5] relative lg:aspect-[4/1.45] w-full aspect-[2/4] overflow-hidden">
         <Image
           src={BannerImage}
           alt="banner"

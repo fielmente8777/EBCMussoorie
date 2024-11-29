@@ -15,7 +15,7 @@ import PopupForm from "../PopupForm";
 const Grid = () => {
   const [showModal, setShowModal] = React.useState(false);
   return (
-    <div className="maxwidth lg:px-0 px-3 py-4">
+    <div className="maxwidth lg:px-0 px-3 py-4 max-md:mt-5">
       <div className="flex flex-col lg:flex-row p-5 gap-3 secBack rounded-xl">
         <div className="w-full lg:w-[65%] lg:grid  lg:grid-cols-3 gap-3 hidden    ">
           <div className=" ">

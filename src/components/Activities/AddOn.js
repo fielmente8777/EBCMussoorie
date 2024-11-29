@@ -1,9 +1,9 @@
 import React from "react";
 
-import Picnic1 from "../../../public/picnic/_MG_0636.JPG";
-import Picnic2 from "../../../public/picnic/_MG_1465.JPG";
-import Picnic3 from "../../../public/picnic/IMG_0620.JPG";
-import Picnic4 from "../../../public/picnic/_MG_2878.JPG";
+import Picnic1 from "../../../public/picnic/_MG_0636.webp";
+import Picnic2 from "../../../public/picnic/_MG_1465.webp";
+import Picnic3 from "../../../public/picnic/IMG_0620.webp";
+import Picnic4 from "../../../public/picnic/_MG_2878.webp";
 
 import BBQ1 from "../../../public/images/Barbecue1.webp";
 import BBQ2 from "../../../public/images/34 Barbeque_11zon.jpg";

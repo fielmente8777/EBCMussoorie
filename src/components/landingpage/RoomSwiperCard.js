@@ -4,10 +4,12 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
+import PopupForm from "../PopupForm";
 
 const RoomSwiperCard = ({ roomData }) => {
+  const [showModal, setShowModal] = React.useState(false);
   return (
-    <div className="rounded-lg overflow-hidden bg-[#D5D5D5] min-h-[470px] h-[470px] ">
+    <div className="rounded-lg overflow-hidden bg-[#D5D5D5] lg:min-h-[450px] min-h-[370px] ">
       <Swiper
         slidesPerView={1}
         navigation={true}
@@ -20,7 +22,10 @@ const RoomSwiperCard = ({ roomData }) => {
         speed="1000"
       >
         {roomData?.image?.map((item, index) => (
-          <SwiperSlide key={index} className="w-full relative aspect-[3/1.8]">
+          <SwiperSlide
+            key={index}
+            className="w-full relative aspect-[3/2.5] lg:aspect-[3/1.8]"
+          >
             <Image
               src={item}
               alt={`Room image ${index}`}
@@ -34,11 +39,20 @@ const RoomSwiperCard = ({ roomData }) => {
         <button className="slide_page_indicator"></button>
       </div> */}
       <div className="flex flex-col gap-2 p-3 md:p-4 text-center">
-        <h1 className="text-[#29422C] lg:text-3xl text-xl text-center font-medium">
+        <h3 className="text-[#29422C] lg:text-3xl text-xl text-center font-medium">
           {roomData.roomName}
-        </h1>
-        <p className="text-lg">{roomData.description}</p>
+        </h3>
+        <p className="lg:text-lg text-sm">{roomData.description}</p>
+        <button
+          onClick={() => setShowModal(true)}
+          className="border w-fit mx-auto mt-2 border-[#29422C] bg-[#29422C] text-md px-8 py-2 text-white rounded-lg hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-black"
+        >
+          Book Now
+        </button>
       </div>
+      {showModal && (
+        <PopupForm showModal={showModal} setShowModal={setShowModal} />
+      )}
     </div>
   );
 };
