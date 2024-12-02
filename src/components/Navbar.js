@@ -46,7 +46,13 @@ const Navbar = () => {
       ) : (
         <div className="maxwidth mx-auto flex flex-col lg:pb-3">
           <>
-            <div className="grid items-center py-3 px-6 grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full">
+            <div
+              className={`grid items-center py-3 px-6 ${
+                pathname === "/ebclanding/" || pathname === "/thank-you/"
+                  ? "grid-cols-2"
+                  : "grid-cols-3"
+              } lg:grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full`}
+            >
               {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
                 ""
               ) : (
@@ -91,18 +97,33 @@ const Navbar = () => {
                 <span className="sr-only">call us on : +9191190 01126</span>
                 <span className="my-auto text-[#acacac]">+91-91190 01126</span>
               </Link>
-              <Link
-                href={"/"}
-                className="flex h-[120px] justify-center  max-md:ml-0 max-md:w-full"
-              >
-                <Image
-                  loading="lazy"
-                  src={Logo}
-                  alt="ebc"
-                  className="grow shrink-0 max-w-full w-[400px]"
-                />
-                <span className="sr-only">home</span>
-              </Link>
+              {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+                <div
+                  // href={"/"}
+                  className="flex h-[120px] justify-center  max-md:ml-0 max-md:w-full"
+                >
+                  <Image
+                    loading="lazy"
+                    src={Logo}
+                    alt="ebc"
+                    className="grow shrink-0 max-w-full w-[400px]"
+                  />
+                  <span className="sr-only">home</span>
+                </div>
+              ) : (
+                <Link
+                  href={"/"}
+                  className="flex h-[120px] justify-center  max-md:ml-0 max-md:w-full"
+                >
+                  <Image
+                    loading="lazy"
+                    src={Logo}
+                    alt="ebc"
+                    className="grow shrink-0 max-w-full w-[400px]"
+                  />
+                  <span className="sr-only">home</span>
+                </Link>
+              )}
               <div className="hidden xl:flex flex-col items-end max-md:ml-0">
                 <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
                   {/* <div className="w-[20%]"></div> */}

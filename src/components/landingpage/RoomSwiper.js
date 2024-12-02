@@ -53,31 +53,79 @@ import surveysuite5 from "../../../public/gallery/SuiteBathroom.webp";
 import surveysuite6 from "../../../public/gallery/SuiteBedroom2.webp";
 import surveysuite7 from "../../../public/gallery/SuiteBedroom1.webp";
 import surveysuite8 from "../../../public/gallery/SuiteFacade.webp";
-
-
+import PopupForm from "../PopupForm";
 
 const RoomSwiper = () => {
+  const [showModal, setShowModal] = React.useState(false);
   const Roomdata = [
     {
-      image: [glamper1, glamper2, glamper3, glamper4, glamper5, glamper6, glamper7, glamper8, glamper9, glamper10, glamper11, glamper12],
+      image: [
+        glamper1,
+        glamper2,
+        glamper3,
+        glamper4,
+        glamper5,
+        glamper6,
+        glamper7,
+        glamper8,
+        glamper9,
+        glamper10,
+        glamper11,
+        glamper12,
+      ],
       roomName: "The Glamper",
       description:
         " Our Glamper rooms promise relaxation and rejuvenation like no other, ideal for small groups, making unforgettable moments on our exclusive netted balcony space, perfect for creating Instagram-worthy memories.",
     },
     {
-      image: [camper1, camper2, camper3, camper4, camper5, camper6, camper7, camper8, camper9, camper10, camper11],
+      image: [
+        camper1,
+        camper2,
+        camper3,
+        camper4,
+        camper5,
+        camper6,
+        camper7,
+        camper8,
+        camper9,
+        camper10,
+        camper11,
+      ],
       roomName: "The Clamper",
       description:
         "Treat yourself to a relaxing getaway in our Camper rooms, perfect for couplesseeking a lavish vacation experience, providing unparalleled comfort and coziness in a peaceful setting.",
     },
     {
-      image: [survey1, survey2, survey3, survey4, survey5, survey6, survey7, survey8, survey9, survey10, survey11, survey12, survey13],
+      image: [
+        survey1,
+        survey2,
+        survey3,
+        survey4,
+        survey5,
+        survey6,
+        survey7,
+        survey8,
+        survey9,
+        survey10,
+        survey11,
+        survey12,
+        survey13,
+      ],
       roomName: "The Surveyor",
       description:
         "Experience luxury in our Surveyor Suite at Everest Base Camp, Mussoorie. Enjoy spacious tents, stunning forest views, and a king-sized bed. Perfect for families or friends.",
     },
     {
-      image: [surveysuite1, surveysuite2, surveysuite3, surveysuite4, surveysuite5, surveysuite6, surveysuite7, surveysuite8],
+      image: [
+        surveysuite1,
+        surveysuite2,
+        surveysuite3,
+        surveysuite4,
+        surveysuite5,
+        surveysuite6,
+        surveysuite7,
+        surveysuite8,
+      ],
       roomName: "The Surveyor Suite",
       description:
         "Relax and recharge in the peaceful Surveyor rooms, surrounded by Deodar forest scenery. Perfect for families or small groups, our serene atmosphere ensures privacy and comfort, allowing you to reconnect with nature.",
@@ -118,20 +166,24 @@ const RoomSwiper = () => {
         >
           {Roomdata.map((roomData, index) => {
             return (
-              <SwiperSlide key={index} className="min-w-[200px] max-md:ml-8">
-                <RoomSwiperCard key={index} roomData={roomData} />
+              <SwiperSlide key={index} className="max-md:ml-8">
+                <RoomSwiperCard
+                  key={index}
+                  roomData={roomData}
+                  setShowModal={setShowModal}
+                />
               </SwiperSlide>
             );
           })}
         </Swiper>
         <div className="w-full flex justify-center items-center gap-3 py-3 lg:hidden mt-1">
-        <button className="prev">
-          <PrevBtn height={"35"} width={"35"} />
-        </button>
-        <button className="next">
-          <NextBtn height={"35"} width={"35"} />
-        </button>
-      </div>
+          <button className="prev">
+            <PrevBtn height={"35"} width={"35"} />
+          </button>
+          <button className="next">
+            <NextBtn height={"35"} width={"35"} />
+          </button>
+        </div>
       </div>
 
       <div className="w-full md:w-[40%] flex flex-col justify-center items-center text-white lg:mb-0 mb-5">
@@ -152,14 +204,16 @@ const RoomSwiper = () => {
           </button>
         </div>
       </div>
-      
+      {showModal && (
+        <PopupForm showModal={showModal} setShowModal={setShowModal} />
+      )}
     </div>
   );
 };
 
 export default RoomSwiper;
 
-const NextBtn = ({height, width}) => {
+const NextBtn = ({ height, width }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +230,7 @@ const NextBtn = ({height, width}) => {
   );
 };
 
-const PrevBtn = ({height, width}) => {
+const PrevBtn = ({ height, width }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

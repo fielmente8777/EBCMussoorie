@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 import { FaPhone } from "react-icons/fa6";
 import Link from "next/link";
-
+import { FaWhatsapp } from "react-icons/fa";
 const ebGaramond = EB_Garamond({ subsets: ["latin"] });
 
 export const metadata = {
@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
           }}
         />
         {/* Kiwi SDK */}
-        <Script
+        {/* <Script
           id="kiwi-sdk-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
           });
         `,
           }}
-        />
+        /> */}
 
         {/* <!-- Google tag (gtag.js) --> */}
         <Script
@@ -119,14 +119,15 @@ export default function RootLayout({ children }) {
           <span className="sr-only">whats app</span>
           <FaPhone className="transform" />
         </Link>
-        {/* <Link
-          href={"tel:+918595274861"}
-          target="_blank"
-          className="whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#29422C] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+        <Link
+         href="https://wa.me/+919119001126?text=Hello"
+         target="_blank"
+         rel="noreferrer"
+          className="whatsapp-button inline-block fixed bottom-[25px] right-[20px] w-[50px] h-[50px] bg-[#12c665] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
         >
           <span className="sr-only">whats app</span>
-          <FaPhone className="transform" />
-        </Link> */}
+          <FaWhatsapp className="transform" />
+        </Link>
       </body>
     </html>
   );
