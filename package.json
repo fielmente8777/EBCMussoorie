@@ -21,6 +21,8 @@
     "swiper": "^11.1.14"
   },
   "devDependencies": {
+    "@types/node": "22.10.1",
+    "@types/react": "18.3.12",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8.4.47",

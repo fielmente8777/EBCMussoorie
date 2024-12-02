@@ -15,6 +15,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 * {
   box-sizing: border-box;
 }
@@ -22,6 +23,7 @@
 body::-webkit-scrollbar {
   width: 0.7rem;
 }
+
 body::-webkit-scrollbar-track {
   background-color: #d5d5d5;
   border-radius: 100vw;
@@ -32,6 +34,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: hsl(148, 25%, 23%);
   border-radius: 1rem;
+
   &:hover {
     background-color: hsl(148, 83%, 42%, 0.5);
   }
@@ -46,6 +49,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
+
   @media screen and (max-width: 1280px) {
     padding: 0 2rem;
   }
@@ -63,12 +67,18 @@ body {
   background-image: url("../../public/images/image1 1.webp");
 }
 
+.textareaScroll::-webkit-scrollbar {
+  display: none;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
 @layer utilities {
+
   .no-spinner::-webkit-outer-spin-button,
   .no-spinner::-webkit-inner-spin-button {
     @apply appearance-none;
@@ -111,6 +121,7 @@ body {
 // }
 
 .card_swiper {
+
   .swiper-button-prev,
   .swiper-button-next {
     color: #29422c;
@@ -121,6 +132,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
     &.swiper-button-disabled {
       display: none;
     }
@@ -129,13 +141,16 @@ body {
       width: 1.5rem;
       height: 1.5rem;
     }
+
     &:hover {
       background-color: #29422c;
       color: #fff;
     }
+
     &::after {
       font-size: 1.4rem;
       font-weight: bolder;
+
       @media screen and (max-width: 768px) {
         font-size: 0.8rem;
       }

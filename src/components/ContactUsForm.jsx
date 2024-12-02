@@ -1,8 +1,8 @@
 "use client";
-import { CallIcon, ChatIcon, FillUser, MailIcon } from "@/icons/icons";
 import { Input, Textarea } from "./landingpage/Form";
 import { useState } from "react";
 import axios from "../../node_modules/axios/index";
+import { CallIcon, ChatIcon, FillUser, MailIcon } from "@/icons/icons";
 
 const ContactUsForm = () => {
   const [userName, setUserName] = useState("");
@@ -94,24 +94,24 @@ const ContactUsForm = () => {
   ];
 
   return (
-    <div className="bg-[#BCD0B8]/85 rounded-xl w-full h-full">
+    <div className="bg-[#29422C] rounded-sm w-full h-full">
       <form
-        className="flex flex-col px-6 py-7 blur-none bg-black bg-opacity-30 max-md:px-5 rounded-xl"
+        className="flex flex-col px-6 py-7 blur-none bg-black bg-opacity-30 max-md:px-5  rounded-sm"
         onSubmit={handleSubmit}
       >
-        <div className="text-2xl font-semibold leading-7 text-[#29422C]">
+        <div className="text-2xl font-semibold leading-7 text-[#FFFFFF]">
           Get in Touch!
         </div>
         <div className="">
           {formInputs.map((input) => (
             <div
               key={input.placeholder}
-              className="flex gap-3 mt-4  px-3 py-3 leading-6 bg-white rounded-lg"
+              className="flex gap-3 mt-4 rounded-sm overflow-hidden  leading-6 bg-[#E5E7EB]"
             >
-              <div className="mt-[.3rem]">{input.icon}</div>
+              <div className="mt-[.3rem]  px-3 py-4">{input.icon}</div>
               <Input
                 type={input.type}
-                className="w-full text-xl font-medium no-spinner"
+                className="w-full py-3 bg-[#E5E7EB] text-xl  no-spinner placeholder:text-[#29422C]"
                 placeholder={input.placeholder}
                 required
                 value={input.value}
@@ -119,14 +119,15 @@ const ContactUsForm = () => {
               />
             </div>
           ))}
-          <div className="flex gap-3 mt-4  px-3 py-3 bg-white rounded-lg">
-            <div className="mt-[.3rem]">
+          <div className="flex gap-3 mt-4 rounded-sm overflow-hidden bg-[#E5E7EB] ">
+            <div className="mt-[.3rem] px-3 py-3">
               <ChatIcon />
             </div>
-            <Textarea
+            <textarea
               placeholder="Your Message*"
-              className="w-full text-xl font-medium"
+              className="w-full text-xl py-3 bg-[#E5E7EB] textareaScroll outline-none focus:outline-none no-spinner placeholder:text-[#29422C] "
               required
+              rows={4}
               value={userMessage}
               onChange={(e) => setUserMessage(e.target.value)}
             />
@@ -134,7 +135,7 @@ const ContactUsForm = () => {
         </div>
         <button
           type="submit"
-          className="flex justify-center items-center px-7 py-3.5 mt-5 text-lg font-medium leading-6 whitespace-nowrap bg-green-900 rounded-sm text-stone-300 max-md:px-5"
+          className="flex justify-center items-center rounded-sm overflow-hidden px-7 py-3.5 mt-5 text-lg font-medium leading-6 whitespace-nowrap bg-[#E5E7EB] text-[#29422C] border border-[#F69F2B] max-md:px-5"
         >
           Submit
         </button>

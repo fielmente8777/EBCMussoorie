@@ -9,12 +9,14 @@ import { Face, Insta, Trip } from "../icons/icons.jsx";
 import PopupForm from "./PopupForm";
 
 const navLinks = [
-  { name: "About", href: "/about" },
-  { name: "Activities", href: "/activities" },
-  { name: "Our Rooms", href: "/rooms" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Park Cafe", href: "/parkcafe" },
-  { name: "Blog", href: "/blogs" },
+  { name: "home", href: "/" },
+  { name: "about Us", href: "/about" },
+  { name: "rooms", href: "/rooms" },
+  { name: "park Cafe", href: "/parkcafe" },
+  { name: "activities", href: "/activities" },
+  { name: "gallery", href: "/gallery" },
+  { name: "blog", href: "/blogs" },
+  { name: "contact us", href: "/contact" },
 ];
 
 export const socialLinks = [
@@ -47,17 +49,16 @@ const Navbar = () => {
         <div className="maxwidth mx-auto flex flex-col lg:pb-3">
           <>
             <div
-              className={`grid items-center py-3 px-6 ${
-                pathname === "/ebclanding/" || pathname === "/thank-you/"
-                  ? "grid-cols-2"
-                  : "grid-cols-3"
-              } lg:grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full`}
+              className={`grid items-center py-3 px-6 ${pathname === "/ebclanding/" || pathname === "/thank-you/"
+                ? "grid-cols-2"
+                : "grid-cols-3"
+                } lg:grid-cols-3 gap-5 w-full max-md:flex-wrap max-md:max-w-full`}
             >
               {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
                 ""
               ) : (
                 <div
-                  className="xl:hidden z-40"
+                  className="lg:hidden z-40"
                   onClick={() => {
                     setOpen(!open);
                   }}
@@ -80,7 +81,7 @@ const Navbar = () => {
                       }}
                     >
                       {pathname === "/ebclanding/" ||
-                      pathname === "/thank-you/" ? (
+                        pathname === "/thank-you/" ? (
                         ""
                       ) : (
                         <HamMenu />
@@ -89,14 +90,20 @@ const Navbar = () => {
                   )}
                 </div>
               )}
-              <Link
+              {/* <Link
                 href={"tel:+919119001126"}
                 className="hidden xl:flex items-center gap-2 px-5 my-auto text-lg w-max text-[#acacac]"
               >
                 <MdCall size={20} />
                 <span className="sr-only">call us on : +9191190 01126</span>
                 <span className="my-auto text-[#acacac]">+91-91190 01126</span>
-              </Link>
+              </Link> */}
+              <div className="h-full lg:flex items-center hidden">
+                <div className="w-full">
+                  <hr />
+
+                </div>
+              </div>
               {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
                 <div
                   // href={"/"}
@@ -124,9 +131,37 @@ const Navbar = () => {
                   <span className="sr-only">home</span>
                 </Link>
               )}
-              <div className="hidden xl:flex flex-col items-end max-md:ml-0">
+
+              <div className="h-full hidden lg:block">
+                <div className="flex  items-start justify-end mb-[15px]">
+
+                  {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+                    <button
+                      className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
+                      onClick={() => setShowModal(!open)}
+                    >
+                      Book Now
+                    </button>
+                  ) : (
+                    <Link
+                      href={
+                        "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
+                      }
+                      target="_blank"
+                      className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
+                    >
+                      Book Now
+                    </Link>
+                  )}
+                </div>
+                <div className="w-full ">
+                  <hr />
+
+                </div>
+              </div>
+              {/* <div className="hidden xl:flex flex-col items-end max-md:ml-0">
                 <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
-                  {/* <div className="w-[20%]"></div> */}
+                  <div className="w-[20%]"></div>
                   {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
                     ""
                   ) : (
@@ -163,9 +198,9 @@ const Navbar = () => {
                     </Link>
                   )}
                 </div>
-              </div>
+              </div> */}
 
-              <div className="xl:hidden flex justify-end">
+              <div className="lg:hidden flex justify-end">
                 <Link
                   href={"tel:+919119001126"}
                   className="flex items-center gap-2 px-5 my-auto text-lg leading-7 text-[#acacac]"
@@ -180,16 +215,15 @@ const Navbar = () => {
               </div>
             </div>
             {pathname !== "/ebclanding/" && pathname !== "/thank-you/" ? (
-              <div className="hidden xl:flex gap-5 justify-between self-center px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
+              <div className="hidden xl:flex justify-center gap-1 px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`${
-                      pathname === link.href
-                        ? "text-[#29422c] bg-[#D5D5D5]"
-                        : " text-[#acacac] cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm "
-                    } py-1 px-2`}
+                    className={`${pathname === link.href
+                      ? "text-[#29422c] bg-[#D5D5D5] "
+                      : " text-[#acacac]  hover:bg-[#D5D5D5] hover:text-[#29422c] "
+                      } py-1 px-2 flex-1 cursor-pointer transition-all duration-[.3s] text-[16px] rounded-sm uppercase`}
                   >
                     {link.name}
                   </Link>
@@ -213,7 +247,7 @@ const HomeNav = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-[#152116]">
+    <div className="bg-[#152116] border border-red-900">
       <div className="maxwidth mx-auto flex flex-col px-8 xl:py-2 py-6">
         <div className="flex justify-between items-center gap-5 w-full max-md:flex-wrap max-md:max-w-full">
           <Link

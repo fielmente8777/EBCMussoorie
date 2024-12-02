@@ -187,6 +187,7 @@ const Form = () => {
                       className="w-full text-xl font-medium"
                       required
                       value={userMessage}
+                      row={8}
                       onChange={(e) => setUserMessage(e.target.value)}
                     />
                   </div>
@@ -252,9 +253,8 @@ export const Textarea = ({ placeholder, className, ...props }) => {
     <>
       <textarea
         placeholder={placeholder}
-        className={`${
-          className && className
-        } outline-none focus:outline-none resize-none`}
+        className={`${className && className
+          } outline-none focus:outline-none resize-none`}
         {...props}
       />
     </>

@@ -10,8 +10,8 @@ const Banner = ({ BannerImage }) => {
           alt="banner"
           className="object-cover object-bottom-[10%]"
           fill
-          // width={600}
-          // height={400}
+        // width={600}
+        // height={400}
         />
         <div className="absolute top-0 flex justify-center items-center left-0 w-full h-full bg-black/50 py-5">
           <div className="maxwidth">
