@@ -120,10 +120,10 @@ export default function RootLayout({ children }) {
           <FaPhone className="transform" />
         </Link>
         <Link
-         href="https://wa.me/+919119001126?text=Hello"
-         target="_blank"
-         rel="noreferrer"
-          className="whatsapp-button inline-block fixed bottom-[25px] right-[20px] w-[50px] h-[50px] bg-[#12c665] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+          href="https://wa.me/+919119001126?text=Hello"
+          target="_blank"
+          rel="noreferrer"
+          className="whatsapp-button inline-block fixed bottom-12 right-[20px] w-[50px] h-[50px] bg-[#12c665] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
         >
           <span className="sr-only">whats app</span>
           <FaWhatsapp className="transform" />

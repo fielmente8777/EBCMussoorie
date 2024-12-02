@@ -9,7 +9,7 @@ import PopupForm from "../PopupForm";
 const RoomSwiperCard = ({ roomData, setShowModal }) => {
   return (
     <>
-      <div className="rounded-lg overflow-hidden bg-[#D5D5D5] lg:min-h-[495px] min-h-[370px] h-full ">
+      <div className=" rounded-lg overflow-hidden bg-[#D5D5D5] lg:min-h-[495px] min-h-[370px] h-full ">
         <Swiper
           slidesPerView={1}
           navigation={true}
@@ -51,7 +51,7 @@ const RoomSwiperCard = ({ roomData, setShowModal }) => {
           </button>
         </div>
       </div>
-      
+
     </>
   );
 };
