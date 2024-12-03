@@ -271,7 +271,7 @@ const Footer = () => {
                       href="https://maps.app.goo.gl/fTBmqjBDoYdGdtmC9"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-10 py-3 max-w-full font-medium text-base  text-[#29422C] bg-white rounded-sm border border-white hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
+                      className="px-10 py-3 max-w-full w-fit font-medium text-base  text-[#29422C] bg-white rounded-sm border border-white hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
                     >
                       View Map
                     </Link>
