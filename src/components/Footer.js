@@ -2,9 +2,9 @@
 import { MdCall } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import Link from "next/link";
-
+import { FiFacebook } from "react-icons/fi";
 import { usePathname } from "next/navigation";
-import Logo from "../../public/logo.svg";
+import Logo from "../../public/logo.png";
 import Image from "next/image";
 import {
   CopyRightIcon,
@@ -12,13 +12,18 @@ import {
   Insta,
   Line,
   OutlineCallWhite,
+  OutLineFacebook,
+  OutLineInstagram,
   OutlineLocationWhite,
   OutlineMailWhite,
+  OutLineTripadvisor,
+  OutLineYoutube,
   Trip,
 } from "../icons/icons.jsx";
 import { IoMail } from "react-icons/io5";
 import { useState } from "react";
-import { socialLinks } from "./Navbar";
+import SectionWithContainer from "./SectionWithContainer";
+import Section from "./Section";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -46,6 +51,62 @@ const Footer = () => {
 
     setEmail("");
   };
+
+  const quickLinks = [
+    { name: "Home", link: "/" },
+    { name: "Rooms", link: "/rooms" },
+    { name: "park cafe", link: "/parkcafe" },
+    { name: "gallery", link: "/gallery" },
+    { name: "Contact Us", link: "/contact-us" },
+  ];
+
+  const policyLinks = [
+    { name: "Privacy Policy", link: "/privacy" },
+    { name: "Terms & Conditions", link: "/terms" },
+  ];
+
+  const socialLinks = [
+    {
+      icon: <OutLineFacebook />,
+      name: "Facebook",
+      link: "https://www.facebook.com/ebc.mussoorie/",
+    },
+    {
+      icon: <OutLineInstagram />,
+      name: "Instagram",
+      link: "https://www.instagram.com/ebcmussoorie/",
+    },
+    {
+      icon: <OutLineTripadvisor />,
+      name: "Tripadvisor",
+      link: "https://www.tripadvisor.in/Hotel_Review-g297689-d23292009-Reviews-Everest_Base_Camp_Mussoorie-Mussoorie_Dehradun_District_Uttarakhand.html",
+    },
+
+    {
+      icon: <OutLineYoutube />,
+      name: "Email",
+      link: "mailto:Kwv0D@example.com",
+    },
+  ];
+  const contactLinks = [
+    {
+      icon: <OutlineLocationWhite />,
+      name: "Everest Base Camp Mussoorie, Park Estate, Hathipaon Road, Mussoorie, Uttarakhand, 248179",
+      link: "",
+    },
+    {
+      icon: <OutlineCallWhite />,
+      name: "Call us: +91 91190 01126",
+      link: "tel:+919119001126",
+    },
+    {
+      icon: <IoMail />,
+      name: "Email: info@ebcmussoorie.com",
+      link: "mailto:info@ebcmussoorie.com",
+    },
+  ];
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -123,113 +184,109 @@ const Footer = () => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col pt-10 !font-thin">
-          <div className="flex justify-between gap-20  maxwidth mx-auto max-md:flex-wrap max-md:max-w-full  px-5">
-            <div className="flex flex-col md:w-[39%] w-full">
-              <div className="flex flex-col  text-white max-md:mt-10 max-md:max-w-full">
-                <div className="w-full flex justify-center">
-                  <Image
-                    loading="lazy"
-                    src={Logo}
-                    alt="logo"
-                    style={{ width: "218px", height: "100%" }}
-                    className="self-center max-w-full "
-                  />
-                </div>
-                <div className="mt-4 text-2xl font-thin tracking-wider leading-10 max-md:max-w-full">
-                  Everest Base Camp Mussoorie
-                </div>
-                <div className="mt-4 text-base leading-7 font-thin text-justify max-md:max-w-full">
-                  Discover Your Mountain Oasis: Experience Luxury Camping at
-                  Everest Base Camp Mussoorie!
-                </div>
-              </div>
-            </div>
-            <div className="flex md:items-center flex-col md:w-[30%] w-full ">
-              <div className="flex flex-col grow text-white">
-                <div className="text-2xl font-thin tracking-wider leading-10">
-                  Links
-                </div>
-                <div className="flex flex-col gap-1 mt-4 text-base font-thin leading-7">
-                  <Link href={"/about"}>About Us</Link>
-                  <Link href={"/activities"}>Activities</Link>
-                  {/* <Link href={"/contact"}>
-                      Contact Us
-
-                    </Link> */}
-                  <Link href={"/rooms"}>Our Rooms</Link>
-                  <Link href={"/gallery"}>Gallery</Link>
-                  <Link href={"/parkcafe"}>Park Cafe</Link>
-                  <Link href={"/glamper"}>A Glamper&apos;s Guide</Link>
-                  <Link href={"/blogs"}>Blogs</Link>
-                  <Link href={"/ebclanding"}>EBC</Link>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col  md:w-[30%] w-full ">
-              <div className="text-2xl font-thin tracking-wider leading-10 text-white">
-                Reach Out
-              </div>
-              <div className="mt-4 text-base font-thin leading-7 text-white">
-                Everest Base Camp Mussoorie, Park Estate, Hathipaon Road,
-                Mussoorie, Uttarakhand, 248179
-              </div>
-
-              <Link
-                href={"mailto:info@ebcmussoorie.com"}
-                className="flex items-center gap-3 mt-4 text-lg leading-7 text-white whitespace-nowrap"
-              >
-                <IoMail size={20} />
-                <div className="my-auto">info@ebcmussoorie.com</div>
-              </Link>
-              <Link
-                href={"tel:+919119001126"}
-                className="flex items-center gap-3 mt-2 text-lg leading-7 text-white whitespace-nowrap"
-              >
-                <MdCall size={20} />
-                <div className="my-auto">+91 91190 01126</div>
-              </Link>
-              <div className="flex gap-4 pr-20 mt-4 max-md:pr-5">
-                {socialLinks.map((link) => (
+        <div>
+          <SectionWithContainer>
+            <div className="flex flex-col items-center justify-center gap-5 w-full">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-16 gap-8 w-full pb-3">
+                <div className="flex flex-col gap-5 w-full">
                   <Link
-                    key={link.name}
-                    href={link.href}
-                    target="_blank"
-                    className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
+                    href="/"
+                    className="w-full relative h-[200px] aspect-[4/1] "
                   >
-                    <span className="sr-only">{link.name}</span>
-                    {link.icon}
+                    <Image
+                      src={Logo}
+                      alt="ebcmussoorie"
+                      fill
+                      className="object-contain"
+                    />
                   </Link>
-                ))}
+                  {/* social links */}
+                  <div className="flex items-center justify-between gap-5">
+                    {socialLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-2 text-[#acacac] cursor-pointer w-11 h-11 shadow-inner rounded-full flex items-center justify-center border border-[#F69F2B] transition-all duration-[.3s] hover:bg-[#29422c]/30 hover:text-[#29422c] text-[18px]  py-1"
+                      >
+                        <span className="sr-only">{link.name}</span>
+                        <span>{link.icon}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                {/* quick links */}
+                <div className="flex flex-col gap-5 w-full">
+                  <h2 className="lg:text-3xl text-2xl font-semibold text-white uppercase">
+                    Quick Links
+                  </h2>
+                  <div className="flex flex-col lg:gap-5 gap-3">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.link}
+                        className="px-2 text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                {/* policy links */}
+                <div className="flex flex-col gap-5 w-full">
+                  <h2 className="lg:text-3xl text-2xl font-normal text-white uppercase">
+                    Our policy
+                  </h2>
+                  <div className="flex flex-col lg:gap-5 gap-3">
+                    {policyLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.link}
+                        className="px-2 text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                {/* contact */}
+                <div className="flex flex-col gap-5 w-full ">
+                  <h2 className="lg:text-3xl text-2xl font-normal text-white uppercase">
+                    Contact Us
+                  </h2>
+                  <div className="flex flex-col lg:gap-5 gap-3">
+                    {contactLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-2 text-white italic cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                    <Link
+                      href="https://maps.app.goo.gl/fTBmqjBDoYdGdtmC9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-10 py-3 max-w-full w-fit font-medium text-base  text-[#29422C] bg-white rounded-sm border border-white hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
+                    >
+                      View Map
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-[1.5px]  bg-[#F1EECB]" />
+              <div className="pt-4">
+                <p className="text-white capitalize flex items-center justify-center italic gap-2">
+                  <CopyRightIcon /> {currentYear} EBC Mussoorie All rights
+                  reserved
+                </p>
               </div>
             </div>
-          </div>
-
-          <div className="bg-neutral-900 mt-8 ">
-            <div className="flex gap-5 maxwidth mx-auto justify-between px-5 py-5 w-full text-xs tracking-wider leading-5 text-white  max-md:flex-wrap max-md:px-5 max-md:max-w-full">
-              <div className="flex gap-2 font-medium">
-                <div className="relative w-3 aspect-square">
-                  <Image
-                    alt="icon"
-                    fill
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f2ebd1425476a83f9785a32d2e5632db68bf9f8db8e123ca89682af54513cec?"
-                    className="object-contain"
-                  />
-                </div>
-                <div className=" text-white">
-                  Copyright EBC Mussoorie
-                </div>
-              </div>
-              <div className="flex gap-3 whitespace-nowrap  text-white">
-                <div className="">
-                  <Link href={"/privacy"}>Privacy Policy</Link>
-                </div>
-                <div className="">
-                  <Link href={"/terms"}>Terms and Conditions</Link>
-                </div>
-              </div>
-            </div>
-          </div>
+          </SectionWithContainer>
         </div>
       )}
     </>
