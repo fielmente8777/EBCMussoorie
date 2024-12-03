@@ -1,5 +1,5 @@
-import Address from "@/components/Contact/Address"
-import ContactUsForm from "@/components/ContactUsForm"
+import Address from "../../components/Contact/Address"
+import ContactUsForm from "../../components/ContactUsForm"
 
 const page = () => {
   return (

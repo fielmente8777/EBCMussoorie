@@ -2,7 +2,7 @@
 import { Input, Textarea } from "./landingpage/Form";
 import { useState } from "react";
 import axios from "../../node_modules/axios/index";
-import { CallIcon, ChatIcon, FillUser, MailIcon } from "@/icons/icons";
+import { CallIcon, ChatIcon, FillUser, MailIcon } from "../icons/icons";
 
 const ContactUsForm = () => {
   const [userName, setUserName] = useState("");
@@ -45,7 +45,7 @@ const ContactUsForm = () => {
       console.log(data);
       if (data.status) {
         setLoader(false);
-        // router.push('/thank-you');
+        router.push('/thank-you');
         setPopupMsg("You information has been Received");
         setOpenPopup(true);
         setFormRes(true);
@@ -125,9 +125,10 @@ const ContactUsForm = () => {
             </div>
             <textarea
               placeholder="Your Message*"
-              className="w-full text-xl py-3 bg-[#E5E7EB] textareaScroll outline-none focus:outline-none no-spinner placeholder:text-[#29422C] "
+              className="w-full text-xl resize-none py-3 bg-[#E5E7EB] textareaScroll outline-none focus:outline-none no-spinner placeholder:text-[#29422C] "
               required
               rows={4}
+
               value={userMessage}
               onChange={(e) => setUserMessage(e.target.value)}
             />

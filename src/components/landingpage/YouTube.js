@@ -4,7 +4,7 @@ import {
   SomethingForEveryone,
   StaywithLuxury,
   UnmatchedViews,
-} from "@/icons/icons";
+} from "../../icons/icons";
 import Link from "next/link";
 import React from "react";
 import SEOVideo from "../SEOVideo";
