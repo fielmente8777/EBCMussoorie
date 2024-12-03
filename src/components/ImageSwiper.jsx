@@ -8,9 +8,9 @@ import "swiper/css/navigation";
 import Image from "next/image";
 
 import indoor1 from "../../public/activity/activity3.webp";
-const ImageSwiper = () => {
+const ImageSwiper = ({images}) => {
   return (
-    <div>
+    <div className="w-full bg-transparent">
       <Swiper
         autoplay={true}
         effect={"coverflow"}
@@ -38,13 +38,13 @@ const ImageSwiper = () => {
           //     spaceBetween: 20,
           //   },
         }}
-        className="w-full h-[250px] md:h-[500px] rounded-sm card_swiper shadow-2xl"
+        className=""
       >
         {[1, 2, 3, 4, 5, 6]?.map((roomImage, index) => {
           return (
             <SwiperSlide
               key={index}
-              className="w-full h-full relative aspect-[4/3]"
+              className="w-full h-full relative aspect-[4/2.5]"
             >
               <Image
                 src={indoor1}

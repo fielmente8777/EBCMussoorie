@@ -5,110 +5,115 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
+import Section from "../Section";
+import BorderLine from "../BorderLine";
 const PressReleases = () => {
+  const data = [
+    {
+      src: "/images/lbb.png",
+      name: "LBB",
+      link: "https://lbb.in/delhi/away-from-the-city-around-all-things-pretty-ebc-mussoorie/",
+    },
+    {
+      src: "/images/so.png",
+      name: "So",
+      link: "https://so.city/delhi/article/this-dreamy-resort-is-a-modern-campers-playground-with-luxury-tents-a-cafe-on-the-hill",
+    },
+    {
+      src: "/images/hotelier_inda.png",
+      name: "Hotelier India",
+      link: "https://www.hotelierindia.com/operations/experience-tranquil-adventure-in-the-heart-of-mussoorie-with-ebc-mussoorie",
+    },
+    {
+      src: "/images/tripoto2.png",
+      name: "Tripoto",
+      link: "https://www.tripoto.com/india/trips/did-you-know-that-just-8-hours-from-delhi-there-s-an-everest-base-camp-no-we-re-not-kidding-3aea3a54f8628a1c8",
+    },
+    {
+      src: "/images/issuu.png",
+      name: "Issuu",
+      link: "https://issuu.com/ebcmussoorie/docs/camp_stay_at_ebc_mussoorie_a_himalayan_foothills_",
+    },
+    {
+      src: "/images/Group_media.png",
+      name: "curlytales",
+      link: "https://curlytales.com/dine-under-the-sky-and-even-stay-inside-dreamy-glamps-at-mussoories-everest-base-camp-resort/",
+    },
+    {
+      src: "/images/wanderalone.png",
+      name: "WanderAlone",
+      link: "https://wanderalone.co.in/did-you-know-that-just-7-hours-from-delhi-theres-an-everest-base-camp-no-were-not-kidding/",
+    },
+  ];
 
-
-    const data = [
-        {
-            src: "/images/lbb.png",
-            name: "LBB",
-            link: "https://lbb.in/delhi/away-from-the-city-around-all-things-pretty-ebc-mussoorie/",
-        },
-        {
-            src: "/images/so.png",
-            name: "So",
-            link: "https://so.city/delhi/article/this-dreamy-resort-is-a-modern-campers-playground-with-luxury-tents-a-cafe-on-the-hill",
-        },
-        {
-            src: "/images/hotelier_inda.png",
-            name: "Hotelier India",
-            link: "https://www.hotelierindia.com/operations/experience-tranquil-adventure-in-the-heart-of-mussoorie-with-ebc-mussoorie",
-        },
-        {
-            src: "/images/tripoto.png",
-            name: "Tripoto",
-            link: "https://www.tripoto.com/india/trips/did-you-know-that-just-8-hours-from-delhi-there-s-an-everest-base-camp-no-we-re-not-kidding-3aea3a54f8628a1c8",
-        },
-        {
-            src: "/images/issuu.png",
-            name: "Issuu",
-            link: "https://issuu.com/ebcmussoorie/docs/camp_stay_at_ebc_mussoorie_a_himalayan_foothills_",
-        },
-        {
-            src: "/images/Group_media.png",
-            name: "curlytales",
-            link: "https://curlytales.com/dine-under-the-sky-and-even-stay-inside-dreamy-glamps-at-mussoories-everest-base-camp-resort/",
-        },
-        {
-            src: "/images/wanderalone.png",
-            name: "WanderAlone",
-            link: "https://wanderalone.co.in/did-you-know-that-just-7-hours-from-delhi-theres-an-everest-base-camp-no-were-not-kidding/",
-        }
-    ]
-
-    return (
-        <section>
-            <div className="max-w-7xl mx-auto px-4 lg:py-8 py-6">
-                <div>
-                    <h2 className="md:text-4xl text-3xl text-center font-bold text-white">
-                        Featured Press Releases
-                    </h2>
-                </div>
-                <div className="mt-8 press">
-                    <Swiper
-                        loop={true}
-                        autoplay={{
-                            delay: 2000,
-                        }}
-                        speed={1000}
-                        pagination={{
-                            type: "bullets",
-                            clickable: true,
-                            el: ".bullets-Portfolio",
-                        }}
-                        slidesPerView={1}
-                        spaceBetween={14}
-                        modules={[Pagination, Autoplay]}
-                        breakpoints={{
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 14,
-                            },
-                            1024: {
-                                slidesPerView: 4,
-                                spaceBetween: 20,
-                            },
-                        }}
-                        className="mySwiper px-2"
-                    >
-                        {data.map((item, index) => (
-                            <SwiperSlide key={index} className="py-4">
-                                <Link target="_blank" href={item.link} className="relative w-full lg:aspect-[3/.7] aspect-[2/1] hover:-translate-y-2 ease-in-out duration-700 transition hover:shadow-md shadow-white/100 rounded-md flex justify-center items-center">
-                                    <Image
-                                        src={item.src}
-                                        alt={item.name}
-                                        fill
-                                        className={`object-contain p-3`}
-                                        style={{
-                                            background:
-                                                index == 0 || index == 4 || index == 5
-                                                    ? "white"
-                                                    : index == 6
-                                                        ? "#126D76"
-                                                        : "transparent",
-                                        }}
-                                    />
-                                </Link>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                    {/* <div className="flex justify-center items-center gap-6 press lg:mt-11"> */}
-                    <div className="bullets-Portfolio lg:mt-11 flex justify-center items-center gap-2"></div>
-                    {/* </div> */}
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <Section>
+      <div className="max-w-7xl mx-auto px-4 lg:py-8 py-6">
+        <div className="flex flex-col items-center justify-center gap-5">
+          <BorderLine />
+          <h2 className="md:text-4xl text-3xl text-center font-normal tracking-wider uppercase text-white">
+            Featured Press Releases
+          </h2>
+        </div>
+        <div className="mt-8">
+          <Swiper
+            loop={true}
+            autoplay={{
+              delay: 2000,
+            }}
+            speed={1000}
+            // pagination={{
+            //   type: "bullets",
+            //   clickable: true,
+            //   el: ".bullets-Portfolio",
+            // }}
+            slidesPerView={1}
+            spaceBetween={14}
+            modules={[Pagination, Autoplay]}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 14,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+            }}
+            className="!p-8 border border-[#F69F2B] rounded-sm"
+          >
+            {data.map((item, index) => (
+              <SwiperSlide key={index} className="">
+                <Link
+                  target="_blank"
+                  href={item.link}
+                  className="relative w-full lg:aspect-[3/1] aspect-[2/1] py-8 flex justify-center items-center bg-white rounded-tl-3xl rounded-br-3xl overflow-hidden"
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.name}
+                    fill
+                    className={`object-contain p-3 bg-white`}
+                    // style={{
+                    //   background:
+                    //     index == 0 || index == 4 || index == 5
+                    //       ? "white"
+                    //       : index == 6
+                    //         ? "#126D76"
+                    //         : "transparent",
+                    // }}
+                  />
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          {/* <div className="flex justify-center items-center gap-6 press lg:mt-11"> */}
+          {/* <div className="bullets-Portfolio lg:mt-11 flex justify-center items-center gap-2"></div> */}
+          {/* </div> */}
+        </div>
+      </div>
+    </Section>
+  );
 };
 
 export default PressReleases;

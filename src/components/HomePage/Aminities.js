@@ -4,7 +4,7 @@ import React from 'react'
 const Aminities = () => {
     return (
         <div className="flex flex-col max-md:px-3 max-w-[880px] mx-auto">
-            <div className="self-center text-[18px] font-bold tracking-wider text-center text-white">
+            {/* <div className="self-center text-[18px] font-bold tracking-wider text-center text-white">
                 AMENITIES
             </div>
             <div className="mt-10 w-full text-[16px] leading-8 text-center text-white max-md:mt-10 max-md:max-w-full">
@@ -13,7 +13,7 @@ const Aminities = () => {
                 outdoor activities, and luxury accommodations, we provide the perfect
                 escape from the hustle and bustle of everyday life. Discover the perfect
                 blend of nature and luxury at our resort.
-            </div>
+            </div> */}
             <div className="mt-14 w-full max-md:mt-10 max-md:max-w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  md:gap-10">
                     <div className="flex flex-col  max-md:w-full">
