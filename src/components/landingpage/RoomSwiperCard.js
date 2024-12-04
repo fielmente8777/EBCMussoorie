@@ -9,7 +9,7 @@ import PopupForm from "../PopupForm";
 const RoomSwiperCard = ({ roomData, setShowModal }) => {
   return (
     <>
-      <div className=" rounded-lg overflow-hidden bg-[#D5D5D5] lg:min-h-[495px] min-h-[370px] h-full ">
+      <div className=" rounded-sm overflow-hidden bg-[#D5D5D5] lg:min-h-[495px] min-h-[370px] h-full ">
         <Swiper
           slidesPerView={1}
           navigation={true}
@@ -45,7 +45,7 @@ const RoomSwiperCard = ({ roomData, setShowModal }) => {
           <p className="lg:text-lg text-sm">{roomData.description}</p>
           <button
             onClick={() => setShowModal(true)}
-            className="border w-fit mx-auto mt-2 border-[#29422C] bg-[#29422C] text-md px-8 py-2 text-white rounded-lg hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-black"
+            className="border w-fit mx-auto mt-2 border-[#29422C] bg-[#29422C] text-md px-8 py-2 text-white rounded-sm hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-black"
           >
             Book Now
           </button>

@@ -1,5 +1,5 @@
-import DynamicPage from "@/components/DynamicPage";
-import blogData from "@/utils/blogData";
+import DynamicPage from "../../../components/DynamicPage";
+import blogData from "../../../utils/blogData";
 import React from "react";
 
 

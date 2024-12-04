@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import Image from "next/image";
 const ActivitiesCard = ({ activitiesData, index }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-6 py-7 bg-[#D5D5D5] rounded-xl min-h-[400px] ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-6 py-7 bg-[#D5D5D5] rounded-sm min-h-[400px] ">
       <div
         className={`col-span-2  ${index === 1 || index === 3 ? "order-2" : ""}`}
       >

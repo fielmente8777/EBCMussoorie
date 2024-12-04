@@ -31,7 +31,7 @@ const TestimonialCard = () => {
     },
   ];
   return (
-    <div className="flex flex-col px-11 py-3 rounded-xl bg-[#D5D5D5] bg-opacity-70 max-w-[610px] max-md:w-full max-md:px-5">
+    <div className="flex flex-col px-11 py-3 rounded-sm bg-[#D5D5D5] bg-opacity-70 max-w-[610px] max-md:w-full max-md:px-5">
       <div className="self-center text-5xl font-bold text-center text-[#29422C] leading-[56.16px] max-md:text-4xl">
         Testimonials
       </div>
@@ -76,7 +76,7 @@ const TestimonialCard = () => {
         {TestimonialData.map((data, index) => {
           return (
             <SwiperSlide key={index} className="">
-              <div className="flex flex-col justify-center px-4 py-4 mt-3 bg-white rounded-xl max-md:pr-5 max-md:max-w-full">
+              <div className="flex flex-col justify-center px-4 py-4 mt-3 bg-white rounded-sm max-md:pr-5 max-md:max-w-full">
                 <div className="flex gap-2 max-md:flex-wrap">
                   <div className="flex gap-1 max-md:justify-center max-md:w-full">
                     <div className="relative aspect-[1/1] w-10 h-8">

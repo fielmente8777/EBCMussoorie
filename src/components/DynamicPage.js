@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import familyadventure from "../../public/blog/familyadvanture.webp";
 import geopark from "../../public/blog/georgepeak.webp";
-import blogData from "@/utils/blogData";
+import blogData from "../utils/blogData";
 
 const DynamicPage = ({ data }) => {
   const category = ["All", ...new Set(blogData.map((item) => item.Category))];

@@ -9,7 +9,7 @@ const Banner = () => {
       <div className="max-w-[1600px] w-full mx-auto">
         <div className="relative lg:aspect-[3/1.3] aspect-[3/4.5]">
           <Image src={bannerImg} alt="logo" className="object-cover" fill />
-          <div className="absolute lg:top-[30%] top-1/2 lg:right-[30%] right-[10%] lg:translate-x-[100%] translate-x-[5%] lg:-translate-y-[30%] -translate-y-1/2">
+          {/* <div className="absolute lg:top-[30%] top-1/2 lg:right-[30%] right-[10%] lg:translate-x-[100%] translate-x-[5%] lg:-translate-y-[30%] -translate-y-1/2">
             <div className="flex flex-col justify-center p-5 bg-[#29422C] max-w-[365px]">
               <div className="flex flex-col px-4 py-5 border border-solid border-[#D5D5D5]">
                 <Image
@@ -35,7 +35,7 @@ const Banner = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

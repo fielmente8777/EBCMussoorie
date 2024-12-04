@@ -16,7 +16,7 @@ const Grid = () => {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <div className="maxwidth lg:px-0 px-3 py-4 max-md:mt-5">
-      <div className="flex flex-col lg:flex-row p-5 gap-3 secBack rounded-xl">
+      <div className="flex flex-col lg:flex-row p-5 gap-3 secBack rounded-sm">
         <div className="w-full lg:w-[65%] lg:grid  lg:grid-cols-3 gap-3 hidden    ">
           <div className=" ">
             <Image
@@ -104,7 +104,7 @@ const Grid = () => {
             <button
               // href={"#contact"}
               onClick={() => setShowModal(true)}
-              className="px-8 flex justify-center items-center w-max py-2 rounded-xl bg-[#29422C] text-[#fff] capitalize text-lg"
+              className="px-8 flex justify-center items-center w-max py-2 rounded-sm bg-[#29422C] text-[#fff] capitalize text-lg"
             >
               Contact us
             </button>

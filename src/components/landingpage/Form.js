@@ -113,7 +113,7 @@ const Form = () => {
   };
   return (
     <div className="w-full md:w-[1280px] mx-auto  px-4 lg:px-0" id="contact">
-      <div className="bg-[#D5D5D5] w-full rounded-xl py-5 ">
+      <div className="bg-[#D5D5D5] w-full rounded-sm py-5 ">
         <div className="text-center text-5xl font-bold text-[#29422C] capitalize ">
           Contact Us
         </div>
@@ -155,7 +155,7 @@ const Form = () => {
           <div className="col-span-2 lg:ms-3">
             <div className="flex flex-col grow justify-center ">
               <form
-                className="flex flex-col px-6 py-7 blur-none bg-black bg-opacity-30 max-md:px-5 rounded-xl"
+                className="flex flex-col px-6 py-7 blur-none bg-black bg-opacity-30 max-md:px-5 rounded-sm"
                 onSubmit={handleSubmit}
               >
                 <div className="text-2xl font-semibold leading-7 text-[#29422C]">
@@ -165,7 +165,7 @@ const Form = () => {
                   {formInputs.map((input) => (
                     <div
                       key={input.placeholder}
-                      className="flex gap-3 mt-4  px-3 py-3 leading-6 bg-white rounded-lg"
+                      className="flex gap-3 mt-4  px-3 py-3 leading-6 bg-white rounded-sm"
                     >
                       <div className="mt-[.3rem]">{input.icon}</div>
                       <Input
@@ -178,7 +178,7 @@ const Form = () => {
                       />
                     </div>
                   ))}
-                  <div className="flex gap-3 mt-4  px-3 py-3 bg-white rounded-lg">
+                  <div className="flex gap-3 mt-4  px-3 py-3 bg-white rounded-sm">
                     <div className="mt-[.3rem]">
                       <ChatIcon />
                     </div>

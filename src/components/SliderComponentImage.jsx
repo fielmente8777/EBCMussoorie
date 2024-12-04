@@ -6,12 +6,16 @@ import Section from "./Section";
 
 const SliderComponentImage = ({
   title,
+  title2,
   description,
   subDescription,
+  subDescription2,
   images,
   link = "#",
   urlText = "book now",
   border = false,
+  newTab = false,
+  descMaxWidth = false,
 }) => {
   return (
     <Section className="bg-[#ffffff]">
@@ -25,7 +29,9 @@ const SliderComponentImage = ({
                   {title}
                 </h2>
 
-                <p className="text-center italic  lg:text-xl text-base text-[#29422C] max-w-3xl">
+                <p
+                  className={`text-center italic  lg:text-xl text-base text-[#29422C] ${descMaxWidth && "max-w-4xl mx-auto"} w-full`}
+                >
                   {description}
                 </p>
               </div>
@@ -37,14 +43,27 @@ const SliderComponentImage = ({
           <ImageSwiper images={images} />
         </div>
         <Container>
-          <div className="flex flex-col items-center justify-center gap-12 mt-12">
+          <div className="flex flex-col items-center justify-center gap-5 mt-12">
+            {title2 && <BorderLine />}
+            {title2 && (
+              <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-[#29422C]">
+                {title2}
+              </h2>
+            )}
             <p className="text-center italic font-normal lg:text-xl text-base text-[#29422C]">
               {subDescription}
             </p>
-            <div>
+            {subDescription2 && (
+              <p className="text-center italic font-normal lg:text-xl text-base text-[#29422C]">
+                {subDescription2}
+              </p>
+            )}
+            <div className="flex items-center justify-center mt-5">
               <Link
                 href={link}
-                className="px-10 py-3 max-w-full text-base bg-[#29422C] text-[#fff] mt-10"
+                target={newTab ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                className="px-10 py-3 max-w-full font-medium text-base  text-white bg-[#29422C] rounded-sm border border-[#F69F2B] hover:bg-transparent  hover:text-[#29422C] duration-300 active:scale-75 hover:scale-105 "
               >
                 {urlText}
               </Link>

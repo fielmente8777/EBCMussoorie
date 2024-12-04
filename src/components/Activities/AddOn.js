@@ -18,6 +18,7 @@ import Wilderness1 from "../../../public/bornfire/33Bonfire_11zon.webp";
 import Wilderness2 from "../../../public/bornfire/treking.webp";
 
 import SpecilizationCard from "../landingpage/SpecilizationCard";
+import Section from "../Section";
 
 const AddOn = () => {
   const datas = [
@@ -73,9 +74,15 @@ const AddOn = () => {
         Paid Add-ons
       </h2>
 
-      <div className="rounded-lg overflow-hidden">
+      <div className="rounded-sm overflow-hidden">
         {datas.map((data, index) => (
-          <SpecilizationCard key={index} cardData={data} index={index} aspectRatio={"lg:aspect-[2/1.38] aspect-[2/1.5]"} />
+          <Section key={index}>
+            <SpecilizationCard
+              cardData={data}
+              index={index}
+              aspectRatio={"lg:aspect-[2/1.5] aspect-[2/1.5]"}
+            />
+          </Section>
         ))}
       </div>
     </div>

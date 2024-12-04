@@ -1,5 +1,5 @@
 "use client";
-import { ZoomInIcon, ZoomOutIcon } from "@/icons/icons";
+import { ZoomInIcon, ZoomOutIcon } from "../../icons/icons";
 import Image, { StaticImageData } from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
@@ -48,7 +48,7 @@ const FullScreenImageViewPopUP = ({ setShowModal, src, showModal }) => {
 
   return (
     <section
-      className="fixed inset-0 z-50 flex  justify-center gap-1  bg-[#29422C] bg-opacity-75 transition duration-1000 ease py-5"
+      className="fixed inset-0 z-50 flex max-md:flex-col  justify-center gap-1  bg-[#29422C] bg-opacity-75 transition duration-1000 ease py-5"
       onClick={() => setShowModal(false)}
     >
       <button
@@ -66,7 +66,7 @@ const FullScreenImageViewPopUP = ({ setShowModal, src, showModal }) => {
           src={src}
           alt="Full screen view"
           fill
-          className="object-resize cursor-pointer"
+          className="object-resize max-md:object-cover cursor-pointer"
           onClick={toggleFullscreen}
           qulity={100}
         />

@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import Image from "next/image";
 
 import indoor1 from "../../public/activity/activity3.webp";
-const ImageSwiper = ({images}) => {
+const ImageSwiper = ({ images = [1, 2, 3, 5, 6, 7] }) => {
   return (
     <div className="w-full bg-transparent">
       <Swiper
@@ -40,14 +40,15 @@ const ImageSwiper = ({images}) => {
         }}
         className=""
       >
-        {[1, 2, 3, 4, 5, 6]?.map((roomImage, index) => {
+        {images?.map((roomImage, index) => {
           return (
             <SwiperSlide
               key={index}
               className="w-full h-full relative aspect-[4/2.5]"
             >
               <Image
-                src={indoor1}
+                src={roomImage.src || roomImage || indoor1}
+                // src={indoor1}
                 className="h-full object-cover"
                 alt="roomImage"
                 fill

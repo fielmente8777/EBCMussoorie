@@ -57,7 +57,7 @@ const Footer = () => {
     { name: "Rooms", link: "/rooms" },
     { name: "park cafe", link: "/parkcafe" },
     { name: "gallery", link: "/gallery" },
-    { name: "Contact Us", link: "/contact-us" },
+    { name: "Contact Us", link: "/contact" },
   ];
 
   const policyLinks = [
@@ -84,8 +84,8 @@ const Footer = () => {
 
     {
       icon: <OutLineYoutube />,
-      name: "Email",
-      link: "mailto:Kwv0D@example.com",
+      name: "Youtube",
+      link: "https://www.youtube.com/@EverestBaseCampMussoorie",
     },
   ];
   const contactLinks = [
@@ -187,7 +187,7 @@ const Footer = () => {
         <div>
           <SectionWithContainer>
             <div className="flex flex-col items-center justify-center gap-5 w-full">
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-16 gap-8 w-full pb-3">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-13 gap-8 w-full pb-3">
                 <div className="flex flex-col gap-5 w-full">
                   <Link
                     href="/"
@@ -208,7 +208,7 @@ const Footer = () => {
                         href={link.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-2 text-[#acacac] cursor-pointer w-11 h-11 shadow-inner rounded-full flex items-center justify-center border border-[#F69F2B] transition-all duration-[.3s] hover:bg-[#29422c]/30 hover:text-[#29422c] text-[18px]  py-1"
+                        className="px-2 text-[#acacac] cursor-pointer w-11 h-11 shadow-inner rounded-full flex items-center justify-center border border-[#F69F2B] transition-all duration-[.3s] hover:bg-[#D5D5D5]/60 hover:text-[#29422c] text-[18px]  py-1"
                       >
                         <span className="sr-only">{link.name}</span>
                         <span>{link.icon}</span>
@@ -226,7 +226,7 @@ const Footer = () => {
                       <Link
                         key={link.name}
                         href={link.link}
-                        className="px-2 text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
+                        className=" text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:text-[#D5D5D5] text-base rounded-sm py-1"
                       >
                         {link.name}
                       </Link>
@@ -243,7 +243,7 @@ const Footer = () => {
                       <Link
                         key={link.name}
                         href={link.link}
-                        className="px-2 text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
+                        className=" text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:text-[#D5D5D5]  text-base rounded-sm py-1"
                       >
                         {link.name}
                       </Link>
@@ -262,7 +262,7 @@ const Footer = () => {
                         href={link.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-2 text-white italic cursor-pointer transition-all duration-[.3s] hover:bg-[#D5D5D5] hover:text-[#29422c] text-[18px] rounded-sm py-1"
+                        className=" text-white italic cursor-pointer transition-all duration-[.3s]  hover:text-[#d5d5d5] text-base rounded-sm py-1"
                       >
                         {link.name}
                       </Link>
@@ -271,7 +271,7 @@ const Footer = () => {
                       href="https://maps.app.goo.gl/fTBmqjBDoYdGdtmC9"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-10 py-3 max-w-full w-fit font-medium text-base  text-[#29422C] bg-white rounded-sm border border-white hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
+                      className="px-10 py-3 max-w-full text-base flex items-center justify-center font-medium   text-[#29422C] bg-white rounded-sm border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
                     >
                       View Map
                     </Link>
@@ -280,9 +280,11 @@ const Footer = () => {
               </div>
               <div className="w-full h-[1.5px]  bg-[#F1EECB]" />
               <div className="pt-4">
-                <p className="text-white capitalize flex items-center justify-center italic gap-2">
-                  <CopyRightIcon /> {currentYear} EBC Mussoorie All rights
-                  reserved
+                <p className="text-white capitalize flex items-center justify-center italic gap-4">
+                  <span className="flex items-center justify-center gap-2">
+                    <CopyRightIcon /> {currentYear} EBC Mussoorie
+                  </span>{" "}
+                  <span>All rights reserved</span>
                 </p>
               </div>
             </div>

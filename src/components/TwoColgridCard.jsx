@@ -10,21 +10,56 @@ const TwoColgridCard = ({
   link,
   urlText,
   subTitle,
+  grid,
 }) => {
   return (
     <SectionWithContainer>
       <div className="w-full grid lg:grid-cols-2 gap-5 items-center justify-center">
-        <div className="w-full relative aspect-square rounded-full overflow-hidden">
-          <Image src={src} alt={title} fill className="object-cover object-center" />
-        </div>
+        {src && (
+          <div className="w-full relative aspect-square rounded-full overflow-hidden">
+            <Image
+              src={src}
+              alt={title}
+              fill
+              className="object-cover object-center"
+            />
+          </div>
+        )}
+        {grid && (
+          <div className="w-full grid grid-cols-2 auto-rows-[14rem] grid-flow-row gap-2">
+            {grid.map((item, index) => (
+              <div
+                className="w-full relative aspect-auto rounded-sm overflow-hidden"
+                key={index}
+              >
+                <Image
+                  src={item || item.src}
+                  alt={title}
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+            ))}
+          </div>
+        )}
         <div className="flex flex-col gap-6 items-center justify-center">
           <BorderLine />
-          <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-white">{title}</h2>
-          {subTitle && <p className="text-center">{subTitle}</p>}
-          <p className="text-center italic  lg:text-xl text-base text-white">{description}</p>
+          <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-white">
+            {title}
+          </h2>
+          {subTitle && (
+            <h3 className="text-center italic  lg:text-2xl text-xl text-white">
+              {subTitle}
+            </h3>
+          )}
+          <p className="text-center italic  lg:text-xl text-base text-white">
+            {description}
+          </p>
           <div className="flex items-center justify-center">
             <Link
               href={link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-10 py-3 max-w-full font-medium text-base  text-[#29422C] bg-white rounded-sm border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
             >
               {urlText}

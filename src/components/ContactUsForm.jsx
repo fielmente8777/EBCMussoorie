@@ -111,7 +111,7 @@ const ContactUsForm = () => {
               <div className="mt-[.3rem]  px-3 py-4">{input.icon}</div>
               <Input
                 type={input.type}
-                className="w-full py-3 bg-[#E5E7EB] text-xl  no-spinner placeholder:text-[#29422C]"
+                className="w-full py-3 bg-[#E5E7EB] text-xl italic no-spinner placeholder:text-[#29422C]"
                 placeholder={input.placeholder}
                 required
                 value={input.value}
@@ -125,7 +125,7 @@ const ContactUsForm = () => {
             </div>
             <textarea
               placeholder="Your Message*"
-              className="w-full text-xl resize-none py-3 bg-[#E5E7EB] textareaScroll outline-none focus:outline-none no-spinner placeholder:text-[#29422C] "
+              className="w-full text-xl resize-none py-3 italic bg-[#E5E7EB] textareaScroll outline-none focus:outline-none no-spinner placeholder:text-[#29422C] "
               required
               rows={4}
 

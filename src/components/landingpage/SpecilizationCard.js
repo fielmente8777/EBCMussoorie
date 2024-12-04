@@ -11,17 +11,21 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import PopupForm from "../PopupForm";
 import { useState } from "react";
+import { bookingLink } from "../../utils/data";
+import BorderLine from "../BorderLine";
 
 const SpecilizationCard = ({ cardData, index, aspectRatio }) => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
   return (
     <div
-      className={`lg:grid grid-cols-2 flex ${
+      className={`lg:grid grid-cols-3 flex ${
         index % 2 === 0 ? "flex-col" : "flex-col-reverse"
-      } bg-[#D5D5D5] overflow-hidden lg:mb-0 mb-5`}
+      } bg-[#F1EECB] overflow-hidden lg:mb-0 mb-5`}
     >
-      <div className={`${index === 1 || index === 3 ? "order-2" : ""}`}>
+      <div
+        className={`${index === 1 || index === 3 ? "order-2" : ""} col-span-2`}
+      >
         <Swiper
           // loop={true}
           // autoplay={{
@@ -50,16 +54,17 @@ const SpecilizationCard = ({ cardData, index, aspectRatio }) => {
           ))}
         </Swiper>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center col-span-1">
         <div className="flex flex-col lg:gap-6 gap-4 lg:px-14 lg:py-12 p-4 ">
-          <h3 className="lg:text-[2rem]/[2.35rem] font-bold text-2xl text-[#29422C]">
+          <BorderLine />
+          <h3 className="lg:text-[2rem]/[2.35rem] font-medium text-center text-2xl text-[#29422C]">
             {cardData.heading}
           </h3>
-          <p className="lg:text-xl font-normal text-base text-[#29422C] text-justify">
+          <p className="lg:text-xl font-normal text-base text-[#29422C] text-center">
             {cardData.para}
           </p>
           {cardData.para2 && (
-            <p className="lg:text-xl font-normal text-base text-[#29422C] text-justify">
+            <p className="lg:text-xl font-normal text-base text-[#29422C] text-center">
               {cardData.para2}
             </p>
           )}
@@ -67,11 +72,10 @@ const SpecilizationCard = ({ cardData, index, aspectRatio }) => {
             <>
               {pathName !== "/ebclanding/" ? (
                 <Link
-                  href={
-                    "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
-                  }
+                  href={bookingLink}
                   target="_blank"
-                  className="justify-center self-start px-8 py-2 mt-6 text-lg font-medium tracking-normal text-white bg-[#29422C] rounded-sm leading-[144%]"
+                  rel="noopener noreferrer"
+                  className="px-10 py-3 w-fit mx-auto font-medium text-base  text-white bg-[#29422C] rounded-sm border border-[#F69F2B] hover:bg-transparent  hover:text-[#29422C] duration-300 active:scale-75 hover:scale-105 "
                 >
                   Book Now
                 </Link>

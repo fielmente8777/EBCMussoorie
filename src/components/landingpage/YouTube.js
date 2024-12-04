@@ -52,7 +52,7 @@ const YouTube = () => {
           <div className="lg:-ms-20">
             <div className=" flex flex-col">
               <div className="">
-                <div className="w-full h-full rounded-xl overflow-hidden relative aspect-[4/2.5]">
+                <div className="w-full h-full rounded-sm overflow-hidden relative aspect-[4/2.5]">
                   <SEOVideo
                     src="https://eazotel-client-images.s3.ap-south-1.amazonaws.com/Everest+Base+Camp%2C+Mussoorie.+%23uttarakhand+%23everestbasecamp+%23mussoorie.mp4"
                     title="Everest Base Camp, Mussoorie. #uttarakhand #everestbasecamp #mussoorie"
@@ -73,7 +73,7 @@ const YouTube = () => {
             // href={
             //   "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
             // }
-            className="px-8 py-2 rounded-md bg-[#D5D5D5] text-xl"
+            className="px-8 py-2 rounded-sm bg-[#D5D5D5] text-xl"
           >
             Book Now
           </button>

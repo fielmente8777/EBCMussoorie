@@ -2,6 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Cammron Demo";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Cammron Demo"),
+    url("/font/CammronDemo.woff") format("woff");
+}
+@font-face {
+  font-family: "NeutraText-BookAlt";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("NeutraText-BookAlt"),
+    url("/font/neutra-text-alt-587261020eccb.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeutraText-Light";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("NeutraText-Light"),
+    url("/font/neutra-text-light-5872613aeda5b.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeutraTextTF-Book";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("NeutraTextTF-Book"),
+    url("/font/neutra-text-tf-5871e0b0704ed.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeutraText-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("NeutraText-Bold"),
+    url("/font/neutra-text-bold-5871e1605afa2.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NeutraText-BoldItalic";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("NeutraText-BoldItalic"),
+    url("/font/neutra-text-bold-italic-5872615974382.woff") format("woff");
+}
+
+.Cammron {
+  font-family: "Cammron Demo", serif;
+}
+
+p,
+input {
+  font-family: "NeutraTextTF-Book", sans-serif;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// a {
+//   font-family: "Cammron demo", serif;
+
+// }
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -55,6 +126,9 @@ body {
   }
 }
 
+.box-shadow {
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+}
 .secBack {
   background-color: #d5d5d5;
 }
@@ -78,7 +152,6 @@ body {
 }
 
 @layer utilities {
-
   .no-spinner::-webkit-outer-spin-button,
   .no-spinner::-webkit-inner-spin-button {
     @apply appearance-none;
@@ -121,7 +194,6 @@ body {
 // }
 
 .card_swiper {
-
   .swiper-button-prev,
   .swiper-button-next {
     color: #29422c;

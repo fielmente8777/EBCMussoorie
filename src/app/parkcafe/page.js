@@ -12,26 +12,26 @@ import chai from "../../../public/images/chai_latte.webp";
 
 import chooseus1 from "../../../public/images/whychooseus1.jpg";
 import chooseus2 from "../../../public/images/whychooseus2.jpg";
+import chooseus3 from "../../../public/Surveyor Suite Room/_MG_2601.webp";
+import chooseus4 from "../../../public/Surveyor Suite Room/_MG_2602.webp";
+import chooseus5 from "../../../public/Surveyor Suite Room/_MG_2603.webp";
 
 import picnic1 from "../../../public/images/picnic1.JPG";
 import picnic2 from "../../../public/images/picnic2.JPG";
 
 import barque1 from "../../../public/images/Barbecue1.webp";
-// import barque2 from "../../../public/images/Barbecue2.webp";
 
 import milestonebg from "../../../public/images/milestonebg.jpg";
 
 import c1 from "../../../public/images/01 Picnic_11zon.jpg";
-import img1 from "../../../public/picnic/_MG_1465.webp";
-import img2 from "../../../public/picnic/_MG_2878.webp";
-import SpecilizationCard from ".././../components/landingpage/SpecilizationCard";
-
-import InstaGrid from "../../components/Activities/InstaGrid";
-import WhatInstaButton from "../../utils/WhatInstaButton";
 import OurCuisine from "./OurCuisine.jsx";
 import HappyCustomers from "./HappyCustomers.jsx";
 import OurAmenities from "./OurAmenities";
-import { FillCall } from "@/icons/icons";
+import SectionHeading from "../../components/SectionHeading";
+import SliderComponentImage from "../../components/SliderComponentImage";
+import AddOnExperience from "./AddOnExperience";
+import { bookingLink } from "../../utils/data";
+import Card from "../../components/Card";
 
 export const metadata = {
   title: "Best Cafe in Mussoorie | Green Restaurant Mussoorie - EBC",
@@ -93,6 +93,12 @@ const images = [
   },
 ];
 
+const cardData = {
+  heading: "Our Cuisine",
+  para: "DEMO TEXT Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, remaining essentially unchanged.",
+  images: images,
+};
+
 // const testimonal = [
 //   {
 //     title: "Pasta Alfredo",
@@ -139,7 +145,68 @@ const images = [
 //     img: c1,
 //   },
 // ];
+const sectionh1 = {
+  title: "Welcome to Park Café! ",
+  subTitle: "One of the best cafes in Mussoorie",
+  description:
+    "Our culinary gem seamlessly combines nature's beauty with exquisite flavors, offering a unique dining experience against the backdrop of breathtaking natural wonders.",
+  samefontsize: true,
+};
+const sliderComponentImagedata1 = {
+  title: "Welcome to Park Cafe!",
+  subDescription:
+    "To create a dining oasis in the middle of the wilderness, we at Park Café are all about fusing innovation and simplicity. Our menu offers a fusion of inventive twists and regional flavors, guaranteeing a delectable experience that ideally accentuates the soothing settings. Everything about this place is meant to evoke memories, from carefree picnic brunches with a variety of BBQ dishes to special dinners served with hot cocoa.",
+  subDescription2:
+    "We're proud to serve a variety of delicious dishes that celebrate Mussoorie's culinary heritage. Our cafe is situated where Sir George Everest once had his stables and rode around, along with the George Everest Museum just a few minutes walk away.",
+  link: bookingLink,
+  urlText: "Book Now",
+  images: [
+    parkcafereachus1,
+    parkcafe,
+    "/gallery2/outsideview3.webp",
+    "/gallery2/outside5.webp",
+    parkcafereachus2,
+  ],
+};
+const sliderComponentImagedata2 = {
+  title: "Why Choose Us ?",
+  subDescription:
+    "Discover what makes us the most unique cafe in Mussoorie – our unwavering commitment to a memorable dining experience that transcends the ordinary. At EBC, indulge in more than just a meal; it's a taste of home amidst the breathtaking beauty of nature. Nestled beside a beautiful meadow, our cafe offers a diverse range of offerings, from delightful tea and snacks to exquisite dining experiences.",
+  subDescription2:
+    "Experience curated events and experiences that promise to elevate your visit. As a must-visit cafe in Mussoorie, EBC ensures an unforgettable culinary journey that celebrates nature and community.",
+  link: "/contact",
+  urlText: "Contact Us",
+  images: [
+    chooseus1,
+    chooseus2,
+    chooseus3,
+    chooseus4,
+    chooseus5,
+    parkcafereachus1,
+    parkcafe,
+    "/gallery2/outsideview3.webp",
+    "/gallery2/outside5.webp",
+    parkcafereachus2,
+  ],
+};
 
+const cardData1 = {
+  title: "How to reach us?",
+  descriptionArray: [
+    "Nestled amidst nature at the Everest Base Camp in Mussoorie, Park Cafe offers a convenient location just a stone's throw away from the George Everest Museum. To enhance your experience, you can come by yourself or give us a call to make a reservation and get a pass that lets you drive straight up to the cafe.",
+    "Don't miss the chance to explore the historical significance of our location, where Sir George Everest once had his stables and rode around.Plus, the George Everest Museum is just a couple of minutes' walk from our café. Conveniently, visitors can park their vehicles at the Park Café grounds before heading to the museum, ensuring a seamless and enjoyable visit.",
+  ],
+  link: "https://maps.app.goo.gl/JA58LhfMCRMFnZ7u7",
+  urlText: "Get Direction",
+  newTabe: true,
+};
+const cardData2 = {
+  title: "Mark Your Milestones with Us!",
+  description:
+    " Experience unforgettable celebrations at Everest Base Camp, Mussoorie. We customize every element to match your vision, from anniversaries to birthdays. With our attention to detail, your event will run seamlessly, letting you cherish every moment. Come celebrate with us and create memories to last a lifetime!",
+  link: "/contact",
+  urlText: "Contact Us",
+};
 const testimonal = [
   {
     title: "Tina Thilyani",
@@ -178,23 +245,33 @@ const testimonal = [
     img: c1,
   },
 ];
+
+const addonExpData = [
+  {
+    title: "Barbeque in the Shadows!",
+    src: "/gallery/bar3.webp",
+    description: `Join us for "Barbeque in the Shadows," a cozy fireside evening filled with delicious bite-sized treats and treasured memories. Our serene property, acclaimed as the finest eatery in Mussoorie, sets the perfect stage for intimate celebrations and relaxation, enhancing the pleasure of unwinding together. Enjoy a private bonfire, a beautifully decorated candlelight table, and personalized butler service, all while selecting from a rich and varied menu under the flicker of Mashal torches.`,
+  },
+  {
+    title: "Picnic in the Meadows!",
+    src: "/gallery/picnic3.webp",
+    description: `Experience an enchanting outdoor gathering surrounded by the wonders of nature, complemented by an Instagram-worthy picnic in the meadows. With vibrant pop color cutlery and chinaware, luxurious cushioned seating on carpets, and the option of tables and chairs under a picnic umbrella, every moment becomes a picture-perfect celebration. Savor in our multi-cuisine menu, offering a range of delectable options, perfect for a unique day dining experience in the mountains with your loved ones.`,
+  },
+];
 function Peakage() {
   return (
     <div>
       <div className="max-w-[1600px] w-full mx-auto relative">
-        <div className="bg-[#000] max-h-[700px] h-[300px] md:h-[700px] overflow-hidden ">
+        <div className="relative w-full aspect-[4/1.8] ">
           <Image
             src={BannerImage}
             alt="banner"
             className="h-full w-full object-cover object-bottom-[10%]"
-            // fill
-            // layout="fill"
-            width={600}
-            height={400}
+            fill
           />
         </div>
 
-        <div className="lg:absolute top-0 left-0 z-20 w-full h-full lg:bg-black/40 flex items-center justify-center lg:py-0 pt-8">
+        {/* <div className="lg:absolute top-0 left-0 z-20 w-full h-full lg:bg-black/40 flex items-center justify-center lg:py-0 pt-8">
           <div className="max-w-5xl mx-auto lg:px-0 px-4">
             <h2 className="text-center md:text-5xl/[3.5rem] text-4xl text-white">
               Welcome to Park Café!
@@ -207,12 +284,16 @@ function Peakage() {
               backdrop of breathtaking natural wonders.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* <div className="absolute top-0 left-0 bg-black/30 z-10 w-full h-full"></div> */}
       </div>
+      <SectionHeading {...sectionh1} titleMaxWidth />
 
-      <div className="lg:grid lg:grid-cols-2 flex flex-col-reverse lg:mt-8 items-center maxwidth mx-auto py-12 lg:px-0 px-4">
+      <SliderComponentImage {...sliderComponentImagedata1} border />
+      <Card {...cardData1} />
+      <SliderComponentImage {...sliderComponentImagedata2} border />
+      {/* <div className="lg:grid lg:grid-cols-2 flex flex-col-reverse lg:mt-8 items-center maxwidth mx-auto py-12 lg:px-0 px-4">
         <div className=" h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-5">
           <h2 className="md:text-5xl text-3xl font-bold text-[#29422C]">
             Welcome to Park Cafe!
@@ -254,9 +335,8 @@ function Peakage() {
             height={400}
           />
         </div>
-      </div>
-
-      <div className="py-8">
+      </div> */}
+      {/* <div className="py-8">
         <div className="lg:grid lg:grid-cols-5 items-center maxwidth mx-auto px-5 gap-6">
           <div className=" col-span-3 lg:grid grid-cols-5 gap-3">
             <div className="col-span-3">
@@ -312,163 +392,15 @@ function Peakage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <OurCuisine images={images} />
+      <OurCuisine {...cardData} />
 
-      <div className="py-12">
-        <div className="grid md:grid-cols-2 items-center maxwidth mx-auto px-5 gap-6">
-          <div className="relative">
-            <div className="">
-              <Image
-                src={chooseus1}
-                width={600}
-                height={400}
-                alt="service"
-                className="md:h-[400px] h-[280px] object-cover"
-              />
-            </div>
-
-            <div className="absolute right-0 -bottom-12  hidden">
-              <Image
-                src={chooseus2}
-                width={600}
-                height={100}
-                alt="service2"
-                className="w-[400px] h-[300px] object-cover"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h2 className="text-white md:text-5xl text-2xl ">
-              Why Choose Us ?
-            </h2>
-            <p className="text-white text-lg text-justify">
-              {`  Discover what makes us the most unique cafe in Mussoorie – our
-              unwavering commitment to a memorable dining experience that
-              transcends the ordinary. At EBC, indulge in more than just a meal;
-              it's a taste of home amidst the breathtaking beauty of nature.
-              Nestled beside a beautiful meadow, our cafe offers a diverse range
-              of offerings, from delightful tea and snacks to exquisite dining
-              experiences.`}
-            </p>
-            <p className="text-white text-lg text-justify">
-              Experience curated events and experiences that promise to elevate
-              your visit. As a must-visit cafe in Mussoorie, EBC ensures an
-              unforgettable culinary journey that celebrates nature and
-              community.
-            </p>
-            <div className="lg:flex hidden justify-center lg:justify-start">
-              <Link href={"/"} className="bg-[#bcd0be] px-6 py-2 text-lg">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="maxwidth mx-auto flex flex-col lg:gap-10 gap-4 max-md:px-3 py-12">
-        <h2 className="text-center md:text-5xl text-2xl text-white">
-          Add-on Experience
-        </h2>
-        <OurAmenities />
-
-        <div className="lg:rounded-lg overflow-hidden">
-          {datas.map((data, index) => (
-            <SpecilizationCard
-              key={index}
-              cardData={data}
-              index={index}
-              aspectRatio={"lg:aspect-[2/1.78] aspect-[2/1.5]"}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="max-w-[1600px] w-full mx-auto relative">
-        <div className="bg-[#D5D5D5]  md:h-[600px] h-[400px] overflow-hidden">
-          <Image
-            src={milestonebg}
-            alt="banner"
-            // fill
-            width={600}
-            height={400}
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
-
-        <div className="lg:absolute top-0 left-0 w-full h-full flex items-center justify-center lg:px-6">
-          <div className="max-w-[440px] bg-[#ACACAC] p-5 mx-auto">
-            <h2 className="text-center md:text-4xl text-2xl text-[#29422C]">
-              Mark Your Milestones with Us!
-            </h2>
-            <p className="text-center text-lg mt-4 text-[#29422C]">
-              Experience unforgettable celebrations at Everest Base Camp
-              ,Mussoorie. We customize every element to match your vision, from
-              anniversaries to birthdays. With our attention to detail, your
-              event will run seamlessly, letting you cherish every moment. Come
-              celebrate with us and create memories to last a lifetime!
-            </p>
-
-            <div className="flex justify-center">
-              <Link
-                href="href"
-                className="bg-[#29422C] px-6 py-2 text-white mt-4"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      <AddOnExperience addOnData={addonExpData} />
+      <Card {...cardData2} />
 
       <HappyCustomers testimonal={testimonal} />
 
-      <div className="py-12">
-        <InstaGrid />
-        <div className="mt-10">
-          <WhatInstaButton
-            button={"insta"}
-            link="https://www.instagram.com/ebcmussoorie/"
-          />
-        </div>
-
-        {/* <div className="maxwidth mx-auto mt-10">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.5263208281!2d76.76357549901144!3d28.643684629087268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1717564178551!5m2!1sen!2sin"
-            width="100%"
-            height="450"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div> */}
-      </div>
-      <div className="py-12">
-        <div className="relative w-full lg:h-[400px] h-80 aspect-[4/3]">
-          <Image
-            src={parkcafe}
-            // src="/images/empty.png"
-            alt="alt"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center flex-col bg-black/50">
-            <p className="text-center lg:text-4xl text-3xl text-white/70">
-              Call us to make a reservation!
-            </p>
-            <Link
-              href="tel:+919119001126"
-              className="text-center mt-3 lg:text-4xl text-3xl text-white/70 flex items-center justify-center gap-1"
-            >
-              <span className="mt-1">
-                <FillCall />
-              </span>
-              +91-9119001126
-            </Link>
-          </div>
-        </div>
-      </div>
       <hr className="h-px my-4 bg-[#D5D5D5] border-0" />
     </div>
   );

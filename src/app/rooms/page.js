@@ -12,11 +12,11 @@ import {
   Whatsapp,
   Wifi,
 } from "../../icons/icons";
-import Link from "next/link";
-import Image from "next/image";
-
-import Room1 from "../../../public/rooms/20Bedroom4_11zon.webp";
-import Room2 from "../../../public/rooms/20Bedroom4_11zon.webp";
+import GridBanner from "../../components/GridBanner";
+import SliderComponentImage from "../../components/SliderComponentImage";
+import NewsLatter from "../../components/NewsLatter";
+import Room1 from "../../../public/gallery2/room2.webp";
+import Room2 from "../../../public/gallery/Glamper1Balcony.webp";
 
 import Surveyor1 from "../../../public/Surveyor Room/_MG_2465.webp";
 import Surveyor2 from "../../../public/Surveyor Room/_MG_2475.webp";
@@ -27,7 +27,9 @@ import SurveyorSuite1 from "../../../public/Surveyor Suite Room/_MG_2601.webp";
 import SurveyorSuite2 from "../../../public/Surveyor Suite Room/_MG_2602.webp";
 import SurveyorSuite3 from "../../../public/Surveyor Suite Room/_MG_2603.webp";
 import SurveyorSuite4 from "../../../public/Surveyor Suite Room/_MG_2605.webp";
-
+import { bookingLink } from "../../utils/data";
+import Section from "../../components/Section";
+import SectionHeading from "../../components/SectionHeading";
 export const metadata = {
   title:
     "Glamping Near Mussoorie | Glamping Near Rishikesh, Dehradun, Delhi - EBC",
@@ -44,7 +46,7 @@ const RoomsAccomodationData = {
     {
       title: "The Camper",
       description: "Homely Haven  | 1-3 people  | 280sqft",
-      subtitle:
+      subDescription:
         "Experience a cozy retreat in our Camper rooms, perfectly suited for couples seeking a luxurious holiday getaway. Nestled amidst the serene surroundings, these heat-insulated rooms provide unparalleled comfort and warmth. Step out onto your private balcony to soak in the breathtaking views of the Deodar forest while savoring delicious coffee.",
       accomodation: [
         {
@@ -85,40 +87,22 @@ const RoomsAccomodationData = {
         },
       ],
       images: [
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/F841F57F-16A6-403E-BA7F-6A9C46F5B2FA_1_105_c.jpeg",
-          alt: "Clamperroom1",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/60fee30b-cbab-4c0f-a1b4-7e5ac13e2596.jpg",
-          alt: "Clamperroom2",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/48fa811c-9e74-4660-a133-dfc9876ce533.jpg",
-          alt: "Clamperroom3",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/49f951c7-c0eb-4d65-ab06-55ac8d75729f.jpg",
-          alt: "Clamperroom4",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/cd99b055-be35-41fe-b324-4cb6e3e91b18.jpg",
-          alt: "Clamperroom5",
-        },
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/F841F57F-16A6-403E-BA7F-6A9C46F5B2FA_1_105_c.jpeg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/60fee30b-cbab-4c0f-a1b4-7e5ac13e2596.jpg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/48fa811c-9e74-4660-a133-dfc9876ce533.jpg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/49f951c7-c0eb-4d65-ab06-55ac8d75729f.jpg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/cd99b055-be35-41fe-b324-4cb6e3e91b18.jpg",
       ],
-
-      link: {
-        label: "Book now",
-        href: "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y",
-      },
+      link: bookingLink,
+      urlText: "Book Now",
     },
     {
       title: "The Glamper",
       description: "Opulent Nature  | 1-3 people  | 375sqft",
-      subtitle:
+      subDescription:
         "Glamper combines sophistication and style, providing a luxurious glamping experience in the wilderness of Everest Base Camp, Mussoorie. Enjoy plush interiors and exclusive luxury rooms for a truly indulgent retreat. Step into a world of extravagance and nature as you sip on delicious hot chocolate and admire the beauty of the Deodar forest. Best suited for small groups. ",
 
-      subtitle2:
+      subDescription2:
         "Don't miss our special netted balcony space, perfect for capturing Instagram-worthy moments.",
       accomodation: [
         {
@@ -159,43 +143,22 @@ const RoomsAccomodationData = {
         },
       ],
       images: [
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Glamper+Room/_MG_2556.JPG",
-          alt: "glamper",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Glamper+Room/_MG_2557.JPG",
-          alt: "glamper",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper.webp",
-          alt: "glamper",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper1.webp",
-          alt: "glamper",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper2.webp",
-          alt: "glamper",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper4.webp",
-          alt: "glamper",
-        },
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Glamper+Room/_MG_2556.JPG",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Glamper+Room/_MG_2557.JPG",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper.webp",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper1.webp",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper2.webp",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper4.webp",
       ],
-
-      link: {
-        label: "Book now",
-        href: "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y",
-      },
+      link: bookingLink,
+      urlText: "Book Now",
     },
     {
       title: "The Surveyor",
       description: "Meadow view Cabins  | 1-3 people  | 450sqft",
-      subtitle:
+      subDescription:
         "Experience in the ultimate wilderness retreat amidst our expansive 20 acres of spacious tents, offering the best views of a lush green forest meadow. After a day of exploration, find solace and rejuvenate your senses in the serene surroundings, surrounded by breathtaking views of the Deodar forest. Best Suited for families or small friend groups. ",
-      subtitle2:
+      subDescription2:
         "Enjoy utmost privacy and comfort in our tranquil ambiance, inviting you to rediscover yourself amidst nature's embrace.",
       accomodation: [
         {
@@ -236,43 +199,22 @@ const RoomsAccomodationData = {
         },
       ],
       images: [
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/cda949b0-cc7a-44de-98f9-8c09ef920fbc.jpg",
-          alt: "document1",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6438.jpg",
-          alt: "document1",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6442.jpg",
-          alt: "document1",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6610.jpg",
-          alt: "document1",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/f15de0f9-399f-4636-aa75-30d7ee073bc4.jpg",
-          alt: "document1",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/be707a6e-7a36-45cb-a4ae-458d225c2eac.jpg",
-          alt: "document1",
-        },
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/cda949b0-cc7a-44de-98f9-8c09ef920fbc.jpg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6438.jpg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6442.jpg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6610.jpg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/f15de0f9-399f-4636-aa75-30d7ee073bc4.jpg",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/be707a6e-7a36-45cb-a4ae-458d225c2eac.jpg",
       ],
-
-      link: {
-        label: "Book now",
-        href: "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y",
-      },
+      link: bookingLink,
+      urlText: "Book Now",
     },
     {
       title: "The Surveyor Suite",
       description: "Opulent Wilderness  | 1-4 people | 600sqft",
-      subtitle:
+      subDescription:
         "Experience unparalleled luxury amidst nature in our Surveyor Suite at Everest Base Camp, Mussoorie. Immerse yourself in a meticulously designed tent featuring spacious living areas, extravagant amenities, and breathtaking forest views. Relax in style with a king-sized bed and the option to set up a queen-sized sofa bed, accommodating up to four people. Perfect for families or friend groups of 4.",
-      subtitle2:
+      subDescription2:
         " Enjoy the utmost privacy and seclusion in our most premium and spacious room, offering tranquility and indulgence like never before.",
       accomodation: [
         {
@@ -313,77 +255,56 @@ const RoomsAccomodationData = {
         },
       ],
       images: [
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2605.JPG",
-          alt: "document1",
-        },
-        {
-          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2611.JPG",
-          alt: "document1",
-        },
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2605.JPG",
+        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2611.JPG",
+        SurveyorSuite2,
+        SurveyorSuite3,
+        SurveyorSuite4,
       ],
-
-      link: {
-        label: "Book now",
-        href: "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y",
-      },
+      link: bookingLink,
+      urlText: "Book Now",
+      // link: {
+      //   label: "Book now",
+      //   href: "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y",
+      // },
     },
   ],
 };
 
+const bannerDate = {
+  title: "OUR ROOMS",
+  description:
+    "Experience the rich legacy of Sir George Everest, the esteemed former Surveyor General of India, and embark on a journey of relaxation and rejuvenation like never before.",
+  src1: Room1,
+  src2: Room2,
+};
+const sectionh1 = {
+  title: "Escape from the Urban Hustle!",
+  description:
+    "Feeling drained by the hustle and bustle of city life? Escape to EBC Mussoorie and rediscover your connection with nature. Rejuvenate your mind and soul amidst the serene beauty of our glamping destination, set within 20 acres of ancient deodar forest. Our all-weather tents ensure comfort and shelter, whether it's rain, snow, hail, or sun.",
+};
 const page = () => {
   return (
     <section>
-      <div className="lg:grid lg:grid-cols-5 mt-8 items-center flex flex-col-reverse">
-        <div className="col-span-2 h-full flex flex-col justify-center bg-[#BCD0B8] space-y-6 p-4">
-          <h2 className="text-5xl font-bold text-[#29422C]">
-            Escape from the Urban Hustle!
-          </h2>
-          <p className="text-xl text-justify text-[#29422C]">
-            {` Feeling drained by the hustle and bustle of city life? Escape to EBC
-            Mussoorie and rediscover your connection with nature. Rejuvenate
-            your mind and soul amidst the serene beauty of our glamping
-            destination, set within 20 acres of ancient deodar forest. Our
-            all-weather tents ensure comfort and shelter, whether it's rain,
-            snow, hail, or sun.`}
-          </p>
-          <p className="text-xl text-justify text-[#29422C]">
-            Experience the rich legacy of Sir George Everest, the esteemed
-            former Surveyor General of India, and embark on a journey of
-            relaxation and rejuvenation like never before.
-          </p>
-
-          <div className="flex">
-            <Link
-              href={"/"}
-              className="text-2xl border border-[#29422c] bg-[#29422c] text-md px-8 py-2 text-white rounded-sm hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-black"
-            >
-              Discover More
-            </Link>
-          </div>
-        </div>
-        <div className="col-span-3 w-full h-full">
-          <Image
-            src={Room1}
-            alt="test"
-            className="object-cover w-full h-full"
-            // fill
-            // width={100}
-            // height={100}
-          />
-        </div>
-      </div>
-
+      <GridBanner {...bannerDate} />
+      <SectionHeading {...sectionh1} border />
       <div className="mt-10">
-        <div className="maxwidth mx-auto px-4">
+        {/* <div className="maxwidth mx-auto px-4">
           <div className="flex flex-col gap-10">
             {RoomsAccomodationData.items.map((item, index) => (
               <Roomscard {...item} index={index} key={index} />
             ))}
           </div>
-        </div>
+        </div> */}
+        {RoomsAccomodationData.items.map((item, index) => (
+          <Section key={index}>
+            <SliderComponentImage {...item} border />
+          </Section>
+        ))}
       </div>
-      <div className="w-full flex justify-center mt-10">
+      <NewsLatter />
+      <div className="w-full h-[1px] bg-[#BCD0B8]" />
+      {/* <div className="w-full flex justify-center mt-10">
         <Link
           href={"https://api.whatsapp.com/send?phone=918595274861&text=Hi"}
           target="_blank"
@@ -417,7 +338,7 @@ const page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
