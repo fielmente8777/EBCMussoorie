@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -18,9 +18,9 @@ const Grid = () => {
     "col-span-2 row-span-2",
     "col-span-1 row-span-2",
     "col-span-2 row-span-2",
-    "col-span-3 row-span-3",
-    "col-span-2 row-span-2",
-    "col-span-2 row-span-1",
+    "col-span-3 row-span-3 -me-[5.3rem]",
+    "col-span-2 row-span-2 ms-[5.3rem]",
+    "col-span-2 row-span-1 ms-[5.3rem]",
   ];
 
   const data = [
@@ -52,13 +52,13 @@ const Grid = () => {
   return (
     <section>
       <Container>
-        <div className="lg:grid hidden grid-cols-5 auto-rows-[14rem] grid-flow-row rounded-sm gap-2 overflow-hidden">
+        <div className="lg:grid hidden grid-cols-5 auto-rows-[14rem] grid-flow-row rounded-sm gap-2 overflow-hidden py-1">
           {data.map((src, index) => (
             <div
               key={index}
               className={`${
                 gridPattern[index % gridPattern.length]
-              } overflow-hidden hover:border-4 border-white  hover:shadow-3xl shadow-2xl hover:-translate-y-1 hover:shadow-gray-600 duration-1000 transition ease-in-out relative aspect-auto`}
+              } overflow-hidden hover:border-4 border-[#F69F2B]  hover:shadow-3xl shadow-2xl hover:-translate-y-1 hover:shadow-gray-600 duration-1000 transition ease-in-out relative aspect-auto`}
             >
               <Image
                 src={src}
@@ -78,13 +78,20 @@ const Grid = () => {
           <Swiper
             slidesPerView={1}
             spaceBetween={10}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            speed={1000}
+            navigation={true}
+            modules={[Autoplay, Navigation]}
             breakpoints={{
               768: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
             }}
-            className=""
+            className="card_swiper"
           >
             {data?.map((src, index) => {
               return (

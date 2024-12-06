@@ -11,6 +11,8 @@ const SliderComponentImage = ({
   subDescription,
   subDescription2,
   images,
+  index,
+  btnName,
   link = "#",
   urlText = "book now",
   border = false,
@@ -40,7 +42,11 @@ const SliderComponentImage = ({
         )}
 
         <div className={`${title && "mt-12"} block`}>
-          <ImageSwiper images={images} />
+          <ImageSwiper
+            images={images}
+            index={index}
+            btnName={btnName}
+          />
         </div>
         <Container>
           <div className="flex flex-col items-center justify-center gap-5 mt-12">

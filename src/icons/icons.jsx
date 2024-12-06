@@ -2010,3 +2010,33 @@ export const Personalizedforyou = () => (
     />
   </svg>
 );
+
+export const NextButton = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="8"
+    height="16"
+    viewBox="0 0 8 16"
+    fill="none"
+  >
+    <path
+      d="M1.07692 0L0 1.33333L5.69231 8L0 14.6667L1.07692 16L8 8L1.07692 0Z"
+      fill="#F69F2B"
+    />
+  </svg>
+);
+
+export const PrevButton = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="8"
+    height="16"
+    viewBox="0 0 8 16"
+    fill="none"
+  >
+    <path
+      d="M6.92308 0L8 1.33333L2.30769 8L8 14.6667L6.92308 16L0 8L6.92308 0Z"
+      fill="#F69F2B"
+    />
+  </svg>
+);

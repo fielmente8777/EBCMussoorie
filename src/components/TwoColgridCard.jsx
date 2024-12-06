@@ -16,7 +16,7 @@ const TwoColgridCard = ({
     <SectionWithContainer>
       <div className="w-full grid lg:grid-cols-2 gap-5 items-center justify-center">
         {src && (
-          <div className="w-full relative aspect-square rounded-full overflow-hidden">
+          <div className="w-full relative aspect-[3/3] rounded-full overflow-hidden">
             <Image
               src={src}
               alt={title}

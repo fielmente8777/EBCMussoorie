@@ -8,6 +8,7 @@ import {
   StayWithLuxury,
   Unmatchedviews,
 } from "../../icons/icons";
+import { bookingLink } from "../../utils/data";
 
 const Aminities = () => {
   return (
@@ -102,7 +103,9 @@ const Aminities = () => {
         </div>
 
         <Link
-          href={"/"}
+          href={bookingLink}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex justify-center self-center px-8 py-2 mt-10 rounded-sm text-base  border border-[#F69F2B] leading-6 text-[#FFFFFF] bg-[#29422C] max-md:mt-10"
         >
           Book Now
