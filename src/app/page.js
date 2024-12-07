@@ -41,7 +41,8 @@ const sliderImageData1 = {
     "Our seven spacious rooms, each uniquely inspired by nature, offer top-notch bed and bath fittings with stunning views of the hills and forests. Enjoy the relaxing corridor and cozy patio overlooking the jungle. Experience nature's tranquility and wake up to the sweet songs of songbirds at our resort!",
   link: "/rooms",
   urlText: "Discover all Rooms",
-  btnNAme: "Discoverallrooms",
+  btnName: "Discoverallrooms",
+  paginationClass:"pagination_0",
   images: [
     "/gallery2/outside5.webp",
     chooseus1,
@@ -62,7 +63,8 @@ const sliderImageData2 = {
     "We're proud to serve a variety of delicious dishes that celebrate Mussoorie's culinary heritage. Our cafe is situated where Sir George Everest once had his stables and rode around, along with the George Everest Museum just a few minutes walk away.",
   link: "/parkcafe",
   urlText: "Discover Park Cafe",
-  btnNAme: "Discover",
+  btnName: "Discover",
+  paginationClass:"pagination_1",
   images: [
     "/DJI_0378.webp",
     "/gallery2/outsideview2.webp",

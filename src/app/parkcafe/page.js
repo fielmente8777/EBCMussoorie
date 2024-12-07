@@ -160,6 +160,8 @@ const sliderComponentImagedata1 = {
     "We're proud to serve a variety of delicious dishes that celebrate Mussoorie's culinary heritage. Our cafe is situated where Sir George Everest once had his stables and rode around, along with the George Everest Museum just a few minutes walk away.",
   link: bookingLink,
   urlText: "Book Now",
+  btnName: "Discover",
+  paginationClass:"pagination_0",
   images: [
     parkcafereachus1,
     parkcafe,
@@ -176,6 +178,8 @@ const sliderComponentImagedata2 = {
     "Experience curated events and experiences that promise to elevate your visit. As a must-visit cafe in Mussoorie, EBC ensures an unforgettable culinary journey that celebrates nature and community.",
   link: "/contact",
   urlText: "Contact Us",
+  paginationClass:"pagination_1",
+  btnName: "ChooseUs",
   images: [
     chooseus1,
     chooseus2,

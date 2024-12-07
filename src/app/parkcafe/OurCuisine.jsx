@@ -7,8 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import BorderLine from "../../components/BorderLine";
 import SectionWithContainer from "../../components/SectionWithContainer";
+import { NextButton, PrevButton } from "../../icons/icons";
 
 const OurCuisine = ({ images = [1, 2, 3, 4, 5], heading, para, para2 }) => {
   return (
@@ -79,7 +81,7 @@ const OurCuisine = ({ images = [1, 2, 3, 4, 5], heading, para, para2 }) => {
     // </div>
     <SectionWithContainer>
       <div
-        className={`lg:grid grid-cols-3 flex flex-col bg-[#F1EECB] overflow-hidden lg:mb-0 mb-5`}
+        className={`lg:grid grid-cols-3 flex flex-col  overflow-hidden lg:mb-0 mb-5 slider`}
       >
         <div className={` col-span-2`}>
           <Swiper
@@ -89,11 +91,14 @@ const OurCuisine = ({ images = [1, 2, 3, 4, 5], heading, para, para2 }) => {
             // }}
             speed={1000}
             pagination={{
-              el: "#bullets-Portfolio",
+              el: ".pagination_9",
             }}
             slidesPerView={1}
-            navigation={true}
-            modules={[Navigation]}
+            navigation={{
+              nextEl: ".button-next-9",
+              prevEl: ".button-prev-9",
+            }}
+            modules={[Navigation, Pagination, Autoplay]}
             className="card_swiper"
           >
             {images?.map((item, index) => (
@@ -106,7 +111,7 @@ const OurCuisine = ({ images = [1, 2, 3, 4, 5], heading, para, para2 }) => {
                     className="object-cover"
                   />
                   <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 px-2 bg-[#F1EECB] -translate-y-1/2">
-                    <h2 className="text-center text-2xl text-[#29422C] capitalize">
+                    <h2 className="text-center lg:text-2xl text-[#29422C] capitalize">
                       {item.title}
                     </h2>
                   </div>
@@ -115,7 +120,7 @@ const OurCuisine = ({ images = [1, 2, 3, 4, 5], heading, para, para2 }) => {
             ))}
           </Swiper>
         </div>
-        <div className="flex items-center justify-center col-span-1">
+        <div className="flex items-center max-md:order-3 bg-[#F1EECB] justify-center col-span-1">
           <div className="flex flex-col lg:gap-6 gap-4 lg:px-14 lg:py-12 p-4 ">
             <BorderLine />
             <h3 className="lg:text-[2rem]/[2.35rem] font-medium text-center text-2xl text-[#29422C]">
@@ -135,6 +140,21 @@ const OurCuisine = ({ images = [1, 2, 3, 4, 5], heading, para, para2 }) => {
             >
               Download Menu
             </Link>
+          </div>
+        </div>
+        <div className="col-span-2 py-1 max-md:order-2 max-md:bg-[#F1EECB]">
+          <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center">
+            <button
+              className={`button-prev-9 p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+            >
+              <PrevButton />
+            </button>
+            <div className={`flex items-center justify-center gap-1 pag pagination_9`} />
+            <button
+              className={`button-next-9 p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+            >
+              <NextButton />
+            </button>
           </div>
         </div>
       </div>

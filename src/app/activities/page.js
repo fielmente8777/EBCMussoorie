@@ -69,7 +69,7 @@ const page = () => {
 
       {activeCarddata.map((item, index) => (
         <Section key={index}>
-          <SliderComponentImage {...item} border />
+          <SliderComponentImage {...item} border index={index} paginationClass={`pagination_${index}`} />
         </Section>
       ))}
       <div className="lg:py-16 py-10">

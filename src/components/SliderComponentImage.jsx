@@ -13,6 +13,7 @@ const SliderComponentImage = ({
   images,
   index,
   btnName,
+  paginationClass,
   link = "#",
   urlText = "book now",
   border = false,
@@ -41,15 +42,16 @@ const SliderComponentImage = ({
           </Container>
         )}
 
-        <div className={`${title && "mt-12"} block`}>
+        <div className={`${title && "lg:mt-12 "} block`}>
           <ImageSwiper
             images={images}
             index={index}
             btnName={btnName}
+            paginationClass={paginationClass}
           />
         </div>
         <Container>
-          <div className="flex flex-col items-center justify-center gap-5 mt-12">
+          <div className="flex flex-col items-center justify-center gap-5 lg:mt-12 mt-4">
             {title2 && <BorderLine />}
             {title2 && (
               <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-[#29422C]">

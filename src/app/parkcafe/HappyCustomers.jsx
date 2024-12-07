@@ -7,11 +7,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 // import { Rating } from "../../icons/icons";
 import BorderLine from "../../components/BorderLine";
+import { NextButton, PrevButton } from "../../icons/icons";
 
 const HappyCustomers = ({ testimonal }) => {
   return (
     <div className="lg:py-12 pt-7 lg:px-6">
-      <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 w-full ">
+      <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 w-full slider">
         <div className="flex flex-col gap-4  items-center">
           <BorderLine />
           <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-[#fff]">
@@ -19,7 +20,7 @@ const HappyCustomers = ({ testimonal }) => {
           </h2>
         </div>
 
-        {/* <div className="w-full rounded-lg overflow-hidden"> */}
+        <div className="w-full rounded-sm overflow-hidden">
         <Swiper
           loop={true}
           autoplay={{
@@ -34,8 +35,8 @@ const HappyCustomers = ({ testimonal }) => {
           slidesPerView={1}
           spaceBetween={20}
           navigation={{
-            prevEl: ".prev-btn",
-            nextEl: ".next-btn",
+            prevEl: ".button-prev",
+            nextEl: ".button-next",
           }}
           modules={[Pagination, Autoplay, Navigation]}
           className="w-full border border-[#F1EECB]"
@@ -43,7 +44,7 @@ const HappyCustomers = ({ testimonal }) => {
           {testimonal?.map((item, index) => {
             return (
               <SwiperSlide key={index} className="">
-                <div className="py-6 lg:px-20">
+                <div className="py-6 lg:px-20 px-2">
                   <div className="flex items-center justify-center">
                     {/* <Image
                       width={600}
@@ -69,13 +70,28 @@ const HappyCustomers = ({ testimonal }) => {
             );
           })}
         </Swiper>
-        {/* </div> */}
+        </div>
 
         {/* <div className="flex justify-center items-center gap-6 press lg:mt-5">
           <button className="bullets-Portfolio">
             <span className="sr-only">swiper bullet</span>
           </button>
         </div> */}
+        <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center">
+          <button
+            className={`button-prev p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+          >
+            <PrevButton />
+          </button>
+          <div
+            className={`flex items-center justify-center gap-1 bullets-Portfolio`}
+          />
+          <button
+            className={`button-next p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+          >
+            <NextButton />
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -15,21 +15,21 @@ import Image from "next/image";
 
 import indoor1 from "../../public/activity/activity3.webp";
 import { NextButton, PrevButton } from "../icons/icons";
-const ImageSwiper = ({ images = [1, 2, 3, 5, 6, 7], index, btnName="" }) => {
-  let buttonName;
 
-  if (index === undefined) {
-    buttonName = btnName;
-  } else {
-    buttonName = index;
-  }
+const ImageSwiper = ({
+  images = [1, 2, 3, 5, 6, 7],
+  index,
+  btnName = "",
+  paginationClass = "pagination_0",
+}) => {
+  let buttonName = index !== undefined ? index : btnName;
 
-  const swiperButtonNext = ".button-next" + buttonName;
-  const swiperButtonPrev = ".button-prev" + buttonName;
+  const swiperButtonNext = `.button-next-${buttonName}`;
+  const swiperButtonPrev = `.button-prev-${buttonName}`;
+
   return (
     <div className="w-full bg-transparent slider">
       <Swiper
-        // autoplay={true}
         speed={1000}
         effect={"coverflow"}
         grabCursor={true}
@@ -37,19 +37,17 @@ const ImageSwiper = ({ images = [1, 2, 3, 5, 6, 7], index, btnName="" }) => {
         loop={true}
         slidesPerView={2}
         spaceBetween={10}
-        slidergap={30}
         modules={[Autoplay, Navigation, EffectCoverflow, Pagination]}
         navigation={{
-          nextEl: ".button-next" + buttonName,
-          prevEl: ".button-prev" + buttonName,
+          nextEl: swiperButtonNext,
+          prevEl: swiperButtonPrev,
         }}
         pagination={{
-          el: ".pagination",
+          el: "." + paginationClass,
           clickable: true,
         }}
         coverflowEffect={{
           rotate: 0,
-          //   stretch: 100,
           depth: 0,
           modifier: 3,
           slideShadows: false,
@@ -59,43 +57,37 @@ const ImageSwiper = ({ images = [1, 2, 3, 5, 6, 7], index, btnName="" }) => {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-          //   1024: {
-          //     slidesPerView: 3,
-          //     spaceBetween: 20,
-          //   },
         }}
-        className=""
       >
-        {images?.map((roomImage, index) => {
-          return (
-            <SwiperSlide
-              key={index}
-              className="w-full h-full relative aspect-[4/2.5]"
-            >
-              <Image
-                src={roomImage.src || roomImage || indoor1}
-                // src={indoor1}
-                className="h-full object-cover"
-                alt={"room" || title}
-                fill
-              />
-            </SwiperSlide>
-          );
-        })}
+        {images?.map((roomImage, idx) => (
+          <SwiperSlide
+            key={idx}
+            className="w-full h-full relative lg:aspect-[4/2.5] aspect-[3/2.5]"
+          >
+            <Image
+              src={roomImage.src || roomImage || indoor1}
+              className="h-full object-cover"
+              alt={"room"}
+              fill
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
-      {/* <div className="flex gap-2 justify-center mt-5 items-center">
+      <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center">
         <button
-          className={`p-2 hover:scale-105 active:scale-95 ${".button-prev" + buttonName}`}
+          className={`button-prev-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
         >
           <PrevButton />
         </button>
-        <div className={`flex items-center justify-center gap-1 pagination`} />
+        <div
+          className={`flex items-center justify-center gap-1 ${paginationClass}`}
+        />
         <button
-          className={`p-2 hover:scale-105 active:scale-95 ${".button-next" + buttonName}`}
+          className={`button-next-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
         >
           <NextButton />
         </button>
-      </div> */}
+      </div>
     </div>
   );
 };
