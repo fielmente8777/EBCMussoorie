@@ -4,12 +4,14 @@
 
 @font-face {
   font-family: "Cammron Demo";
-  font-style: normal;
-  font-weight: normal;
   src:
     local("Cammron Demo"),
-    url("/font/CammronDemo.woff") format("woff");
+    url("/font/CammronDemo.otf") format("otf");
 }
+// @font-face {
+//   font-family: "Cammron Demo";
+//   src: url('/font/CammronDemo.ttf') format('ttf');
+// }
 @font-face {
   font-family: "NeutraText-BookAlt";
   font-style: normal;
@@ -56,23 +58,23 @@
 }
 
 .Cammron {
-  font-family: "Cammron Demo", serif;
+  font-family: "Cammron Demo", sans-serif;
 }
 
 p,
 input {
   font-family: "NeutraTextTF-Book", sans-serif;
 }
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// a {
-//   font-family: "Cammron demo", serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Cammron demo", serif;
 
-// }
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
