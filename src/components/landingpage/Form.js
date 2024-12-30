@@ -15,6 +15,7 @@ import {
 } from "../../icons/icons.jsx";
 import LazyLoadedMap from "./LazyLoadedMap.jsx";
 import axios from "axios";
+import { useRouter } from "next/navigation.js";
 
 const Form = () => {
   const [userName, setUserName] = useState("");
@@ -60,7 +61,8 @@ const Form = () => {
       console.log(data);
       if (data.status) {
         setLoader(false);
-        // router.push('/thank-you');
+        // router.push('/thank-you','_blank');
+        window.open("/thank-you", "_blank");
         setPopupMsg("You information has been Received");
         setOpenPopup(true);
         setFormRes(true);

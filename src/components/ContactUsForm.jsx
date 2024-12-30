@@ -3,8 +3,10 @@ import { Input, Textarea } from "./landingpage/Form";
 import { useState } from "react";
 import axios from "../../node_modules/axios/index";
 import { CallIcon, ChatIcon, FillUser, MailIcon } from "../icons/icons";
+import { useRouter } from "next/navigation";
 
 const ContactUsForm = () => {
+  const route = useRouter();
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
@@ -45,7 +47,8 @@ const ContactUsForm = () => {
       console.log(data);
       if (data.status) {
         setLoader(false);
-        router.push('/thank-you');
+        // route.push("/thank-you", "_blank");
+        window.open("/thank-you", "_blank");
         setPopupMsg("You information has been Received");
         setOpenPopup(true);
         setFormRes(true);
