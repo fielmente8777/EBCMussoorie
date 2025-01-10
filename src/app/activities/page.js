@@ -1,14 +1,7 @@
 import AddOn from "../../components/Activities/AddOn";
-import IndoorActivities from "../../components/Activities/IndoorActivities";
-import InstaGrid from "../../components/Activities/InstaGrid";
-import OutdoorActivities from "../../components/Activities/OutdoorActivities";
-import WhatInstaButton from "../../utils/WhatInstaButton";
-import BannerImage from "../../../public/activity/activity10.webp";
-// import Banner from "../../components/landingpage/Banner";
-import Image from "next/image";
 import GridBanner from "../../components/GridBanner";
 import SectionHeading from "../../components/SectionHeading";
-import { bookingLink } from "../../utils/data";
+import { bookingLink, imgSrc } from "../../utils/data";
 import Section from "../../components/Section";
 import SliderComponentImage from "../../components/SliderComponentImage";
 
@@ -17,8 +10,8 @@ const page = () => {
     title: "ACTIVITIES",
     description:
       "Whether you're a fan of indoor elegance or outdoor adventure, we have something special for everyone! Discover thrilling outdoor activities & explore our diverse range of indoor games perfect for a cosy indoor adventure.",
-    src1: BannerImage,
-    src2: "/bornfire/treking.webp",
+    src1: imgSrc + "activities/img1.webp",
+    src2: imgSrc + "activities/img2.webp",
   };
 
   const sectionh1 = {
@@ -33,13 +26,12 @@ const page = () => {
       subDescription:
         "Discover thrilling outdoor activities like badminton, archery, mountain biking, and hooping. Join the brave for haunted walks around the campsite or witness the stunning sunrise at Mussoorie's Lal Tibba. For a unique challenge, partake in a momo-eating contest and unite with fellow birdwatchers at Benog Wildlife Sanctuary. Explore numerous hikes and trails for an unforgettable adventure.",
       images: [
-        "/activity/activity11.webp",
-        "/activity/activity8.webp",
-        "/activity/activity10.webp",
-        "/activity/activity2.webp",
-        "/activity/activitydiv1.webp",
-        "/activity/activity1.webp",
-        "/activity/DSC04128_11zon.webp",
+        imgSrc + "activities/img1.webp",
+        imgSrc + "activities/outdoor-activities/img1.webp",
+        imgSrc + "activities/outdoor-activities/img2.webp",
+        imgSrc + "activities/img1.webp",
+        imgSrc + "activities/outdoor-activities/img1.webp",
+        imgSrc + "activities/outdoor-activities/img2.webp",
       ],
       link: bookingLink,
       urlText: "Book Now",
@@ -49,14 +41,12 @@ const page = () => {
       subDescription:
         "Explore our diverse range of board games perfect for a cosy indoor adventure. Join us for a relaxing day of strategic fun and friendly competition.",
       images: [
-        "/activity/activity6.webp",
-        "/activity/activity7.webp",
-        "/activity/activity3.webp",
-        "/activity/activity4.webp",
-        "/activity/indoor1.webp",
-        "/activity/indoor2.webp",
-        "/activity/boardgame.webp",
-        "/activity/activity5.webp",
+        imgSrc + "activities/indoor-activities/img1.webp",
+        imgSrc + "activities/indoor-activities/img2.webp",
+        imgSrc + "activities/indoor-activities/img3.webp",
+        imgSrc + "activities/indoor-activities/img1.webp",
+        imgSrc + "activities/indoor-activities/img2.webp",
+        imgSrc + "activities/indoor-activities/img3.webp",
       ],
       link: bookingLink,
       urlText: "Book Now",
@@ -69,7 +59,12 @@ const page = () => {
 
       {activeCarddata.map((item, index) => (
         <Section key={index}>
-          <SliderComponentImage {...item} border index={index} paginationClass={`pagination_${index}`} />
+          <SliderComponentImage
+            {...item}
+            border
+            index={index}
+            paginationClass={`pagination_${index}`}
+          />
         </Section>
       ))}
       <div className="lg:py-16 py-10">

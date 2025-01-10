@@ -1,43 +1,39 @@
 import React from "react";
 
-import Picnic1 from "../../../public/picnic/_MG_0636.webp";
-import Picnic2 from "../../../public/picnic/_MG_1465.webp";
-import Picnic3 from "../../../public/picnic/IMG_0620.webp";
-import Picnic4 from "../../../public/picnic/_MG_2878.webp";
-
-import BBQ1 from "../../../public/images/Barbecue1.webp";
-import BBQ2 from "../../../public/images/34 Barbeque_11zon.jpg";
-import BBQ3 from "../../../public/images/about1.jpg";
-
-import BornFire1 from "../../../public/bornfire/dji_fly_20230402_033354_140_1680447488677_photo.webp";
-import BornFire2 from "../../../public/bornfire/bornfire.webp";
-import BornFire3 from "../../../public/bornfire/bornfire.webp";
-import BornFire4 from "../../../public/bornfire/38Bonfire_11zon.webp";
-
-import Wilderness1 from "../../../public/bornfire/33Bonfire_11zon.webp";
-import Wilderness2 from "../../../public/bornfire/treking.webp";
-
 import SpecilizationCard from "../landingpage/SpecilizationCard";
 import Section from "../Section";
+import { imgSrc } from "../../utils/data";
 
 const AddOn = () => {
   const datas = [
     {
       heading: "Picnic in the Meadows!",
       para: "Enjoy a peaceful picnic amidst the beauty of nature, with a basket brimming with delightful snacks and refreshing beverages. Our idyllic property offers the ideal setting for a relaxing afternoon, spent cherishing moments with friends and family.",
-      images: [Picnic1, Picnic2, Picnic3, Picnic4],
+      images: [
+        imgSrc + "activities/picnic/img1.webp",
+        imgSrc + "activities/picnic/img2.webp",
+        imgSrc + "activities/picnic/img3.webp",
+      ],
       button: true,
     },
     {
       heading: "Gather Together for a Barbecue",
       para: "Join us for an enchanting evening of grilling under the stars. Surrounded by the tranquil beauty of our property, enjoy a memorable night filled with warmth and camaraderie. As the fire crackles, savour a delightful array of your favourite grilled meats and vegetables, creating the perfect backdrop for relaxation and connection with family and friends.",
-      images: [BBQ1, BBQ2, BBQ3],
+      images: [
+        imgSrc + "activities/barbecue/img1.webp",
+        imgSrc + "activities/barbecue/img2.webp",
+        imgSrc + "activities/barbecue/img3.webp",
+      ],
       button: true,
     },
     {
       heading: "Bonfire",
       para: "Experience the magic of a private bonfire under the starlit sky, creating cherished moments with your loved ones. Unwind after exploring Mussoorie's natural beauty in the warmth of your own intimate setting, fostering both adventure and relaxation.",
-      images: [BornFire1, BornFire2, BornFire3, BornFire4],
+      images: [
+        imgSrc + "activities/bonfire/img1.webp",
+        imgSrc + "activities/bonfire/img2.webp",
+        imgSrc + "activities/bonfire/img3.webp",
+      ],
       button: true,
     },
     {
@@ -45,7 +41,11 @@ const AddOn = () => {
       para: "Embark on the George Everest Peak trek amidst Mussoorie's serene hills, with our knowledgeable guide providing direction and companionship along the way. Enjoy a refreshing sandwich, tea, and water as you explore hidden gems and breathtaking Himalayan views.",
       para2:
         "Experience the perfect blend of adventure and comfort with luxury camping amidst nature's beauty.",
-      images: [Wilderness1, Wilderness2],
+      images: [
+        imgSrc + "activities/trekking/img1.webp",
+        imgSrc + "activities/trekking/img2.webp",
+        imgSrc + "activities/trekking/img3.webp",
+      ],
       button: true,
     },
   ];

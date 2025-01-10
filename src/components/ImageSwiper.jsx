@@ -31,13 +31,12 @@ const ImageSwiper = ({
     <div className="w-full bg-transparent slider">
       <Swiper
         speed={1000}
-        effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={2}
+        slidesPerView={2.2}
         spaceBetween={10}
-        modules={[Autoplay, Navigation, EffectCoverflow, Pagination]}
+        modules={[Autoplay, Navigation, Pagination]}
         navigation={{
           nextEl: swiperButtonNext,
           prevEl: swiperButtonPrev,
@@ -46,23 +45,12 @@ const ImageSwiper = ({
           el: "." + paginationClass,
           clickable: true,
         }}
-        coverflowEffect={{
-          rotate: 0,
-          depth: 0,
-          modifier: 3,
-          slideShadows: false,
-        }}
-        breakpoints={{
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-        }}
+        
       >
         {images?.map((roomImage, idx) => (
           <SwiperSlide
             key={idx}
-            className="w-full h-full relative lg:aspect-[4/2.5] aspect-[3/2.5]"
+            className="w-full h-full relative lg:aspect-[4/3] aspect-[3/2.5]"
           >
             <Image
               src={roomImage.src || roomImage || indoor1}

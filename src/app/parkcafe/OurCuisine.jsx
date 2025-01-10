@@ -110,11 +110,11 @@ const OurCuisine = ({ images = [1, 2, 3, 4, 5], heading, para, para2 }) => {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 px-2 bg-[#F1EECB] -translate-y-1/2">
+                  {/* <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 px-2 bg-[#F1EECB] -translate-y-1/2">
                     <h2 className="text-center lg:text-2xl text-[#29422C] capitalize">
                       {item.title}
                     </h2>
-                  </div>
+                  </div> */}
                 </div>
               </SwiperSlide>
             ))}

@@ -1,19 +1,11 @@
-import Banner from "../../components/AboutPage/Banner";
 import BannerImage from "../../../public/images/parkcafebg.jpg";
-import c1 from "../../../public/images/01 Picnic_11zon.jpg";
-import about1 from "../../../public/images/DSC_6549.jpg";
-import about2 from "../../../public/images/DSC_6498.jpg";
-import about3 from "../../../public/images/about3.jpg";
 
 import aroundcapm1 from "../../../public/images/aroundcamp1.jpg";
-import aroundcapm2 from "../../../public/images/aroundcamp2.jpg";
-// import aroundcapm3 from "../../../public/images/arouncamp3.jpg"
 
-import GeorgeEverest from "../../components/AboutPage/GeorgeEverest";
 import Image from "next/image";
 import SectionHeading from "../../components/SectionHeading";
 import SliderComponentImage from "../../components/SliderComponentImage";
-import { bookingLink } from "../../utils/data";
+import { bookingLink, imgSrc } from "../../utils/data";
 import TwoColgridCard from "../../components/TwoColgridCard";
 
 export const metadata = {
@@ -29,10 +21,15 @@ const page = () => {
     description:
       "Nestled amidst the serene beauty of Mussoorie lies our resort, just a short walk away from the iconic George Everest House. Sir George Everest, the legendary Surveyor General of India, once resided here during his historic journey. Today, his legacy lives on through the towering peak of Mount Everest, named in his honor. At our camp, we pay homage to Sir George Everest's remarkable contributions through our name and our commitment to preserving the beauty of nature that surrounds us. Join us in experiencing the wonder of Mussoorie and the rich history that lies within its embrace.",
     subPara: "Our family heritage, is now your favorite escape.",
-    images: [about1, about2, about3, aroundcapm1],
+    images: [
+      imgSrc + "about/img1.webp",
+      imgSrc + "about/img2.webp",
+      imgSrc + "about/img3.webp",
+      imgSrc + "about/img4.webp",
+    ],
 
     title2: "For the next few lazy days and cozy nights",
-    
+
     subDescription:
       "Get ready to experience the best of both worlds with our glamorous camping. We've carefully curated a luxurious indoor experience that blends perfectly with the wild outdoors. Our tents are fully equipped with all the modern amenities and decorated with a mix of modern and rustic interiors, creating a unique and comfortable atmosphere. Get in touch with your wild side, clad in comfortable jungle wear, and immerse yourself in the natural beauty of the surroundings. Get ready to roar like a wolf and snore like a lion, as you indulge in the ultimate glamping experience at EBC Mussoorie.",
     link: bookingLink,

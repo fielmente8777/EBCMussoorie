@@ -8,7 +8,7 @@ import SliderComponentImage from "../components/SliderComponentImage";
 import SectionHeading from "../components/SectionHeading";
 import TwoColgridCard from "../components/TwoColgridCard";
 import AddBanner from "../components/AddBanner";
-import { bookingLink } from "../utils/data";
+import { bookingLink, imgSrc } from "../utils/data";
 import parkcafe from "../../public/images/parkcafe.jpg";
 import parkcafereachus1 from "../../public/images/DSC_6324.jpg";
 import chooseus1 from "../../public/images/whychooseus1.jpg";
@@ -44,18 +44,10 @@ const sliderImageData1 = {
   btnName: "Discoverallrooms",
   paginationClass:"pagination_0",
   images: [
-    "/gallery2/outside5.webp",
-    chooseus1,
-    "/gallery2/outsideview3.webp",
-    parkcafe,
-    "/gallery2/outside5.webp",
-    chooseus2,
-    chooseus3,
-    chooseus4,
-    chooseus5,
-    parkcafereachus1,
-    parkcafe,
-    "/gallery2/outsideview3.webp",
+    imgSrc+"home/img1.webp",
+    imgSrc+"home/img2.webp",
+    imgSrc+"home/img3.webp",
+    imgSrc+"home/img4.webp",
   ],
 };
 const sliderImageData2 = {

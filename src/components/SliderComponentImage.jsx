@@ -42,7 +42,7 @@ const SliderComponentImage = ({
           </Container>
         )}
 
-        <div className={`${title && "lg:mt-12 "} block`}>
+        <div className={`${title && "lg:mt-12 mt-4"} block`}>
           <ImageSwiper
             images={images}
             index={index}

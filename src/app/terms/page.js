@@ -53,7 +53,7 @@ const list = [
   {
     questoin: "Check-in & Check-out timings",
     answer: [
-      "Check-in timing is 2 pm to 5 pm. Check-out timing is 10 am.",
+      "Check-in timing is 2:00PM to 9:00PM. Check-out timing is 10:30PM.",
       "If your arrival is delayed beyond 6 pm, you are required to inform Everest Base Camp in advance to retain your booking for the day.",
     ],
   },

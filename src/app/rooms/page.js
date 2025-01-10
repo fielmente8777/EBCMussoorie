@@ -1,5 +1,3 @@
-import Roomscard from "../../components/Card/roomscard";
-
 import {
   BedService,
   Cloth,
@@ -15,19 +13,8 @@ import {
 import GridBanner from "../../components/GridBanner";
 import SliderComponentImage from "../../components/SliderComponentImage";
 import NewsLatter from "../../components/NewsLatter";
-import Room1 from "../../../public/gallery2/room2.webp";
-import Room2 from "../../../public/gallery/Glamper1Balcony.webp";
 
-import Surveyor1 from "../../../public/Surveyor Room/_MG_2465.webp";
-import Surveyor2 from "../../../public/Surveyor Room/_MG_2475.webp";
-import Surveyor3 from "../../../public/Surveyor Room/_MG_2477.webp";
-import Surveyor4 from "../../../public/Surveyor Room/_MG_2505.webp";
-
-import SurveyorSuite1 from "../../../public/Surveyor Suite Room/_MG_2601.webp";
-import SurveyorSuite2 from "../../../public/Surveyor Suite Room/_MG_2602.webp";
-import SurveyorSuite3 from "../../../public/Surveyor Suite Room/_MG_2603.webp";
-import SurveyorSuite4 from "../../../public/Surveyor Suite Room/_MG_2605.webp";
-import { bookingLink } from "../../utils/data";
+import { bookingLink, imgSrc } from "../../utils/data";
 import Section from "../../components/Section";
 import SectionHeading from "../../components/SectionHeading";
 export const metadata = {
@@ -87,11 +74,10 @@ const RoomsAccomodationData = {
         },
       ],
       images: [
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/F841F57F-16A6-403E-BA7F-6A9C46F5B2FA_1_105_c.jpeg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/60fee30b-cbab-4c0f-a1b4-7e5ac13e2596.jpg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/48fa811c-9e74-4660-a133-dfc9876ce533.jpg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/49f951c7-c0eb-4d65-ab06-55ac8d75729f.jpg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Camper+room/cd99b055-be35-41fe-b324-4cb6e3e91b18.jpg",
+        imgSrc + "room/camper/img1.webp",
+        imgSrc + "room/camper/img2.webp",
+        imgSrc + "room/camper/img3.webp",
+        imgSrc + "room/camper/img4.webp",
       ],
       link: bookingLink,
       urlText: "Book Now",
@@ -143,12 +129,10 @@ const RoomsAccomodationData = {
         },
       ],
       images: [
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Glamper+Room/_MG_2556.JPG",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Glamper+Room/_MG_2557.JPG",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper.webp",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper1.webp",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper2.webp",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/theglamper4.webp",
+        imgSrc + "room/glamper/img1.webp",
+        imgSrc + "room/glamper/img2.webp",
+        imgSrc + "room/glamper/img3.webp",
+        imgSrc + "room/glamper/img4.webp",
       ],
       link: bookingLink,
       urlText: "Book Now",
@@ -199,12 +183,10 @@ const RoomsAccomodationData = {
         },
       ],
       images: [
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/cda949b0-cc7a-44de-98f9-8c09ef920fbc.jpg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6438.jpg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6442.jpg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/DSC_6610.jpg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/f15de0f9-399f-4636-aa75-30d7ee073bc4.jpg",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/new/z2/Room+Media/Surveyor+room/be707a6e-7a36-45cb-a4ae-458d225c2eac.jpg",
+        imgSrc + "room/surveyor/img1.webp",
+        imgSrc + "room/surveyor/img2.webp",
+        imgSrc + "room/surveyor/img3.webp",
+        imgSrc + "room/surveyor/img4.webp",
       ],
       link: bookingLink,
       urlText: "Book Now",
@@ -255,11 +237,10 @@ const RoomsAccomodationData = {
         },
       ],
       images: [
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2605.JPG",
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/ebcmussoorie/image/Z1/Surveyor+Suite+Room/_MG_2611.JPG",
-        SurveyorSuite2,
-        SurveyorSuite3,
-        SurveyorSuite4,
+        imgSrc + "room/surveyor-suite/img1.webp",
+        imgSrc + "room/surveyor-suite/img2.webp",
+        imgSrc + "room/surveyor-suite/img3.webp",
+        imgSrc + "room/surveyor-suite/img4.webp",
       ],
       link: bookingLink,
       urlText: "Book Now",
@@ -275,8 +256,8 @@ const bannerDate = {
   title: "OUR ROOMS",
   description:
     "Experience the rich legacy of Sir George Everest, the esteemed former Surveyor General of India, and embark on a journey of relaxation and rejuvenation like never before.",
-  src1: Room1,
-  src2: Room2,
+  src1: imgSrc + "room/img1.webp",
+  src2: imgSrc + "room/img2.webp",
 };
 const sectionh1 = {
   title: "Escape from the Urban Hustle!",
@@ -298,7 +279,12 @@ const page = () => {
         </div> */}
         {RoomsAccomodationData.items.map((item, index) => (
           <Section key={index}>
-            <SliderComponentImage {...item} border index={index} paginationClass={`pagination_${index}`} />
+            <SliderComponentImage
+              {...item}
+              border
+              index={index}
+              paginationClass={`pagination_${index}`}
+            />
           </Section>
         ))}
       </div>
