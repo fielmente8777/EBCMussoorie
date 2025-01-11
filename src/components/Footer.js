@@ -280,7 +280,7 @@ const Footer = () => {
               </div>
               <div className="w-full h-[1.5px]  bg-[#F1EECB]" />
               <div className="pt-4">
-                <p className="text-white capitalize flex items-center justify-center italic gap-4">
+                <p className="text-white capitalize flex items-center max-md:flex-col justify-center italic gap-4">
                   <span className="flex items-center justify-center gap-2">
                     <CopyRightIcon /> {currentYear} EBC Mussoorie
                   </span>{" "}

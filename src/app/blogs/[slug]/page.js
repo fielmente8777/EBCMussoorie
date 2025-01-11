@@ -11,7 +11,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const data = blogData.find((blog) => blog.slug === params.slug);
   return {
     title: data.title,
@@ -19,8 +20,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const page = ({ params }) => {
-  
+const page = async props => {
+  const params = await props.params;
+
   const data = blogData.find((blog) => blog.slug === params.slug);
 
   return (

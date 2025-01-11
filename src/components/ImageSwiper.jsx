@@ -68,7 +68,7 @@ const ImageSwiper = ({
           <PrevButton />
         </button>
         <div
-          className={`flex items-center justify-center gap-1 ${paginationClass}`}
+          className={`items-center justify-center gap-1 ${paginationClass} ${images?.length > 5 ? "lg:flex hidden" : "flex"}`}
         />
         <button
           className={`button-next-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}

@@ -46,7 +46,7 @@ const OurPartners = () => {
                 spaceBetween: 50,
               },
             }}
-            className="!p-8 border border-[#F69F2B] rounded-sm bg-white"
+            className="lg:!p-8 !p-3 border border-[#F69F2B] rounded-sm bg-white"
           >
             {ClientImages.map((item, index) => (
               <SwiperSlide key={index} className="py-2">

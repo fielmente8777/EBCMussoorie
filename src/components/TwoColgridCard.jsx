@@ -26,7 +26,7 @@ const TwoColgridCard = ({
           </div>
         )}
         {grid && (
-          <div className="w-full grid grid-cols-2 auto-rows-[14rem] grid-flow-row gap-2">
+          <div className="w-full grid grid-cols-2 lg:auto-rows-[14rem] auto-rows-[7rem] grid-flow-row gap-2">
             {grid.map((item, index) => (
               <div
                 className="w-full relative aspect-auto rounded-sm overflow-hidden"

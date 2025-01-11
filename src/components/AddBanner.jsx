@@ -5,7 +5,7 @@ import { bookingLink } from "../utils/data";
 const AddBanner = () => {
   return (
     <Section>
-      <div className="w-full relative aspect-[16/6.7]">
+      <div className="w-full relative lg:aspect-[16/6.66] aspect-[3/2]">
         <Image
           src="/add-image.webp"
           alt="add page banner"

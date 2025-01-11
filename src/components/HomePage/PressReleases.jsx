@@ -80,14 +80,14 @@ const PressReleases = () => {
                 spaceBetween: 40,
               },
             }}
-            className="!p-8 border border-[#F69F2B] rounded-sm"
+            className="lg:!p-8 !p-3 border border-[#F69F2B] rounded-sm"
           >
             {data.map((item, index) => (
               <SwiperSlide key={index} className="">
                 <Link
                   target="_blank"
                   href={item.link}
-                  className="relative w-full lg:aspect-[3/1] aspect-[2/1] py-8 flex justify-center items-center bg-white rounded-tl-3xl rounded-br-3xl overflow-hidden"
+                  className="relative w-full lg:aspect-[3/1] aspect-[3/1] py-8 flex justify-center items-center bg-white rounded-tl-3xl rounded-br-3xl overflow-hidden"
                 >
                   <Image
                     src={item.src}
