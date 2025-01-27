@@ -24,6 +24,9 @@ import { IoMail } from "react-icons/io5";
 import { useState } from "react";
 import SectionWithContainer from "./SectionWithContainer";
 import Section from "./Section";
+import Container from "./Container";
+import ContactUsForm2 from "./ContactUsForm2";
+import BorderLine from "./BorderLine";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -106,83 +109,54 @@ const Footer = () => {
     },
   ];
 
+  const contactLinks2 = [
+    {
+      name: "Call us: +91 91190 01126",
+      link: "tel:+919119001126",
+    },
+    {
+      name: "Email: info@ebcmussoorie.com",
+      link: "mailto:info@ebcmussoorie.com",
+    },
+    {
+      name: "Everest Base Camp Mussoorie, Park Estate, Hathipaon Road, Mussoorie, Uttarakhand, 248179",
+      link: "",
+    },
+  ];
+
   const currentYear = new Date().getFullYear();
 
   return (
     <>
       {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
-        <div className="pt-10">
-          <div className="maxwidth mx-auto max-md:px-4">
-            <div className="flex justify-center items-center w-full">
-              <Line />
-            </div>
-            <div className="lg:grid grid-cols-2 lg:gap-20 py-10 flex flex-col gap-7">
-              <div className="relative lg:aspect-[5/1.45] aspect-[3/1] w-full">
-                <Image src={Logo} alt="logo" fill className="object-contain" />
-              </div>
-              <div className="flex flex-col text-white gap-3 tracking-wide">
-                <Link
-                  href={
-                    "https://www.google.com/maps/dir//Everest+Base+Camp,+Near+George+Everest+House,+George+Everest+House,+5km+from+Mall,+Park+Estate+Hathi+paon,+Road,+Mussoorie,+Uttarakhand+248179/@30.459293,78.025305,15z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3908d170d61d91cb:0x84607e0d71c4450f!2m2!1d78.025305!2d30.4592927!3e0?hl=en&entry=ttu"
-                  }
-                  className="flex gap-2"
-                >
-                  <span className="mt-1">
-                    <OutlineLocationWhite />
-                  </span>
-                  <span className="text-xl">
-                    Everest Base Camp Mussoorie, Park Estate, Hathipaon Road,
-                    Mussoorie, Uttarakhand, 248179
-                  </span>
-                </Link>
-                <Link
-                  href="tel:+919119001126"
-                  className="flex items-center gap-2"
-                >
-                  <span className="mt-1">
-                    <OutlineCallWhite />
-                  </span>
-                  <span className="text-xl">+91 91190 01126</span>
-                </Link>
-                <Link
-                  href="mailto:info@ebcmussoorie.com"
-                  className="flex items-center gap-2"
-                >
-                  <span className="mt-1">
-                    <OutlineMailWhite />
-                  </span>
-                  <span className="text-xl">info@ebcmussoorie.com</span>
-                </Link>
-              </div>
-              {/* <div className="flex flex-col text-white gap-3 tracking-wider">
-                <h2 className="lg:text-4xl text-3xl font-bold capitalize">
-                  Subscribe our newsletter
-                </h2>
-                <div className="w-full border border-[#BCD0B8] px-4 py-3 rounded-lg shadow-sm shadow-[#BCD0B8]">
-                  <input
-                    type="email"
-                    placeholder="Enter email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleNewsletter();
-                      }
-                    }}
-                    className="outline-none w-full focus:outline-none text-xl bg-transparent placeholder:text-white text-white"
-                  />
+        <footer className="lg:py-12 py-8 bg-bgClr">
+          <Container>
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 ">
+              <div className="w-full flex flex-col gap-4 justify-center">
+                <div className="w-fit">
+                  <BorderLine />
                 </div>
-              </div> */}
+                <h2 className="text-primary heading_2">Get in Touch</h2>
+                <p className="desc_1 italic text-primary">
+                  We’re Here to Help You Plan Your Next Adventure!
+                </p>
+                <ul className="flex flex-col gap-4 lg:mt-2 max-w-[34rem] w-full">
+                  {contactLinks2.map((item, i) => (
+                    <li className="desc_2 italic text-primary" key={i}>
+                      {item.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="max-w-md w-full lg:ml-auto">
+                <ContactUsForm2
+                  title={"Have Questions?"}
+                  description={"Contact Us and Start Your Next Adventure!"}
+                />
+              </div>
             </div>
-          </div>
-          <div className="text-white text-center text-lg bg-[#152116] capitalize py-4 lg:flex gap-2 justify-center items-center max-md:px-4 tracking-wider">
-            <span className="flex gap-2 justify-center items-center">
-              <CopyRightIcon />
-              Copyright EBC Mussoorie
-            </span>
-            •<span className=""> All rights reserved</span>
-          </div>
-        </div>
+          </Container>
+        </footer>
       ) : (
         <div>
           <SectionWithContainer>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +13,10 @@
 //   font-family: "Cammron Demo";
 //   src: url('/font/CammronDemo.ttf') format('ttf');
 // }
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
 @font-face {
   font-family: "NeutraText-BookAlt";
   font-style: normal;
@@ -31,39 +36,21 @@
 }
 
 @font-face {
-  font-family: "NeutraTextTF-Book";
+  font-family: "Neutra Text Book italic";
   font-style: normal;
   font-weight: normal;
   src:
     local("NeutraTextTF-Book"),
-    url("/font/neutra-text-tf-5871e0b0704ed.woff") format("woff");
-}
-
-@font-face {
-  font-family: "NeutraText-Bold";
-  font-style: normal;
-  font-weight: normal;
-  src:
-    local("NeutraText-Bold"),
-    url("/font/neutra-text-bold-5871e1605afa2.woff") format("woff");
-}
-
-@font-face {
-  font-family: "NeutraText-BoldItalic";
-  font-style: normal;
-  font-weight: normal;
-  src:
-    local("NeutraText-BoldItalic"),
-    url("/font/neutra-text-bold-italic-5872615974382.woff") format("woff");
+    url("/font/Neutra%20Text%20Book%20Italic.otf") format("otf");
 }
 
 .Cammron {
-  font-family: "Cammron Demo", sans-serif;
+  font-family: "Cammron Demo", serif;
 }
 
 p,
 input {
-  font-family: "NeutraTextTF-Book", sans-serif;
+  font-family: "Neutra Text Book italic", sans-serif;
 }
 h1,
 h2,
@@ -73,7 +60,6 @@ h5,
 h6,
 a {
   font-family: "Cammron demo", serif;
-
 }
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -91,6 +77,8 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body::-webkit-scrollbar {
@@ -123,8 +111,8 @@ body {
   margin: 0 auto;
   width: 100%;
 
-  @media screen and (max-width: 1280px) {
-    padding: 0 2rem;
+  @media (width<=768px) {
+    padding: 0 1rem;
   }
 }
 
@@ -151,6 +139,60 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .heading_1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    @media (width<=768px) {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+    }
+  }
+  .heading_2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    @media (width<=768px) {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
+  }
+
+  .desc_1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    @media (width<=768px) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .desc_2 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    @media (width<=768px) {
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  .desc_3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    @media (width<=768px) {
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+  .desc_4{
+    font-size: 1.3125rem;
+    line-height: 2rem;
+    @media (width<=768px) {
+      font-size: 0.85rem;
+      line-height: 1.25rem;
+    }
+  }
+  .bg_gradient {
+    background: linear-gradient(89deg, #000 -25.3%, rgba(0, 0, 0, 0) 107.94%);
+  }
 }
 
 @layer utilities {
@@ -165,19 +207,6 @@ body {
   }
 }
 
-// .press .bullets-Portfolio .swiper-pagination-bullet {
-//   border: 2px solid #ffffff !important;
-//   background-color: transparent !important;
-//   width: 1rem !important;
-//   height: 1rem !important;
-//   opacity: 1 !important;
-// }
-
-// .press .bullets-Portfolio .swiper-pagination-bullet-active {
-//   background-color: #fff !important;
-//   width: 1rem !important;
-//   height: 1rem !important;
-// }
 .slider {
   .pagination_0,
   .pagination_1,
@@ -193,40 +222,57 @@ body {
     .swiper-pagination-bullet {
       border: 2px solid #f69f2b;
       background-color: transparent;
-      width: .7rem;
-      height: .7rem;
+      width: 0.7rem;
+      height: 0.7rem;
       opacity: 1;
     }
 
     .swiper-pagination-bullet-active {
       background-color: #f69f2b;
-      width: .7rem;
-      height: .7rem;
+      width: 0.7rem;
+      height: 0.7rem;
     }
   }
 }
 
-// .slide_page_indicator {
-//   .swiper-pagination-bullet {
-//     border: 2px solid #29422C;
-//     background-color: transparent;
-//     width: 1rem;
-//     height: 1rem;
-//     opacity: 1;
-//   }
+.bullets-Portfolio,
+.Portfolio,
+.page_indicator {
+  .swiper-pagination-bullet {
+    border: 1px solid #fff;
+    background-color: transparent;
+    width: 1rem;
+    height: 1rem;
+    opacity: 1;
+  }
 
-//   .swiper-pagination-bullet-active {
-//     background-color: #29422C;
-//     width: 1rem;
-//     height: 1rem;
-//   }
-// }
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.lp_roomcard {
+  .swiper-pagination-bullet {
+    border: 1px solid #fff;
+    background-color: transparent;
+    width: 0.7rem;
+    height: 0.7rem;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+}
 
 .card_swiper {
   .swiper-button-prev,
   .swiper-button-next {
-    color: #f69f2b;
-    border: #f69f2b solid 2px;
+    color: #29422c;
+    // border: #f69f2b solid 2px;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
@@ -238,16 +284,19 @@ body {
     &.swiper-button-disabled {
       display: none;
     }
+    .swiper-button-next:active {
+      background-color: #fff;
+    }
 
     @media screen and (max-width: 768px) {
       width: 1.5rem;
       height: 1.5rem;
     }
 
-    &:hover {
-      background-color: #29422c;
-      color: #f69f2b;
-    }
+    // &:hover {
+    //   background-color: #29422c;
+    //   color: #f69f2b;
+    // }
 
     &::after {
       font-size: 1.4rem;
@@ -257,5 +306,24 @@ body {
         font-size: 0.8rem;
       }
     }
+  }
+}
+
+.slider-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #29422c;
+  background-color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  cursor: pointer;
+  &:hover {
+    scale: 1.05;
+  }
+  &:active {
+    scale: 0.95;
   }
 }

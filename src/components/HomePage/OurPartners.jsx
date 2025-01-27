@@ -5,7 +5,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import makemytrip from "../../../public/partners/makemytrip.png";
-import trivago from "../../../public/partners/trivago.png";
+import trivago from "../../../public/partners/Trivago.png";
 import tripadvisor from "../../../public/partners/tripadvisor-logo.png";
 import booking from "../../../public/partners/booking.png";
 import goibibo from "../../../public/partners/goibibo-logo.png";

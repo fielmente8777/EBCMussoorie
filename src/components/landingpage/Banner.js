@@ -1,36 +1,32 @@
 import Image from "next/image";
-import ContactUsForm from "../ContactUsForm";
+import ContactUsForm2 from "../ContactUsForm2";
 
 const Banner = ({ BannerImage }) => {
   return (
     <div className="max-w-[1600px] w-full mx-auto ">
-      <div className="bg-[#D5D5D5] relative lg:aspect-[4/1.45] w-full aspect-[2/5]">
+      <div className="bg-[#D5D5D5] relative lg:aspect-[4/1.7] w-full aspect-[2/5]">
         <Image
           src={BannerImage}
           alt="banner"
           className="object-cover object-bottom-[10%]"
           fill
-        // width={600}
-        // height={400}
         />
-        <div className="absolute top-0 flex justify-center items-center left-0 w-full h-full bg-black/50 py-5">
+        <div className="absolute top-0 flex justify-center items-center left-0 w-full h-full bg_gradient py-5">
           <div className="maxwidth">
             <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-center h-full gap-4 ">
               <div className="flex flex-col gap-4">
-                <h2 className="md:text-5xl/[3.5rem] text-3xl text-white">
-                  Escape to EBC Mussoorie – Your Mountain Retreat Awaits!
+                <h2 className="heading_1 text-white">
+                  Escape to EBC Mussoorie Your Mountain Retreat Awaits!
                 </h2>
-                <p className="md:text-2xl text-xl mt-4 text-white">
-                  Nestled in the heart of the Queen of Hills, our resort offers
-                  breathtaking views, world-class amenities, and personalized
-                  experiences. Whether it’s a peaceful getaway, a romantic
-                  escape, or a family vacation, EBC Mussoorie promises
-                  unforgettable moments.
+                <p className="desc_1 italic mt-4 text-white">
+                  Nestled in the heart of Mussoorie, EBC offers stunning views,
+                  top-notch amenities, and personalized experiences for a
+                  peaceful getaway, romantic escape, or family vacation.
                 </p>
               </div>
               <div className="flex lg:justify-end lg:items-end items-center justify-center">
                 <div className=" w-full max-w-md">
-                  <ContactUsForm />
+                  <ContactUsForm2 title={"Contact Us Today!"} description={"Experience Luxury at EBC Mussoorie!"} />
                 </div>
               </div>
             </div>

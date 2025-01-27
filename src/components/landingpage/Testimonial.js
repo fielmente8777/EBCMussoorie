@@ -1,18 +1,21 @@
-import React from 'react'
-import TestimonialCard from './TestimonialCard'
+import React from "react";
+import TestimonialCard from "./TestimonialCard";
+import Section from "../Section";
+import Container from "../Container";
+import BorderLine from "../BorderLine";
 
 const Testimonial = () => {
-    return (
-        <div className='bg-cover bg-center bg-no-repeat back max-md:mt-4'>
-
-
-
-            <div className=' w-full h-full flex justify-center items-center py-24 max-md:p-4'>
-                <TestimonialCard />
-
-            </div>
+  return (
+    <Section>
+      <Container className="lg:py-12 py-6">
+        <div className="flex flex-col items-center gap-6 py-8 bg-[#F1EECB] rounded-lg w-full">
+          <BorderLine />
+          <h2 className="heading_2">Testimonials</h2>
+          <TestimonialCard />
         </div>
-    )
-}
+      </Container>
+    </Section>
+  );
+};
 
-export default Testimonial
+export default Testimonial;

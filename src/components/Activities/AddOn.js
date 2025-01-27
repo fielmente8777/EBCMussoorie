@@ -51,24 +51,6 @@ const AddOn = () => {
   ];
 
   return (
-    // <div className="maxwidth  max-md:px-3 ">
-    //   <div className="flex flex-col gap-10">
-    //     <div className="flex flex-col gap-5  items-center">
-    //       <h2 className="text-[42px] max-md:text-center text-white font-medium leading-[45px]">
-    //         Paid Add-ons
-    //       </h2>
-    //       {/* <p className=" text-center max-md:text-justify text-white">Experience luxury amidst the serene hills at Everest Base Camp with a range of
-    //             to choose from, including a fine dining restaurant, outdoor activities, and luxury accommodations,
-    //             we provide the perfect escape from the hustle and bustle of everyday life.</p> */}
-    //     </div>
-
-    //     <div className="rounded-lg overflow-hidden">
-    //       {datas.map((data, index) => (
-    //         <SpecilizationCard key={index} cardData={data} index={index} />
-    //       ))}
-    //     </div>
-    //   </div>
-    // </div>
     <div className="maxwidth mx-auto flex flex-col lg:gap-10 gap-4 max-md:px-3 py-12">
       <h2 className="text-center md:text-5xl text-2xl text-white">
         Paid Add-ons

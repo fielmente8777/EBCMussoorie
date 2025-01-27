@@ -1,85 +1,134 @@
 "use client";
-import SpecilizationCard from "./SpecilizationCard";
-import c1 from "../../../public/images/01 Picnic_11zon.jpg";
-
-import Picnic1 from "../../../public/picnic/_MG_0636.webp";
-import Picnic2 from "../../../public/picnic/_MG_1465.webp";
-import Picnic3 from "../../../public/picnic/IMG_0620.webp";
-import Picnic4 from "../../../public/picnic/_MG_2878.webp";
-
-import BBQ1 from "../../../public/images/Barbecue1.webp";
-import BBQ2 from "../../../public/images/34 Barbeque_11zon.jpg";
-import BBQ3 from "../../../public/images/about1.jpg";
-
-import BornFire1 from "../../../public/bornfire/dji_fly_20230402_033354_140_1680447488677_photo.webp";
-import BornFire2 from "../../../public/bornfire/bornfire.webp";
-import BornFire3 from "../../../public/bornfire/bornfire.webp";
-import BornFire4 from "../../../public/bornfire/38Bonfire_11zon.webp";
-
-import Wilderness1 from "../../../public/bornfire/33Bonfire_11zon.webp";
-import Wilderness2 from "../../../public/bornfire/treking.webp";
+import { SpecilizationCardNew } from "../Card/index";
 
 import { usePathname } from "next/navigation";
 import Section from "../Section";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { NextButton, PrevButton } from "../../icons/icons";
+import Container from "../Container";
+import BorderLine from "../BorderLine";
+import { imgSrc } from "../../utils/data";
+import PopupForm from "../PopupForm";
+import { useState } from "react";
+
 const OurSpecialization = () => {
   const pathname = usePathname();
+  const [showModal, setShowModal] = useState(false);
 
   const datas = [
     {
-      heading: "Blissful Picnics with the Nature",
-      para: "Enjoy a peaceful picnic amidst the beauty of nature, with a basket brimming with delightful snacks and refreshing beverages. Our idyllic property offers the ideal setting for a relaxing afternoon, spent cherishing moments with friends and family.",
-      images: [Picnic1, Picnic2, Picnic3, Picnic4],
+      heading: "Picnic in the Meadows!",
+      para: "Enjoy a peaceful picnic amidst the beauty of nature, with a basket brimming with delightful snacks and refreshing beverages. Our idyllic property offers the ideal setting for a relaxing afternoon, spent cherishing moments with friends and family. Let the serene surroundings and gentle breeze enhance your perfect outdoor escape.",
+      images: [
+        imgSrc + "activities/picnic/img1.webp",
+        imgSrc + "activities/picnic/img2.webp",
+        imgSrc + "activities/picnic/img3.webp",
+      ],
       button: "Book Now",
     },
     {
-      heading: "Gather 'Round for a BBQ Feast!",
-      para: "Join us for an enchanting evening of grilling under the stars. Surrounded by the tranquil beauty of our property, enjoy a memorable night filled with warmth and camaraderie. As the fire crackles, savour a delightful array of your favourite grilled meats and vegetables, creating the perfect backdrop for relaxation and connection with family and friends.",
-      images: [BBQ1, BBQ2, BBQ3],
+      heading: "Barbecue",
+      para: "Join us for an enchanting evening of grilling under the stars. Surrounded by the tranquil beauty of our property, enjoy a memorable night filled with warmth. As the fire crackles, savour a delightful array of your favourite grilled meats and vegetables, creating the perfect backdrop for relaxation and connection with family and friends.",
+      images: [
+        imgSrc + "activities/barbecue/img1.webp",
+        imgSrc + "activities/barbecue/img2.webp",
+        imgSrc + "activities/barbecue/img3.webp",
+      ],
       button: "Book Now",
     },
     {
-      heading: "Stories & S'mores by the Bonfire",
-      para: "Experience crackling fire under the starlit sky and share stories and quiet moments with your loved ones. It's an ideal way to unwind after a day of exploring Mussoorie's natural beauty, providing a warm, communal setting that embodies the spirit of adventure and relaxation.",
-      images: [BornFire1, BornFire4, BornFire2, BornFire3],
+      heading: "Bonfire",
+      para: "Experience the magic of a private bonfire under the starlit sky, creating cherished moments with your loved ones. Unwind after exploring Mussoorie's natural beauty in the warmth of your own intimate setting, fostering both adventure and relaxation. Let the crackling fire and peaceful atmosphere make your evening truly unforgettable.",
+      images: [
+        imgSrc + "activities/bonfire/img1.webp",
+        imgSrc + "activities/bonfire/img2.webp",
+        imgSrc + "activities/bonfire/img3.webp",
+      ],
       button: "Book Now",
     },
     {
       heading: "Explore the Wilderness",
-      para: "Situated in the serene hills of Mussoorie, explore the spectacular views of the Himalayas from the George Everest Peak trek. The trek promises an immersive experience in nature's tranquillity, complemented by luxury camping facilities. It's an ideal getaway for those looking to blend outdoor adventure with comfortable amenities in a picturesque mountain setting.",
-      images: [Wilderness1, Wilderness2],
+      para: "Embark on the George Everest Peak trek in Mussoorie's serene hills, with our expert guide offering direction and companionship. Enjoy a sandwich, tea, and water while exploring hidden gems and stunning Himalayan views. Experience the perfect blend of adventure and comfort with luxury glamping in nature’s beauty.",
+      images: [
+        imgSrc + "activities/trekking/img1.webp",
+        imgSrc + "activities/trekking/img2.webp",
+        imgSrc + "activities/trekking/img3.webp",
+      ],
       button: "Book Now",
     },
   ];
 
   return (
-    <div className="maxwidth mx-auto flex flex-col gap-10 max-md:px-3 ">
-      {pathname === "/landingpage" && (
-        <div className="flex flex-col gap-5  items-center">
-          <h2 className="text-[42px] max-md:text-center text-white font-medium leading-[45px]">
-            OUR AMENITIES
-          </h2>
-          <p className=" text-center max-md:text-justify text-white">
-            Experience luxury amidst the serene hills at Everest Base Camp with
-            a range of to choose from, including a fine dining restaurant,
-            outdoor activities, and luxury accommodations, we provide the
-            perfect escape from the hustle and bustle of everyday life.
-          </p>
-        </div>
-      )}
+    <Section>
+      <Container>
+        <div className="flex flex-col gap-4 py-10">
+          {pathname === "/ebclanding/" && (
+            <>
+              <BorderLine />
+              <h2 className="heading_2 text-center text-white font-normal">
+                Our Specialization
+              </h2>
+              <p className=" text-center desc_1 text-white font-normal">
+                Expertly Crafted Experiences Tailored to Every Adventurer&apos;s
+                Passion.
+              </p>
+            </>
+          )}
 
-      <div className="rounded-sm overflow-hidden">
-        {datas.map((data, index) => (
-          <Section key={index}>
-            <SpecilizationCard
-              cardData={data}
-              index={index}
-              aspectRatio={"lg:aspect-[2/1.4] aspect-[2/1.5]"}
+          <div className="lg:mt-8 mt-4">
+            <Swiper
+              speed={1000}
+              pagination={{
+                el: ".bullets-Portfolio",
+                clickable: true,
+              }}
+              slidesPerView={1}
+              spaceBetween={10}
+              modules={[Navigation, Pagination]}
+              navigation={{
+                nextEl: ".swiperButtonNext",
+                prevEl: ".swiperButtonPrev",
+              }}
+              className="card_swiper"
+            >
+              {datas.map((data, index) => (
+                <SwiperSlide key={index}>
+                  <SpecilizationCardNew
+                    cardData={data}
+                    index={index}
+                    aspectRatio={"lg:aspect-[2/1.35] aspect-[4/2.8]"}
+                    setShowModal={setShowModal}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+          <div className="flex gap-2 justify-center w-fit mx-auto lg:mt-8 h-8 items-center">
+            <button
+              className={`swiperButtonPrev slider-button disabled:opacity-50`}
+            >
+              <PrevButton />
+            </button>
+            <div
+              className={`flex items-center justify-center gap-1 bullets-Portfolio`}
             />
-          </Section>
-        ))}
-      </div>
-    </div>
+            <button
+              className={`swiperButtonNext slider-button disabled:opacity-50`}
+            >
+              <NextButton />
+            </button>
+          </div>
+        </div>
+      </Container>
+      {showModal && (
+        <PopupForm setShowModal={setShowModal} showModal={showModal} />
+      )}
+    </Section>
   );
 };
 

@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import star from "../../../public/images/start.svg";
 import quotes from "../../../public/quotes.png";
+import { NextButton, PrevButton, Star } from "../../icons/icons";
 const TestimonialCard = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -31,118 +32,64 @@ const TestimonialCard = () => {
     },
   ];
   return (
-    <div className="flex flex-col px-11 py-3 rounded-sm bg-[#D5D5D5] bg-opacity-70 max-w-[610px] max-md:w-full max-md:px-5">
-      <div className="self-center text-5xl font-bold text-center text-[#29422C] leading-[56.16px] max-md:text-4xl">
-        Testimonials
-      </div>
-      {/* <div className="mt-4 text-lg leading-7 text-center text-[#29422C] max-md:max-w-full">
-        {" "}
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliqu.
-      </div> */}
-
-      <Swiper
-        loop={true}
-        autoplay={{
-          delay: 3000,
-        }}
-        speed={1000}
-        pagination={{
-          el: "#bullets-Portfolio",
-          bulletActiveClass: "swiper-pagination-bullet-active",
-        }}
-        slidesPerView={1}
-        spaceBetween={20}
-        navigation={{
-          prevEl: ".prev-btn",
-          nextEl: ".next-btn",
-        }}
-        modules={[Pagination, Autoplay, Navigation]}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        breakpoints={
-          {
-            // 768: {
-            //     slidesPerView: ,
-            //     spaceBetween: 20,
-            // },
-            //   1024: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 20,
-            //   },
-          }
-        }
-        className="w-full h-full"
-      >
-        {TestimonialData.map((data, index) => {
-          return (
-            <SwiperSlide key={index} className="">
-              <div className="flex flex-col justify-center px-4 py-4 mt-3 bg-white rounded-sm max-md:pr-5 max-md:max-w-full">
-                <div className="flex gap-2 max-md:flex-wrap">
-                  <div className="flex gap-1 max-md:justify-center max-md:w-full">
-                    <div className="relative aspect-[1/1] w-10 h-8">
-                      <Image src={quotes} alt="alt" fill className="object-cover" />
-                    </div>
+    <div className="block w-full overflow-hidden">
+      <div className="flex items-center justify-center gap-[56px] w-full lg:px-4">
+        <button
+          className={`prev-btn mb-16 disabled:opacity-50 lg:flex hidden w-[2.5rem] aspect-square rounded-full bg-white text-primary items-center justify-center hover:scale-105 active:scale-95`}
+        >
+          <PrevButton />
+        </button>
+        <Swiper
+          loop={true}
+          autoplay={{
+            delay: 3000,
+          }}
+          speed={900}
+          pagination={{
+            el: ".Portfolio",
+          }}
+          slidesPerView={1}
+          spaceBetween={20}
+          navigation={{
+            prevEl: ".prev-btn",
+            nextEl: ".next-btn",
+          }}
+          modules={[Pagination, Autoplay, Navigation]}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          className="w-full h-full"
+        >
+          {TestimonialData.map((data, index) => {
+            return (
+              <SwiperSlide key={index} className="">
+                <div className="flex flex-col items-center gap-4 justify-center px-5">
+                  <div className="flex items-center gap-1 mt-3">
+                    {[1, 2, 3, 4, 5].map((index) => (
+                      <Star key={index} />
+                    ))}
                   </div>
-                  <div className="flex flex-col items-center max-md:max-w-full">
-                    <div className="self-stretch text-lg leading-7 text-center text-[#29422C] max-md:max-w-full">
-                      <span className="">{data.text}...</span>
-                      <Link
-                        href={""}
-                        className="font-bold text-[#29422C] underline"
-                      >
-                        Read More
-                      </Link>
-                    </div>
-                    <div className="flex gap-1 mt-3">
-                      {[1, 2, 3, 4, 5].map((index) => (
-                        <Image
-                          alt="image"
-                          key={index}
-                          loading="lazy"
-                          src={star}
-                          className="shrink-0 w-4 aspect-square fill-[#29422C]"
-                          width={600}
-                          height={400}
-                        />
-                      ))}
-                    </div>
-                    <div className="mt-3 text-lg font-bold leading-6 text-center text-[#29422C]">
+                  <div className="flex flex-col gap-4 items-center">
+                    <p className="desc_1 italic text-center text-primary">
+                      {data.text}
+                    </p>
+
+                    <h3 className="desc_1 text-center font-medium text-primary">
                       {data.name}
-                    </div>
+                    </h3>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-
-      <div className="flex gap-2 items-center self-center mt-3">
-        {[1, 2, 3, 4, 5].map((_, index) => (
-          <div
-            key={index}
-            className={`shrink-0 self-stretch ${
-              index === activeIndex
-                ? "w-3 h-3 bg-[#29422C]"
-                : "w-3 h-3 border border-[#29422C]"
-            } rounded-full`}
-          />
-        ))}
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <button
+          className={`next-btn mb-16 disabled:opacity-50 lg:flex hidden w-[2.5rem] aspect-square rounded-full bg-white text-primary items-center justify-center hover:scale-105 active:scale-95`}
+        >
+          <NextButton />
+        </button>
       </div>
-      {/* <div className="flex gap-2 items-center self-center mt-6">
-
-
-                {
-                    [1, 2, 3, 4, 5].map((roomImage, index) => (
-
-                        {if not current slide? <div id="bullets-Portfolio" className="shrink-0 self-stretch my-auto w-3 h-3 rounded-full border border-[#29422C] border-solid stroke-[0.5px]" />
-                        :
-                        <div className="shrink-0 self-stretch w-4 h-4 bg-[#29422C] rounded-full" />
-
-
-                    ))
-                }
-            </div> */}
+      <div
+        className={`flex items-center justify-center mt-6 gap-1 Portfolio`}
+      />
     </div>
   );
 };

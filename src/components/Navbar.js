@@ -5,7 +5,13 @@ import Image from "next/image";
 import { MdCall } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Face, Insta, Trip } from "../icons/icons.jsx";
+import {
+  BookNowIcon,
+  Face,
+  Insta,
+  OutLineCall,
+  Trip,
+} from "../icons/icons.jsx";
 import PopupForm from "./PopupForm";
 
 const navLinks = [
@@ -49,7 +55,7 @@ const Navbar = () => {
         <div className="maxwidth mx-auto flex flex-col lg:pb-3">
           <>
             <div
-              className={`grid items-center py-3 px-6 ${
+              className={`grid items-center py-3 lg:px-6 ${
                 pathname === "/ebclanding/" || pathname === "/thank-you/"
                   ? "grid-cols-2"
                   : "grid-cols-3"
@@ -99,22 +105,44 @@ const Navbar = () => {
                 <span className="sr-only">call us on : +9191190 01126</span>
                 <span className="my-auto text-[#acacac]">+91-91190 01126</span>
               </Link> */}
-              <div className="h-full lg:flex items-center hidden">
-                <div className="w-full">
-                  <hr />
+              {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+                <div className="h-full hidden lg:block">
+                  <div className="flex  items-start  mt-2 mb-[15px]">
+                    <Link
+                      href={"tel:+919119001126"}
+                      className="hidden xl:flex poppins italic items-center gap-2 my-auto w-max text-white"
+                    >
+                      <OutLineCall />
+                      <span className="sr-only">
+                        call us on : +9191190 01126
+                      </span>
+                      <span className="my-auto  text-white">
+                        +91-91190 01126
+                      </span>
+                    </Link>
+                  </div>
+                  <div className="w-full mt-5">
+                    <hr />
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="h-full lg:flex items-center hidden">
+                  <div className="w-full">
+                    <hr />
+                  </div>
+                </div>
+              )}
               {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
                 <div
                   // href={"/"}
-                  className="flex h-[120px] relative justify-center  max-md:ml-0 max-md:w-full"
+                  className="flex lg:h-[120px] h-[70px] relative aspect-[4/1.5] lg:aspect-[4/1.2] lg:justify-center  max-md:ml-0 max-md:w-full"
                 >
                   <Image
                     loading="lazy"
                     src={Logo}
                     alt="ebc"
                     fill
-                    className="grow shrink-0 max-w-full w-[400px]"
+                    className="object-contain"
                   />
                   <span className="sr-only">home</span>
                 </div>
@@ -137,10 +165,13 @@ const Navbar = () => {
                 <div className="flex  items-start justify-end mb-[15px]">
                   {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
                     <button
-                      className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
+                      className="rounded-lg Cammron flex items-center gap-2 justify-center px-6 py-2 text-[1.2rem]/[2rem] text-primary bg-white"
                       onClick={() => setShowModal(!open)}
                     >
                       Book Now
+                      <span>
+                        <BookNowIcon />
+                      </span>
                     </button>
                   ) : (
                     <Link
@@ -148,7 +179,7 @@ const Navbar = () => {
                         "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
                       }
                       target="_blank"
-                      className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
+                      className="rounded-sm Cammron flex items-center justify-center w-[150px] py-2 text-[1.375rem]/[2rem] text-primary bg-white"
                     >
                       Book Now
                     </Link>
@@ -158,54 +189,13 @@ const Navbar = () => {
                   <hr />
                 </div>
               </div>
-              {/* <div className="hidden xl:flex flex-col items-end max-md:ml-0">
-                <div className="flex justify-end gap-2 self-stretch my-auto max-md:mt-10">
-                  <div className="w-[20%]"></div>
-                  {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
-                    ""
-                  ) : (
-                    <div className="flex gap-3 px-5 my-auto">
-                      {socialLinks.map((link) => (
-                        <Link
-                          key={link.name}
-                          href={link.href}
-                          target="_blank"
-                          className="h-10 w-10 flex justify-center items-center rounded-full bg-white"
-                        >
-                          <span className="sr-only">{link.name}</span>
-                          {link.icon}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                  {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
-                    <button
-                      className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
-                      onClick={() => setShowModal(!open)}
-                    >
-                      Book Now
-                    </button>
-                  ) : (
-                    <Link
-                      href={
-                        "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
-                      }
-                      target="_blank"
-                      className="rounded-sm flex items-center justify-center w-[150px] py-2 text-lg font-semibold tracking-normal leading-7 text-[#29422C] bg-white"
-                    >
-                      Book Now
-                    </Link>
-                  )}
-                </div>
-              </div> */}
-
               <div className="lg:hidden flex justify-end">
                 <Link
                   href={"tel:+919119001126"}
                   className="flex items-center gap-2 px-5 my-auto text-lg leading-7 text-[#acacac]"
                 >
                   {/* <MdCall size={20} /> */}
-                  <CallNavIcon />
+                  <OutLineCall />
                   <span className="sr-only">call us on : +9191190 01126</span>
                   <span className="my-auto text-[#acacac] xl:block hidden">
                     +91-91190 01126

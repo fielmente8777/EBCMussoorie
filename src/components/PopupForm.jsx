@@ -2,7 +2,7 @@
 import { useEffect, useCallback, useRef } from "react";
 import React from "react";
 import { IoCloseSharp } from "react-icons/io5";
-import ContactUsForm from "./ContactUsForm";
+import ContactUsForm2 from "./ContactUsForm2";
 const PopupForm = ({ setShowModal, showModal }) => {
   // useRef to store intervalId
   const intervalIdRef = useRef(null);
@@ -37,14 +37,16 @@ const PopupForm = ({ setShowModal, showModal }) => {
       {showModal && (
         <section className="fixed z-50 w-full h-screen bg-[rgb(0,0,0)] bg-opacity-70 top-0 left-0">
           <article className="flex justify-center items-center h-full">
-            <div className="flex flex-col gap-3 max-w-[400px] w-full shadow-2xl p-4 relative rounded-md">
+            <div
+              className={`flex flex-col gap-3 max-w-[400px] w-full shadow-2xl p-4 relative rounded-lg transform transition-transform duration-500 ease-in-out ${showModal ? "scale-100" : "scale-95"}`}
+            >
               <button
                 onClick={closeModal}
                 className="absolute top-[22px] lg:top-0 right-[3px] w-8 h-8 flex justify-center items-center text-lg rounded-full bg-[#172519] hover:bg-[#29422C]/90 font-bold text-[#D5D5D5]"
               >
                 <IoCloseSharp />
               </button>
-              <ContactUsForm />
+              <ContactUsForm2 title={"Contact Us Today!"} description={"Experience Luxury at EBC Mussoorie!"} />
             </div>
           </article>
         </section>
