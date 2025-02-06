@@ -33,7 +33,7 @@ const TestimonialCard = () => {
   ];
   return (
     <div className="block w-full overflow-hidden">
-      <div className="flex items-center justify-center gap-[56px] w-full lg:px-4">
+      <div className="flex items-center justify-center lg:gap-20 w-full lg:px-14">
         <button
           className={`prev-btn mb-16 disabled:opacity-50 lg:flex hidden w-[2.5rem] aspect-square rounded-full bg-white text-primary items-center justify-center hover:scale-105 active:scale-95`}
         >
