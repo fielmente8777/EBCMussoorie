@@ -17,6 +17,10 @@ const ContactUsForm2 = ({ title, description }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  const [captcha, setCaptcha] = useState("");
+  const [enterCaptcha, setEnterCaptcha] = useState("");
+  const [canSubmitForm, setCanSubmitForm] = useState(false)
+
   const handlePhoneChange = (e) => {
     const value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
     if (value.length <= 10) {
@@ -32,6 +36,26 @@ const ContactUsForm2 = ({ title, description }) => {
       !emailRegex.test(value) ? "Please enter a valid email address" : ""
     );
   };
+
+  const generateCaptcha = () => {
+    const chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let captcha = "";
+    for (let i = 0; i < 6; i++) {
+      captcha += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return captcha;
+  };
+
+  const handleCaptcha = () => {
+    setCaptcha(generateCaptcha());
+  };
+
+
+  const VerifyCaptcha = () => {
+    if (captcha === enterCaptcha) {
+      setCanSubmitForm(true);
+    }
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormRes(true);
@@ -42,7 +66,6 @@ const ContactUsForm2 = ({ title, description }) => {
       setFormRes(false);
       return;
     }
-
     try {
       setLoader(true);
       const data = await axios.post(
@@ -70,6 +93,8 @@ const ContactUsForm2 = ({ title, description }) => {
         setUserHotelName("");
 
         setUserPhone("");
+        setCaptcha("");
+        setEnterCaptcha("")
       } else {
         setLoader(false);
         setPopupMsg("Something went wrong!");
@@ -108,7 +133,7 @@ const ContactUsForm2 = ({ title, description }) => {
             name="countryCode"
             value={countryCode}
             onChange={(e) => setCountryCode(e.target.value)}
-            className="w-20 bg-white italic rounded-lg text-textdark focus:outline-none"
+            className="w-20 bg-white italic rounded-lg text-[#A3A3A3]  focus:outline-none"
           >
             {countries.map((country, index) => (
               <option
@@ -174,19 +199,19 @@ const ContactUsForm2 = ({ title, description }) => {
                 {data.tag === "div"
                   ? data.content
                   : React.createElement(data.tag, {
-                      id: data.name,
-                      type: data.type,
-                      name: data.name,
-                      value: data.value,
-                      onChange: data.onChange,
-                      placeholder: data.placeholder,
-                      required: data.required,
-                      autoComplete: "off",
-                      spellCheck: "false",
-                      rows: "4",
-                      className:
-                        "w-full rounded-lg italic bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
-                    })}
+                    id: data.name,
+                    type: data.type,
+                    name: data.name,
+                    value: data.value,
+                    onChange: data.onChange,
+                    placeholder: data.placeholder,
+                    required: data.required,
+                    autoComplete: "off",
+                    spellCheck: "false",
+                    rows: "4",
+                    className:
+                      "w-full rounded-lg italic bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
+                  })}
               </div>
               {data.name === "phone" && errorMessage && (
                 <p className="text-sm text-red-500 mt-2">{errorMessage}</p>
@@ -197,15 +222,50 @@ const ContactUsForm2 = ({ title, description }) => {
             </div>
           ))}
         </div>
-        <div className="mt-2">
-          <button
-            type="submit"
-            className="text-white Cammron rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
-            disabled={formRes}
-          >
-            {formRes ? "Submitting..." : "Submit"}
-          </button>
-        </div>
+        {captcha &&
+          <div className="italic flex flex-col py-2">
+            <div className="flex justify-between text-[#A3A3A3] ">
+
+              <p>Enter captcha code :</p>
+              <div className="bg-slate-50 px-2 rounded-md">
+                {captcha}
+              </div>
+            </div>
+
+            <input type="text" required placeholder="Please enter the captcha here" onChange={(e) => setEnterCaptcha(e.target.value)} className="mt-2 text-[#A3A3A3]  outline-none text-center bg-transparent border-b border-black" value={enterCaptcha} />
+
+          </div>}
+
+        {!canSubmitForm ?
+          <>
+            {captcha ? <button
+              onClick={VerifyCaptcha}
+              className="text-white mt-2 rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out">
+              Verify captcha
+            </button>
+              :
+              <button
+                onClick={handleCaptcha}
+                disabled={formRes}
+                className="text-white mt-2 rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
+              >
+                Get Captcha {captcha}
+              </button>
+            }
+          </>
+          :
+          <div className="mt-2">
+
+            <button
+              type="submit"
+              className="text-white Cammron rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
+              disabled={formRes}
+            >
+              {formRes ? "Submitting..." : "Submit"}
+            </button>
+
+          </div>
+        }
       </form>
     </div>
   );
