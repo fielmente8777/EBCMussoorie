@@ -120,7 +120,7 @@ const Footer = () => {
     },
     {
       name: "Everest Base Camp Mussoorie, Park Estate, Hathipaon Road, Mussoorie, Uttarakhand, 248179",
-      link: "",
+      link: "#",
     },
   ];
 
@@ -128,7 +128,7 @@ const Footer = () => {
 
   return (
     <>
-      {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+      {pathname === "/ebclanding/" ? (
         <footer className="lg:py-12 py-8 bg-bgClr">
           <Container>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 ">
@@ -143,7 +143,7 @@ const Footer = () => {
                 <ul className="flex flex-col gap-4 lg:mt-2 max-w-[34rem] w-full">
                   {contactLinks2.map((item, i) => (
                     <li className="desc_2 italic text-primary" key={i}>
-                      {item.name}
+                      <Link href={item.link}>{item.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -159,101 +159,109 @@ const Footer = () => {
         </footer>
       ) : (
         <div>
-          <SectionWithContainer>
+          <SectionWithContainer
+            className={pathname === "/thank-you/" ? "!p-3" : ""}
+          >
             <div className="flex flex-col items-center justify-center gap-5 w-full">
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-13 gap-8 w-full pb-3">
-                <div className="flex flex-col gap-5 w-full">
-                  <Link
-                    href="/"
-                    className="w-full relative h-[200px] aspect-[4/1] "
-                  >
-                    <Image
-                      src={Logo}
-                      alt="ebcmussoorie"
-                      fill
-                      className="object-contain"
-                    />
-                  </Link>
-                  {/* social links */}
-                  <div className="flex items-center justify-between gap-5">
-                    {socialLinks.map((link) => (
+              {pathname === "/thank-you/" ? (
+                ""
+              ) : (
+                <>
+                  <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-13 gap-8 w-full pb-3">
+                    <div className="flex flex-col gap-5 w-full">
                       <Link
-                        key={link.name}
-                        href={link.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-2 text-[#acacac] cursor-pointer w-11 h-11 shadow-inner rounded-full flex items-center justify-center border border-[#F69F2B] transition-all duration-[.3s] hover:bg-[#D5D5D5]/60 hover:text-[#29422c] text-[18px]  py-1"
+                        href="/"
+                        className="w-full relative h-[200px] aspect-[4/1] "
                       >
-                        <span className="sr-only">{link.name}</span>
-                        <span>{link.icon}</span>
+                        <Image
+                          src={Logo}
+                          alt="ebcmussoorie"
+                          fill
+                          className="object-contain"
+                        />
                       </Link>
-                    ))}
+                      {/* social links */}
+                      <div className="flex items-center justify-between gap-5">
+                        {socialLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-2 text-[#acacac] cursor-pointer w-11 h-11 shadow-inner rounded-full flex items-center justify-center border border-[#F69F2B] transition-all duration-[.3s] hover:bg-[#D5D5D5]/60 hover:text-[#29422c] text-[18px]  py-1"
+                          >
+                            <span className="sr-only">{link.name}</span>
+                            <span>{link.icon}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    {/* quick links */}
+                    <div className="flex flex-col gap-5 w-full">
+                      <h2 className="lg:text-3xl text-2xl font-semibold text-white uppercase">
+                        Quick Links
+                      </h2>
+                      <div className="flex flex-col lg:gap-5 gap-3">
+                        {quickLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.link}
+                            className=" text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:text-[#D5D5D5] text-base rounded-sm py-1"
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    {/* policy links */}
+                    <div className="flex flex-col gap-5 w-full">
+                      <h2 className="lg:text-3xl text-2xl font-normal text-white uppercase">
+                        Our policy
+                      </h2>
+                      <div className="flex flex-col lg:gap-5 gap-3">
+                        {policyLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.link}
+                            className=" text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:text-[#D5D5D5]  text-base rounded-sm py-1"
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    {/* contact */}
+                    <div className="flex flex-col gap-5 w-full ">
+                      <h2 className="lg:text-3xl text-2xl font-normal text-white uppercase">
+                        Contact Us
+                      </h2>
+                      <div className="flex flex-col lg:gap-5 gap-3">
+                        {contactLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className=" text-white italic cursor-pointer transition-all duration-[.3s]  hover:text-[#d5d5d5] text-base rounded-sm py-1"
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                        <Link
+                          href="https://maps.app.goo.gl/fTBmqjBDoYdGdtmC9"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-10 py-3 max-w-full text-base flex items-center justify-center font-medium   text-[#29422C] bg-white rounded-sm border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
+                        >
+                          View Map
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                {/* quick links */}
-                <div className="flex flex-col gap-5 w-full">
-                  <h2 className="lg:text-3xl text-2xl font-semibold text-white uppercase">
-                    Quick Links
-                  </h2>
-                  <div className="flex flex-col lg:gap-5 gap-3">
-                    {quickLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.link}
-                        className=" text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:text-[#D5D5D5] text-base rounded-sm py-1"
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                {/* policy links */}
-                <div className="flex flex-col gap-5 w-full">
-                  <h2 className="lg:text-3xl text-2xl font-normal text-white uppercase">
-                    Our policy
-                  </h2>
-                  <div className="flex flex-col lg:gap-5 gap-3">
-                    {policyLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.link}
-                        className=" text-white italic capitalize cursor-pointer transition-all duration-[.3s] hover:text-[#D5D5D5]  text-base rounded-sm py-1"
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                {/* contact */}
-                <div className="flex flex-col gap-5 w-full ">
-                  <h2 className="lg:text-3xl text-2xl font-normal text-white uppercase">
-                    Contact Us
-                  </h2>
-                  <div className="flex flex-col lg:gap-5 gap-3">
-                    {contactLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className=" text-white italic cursor-pointer transition-all duration-[.3s]  hover:text-[#d5d5d5] text-base rounded-sm py-1"
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                    <Link
-                      href="https://maps.app.goo.gl/fTBmqjBDoYdGdtmC9"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-10 py-3 max-w-full text-base flex items-center justify-center font-medium   text-[#29422C] bg-white rounded-sm border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
-                    >
-                      View Map
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full h-[1.5px]  bg-[#F1EECB]" />
-              <div className="pt-4">
+                  <div className="w-full h-[1.5px]  bg-[#F1EECB]" />
+                </>
+              )}
+              <div className={pathname === "/thank-you/" ? "" : "pt-4"}>
                 <p className="text-white capitalize flex items-center max-md:flex-col justify-center italic gap-4">
                   <span className="flex items-center justify-center gap-2">
                     <CopyRightIcon /> {currentYear} EBC Mussoorie

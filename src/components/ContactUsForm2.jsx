@@ -10,16 +10,15 @@ const ContactUsForm2 = ({ title, description }) => {
   const [userEmail, setUserEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
   const [userPhone, setUserPhone] = useState("");
-  const [userInterestedIn, setUserInterestedIn] = useState("");
   const [countryCode, setCountryCode] = useState("+91");
   const [formRes, setFormRes] = useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   const [captcha, setCaptcha] = useState("");
   const [enterCaptcha, setEnterCaptcha] = useState("");
-  const [canSubmitForm, setCanSubmitForm] = useState(false)
+  const [canSubmitForm, setCanSubmitForm] = useState(false);
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handlePhoneChange = (e) => {
     const value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
@@ -43,69 +42,47 @@ const ContactUsForm2 = ({ title, description }) => {
     for (let i = 0; i < 6; i++) {
       captcha += chars[Math.floor(Math.random() * chars.length)];
     }
-    return captcha;
+    setCaptcha(captcha);
   };
 
-  const handleCaptcha = () => {
-    setCaptcha(generateCaptcha());
-  };
-
-
-  const VerifyCaptcha = () => {
-    if (captcha === enterCaptcha) {
-      setCanSubmitForm(true);
-    }
-  }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormRes(true);
-
-    if (userPhone.length > 10) {
-      alert("Phone number should not exceed 10 digits.");
-      setLoader(false);
-      setFormRes(false);
+    if (userPhone.length !== 10) {
+      alert("Phone number should be exactly 10 digits.");
       return;
     }
+
+    if (captcha !== enterCaptcha) {
+      alert("Captcha does not match.");
+      return;
+    }
+
+    setFormRes(true);
     try {
-      setLoader(true);
-      const data = await axios.post(
-        "https://nexon.eazotel.com/eazotel/addcontacts",
-        {
-          Domain: "eb112233", // Replace with your actual domain value// eb112233
-          // Domain: "sumit",
-          email: userEmail,
-          Name: userName,
-          Contact: userPhone,
-          Subject: userHotelName,
-          Description: userMessage,
-        }
-      );
-      console.log(data);
+      const data = await axios.post("https://nexon.eazotel.com/eazotel/addcontacts", {
+        Domain: "eb112233",
+        // Domain: "sumit",
+        email: userEmail,
+        Name: userName,
+        Contact: userPhone,
+        Description: userMessage,
+      });
       if (data.status) {
-        setLoader(false);
         window.open("/thank-you", "_blank");
-        setPopupMsg("You information has been Received");
-        setOpenPopup(true);
         setFormRes(true);
         setUserName("");
         setUserEmail("");
         setUserMessage("");
-        setUserHotelName("");
-
         setUserPhone("");
         setCaptcha("");
-        setEnterCaptcha("")
+        setEnterCaptcha("");
       } else {
-        setLoader(false);
-        setPopupMsg("Something went wrong!");
-        setOpenPopup(false);
         setFormRes(false);
+        alert("Something went wrong!");
       }
     } catch (error) {
-      setLoader(false);
-      console.error("Error submitting form:", error);
       setFormRes(false);
-      alert("Something went wrong!");
+      alert("Error submitting form!");
     }
   };
 
@@ -117,9 +94,7 @@ const ContactUsForm2 = ({ title, description }) => {
       placeholder: "Full Name*",
       required: true,
       value: userName,
-      onChange: (e) => {
-        setUserName(e.target.value);
-      },
+      onChange: (e) => setUserName(e.target.value),
     },
     {
       tag: "div",
@@ -174,88 +149,84 @@ const ContactUsForm2 = ({ title, description }) => {
       placeholder: "Tell us something about your enquiry!",
       required: true,
       value: userMessage,
-      onChange: (e) => {
-        setUserMessage(e.target.value);
-      },
+      onChange: (e) => setUserMessage(e.target.value),
     },
   ];
 
   return (
-    <div className="bg-secondary border  border-primary rounded-lg w-full h-full flex flex-col px-4 py-3">
+    <div className="bg-secondary border border-primary rounded-lg w-full h-full flex flex-col px-4 py-3">
       <h2 className="desc_1 Cammron  font-semibold text-primary">{title}</h2>
       <p className="desc_1 text-primary italic">{description}</p>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-2 mt-4">
           {formData.map((data, index) => (
             <div key={index}>
-              <div>
-                {/* <label
-                    htmlFor={data.name}
-                    className="text-primary text-base flex items-center gap-4 mb-3"
-                  >
-                    <span className="">{data.icon}</span>
-                    {data.name}
-                  </label> */}
-                {data.tag === "div"
-                  ? data.content
-                  : React.createElement(data.tag, {
-                    id: data.name,
-                    type: data.type,
-                    name: data.name,
-                    value: data.value,
-                    onChange: data.onChange,
-                    placeholder: data.placeholder,
-                    required: data.required,
-                    autoComplete: "off",
-                    spellCheck: "false",
-                    rows: "4",
-                    className:
-                      "w-full rounded-lg italic bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
-                  })}
-              </div>
-              {data.name === "phone" && errorMessage && (
+              {data.tag === "div" ? data.content : React.createElement(data.tag, {
+                id: data.name,
+                type: data.type,
+                name: data.name,
+                value: data.value,
+                onChange: data.onChange,
+                placeholder: data.placeholder,
+                required: data.required,
+                autoComplete: "off",
+                spellCheck: "false",
+                rows: "4",
+                className: "w-full rounded-lg italic bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary"
+              })}
+              {data.name === "Phone Number*" && errorMessage && (
                 <p className="text-sm text-red-500 mt-2">{errorMessage}</p>
               )}
-              {data.name === "email" && emailErrorMessage && (
+              {data.name === "Email Address*" && emailErrorMessage && (
                 <p className="text-sm text-red-500 mt-2">{emailErrorMessage}</p>
               )}
             </div>
           ))}
         </div>
-        {captcha &&
-          <div className="italic flex flex-col py-2">
-            <div className="flex justify-between text-[#A3A3A3] ">
 
-              <p>Enter captcha code :</p>
-              <div className="bg-slate-50 px-2 rounded-md">
-                {captcha}
+        <div className="italic flex flex-col py-2">
+          {captcha && (
+            <>
+              <div className="flex justify-between text-[#A3A3A3] ">
+                <p>Enter captcha code:</p>
+                <div className="bg-slate-50 px-2 rounded-md">{captcha}</div>
               </div>
-            </div>
+              <input
+                type="text"
+                required
+                placeholder="Please enter the captcha here"
+                onChange={(e) => setEnterCaptcha(e.target.value)}
+                className="mt-2 text-[#A3A3A3] outline-none text-center bg-transparent border-b border-black"
+                value={enterCaptcha}
+              />
+            </>
+          )}
+        </div>
 
-            <input type="text" required placeholder="Please enter the captcha here" onChange={(e) => setEnterCaptcha(e.target.value)} className="mt-2 text-[#A3A3A3]  outline-none text-center bg-transparent border-b border-black" value={enterCaptcha} />
-
-          </div>}
-
-        {!canSubmitForm ?
+        {!canSubmitForm ? (
           <>
-            {captcha ? <button
-              onClick={VerifyCaptcha}
-              className="text-white mt-2 rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out">
-              Verify captcha
-            </button>
-              :
+            {captcha ? (
               <button
-                onClick={handleCaptcha}
+                type="button"
+                onClick={handleSubmit}
+                className="text-white mt-2 rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
+                disabled={formRes}
+              >
+                {formRes ? "Submitting..." : "Submit"}
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={generateCaptcha}
                 disabled={formRes}
                 className="text-white mt-2 rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
               >
-                Get Captcha {captcha}
+                Generate Captcha
               </button>
-            }
+            )}
           </>
-          :
+        ) : (
           <div className="mt-2">
-
             <button
               type="submit"
               className="text-white Cammron rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
@@ -263,9 +234,8 @@ const ContactUsForm2 = ({ title, description }) => {
             >
               {formRes ? "Submitting..." : "Submit"}
             </button>
-
           </div>
-        }
+        )}
       </form>
     </div>
   );

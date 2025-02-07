@@ -105,7 +105,7 @@ const Navbar = () => {
                 <span className="sr-only">call us on : +9191190 01126</span>
                 <span className="my-auto text-[#acacac]">+91-91190 01126</span>
               </Link> */}
-              {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+              {pathname === "/ebclanding/" ? (
                 <div className="h-full hidden lg:block">
                   <div className="flex  items-start  mt-2 mb-[15px]">
                     <Link
@@ -128,7 +128,7 @@ const Navbar = () => {
               ) : (
                 <div className="h-full lg:flex items-center hidden">
                   <div className="w-full">
-                    <hr />
+                    <hr className={pathname === "/thank-you/" ? "hidden" : "bg-secondary"} />
                   </div>
                 </div>
               )}
@@ -163,7 +163,7 @@ const Navbar = () => {
 
               <div className="h-full hidden lg:block">
                 <div className="flex  items-start justify-end mb-[15px]">
-                  {pathname === "/ebclanding/" || pathname === "/thank-you/" ? (
+                  {pathname === "/ebclanding/" ? (
                     <button
                       className="rounded-lg Cammron flex items-center gap-2 justify-center px-6 py-2 text-[1.2rem]/[2rem] text-primary bg-white"
                       onClick={() => setShowModal(!open)}
@@ -174,19 +174,23 @@ const Navbar = () => {
                       </span>
                     </button>
                   ) : (
-                    <Link
-                      href={
-                        "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
-                      }
-                      target="_blank"
-                      className="rounded-sm Cammron flex items-center justify-center w-[150px] py-2 text-[1.375rem]/[2rem] text-primary bg-white"
-                    >
-                      Book Now
-                    </Link>
+                    <>
+                      {pathname !== "/thank-you/" && (
+                        <Link
+                          href={
+                            "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
+                          }
+                          target="_blank"
+                          className="rounded-sm Cammron flex items-center justify-center w-[150px] py-2 text-[1.375rem]/[2rem] text-primary bg-white"
+                        >
+                          Book Now
+                        </Link>
+                      )}
+                    </>
                   )}
                 </div>
                 <div className="w-full ">
-                  <hr />
+                  <hr className={`${pathname === "/thank-you/" ? "hidden" : "bg-secondary"}`} />
                 </div>
               </div>
               <div className="lg:hidden flex justify-end">
