@@ -108,7 +108,7 @@ const ContactUsForm2 = ({ title, description }) => {
             name="countryCode"
             value={countryCode}
             onChange={(e) => setCountryCode(e.target.value)}
-            className="w-20 bg-white italic rounded-lg text-[#A3A3A3]  focus:outline-none"
+            className="w-20 bg-white rounded-lg text-[#A3A3A3]  focus:outline-none"
           >
             {countries.map((country, index) => (
               <option
@@ -127,7 +127,7 @@ const ContactUsForm2 = ({ title, description }) => {
             placeholder="Phone Number*"
             value={userPhone}
             onChange={handlePhoneChange}
-            className="w-full bg-white italic placeholder:text-[#A3A3A3] text-primary no-spinner focus:outline-none"
+            className="w-full bg-white placeholder:text-[#A3A3A3] text-primary no-spinner focus:outline-none"
           />
         </div>
       ),
@@ -172,7 +172,7 @@ const ContactUsForm2 = ({ title, description }) => {
                 autoComplete: "off",
                 spellCheck: "false",
                 rows: "4",
-                className: "w-full rounded-lg italic bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary"
+                className: "w-full rounded-lg bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary"
               })}
               {data.name === "Phone Number*" && errorMessage && (
                 <p className="text-sm text-red-500 mt-2">{errorMessage}</p>

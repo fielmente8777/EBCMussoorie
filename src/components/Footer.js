@@ -137,18 +137,18 @@ const Footer = () => {
                   <BorderLine />
                 </div>
                 <h2 className="text-primary heading_2">Get in Touch</h2>
-                <p className="desc_1 italic text-primary">
+                <p className="desc_1 text-primary">
                   We’re Here to Help You Plan Your Next Adventure!
                 </p>
                 <ul className="flex flex-col gap-4 lg:mt-2 max-w-[34rem] w-full">
                   {contactLinks2.map((item, i) => (
-                    <li className="desc_2 italic text-primary" key={i}>
+                    <li className="desc_4 text-primary" key={i}>
                       <Link href={item.link}>{item.name}</Link>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="max-w-md w-full lg:ml-auto">
+              <div className="max-w-lg w-full lg:ml-auto">
                 <ContactUsForm2
                   title={"Have Questions?"}
                   description={"Contact Us and Start Your Next Adventure!"}
