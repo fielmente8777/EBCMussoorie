@@ -16,7 +16,7 @@ const ActivitieCard = ({ title, description, images, index }) => {
         <h3 className="desc_1 text-primary font-medium tracking-wider">
           {title}
         </h3>
-        <p className="desc_4 italic text-primary">
+        <p className="desc_4 text-primary">
           {description}
         </p>
       </div>

@@ -63,11 +63,11 @@ const SpecilizationCardNew = ({
           <h3 className="desc_1 font-semibold  text-[#29422C]">
             {cardData.heading}
           </h3>
-          <p className="desc_2 font-medium italic text-[#29422C]">
+          <p className="desc_2 font-medium text-[#29422C]">
             {cardData.para}
           </p>
           {cardData.para2 && (
-            <p className="desc_2 font-medium italic text-[#29422C]">
+            <p className="desc_2 font-medium text-[#29422C]">
               {cardData.para2}
             </p>
           )}

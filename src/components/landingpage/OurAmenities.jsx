@@ -22,7 +22,7 @@ const OurAmenities = () => {
   const data = {
     title: "Our Amenities",
     description:
-      "Experience luxury amidst the serene hills at Everest Base Camp with a range of amenities to choose from, including a fine dining restaurant, outdoor activities, and luxury accommodations, we provide the perfect escape from the hustle and bustle of everyday life.",
+      "Experience luxury amidst the serene hills at Everest Base Camp with a range of amenities to choose from, including a fine dining restaurant, outdoor activities, and luxury accommodation, we provide the perfect escape from the hustle and bustle of everyday life.",
     items: [
       {
         title: "Stay with Luxury",
@@ -53,7 +53,7 @@ const OurAmenities = () => {
           <h2 className="heading_2 text-primary">
             {data.title}
           </h2>
-          <p className="desc_2 font-normal text-primary italic mt-2 text-center">
+          <p className="desc_2 font-normal text-primary mt-2 text-center">
             {data.description}
           </p>
 
@@ -65,7 +65,7 @@ const OurAmenities = () => {
                   <h3 className="desc_1 mt-4 font-semibold">
                     {item.title}
                   </h3>
-                  <p className="desc_2 font-medium italic w-[19rem]">
+                  <p className="desc_2 font-medium w-[19rem]">
                     {item.description}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ const OurAmenities = () => {
                       <h3 className="mt-4 text-xl font-bold leading-7">
                         {item.title}
                       </h3>
-                      <p className="mt-4 text-base italic w-[15rem]">
+                      <p className="mt-4 text-base w-[15rem]">
                         {item.description}
                       </p>
                     </div>

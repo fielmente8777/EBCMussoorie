@@ -15,10 +15,10 @@ const Banner = ({ BannerImage }) => {
           <div className="maxwidth">
             <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-center h-full gap-4 ">
               <div className="flex flex-col gap-4">
-                <h2 className="heading_1 text-white">
-                  Escape to EBC Mussoorie Your Mountain Retreat Awaits!
-                </h2>
-                <p className="desc_1 italic mt-4 text-white">
+                <h1 className="heading_1 text-white max-w-lg w-full">
+                  Escape to EBC Mussoorie... Your Mountain Retreat Awaits!
+                </h1>
+                <p className="desc_1 mt-4 text-white">
                   Nestled in the heart of Mussoorie, EBC offers stunning views,
                   top-notch amenities, and personalized experiences for a
                   peaceful getaway, romantic escape, or family vacation.
@@ -26,7 +26,10 @@ const Banner = ({ BannerImage }) => {
               </div>
               <div className="flex lg:justify-end lg:items-end items-center justify-center">
                 <div className=" w-full max-w-md">
-                  <ContactUsForm2 title={"Contact Us Today!"} description={"Experience Luxury at EBC Mussoorie!"} />
+                  <ContactUsForm2
+                    title={"Contact Us Today!"}
+                    description={"Experience Luxury at EBC Mussoorie!"}
+                  />
                 </div>
               </div>
             </div>

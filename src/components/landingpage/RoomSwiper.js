@@ -25,7 +25,7 @@ const RoomSwiper = () => {
       ],
       roomName: "The Clamper",
       description:
-        "Treat yourself to a relaxing getaway in our Camper rooms, perfect for couplesseeking a lavish vacation experience, providing unparalleled comfort and coziness in a peaceful setting.",
+        "Treat yourself to a relaxing getaway in our Camper rooms, perfect for couples seeking a lavish vacation experience, providing unparalleled comfort and coziness in a peaceful setting.",
     },
     {
       image: [
@@ -36,7 +36,7 @@ const RoomSwiper = () => {
       ],
       roomName: "The Glamper",
       description:
-        " Our Glamper rooms promise relaxation and rejuvenation like no other, ideal for small groups, making unforgettable moments on our exclusive netted balcony space, perfect for creating Instagram-worthy memories.",
+        "Our Glamper rooms promise relaxation and rejuvenation like no other, ideal for small groups, making unforgettable moments on our exclusive netted balcony space, perfect for creating Instagram-worthy memories.",
     },
     {
       image: [
@@ -47,7 +47,7 @@ const RoomSwiper = () => {
       ],
       roomName: "The Surveyor",
       description:
-        "Experience luxury in our Surveyor Suite at Everest Base Camp, Mussoorie. Enjoy spacious tents, stunning forest views, and a king-sized bed. Perfect for families or friends.",
+        "Experience luxury in the Surveyor at Everest Base Camp, Mussoorie. Enjoy spacious tents, stunning forest views, and a king-sized bed. Perfect for families or friends.",
     },
     {
       image: [
@@ -58,7 +58,7 @@ const RoomSwiper = () => {
       ],
       roomName: "The Surveyor Suite",
       description:
-        "Relax and recharge in the peaceful Surveyor rooms, surrounded by Deodar forest scenery. Perfect for families or small groups, our serene atmosphere ensures privacy and comfort, allowing you to reconnect with nature.",
+        "Relax and recharge in the peaceful the Surveyor Suite, surrounded by Deodar forest scenery. Perfect for families or small groups, our serene atmosphere ensures privacy and comfort, allowing you to reconnect with nature.",
     },
   ];
   return (
@@ -69,7 +69,7 @@ const RoomSwiper = () => {
           <h2 className="heading_2 text-white text-center font-normal">
             Our Rooms
           </h2>
-          <p className="desc_2 max-w-[45rem] w-full italic text-white text-center mt-2">
+          <p className="desc_2 max-w-[45rem] w-full text-white text-center mt-2">
             Glamping and Comfort Redefined. Experience the great outdoors like
             never before, where adventure meets luxury.
           </p>

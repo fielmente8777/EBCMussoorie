@@ -68,7 +68,7 @@ const TestimonialCard = () => {
                     ))}
                   </div>
                   <div className="flex flex-col gap-4 items-center">
-                    <p className="desc_1 italic text-center text-primary">
+                    <p className="desc_1 text-center text-primary">
                       {data.text}
                     </p>
 

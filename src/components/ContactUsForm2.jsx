@@ -156,7 +156,7 @@ const ContactUsForm2 = ({ title, description }) => {
   return (
     <div className="bg-secondary border border-primary rounded-lg w-full h-full flex flex-col px-4 py-3">
       <h2 className="desc_1 Cammron  font-semibold text-primary">{title}</h2>
-      <p className="desc_1 text-primary italic">{description}</p>
+      <p className="desc_1 text-primary">{description}</p>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-2 mt-4">
           {formData.map((data, index) => (

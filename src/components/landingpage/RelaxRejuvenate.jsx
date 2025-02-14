@@ -74,7 +74,7 @@ const RelaxRejuvenate = () => {
               ))}
             </Swiper>
           </div>
-          <p className="desc_2 text-primary tracking-wide italic mt-4 text-center">{data.description}</p>
+          <p className="desc_2 text-primary tracking-wide mt-4 text-center">{data.description}</p>
           <button
             onClick={() => setShowModal(true)}
             className="px-8 flex justify-center mt-4 Cammron items-center w-max py-2 rounded-lg bg-[#29422C] text-[#fff] capitalize text-lg"

@@ -53,7 +53,7 @@ const OurSpecialization = () => {
     },
     {
       heading: "Explore the Wilderness",
-      para: "Embark on the George Everest Peak trek in Mussoorie's serene hills, with our expert guide offering direction and companionship. Enjoy a sandwich, tea, and water while exploring hidden gems and stunning Himalayan views. Experience the perfect blend of adventure and comfort with luxury glamping in nature’s beauty.",
+      para: "Embark on the George Everest Peak trek in Mussoorie's serene hills, with our expert guide offering direction and companionship. Indulge in a delightful picnic basket with savoury refreshments as you explore hidden gems and soak in stunning Himalayan views. Experience the perfect blend of adventure and comfort with luxury glamping in nature’s beauty.",
       images: [
         imgSrc + "activities/trekking/img1.webp",
         imgSrc + "activities/trekking/img2.webp",
@@ -75,7 +75,7 @@ const OurSpecialization = () => {
               </h2>
               <p className=" text-center desc_1 text-white font-normal">
                 Expertly Crafted Experiences Tailored to Every Adventurer&apos;s
-                Passion.
+                Passion
               </p>
             </>
           )}

@@ -59,7 +59,7 @@ const Activities = () => {
           <h2 className="heading_2 text-primary text-center font-light">
             {activeCarddata.title}
           </h2>
-          <p className="desc_1 text-center italic text-primary">
+          <p className="desc_1 text-center text-primary max-w-[60rem] mx-auto">
             {activeCarddata.description}
           </p>
           <div className="lg:mt-11 mt-4 flex flex-col gap-4">

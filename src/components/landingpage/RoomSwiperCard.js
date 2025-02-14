@@ -37,7 +37,7 @@ const RoomSwiperCard = ({ roomData }) => {
           <h3 className="text-primary desc_1 text-center font-semibold">
             {roomData.roomName}
           </h3>
-          <p className="desc_2 text-primary font-normal italic">{roomData.description}</p>
+          <p className="desc_2 text-primary font-normal">{roomData.description}</p>
         </div>
       </div>
     </>
