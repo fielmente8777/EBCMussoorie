@@ -23,7 +23,7 @@ const RoomSwiper = () => {
         landingpageImgSrc + "camper/img3.webp",
         landingpageImgSrc + "camper/img4.webp",
       ],
-      roomName: "The Clamper",
+      roomName: "The Camper",
       description:
         "Treat yourself to a relaxing getaway in our Camper rooms, perfect for couples seeking a lavish vacation experience, providing unparalleled comfort and coziness in a peaceful setting.",
     },
