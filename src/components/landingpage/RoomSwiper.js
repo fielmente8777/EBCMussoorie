@@ -25,7 +25,7 @@ const RoomSwiper = () => {
       ],
       roomName: "The Camper",
       description:
-        "Treat yourself to a relaxing getaway in our Camper rooms, perfect for couples seeking a lavish vacation experience, providing unparalleled comfort and coziness in a peaceful setting.",
+        "Treat yourself to a relaxing getaway in our Camper rooms, designed for couples seeking a lavish vacation experience with unparalleled comfort and coziness in a peaceful setting.",
     },
     {
       image: [
@@ -36,7 +36,7 @@ const RoomSwiper = () => {
       ],
       roomName: "The Glamper",
       description:
-        "Our Glamper rooms promise relaxation and rejuvenation like no other, ideal for small groups, making unforgettable moments on our exclusive netted balcony space, perfect for creating Instagram-worthy memories.",
+        "Our Glamper rooms promise relaxation and rejuvenation like no other, ideal for small groups, making unforgettable moments on our exclusive netted balcony spaces — perfect for creating Instagram-worthy memories.",
     },
     {
       image: [
@@ -47,7 +47,7 @@ const RoomSwiper = () => {
       ],
       roomName: "The Surveyor",
       description:
-        "Experience luxury in the Surveyor at Everest Base Camp, Mussoorie. Enjoy spacious tents, stunning forest views, and a king-sized bed. Perfect for families or friends.",
+        "Experience luxury in the Surveyor at Everest Base Camp, Mussoorie. Enjoy Spacious tents with stunning forest views and king-size beds, perfect for families or friends seeking luxury in nature.",
     },
     {
       image: [
@@ -56,9 +56,9 @@ const RoomSwiper = () => {
         landingpageImgSrc + "surveyor_suite/img3.webp",
         landingpageImgSrc + "surveyor/img3.webp",
       ],
-      roomName: "The Surveyor Suite",
+      roomName: "The Surveyor Grand Suite",
       description:
-        "Relax and recharge in the peaceful the Surveyor Suite, surrounded by Deodar forest scenery. Perfect for families or small groups, our serene atmosphere ensures privacy and comfort, allowing you to reconnect with nature.",
+        "Relax and recharge in the peaceful Surveyor Suite, surrounded by Deodar forest scenery. Perfect for families or small groups, our serene atmosphere ensures privacy and comfort, allowing you to reconnect with nature.",
     },
   ];
   return (
