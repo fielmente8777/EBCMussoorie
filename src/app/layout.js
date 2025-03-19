@@ -5,7 +5,8 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 import { FaPhone } from "react-icons/fa6";
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
+import Salesiq from "@/components/Salesiq";
+import WhatsApp from "@/components/contactButton/WhatsApp";
 const ebGaramond = EB_Garamond({ subsets: ["latin"] });
 
 export const metadata = {
@@ -36,6 +37,8 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        {/* Sales iq  */}
+        <Salesiq />
         {/* Google Tag Manager */}
         {/* Google Tag Manager */}
 
@@ -110,15 +113,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <span className="sr-only">whats app</span>
           <FaPhone className="transform" />
         </Link>
-        <Link
-          href="https://wa.me/+919119001126?text=Hello"
-          target="_blank"
-          rel="noreferrer"
-          className="whatsapp-button inline-block fixed bottom-12 right-[20px] w-[50px] h-[50px] bg-[#12c665] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
-        >
-          <span className="sr-only">whats app</span>
-          <FaWhatsapp className="transform" />
-        </Link>
+        <WhatsApp />
 
         <noscript>
           <iframe
