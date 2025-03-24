@@ -105,7 +105,7 @@ const OurAmenities = () => {
             onClick={() => setShowModal(true)}
             className="px-8 flex justify-center Cammron lg:mt-8 mt-4 items-center w-max py-2 rounded-lg bg-[#29422C] text-[#fff] capitalize text-lg"
           >
-            Contact us
+            Get Exclusive Offers!
           </button>
         </div>
       </Container>

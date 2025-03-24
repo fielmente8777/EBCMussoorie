@@ -71,7 +71,7 @@ const Activities = () => {
             onClick={() => setShowModal(true)}
             className="px-8 flex justify-center Cammron items-center mx-auto mt-8 w-max py-2 rounded-lg bg-primary text-white capitalize text-lg"
           >
-            Get In Touch
+            Get Exclusive Offers!
           </button>
         </div>
       </Container>

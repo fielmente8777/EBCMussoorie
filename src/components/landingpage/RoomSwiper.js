@@ -128,7 +128,7 @@ const RoomSwiper = () => {
           onClick={() => setShowModal(true)}
           className="px-8 flex justify-center Cammron mb-10 lg:mt-12 items-center mx-auto mt-8 w-max py-2 rounded-lg bg-white text-primary capitalize text-lg"
         >
-          Book Your Stay
+         Book Your Stay Now!
         </button>
         {showModal && (
           <PopupForm showModal={showModal} setShowModal={setShowModal} />

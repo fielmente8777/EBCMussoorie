@@ -27,8 +27,8 @@ const Banner = ({ BannerImage }) => {
               <div className="flex lg:justify-end lg:items-end items-center justify-center">
                 <div className=" w-full max-w-md">
                   <ContactUsForm2
-                    title={"Contact Us Today!"}
-                    description={"Experience Luxury at EBC Mussoorie!"}
+                    title={"Get Exclusive Offer Today!"}
+                    description={"Experience Luxury at EBC Mussoorie"}
                   />
                 </div>
               </div>

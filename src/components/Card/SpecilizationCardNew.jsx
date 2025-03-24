@@ -87,7 +87,7 @@ const SpecilizationCardNew = ({
                   onClick={() => setShowModal(true)}
                   className="justify-center Cammron self-start px-8 py-2 lg:mt-6 lg:text-lg font-medium tracking-normal text-white bg-primary rounded-lg duration-300 active:scale-75 hover:scale-105"
                 >
-                  Get In Touch
+                Get Exclusive Offers!
                 </button>
               )}
             </>

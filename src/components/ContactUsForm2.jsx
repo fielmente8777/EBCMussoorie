@@ -146,7 +146,7 @@ const ContactUsForm2 = ({ title, description }) => {
       tag: "textarea",
       type: "text",
       name: "Message (if any)",
-      placeholder: "Tell us something about your enquiry!",
+      placeholder: "Plan Your Stay With Us – Get Best Deals Now!",
       required: true,
       value: userMessage,
       onChange: (e) => setUserMessage(e.target.value),
@@ -212,7 +212,7 @@ const ContactUsForm2 = ({ title, description }) => {
                 className="text-white mt-2 rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
                 disabled={formRes}
               >
-                {formRes ? "Submitting..." : "Submit"}
+                {formRes ? "Submitting..." : "Book Your Stay"}
               </button>
             ) : (
               <button
@@ -221,7 +221,7 @@ const ContactUsForm2 = ({ title, description }) => {
                 disabled={formRes}
                 className="text-white mt-2 rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
               >
-                Generate Captcha
+                Book Your Stay
               </button>
             )}
           </>
@@ -232,7 +232,7 @@ const ContactUsForm2 = ({ title, description }) => {
               className="text-white Cammron rounded-lg w-full bg-primary text-base py-3 px-4 tracking-wider hover:bg-primary/80 transition-colors duration-300 ease-in-out"
               disabled={formRes}
             >
-              {formRes ? "Submitting..." : "Submit"}
+              {formRes ? "Submitting..." : "Book Your Stay"}
             </button>
           </div>
         )}

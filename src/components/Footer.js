@@ -27,9 +27,11 @@ import Section from "./Section";
 import Container from "./Container";
 import ContactUsForm2 from "./ContactUsForm2";
 import BorderLine from "./BorderLine";
+import PopupForm from "./PopupForm";
 
 const Footer = () => {
   const pathname = usePathname();
+  const [showModal, setShowModal] = useState(false);
 
   const host = "https://eazotel.eazotel.com/api/dashboard/editnewsletter";
 
@@ -150,12 +152,13 @@ const Footer = () => {
               </div>
               <div className="max-w-lg w-full lg:ml-auto">
                 <ContactUsForm2
-                  title={"Have Questions?"}
-                  description={"Contact Us and Start Your Next Adventure!"}
+                  title={"Get Exclusive Offer Today!"}
+                  description={"Experience Luxury at EBC Mussoorie"}
                 />
               </div>
             </div>
           </Container>
+          <PopupForm showModal={showModal} setShowModal={setShowModal} />
         </footer>
       ) : (
         <div>

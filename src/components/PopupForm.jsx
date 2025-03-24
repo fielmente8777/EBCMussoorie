@@ -11,7 +11,7 @@ const PopupForm = ({ setShowModal, showModal }) => {
     intervalIdRef.current = setInterval(() => {
       setShowModal(true);
       document.body.style.overflow = "hidden";
-    }, 10000);
+    }, 30 * 1000);
 
     // Cleanup the interval when the component unmounts or modal is closed
     return () => {
@@ -46,7 +46,7 @@ const PopupForm = ({ setShowModal, showModal }) => {
               >
                 <IoCloseSharp />
               </button>
-              <ContactUsForm2 title={"Contact Us Today!"} description={"Experience Luxury at EBC Mussoorie!"} />
+              <ContactUsForm2 title={"Get Exclusive Offer Today!"} description={"Experience Luxury at EBC Mussoorie"} />
             </div>
           </article>
         </section>
