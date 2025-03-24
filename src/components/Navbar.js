@@ -10,6 +10,7 @@ import {
   Face,
   Insta,
   OutLineCall,
+  OutlineCall2,
   Trip,
 } from "../icons/icons.jsx";
 import PopupForm from "./PopupForm";
@@ -128,7 +129,11 @@ const Navbar = () => {
               ) : (
                 <div className="h-full lg:flex items-center hidden">
                   <div className="w-full">
-                    <hr className={pathname === "/thank-you/" ? "hidden" : "bg-secondary"} />
+                    <hr
+                      className={
+                        pathname === "/thank-you/" ? "hidden" : "bg-secondary"
+                      }
+                    />
                   </div>
                 </div>
               )}
@@ -165,13 +170,13 @@ const Navbar = () => {
                 <div className="flex  items-start justify-end mb-[15px]">
                   {pathname === "/ebclanding/" ? (
                     <button
-                      className="rounded-lg Cammron flex items-center gap-2 justify-center px-6 py-2 text-[1.2rem]/[2rem] text-primary bg-white"
+                      className="rounded-lg Cammron flex items-center gap-2 justify-center px-6 py-2 text-[1.2rem]/[2rem] text-primary border border-white bg-white hover:bg-primary hover:text-white"
                       onClick={() => setShowModal(!open)}
                     >
-                      Book Now
                       <span>
-                        <BookNowIcon />
+                        <OutlineCall2 />
                       </span>
+                      Call Now for Best Deals
                     </button>
                   ) : (
                     <>
@@ -190,7 +195,9 @@ const Navbar = () => {
                   )}
                 </div>
                 <div className="w-full ">
-                  <hr className={`${pathname === "/thank-you/" ? "hidden" : "bg-secondary"}`} />
+                  <hr
+                    className={`${pathname === "/thank-you/" ? "hidden" : "bg-secondary"}`}
+                  />
                 </div>
               </div>
               <div className="lg:hidden flex justify-end">
