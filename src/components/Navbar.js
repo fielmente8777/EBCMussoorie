@@ -186,9 +186,10 @@ const Navbar = () => {
                             "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
                           }
                           target="_blank"
-                          className="rounded-sm Cammron flex items-center justify-center w-[150px] py-2 text-[1.375rem]/[2rem] text-primary bg-white"
+                          className="rounded-sm Cammron flex items-center justify-center w-[150px] p-2 text-[1.375rem]/[2rem] text-primary bg-white items-center"
                         >
-                          Book Now
+                          Book Now 
+                          <Image src="/callButtonLogo.png" className="ml-2" height={24} width={24} alt="call"/>
                         </Link>
                       )}
                     </>

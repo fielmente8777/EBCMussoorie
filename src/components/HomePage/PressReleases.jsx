@@ -85,20 +85,20 @@ const PressReleases = () => {
                 spaceBetween: 40,
               },
             }}
-            className="lg:!p-8 !p-3 border border-[#F69F2B] rounded-sm"
+            className="lg:!p-8 !p-3 border border-[#F69F2B] rounded-sm bg-white"
           >
             {data.map((item, index) => (
               <SwiperSlide key={index} className="">
                 <Link
                   target="_blank"
                   href={item.link}
-                  className="relative w-full lg:aspect-[3/1] aspect-[3/1] py-8 flex justify-center items-center bg-white rounded-tl-3xl rounded-br-3xl overflow-hidden"
+                  className="relative w-full lg:aspect-[3/1] aspect-[3/1] py-8 flex justify-center items-center bg-[#ffffff] rounded-tl-3xl rounded-br-3xl overflow-hidden box-shadow"
                 >
                   <Image
                     src={item.src}
                     alt={item.name}
                     fill
-                    className={`object-contain p-3 bg-white`}
+                    className={`object-contain p-3 bg-[#ffffff]`}
                     // style={{
                     //   background:
                     //     index == 0 || index == 4 || index == 5

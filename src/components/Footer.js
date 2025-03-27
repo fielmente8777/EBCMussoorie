@@ -201,7 +201,7 @@ const Footer = () => {
                     </div>
                     {/* quick links */}
                     <div className="flex flex-col gap-5 w-full">
-                      <h2 className="lg:text-3xl text-2xl font-semibold text-white uppercase">
+                      <h2 className="lg:text-[24px] text-2xl font-semibold text-white uppercase">
                         Quick Links
                       </h2>
                       <div className="flex flex-col lg:gap-5 gap-3">
@@ -218,7 +218,7 @@ const Footer = () => {
                     </div>
                     {/* policy links */}
                     <div className="flex flex-col gap-5 w-full">
-                      <h2 className="lg:text-3xl text-2xl font-normal text-white uppercase">
+                      <h2 className="lg:text-[24px] text-2xl font-normal text-white uppercase">
                         Our policy
                       </h2>
                       <div className="flex flex-col lg:gap-5 gap-3">
@@ -235,7 +235,7 @@ const Footer = () => {
                     </div>
                     {/* contact */}
                     <div className="flex flex-col gap-5 w-full ">
-                      <h2 className="lg:text-3xl text-2xl font-normal text-white uppercase">
+                      <h2 className="lg:text-[24px] text-2xl font-normal text-white uppercase">
                         Contact Us
                       </h2>
                       <div className="flex flex-col lg:gap-5 gap-3">
@@ -254,9 +254,10 @@ const Footer = () => {
                           href="https://maps.app.goo.gl/fTBmqjBDoYdGdtmC9"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-10 py-3 max-w-full text-base flex items-center justify-center font-medium   text-[#29422C] bg-white rounded-sm border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white"
+                          className="px-10 py-3 max-w-full flex items-center justify-center font-medium  text-[22px] text-[#29422C] bg-white border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white rounded-[8px]"
                         >
-                          View Map
+                          Get Direction
+                          <Image src="/mapArrow.png" height={32} width={32} alt="arrow" className="ml-2" />
                         </Link>
                       </div>
                     </div>
@@ -265,11 +266,15 @@ const Footer = () => {
                 </>
               )}
               <div className={pathname === "/thank-you/" ? "" : "pt-4"}>
-                <p className="text-white capitalize flex items-center max-md:flex-col justify-center italic gap-4">
-                  <span className="flex items-center justify-center gap-2">
+                <p className="text-white capitalize w-screen py-[8px] flex items-center max-md:flex-col justify-center italic gap-4 bg-[#F1EECB]">
+                  <span className="flex items-center justify-center gap-2 text-[#29422C]">
                     <CopyRightIcon /> {currentYear} EBC Mussoorie
                   </span>{" "}
-                  <span>All rights reserved</span>
+                  <span className="text-[#29422C]">All rights reserved</span>
+                  <span className="text-[#29422C]">Designed & Developed by {" "}
+                    <Link href="https://eazotel.com" className="font-bold underline">
+                      Eazotel
+                    </Link></span>
                 </p>
               </div>
             </div>
