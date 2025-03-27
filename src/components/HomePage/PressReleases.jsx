@@ -35,6 +35,11 @@ const PressReleases = () => {
       link: "https://issuu.com/ebcmussoorie/docs/camp_stay_at_ebc_mussoorie_a_himalayan_foothills_",
     },
     {
+      src: "/images/logo-ad-int.svg",
+      name: "AD",
+      link: "https://www.architecturaldigest.in/story/weekend-getaways-from-delhi-that-are-perfect-for-last-minute-planning/",
+    },
+    {
       src: "/images/Group_media.png",
       name: "curlytales",
       link: "https://curlytales.com/dine-under-the-sky-and-even-stay-inside-dreamy-glamps-at-mussoories-everest-base-camp-resort/",

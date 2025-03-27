@@ -16,6 +16,7 @@ import chooseus2 from "../../public/images/whychooseus2.jpg";
 import chooseus3 from "../../public/Surveyor Suite Room/_MG_2601.webp";
 import chooseus4 from "../../public/Surveyor Suite Room/_MG_2602.webp";
 import chooseus5 from "../../public/Surveyor Suite Room/_MG_2603.webp";
+import AwardRecognition from "@/components/HomePage/AwardRecognition";
 
 
 const sectionh1 = {
@@ -42,12 +43,12 @@ const sliderImageData1 = {
   link: "/rooms",
   urlText: "Discover all Rooms",
   btnName: "Discoverallrooms",
-  paginationClass:"pagination_0",
+  paginationClass: "pagination_0",
   images: [
-    imgSrc+"home/img1.webp",
-    imgSrc+"home/img2.webp",
-    imgSrc+"home/img3.webp",
-    imgSrc+"home/img4.webp",
+    imgSrc + "home/img1.webp",
+    imgSrc + "home/img2.webp",
+    imgSrc + "home/img3.webp",
+    imgSrc + "home/img4.webp",
   ],
 };
 const sliderImageData2 = {
@@ -56,7 +57,7 @@ const sliderImageData2 = {
   link: "/parkcafe",
   urlText: "Discover Park Cafe",
   btnName: "Discover",
-  paginationClass:"pagination_1",
+  paginationClass: "pagination_1",
   images: [
     "/DJI_0378.webp",
     "/gallery2/outsideview2.webp",
@@ -91,8 +92,8 @@ const page = () => {
   return (
     <div className="">
       <Banner />
-      <SectionHeading {...sectionh1} descMaxWidth/>
-      <SliderComponentImage border={true} {...sliderImageData1}  />
+      <SectionHeading {...sectionh1} descMaxWidth />
+      <SliderComponentImage border={true} {...sliderImageData1} />
       <SectionHeading {...sectionh2} />
       <Aminities />
       <SectionHeading {...sectionh3} descMaxWidth />
@@ -100,6 +101,7 @@ const page = () => {
       {/* <OurSpecialization /> */}
       <TwoColgridCard {...twoColgridCardData} />
       <PressReleases />
+      <AwardRecognition awardImage="/images/award.png" />
       <AddBanner />
       <OurPartners />
       <div className="lg:py-2"></div>
