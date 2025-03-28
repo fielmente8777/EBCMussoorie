@@ -14,11 +14,12 @@ const SectionHeading = ({
       <div className="flex flex-col items-center justify-center gap-5 py-5 md:py-10">
         <BorderLine />
         <div className="flex flex-col gap-5">
-          <h2
-            className={`lg:text-4xl text-2xl tracking-wider text-center text-[#fff] ${titleMaxWidth && "max-w-2xl mx-auto"} w-full`}
+          <h1
+            className={`lg:text-[40px] font-[400] text-center text-[#fff] ${titleMaxWidth && "max-w-2xl mx-auto"} w-full`}
+            style={{lineHeight:"48px"}}
           >
             {title}
-          </h2>
+          </h1>
           {subTitle && (
             <h3
               className={`${samefontsize ? "lg:text-4xl text-2xl" : "lg:text-2xl text-xl"} -mt-4 tracking-wider text-center text-[#fff] ${titleMaxWidth && "max-w-4xl mx-auto"} w-full`}
@@ -28,7 +29,7 @@ const SectionHeading = ({
           )}
 
           <p
-            className={`text-center italic font-medium lg:text-xl text-base text-[#fff] ${descMaxWidth && "max-w-4xl mx-auto"} w-full`}
+            className={`text-center italic font-medium lg:text-2xl text-base text-[#fff] ${descMaxWidth && "max-w-4xl mx-auto"} w-full`}
           >
             {description}
           </p>

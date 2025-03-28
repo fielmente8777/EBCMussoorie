@@ -28,7 +28,7 @@ const SliderComponentImage = ({
             <div className="flex flex-col items-center justify-center gap-5">
               {border && <BorderLine />}
               <div className="flex flex-col gap-5">
-                <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-[#29422C]">
+                <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-[#29422C] font-[700]">
                   {title}
                 </h2>
 
