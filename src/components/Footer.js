@@ -257,7 +257,13 @@ const Footer = () => {
                           className="px-10 py-3 max-w-full flex items-center justify-center font-medium  text-[22px] text-[#29422C] bg-white border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white rounded-[8px]"
                         >
                           Get Direction
-                          <Image src="/mapArrow.png" height={32} width={32} alt="arrow" className="ml-2" />
+                          <Image
+                            src="/mapArrow.png"
+                            height={32}
+                            width={32}
+                            alt="arrow"
+                            className="ml-2"
+                          />
                         </Link>
                       </div>
                     </div>
@@ -265,20 +271,25 @@ const Footer = () => {
                   <div className="w-full h-[1.5px]  bg-[#F1EECB]" />
                 </>
               )}
-              <div className={pathname === "/thank-you/" ? "" : "pt-4"}>
-                <p className="text-white capitalize w-screen py-[8px] flex items-center max-md:flex-col justify-center italic gap-4 bg-[#F1EECB]">
-                  <span className="flex items-center justify-center gap-2 text-[#29422C]">
-                    <CopyRightIcon /> {currentYear} EBC Mussoorie
-                  </span>{" "}
-                  <span className="text-[#29422C]">All rights reserved</span>
-                  <span className="text-[#29422C]">Designed & Developed by {" "}
-                    <Link href="https://eazotel.com" className="font-bold underline">
-                      Eazotel
-                    </Link></span>
-                </p>
-              </div>
             </div>
           </SectionWithContainer>
+          <div className={pathname === "/thank-you/" ? "" : "pt-4 "}>
+            <p className="text-white capitalize w-full py-[8px] flex items-center max-md:flex-col justify-center italic gap-4 bg-[#F1EECB]">
+              <span className="flex items-center justify-center gap-2 text-[#29422C]">
+                <CopyRightIcon /> {currentYear} EBC Mussoorie
+              </span>{" "}
+              <span className="text-[#29422C]">All rights reserved</span>
+              <span className="text-[#29422C]">
+                Designed & Developed by{" "}
+                <Link
+                  href="https://eazotel.com"
+                  className="font-bold underline"
+                >
+                  Eazotel
+                </Link>
+              </span>
+            </p>
+          </div>
         </div>
       )}
     </>

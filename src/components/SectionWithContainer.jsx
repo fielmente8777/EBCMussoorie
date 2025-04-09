@@ -8,7 +8,7 @@ const SectionWithContainer = ({
 }) => {
   return (
     <section
-      className={`lg:py-12 py-5 max-w-[1900px] mx-auto w-full ${className}`}
+      className={`lg:py-12 py-5 max-w-[1600px] mx-auto w-full ${className}`}
       id={id}
     >
       <Container className={containerClassName}>{children}</Container>
