@@ -83,12 +83,19 @@ const SpecilizationCardNew = ({
                   Book Now
                 </Link>
               ) : (
-                <button
-                  onClick={() => setShowModal(true)}
-                  className="justify-center Cammron self-start px-8 py-2 lg:mt-6 lg:text-lg font-medium tracking-normal text-white bg-primary rounded-lg duration-300 active:scale-75 hover:scale-105"
+                // <button
+                //   onClick={() => setShowModal(true)}
+                //   className="justify-center Cammron self-start px-8 py-2 lg:mt-6 lg:text-lg font-medium tracking-normal text-white bg-primary rounded-lg duration-300 active:scale-75 hover:scale-105"
+                // >
+                // Get Exclusive Offers!
+                // </button>
+                <Link
+                  href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
+                  target="_blank"
+                  className="px-8 flex justify-center mt-4 Cammron items-center w-max py-2 rounded-lg bg-[#29422C] text-[#fff] capitalize text-lg"
                 >
-                Get Exclusive Offers!
-                </button>
+                  Get Exclusive Offers!
+                </Link>
               )}
             </>
           )}

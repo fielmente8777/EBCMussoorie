@@ -6,6 +6,7 @@ import { ActivitieCard } from "../Card/index";
 import Container from "../Container";
 import Section from "../Section";
 import PopupForm from "../PopupForm";
+import Link from "next/link";
 
 const Activities = () => {
   const [showModal, setShowModal] = useState(false);
@@ -67,12 +68,19 @@ const Activities = () => {
               <ActivitieCard {...item} key={index} index={index} />
             ))}
           </div>
-          <button
+          {/* <button
             onClick={() => setShowModal(true)}
             className="px-8 flex justify-center Cammron items-center mx-auto mt-8 w-max py-2 rounded-lg bg-primary text-white capitalize text-lg"
           >
             Get Exclusive Offers!
-          </button>
+          </button> */}
+          <Link
+            href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
+            target="_blank"
+            className="px-8 flex self-center justify-center mt-4 Cammron items-center w-max py-2 rounded-lg bg-[#29422C] text-[#fff] capitalize text-lg"
+          >
+            Get Exclusive Offers!
+          </Link>
         </div>
       </Container>
       {showModal && (

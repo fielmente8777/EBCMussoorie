@@ -12,6 +12,7 @@ import Container from "../Container";
 import { NextButton, PrevButton } from "../../icons/icons";
 import { imgSrc, landingpageImgSrc } from "@/utils/data";
 import BorderLine from "../BorderLine";
+import Link from "next/link";
 
 const RoomSwiper = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -124,12 +125,18 @@ const RoomSwiper = () => {
             </button>
           </div>
         </div>
-        <button
+        {/* <button
           onClick={() => setShowModal(true)}
           className="px-8 flex justify-center Cammron mb-10 lg:mt-12 items-center mx-auto mt-8 w-max py-2 rounded-lg bg-white text-primary capitalize text-lg"
         >
-         Book Your Stay Now!
-        </button>
+          Book Your Stay Now!
+        </button> */}
+        <Link href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
+          target="_blank"
+          className="px-8 flex justify-center Cammron mb-10 lg:mt-12 items-center mx-auto mt-8 w-max py-2 rounded-lg bg-white text-primary capitalize text-lg"
+        >
+          Book Your Stay Now!
+        </Link>
         {showModal && (
           <PopupForm showModal={showModal} setShowModal={setShowModal} />
         )}
