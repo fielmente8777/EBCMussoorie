@@ -1,13 +1,15 @@
-import { EB_Garamond } from "next/font/google";
-import "./globals.scss";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Script from "next/script";
-import { FaPhone } from "react-icons/fa6";
-import Link from "next/link";
 import Salesiq from "@/components/Salesiq";
 import WhatsApp from "@/components/contactButton/WhatsApp";
+import { EB_Garamond } from "next/font/google";
+import Link from "next/link";
+import Script from "next/script";
+import { FaPhone } from "react-icons/fa6";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import "./globals.scss";
 const ebGaramond = EB_Garamond({ subsets: ["latin"] });
+
+import RenderChatBot from "../components/chatbot/RenderChatBot.tsx";
 
 export const metadata = {
   title: "Camping in Mussoorie | Glamping near Dehradun - EBC Mussoorie",
@@ -102,6 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* Google Tag Manager (noscript) */}
 
         {/* End Google Tag Manager (noscript) */}
+        <RenderChatBot />
         <Navbar />
         {children}
         <Footer />
