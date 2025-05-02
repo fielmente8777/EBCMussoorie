@@ -2175,6 +2175,22 @@ export const FillInsta = () => (
   </svg>
 );
 
+export const FillDownload = ({ ...props }) => (
+  <svg
+  width={32}
+  height={32}
+  viewBox="0 0 32 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  {...props}
+>
+  <path
+    d="M16.003 21.334l-6.667-6.667 1.867-1.934 3.466 3.467V5.334h2.667V16.2l3.467-3.466 1.866 1.933-6.666 6.667zm-8 5.333c-.734 0-1.361-.261-1.883-.783A2.573 2.573 0 015.336 24v-4h2.667v4h16v-4h2.666v4c0 .733-.26 1.361-.782 1.884a2.562 2.562 0 01-1.884.783h-16z"
+    fill="currentColor"
+  />
+</svg>
+)
+
 export const FillTripadvisor = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

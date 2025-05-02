@@ -86,6 +86,11 @@ export default function RootLayout({ children }) {
         `,
           }}
         />
+        {/* <!-- ASKSUITE CODE START --> */}
+
+          <Script id="script-infochat" src='https://cdn.asksuite.com/infochat.js?dataConfig=https://control.asksuite.com/api/companies/everest-base-camp-mussoorie'/>
+
+        {/* <!-- ASKSUITE CODE END --> */}
         <Script
           id="google-tag-manager-script"
           strategy="afterInteractive"
@@ -104,7 +109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* Google Tag Manager (noscript) */}
 
         {/* End Google Tag Manager (noscript) */}
-        <RenderChatBot />
+        {/* <RenderChatBot /> */}
         <Navbar />
         {children}
         <Footer />

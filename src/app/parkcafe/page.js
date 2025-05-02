@@ -53,7 +53,7 @@ const images = [
 
 const cardData = {
   heading: "Our Cuisine",
-  para: "DEMO TEXT Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, remaining essentially unchanged.",
+  para: "Our cuisine celebrates a rich blend of flavors, traditions, and techniques, offering a delightful journey for your taste buds. From aromatic spices and fresh, locally sourced ingredients to time-honored recipes passed down through generations, each dish tells a story of culture and craftsmanship. . Every meal is designed to provide an unforgettable dining experience, combining the best of regional influences with modern twists to satisfy every craving and occasion.",
   images: images,
 };
 
