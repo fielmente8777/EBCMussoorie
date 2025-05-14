@@ -284,6 +284,7 @@ const page = () => {
               border
               index={index}
               paginationClass={`pagination_${index}`}
+              newTab
             />
           </Section>
         ))}

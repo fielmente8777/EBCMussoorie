@@ -14,6 +14,7 @@ import {
   Trip,
 } from "../icons/icons.jsx";
 import PopupForm from "./PopupForm";
+import { bookingLink } from "@/utils/data";
 
 const navLinks = [
   { name: "home", href: "/" },
@@ -182,9 +183,7 @@ const Navbar = () => {
                     <>
                       {pathname !== "/thank-you/" && (
                         <Link
-                          href={
-                            "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
-                          }
+                          href={bookingLink}
                           target="_blank"
                           className="rounded-sm Cammron flex items-center justify-center w-[150px] p-2 text-[1.375rem]/[2rem] text-primary bg-white items-center"
                         >
@@ -277,9 +276,7 @@ const HomeNav = () => {
 
           <div className="hidden xl:block">
             <Link
-              href={
-                "https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"
-              }
+              href={bookingLink}
               target="_blank"
               className="rounded-sm flex items-center justify-center  px-10 py-2 text-lg font-semibold tracking-normal leading-7 text-[] bg-stone-300"
             >

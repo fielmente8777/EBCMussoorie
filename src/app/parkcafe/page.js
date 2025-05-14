@@ -184,7 +184,7 @@ function Page() {
       </div>
       <SectionHeading {...sectionh1} titleMaxWidth />
 
-      <SliderComponentImage {...sliderComponentImagedata1} border />
+      <SliderComponentImage {...sliderComponentImagedata1} border newTab />
       <Card {...cardData1} />
       <SliderComponentImage {...sliderComponentImagedata2} border />
 

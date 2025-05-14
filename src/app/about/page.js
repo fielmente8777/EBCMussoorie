@@ -73,7 +73,7 @@ const page = () => {
         </div>
       </div>
       <SectionHeading {...sectionh} />
-      <SliderComponentImage {...datas} border />
+      <SliderComponentImage {...datas} border newTab />
       <TwoColgridCard {...data2} />
       <hr className="h-px my-4 bg-[#F1EECB] border-0" />
     </main>

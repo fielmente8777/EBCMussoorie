@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import BorderLine from "../BorderLine";
+import { bookingLink } from "@/utils/data";
+import Link from "next/link";
 
 const AwardRecognition = ({ awardImage }) => {
     return (
@@ -26,9 +28,9 @@ const AwardRecognition = ({ awardImage }) => {
                         Happy to celebrate this recognition with our guests! This validates all the hard work and dedication we put into providing exceptional experiences.
                     </p>
                     <div className="flex justify-center">
-                    <button className="bg-[#29422C] text-white text-[22px] px-6 py-2 rounded-md hover:bg-[#3a5a3d] transition-colors Cammron" style={{ fontWeight: 400, lineHeight: "32px" }}>
+                    <Link target="_blank" href={bookingLink} className="bg-[#29422C] text-white text-[22px] px-6 py-2 rounded-md hover:bg-[#3a5a3d] transition-colors Cammron" style={{ fontWeight: 400, lineHeight: "32px" }}>
                         Book Your Stay Now
-                    </button>
+                    </Link>
                     </div>
                 </div>
             </div>

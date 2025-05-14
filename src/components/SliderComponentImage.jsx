@@ -69,7 +69,7 @@ const SliderComponentImage = ({
             <div className="flex items-center justify-center mt-5">
               <Link
                 href={link}
-                target={newTab ? "_blank" : "_self"}
+                target={newTab || urlText === "book now" ? "_blank" : "_self"}
                 rel="noopener noreferrer"
                 className="px-10 py-3 max-w-full font-medium text-base  text-white bg-[#29422C] rounded-sm border border-[#F69F2B] hover:bg-transparent  hover:text-[#29422C] duration-300 active:scale-75 hover:scale-105 "
               >
