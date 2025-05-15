@@ -82,7 +82,7 @@ const TestimonialCard = () => {
           })}
         </Swiper>
         <button
-          className={`next-btn mb-16 disabled:opacity-50 lg:flex hidden w-[2.5rem] aspect-square rounded-full bg-white text-primary items-center justify-center hover:scale-105 active:scale-95`}
+          className={`next-btn mb-16  disabled:opacity-50 lg:flex hidden w-[2.5rem] aspect-square rounded-full bg-white text-primary items-center justify-center hover:scale-105 active:scale-95`}
         >
           <NextButton />
         </button>

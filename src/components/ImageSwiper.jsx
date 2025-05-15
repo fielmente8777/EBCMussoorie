@@ -63,16 +63,16 @@ const ImageSwiper = ({
       </Swiper>
       <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center">
         <button
-          className={`button-prev-${buttonName} py-2 px-4 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+          className={`button-prev-${buttonName} text-white py-2 px-4 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
           style={{borderRadius:"100px",height:"40px",width:"40px",background:"#29422C"}}
         >
           <PrevButton />
         </button>
         <div
-          className={`items-center justify-center gap-1 ${paginationClass} ${images?.length > 5 ? "lg:flex hidden" : "flex"}`}
+          className={`items-center  justify-center gap-1 ${paginationClass} ${images?.length > 5 ? "lg:flex hidden" : "flex"}`}
         />
         <button
-          className={`button-next-${buttonName} py-2 px-4 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+          className={`button-next-${buttonName} text-white py-2 px-4 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
           style={{borderRadius:"100px",height:"40px",width:"40px",background:"#29422C"}}
         >
           <NextButton />

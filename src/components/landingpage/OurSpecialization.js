@@ -110,7 +110,7 @@ const OurSpecialization = () => {
           </div>
           <div className="flex gap-2 justify-center w-fit mx-auto lg:mt-8 h-8 items-center">
             <button
-              className={`swiperButtonPrev slider-button disabled:opacity-50`}
+              className={`swiperButtonPrev text-white slider-button disabled:opacity-50`}
             >
               <PrevButton />
             </button>
@@ -118,7 +118,7 @@ const OurSpecialization = () => {
               className={`flex items-center justify-center gap-1 bullets-Portfolio`}
             />
             <button
-              className={`swiperButtonNext slider-button disabled:opacity-50`}
+              className={`swiperButtonNext text-white slider-button disabled:opacity-50`}
             >
               <NextButton />
             </button>

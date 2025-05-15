@@ -10,7 +10,7 @@ import PopupForm from "../PopupForm";
 import Section from "../Section";
 import Container from "../Container";
 import { NextButton, PrevButton } from "../../icons/icons";
-import { imgSrc, landingpageImgSrc } from "@/utils/data";
+import { bookingLink, imgSrc, landingpageImgSrc } from "@/utils/data";
 import BorderLine from "../BorderLine";
 import Link from "next/link";
 
@@ -114,13 +114,13 @@ const RoomSwiper = () => {
             })}
           </Swiper>
           <div className="flex gap-2 justify-center w-fit mx-auto lg:mt-14 mt-8 h-8 items-center">
-            <button className={`prev slider-button disabled:opacity-50`}>
+            <button className={`prev text-white slider-button disabled:opacity-50`}>
               <PrevButton />
             </button>
             <div
               className={`flex items-center justify-center gap-1 page_indicator`}
             />
-            <button className={`next slider-button disabled:opacity-50`}>
+            <button className={`next text-white slider-button disabled:opacity-50`}>
               <NextButton />
             </button>
           </div>
@@ -131,7 +131,7 @@ const RoomSwiper = () => {
         >
           Book Your Stay Now!
         </button> */}
-        <Link href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
+        <Link href={bookingLink}
           target="_blank"
           className="px-8 flex justify-center Cammron mb-10 lg:mt-12 items-center mx-auto mt-8 w-max py-2 rounded-lg bg-white text-primary capitalize text-lg"
         >

@@ -90,7 +90,7 @@ const SpecilizationCardNew = ({
                 // Get Exclusive Offers!
                 // </button>
                 <Link
-                  href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
+                  href={bookingLink}
                   target="_blank"
                   className="px-8 flex justify-center mt-4 Cammron items-center w-max py-2 rounded-lg bg-[#29422C] text-[#fff] capitalize text-lg"
                 >

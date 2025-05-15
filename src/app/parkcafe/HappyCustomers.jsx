@@ -79,7 +79,7 @@ const HappyCustomers = ({ testimonal }) => {
         </div> */}
         <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center">
           <button
-            className={`button-prev p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+            className={`button-prev p-2 text-white hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
           >
             <PrevButton />
           </button>
@@ -87,7 +87,7 @@ const HappyCustomers = ({ testimonal }) => {
             className={`flex items-center justify-center gap-1 bullets-Portfolio`}
           />
           <button
-            className={`button-next p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+            className={`button-next p-2 text-white hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
           >
             <NextButton />
           </button>

@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import PopupForm from "../PopupForm";
 import { useState } from "react";
-import { landingpageImgSrc } from "@/utils/data";
+import { bookingLink, landingpageImgSrc } from "@/utils/data";
 import Link from "next/link";
 
 const RelaxRejuvenate = () => {
@@ -77,7 +77,7 @@ const RelaxRejuvenate = () => {
           </div>
           <p className="desc_2 text-primary tracking-wide mt-4 text-center">{data.description}</p>
           <Link
-            href={"https://www.swiftbook.io/inst/#home?propertyId=741NzlEgzYT84Y4xsBi6DB7MLWBj5lkdF8KxEaTBJTEzMTg=&JDRN=Y"}
+            href={bookingLink}
             target="_blank"
             className="px-8 flex justify-center mt-4 Cammron items-center w-max py-2 rounded-lg bg-[#29422C] text-[#fff] capitalize text-lg"
           >

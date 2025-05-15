@@ -2021,7 +2021,7 @@ export const NextButton = () => (
   >
     <path
       d="M1.07692 0L0 1.33333L5.69231 8L0 14.6667L1.07692 16L8 8L1.07692 0Z"
-      fill="#FFFFFF"
+      fill="currentColor"
     />
   </svg>
 );
@@ -2036,7 +2036,7 @@ export const PrevButton = () => (
   >
     <path
       d="M6.92308 0L8 1.33333L2.30769 8L8 14.6667L6.92308 16L0 8L6.92308 0Z"
-      fill="#FFFFFF"
+      fill="currentColor"
     />
   </svg>
 );
