@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
         />
         {/* <!-- ASKSUITE CODE START --> */}
 
-          {/* <Script id="script-infochat" src='https://cdn.asksuite.com/infochat.js?dataConfig=https://control.asksuite.com/api/companies/everest-base-camp-mussoorie'/> */}
+          <Script id="script-infochat" src='https://cdn.asksuite.com/infochat.js?dataConfig=https://control.asksuite.com/api/companies/everest-base-camp-mussoorie'/>
 
         {/* <!-- ASKSUITE CODE END --> */}
         <Script
