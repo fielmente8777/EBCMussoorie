@@ -185,7 +185,7 @@ const Navbar = () => {
                         <Link
                           href={bookingLink}
                           target="_blank"
-                          className="rounded-sm Cammron flex items-center justify-center w-[150px] p-2 text-[1.375rem]/[2rem] text-primary bg-white items-center"
+                          className="rounded-sm Cammron flex items-center justify-center w-[150px] p-2 text-[1.375rem]/[2rem] text-primary bg-white"
                         >
                           Book Now 
                           <Image src="/callButtonLogo.png" className="ml-2" height={24} width={24} alt="call"/>
