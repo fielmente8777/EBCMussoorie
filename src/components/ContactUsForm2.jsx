@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import axios from "../../node_modules/axios/index";
 import { useRouter } from "next/navigation";
@@ -37,7 +38,8 @@ const ContactUsForm2 = ({ title, description }) => {
   };
 
   const generateCaptcha = () => {
-    const chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const chars =
+      "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let captcha = "";
     for (let i = 0; i < 6; i++) {
       captcha += chars[Math.floor(Math.random() * chars.length)];
@@ -52,21 +54,24 @@ const ContactUsForm2 = ({ title, description }) => {
       return;
     }
 
-    if (captcha !== enterCaptcha) {
-      alert("Captcha does not match.");
-      return;
-    }
+    // if (captcha !== enterCaptcha) {
+    //   alert("Captcha does not match.");
+    //   return;
+    // }
 
     setFormRes(true);
     try {
-      const data = await axios.post("https://nexon.eazotel.com/eazotel/addcontacts", {
-        Domain: "eb112233",
-        // Domain: "sumit",
-        email: userEmail,
-        Name: userName,
-        Contact: userPhone,
-        Description: userMessage,
-      });
+      const data = await axios.post(
+        "https://nexon.eazotel.com/eazotel/addcontacts",
+        {
+          Domain: "eb112233",
+          // Domain: "sumit",
+          email: userEmail,
+          Name: userName,
+          Contact: userPhone,
+          Description: userMessage,
+        }
+      );
       if (data.status) {
         window.open("/thank-you", "_blank");
         setFormRes(true);
@@ -161,19 +166,22 @@ const ContactUsForm2 = ({ title, description }) => {
         <div className="flex flex-col gap-2 mt-4">
           {formData.map((data, index) => (
             <div key={index}>
-              {data.tag === "div" ? data.content : React.createElement(data.tag, {
-                id: data.name,
-                type: data.type,
-                name: data.name,
-                value: data.value,
-                onChange: data.onChange,
-                placeholder: data.placeholder,
-                required: data.required,
-                autoComplete: "off",
-                spellCheck: "false",
-                rows: "4",
-                className: "w-full rounded-lg bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary"
-              })}
+              {data.tag === "div"
+                ? data.content
+                : React.createElement(data.tag, {
+                    id: data.name,
+                    type: data.type,
+                    name: data.name,
+                    value: data.value,
+                    onChange: data.onChange,
+                    placeholder: data.placeholder,
+                    required: data.required,
+                    autoComplete: "off",
+                    spellCheck: "false",
+                    rows: "4",
+                    className:
+                      "w-full rounded-lg bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
+                  })}
               {data.name === "Phone Number*" && errorMessage && (
                 <p className="text-sm text-red-500 mt-2">{errorMessage}</p>
               )}
@@ -184,7 +192,7 @@ const ContactUsForm2 = ({ title, description }) => {
           ))}
         </div>
 
-        <div className="italic flex flex-col py-2">
+        {/* <div className="italic flex flex-col py-2">
           {captcha && (
             <>
               <div className="flex justify-between text-[#A3A3A3] ">
@@ -201,7 +209,7 @@ const ContactUsForm2 = ({ title, description }) => {
               />
             </>
           )}
-        </div>
+        </div> */}
 
         {!canSubmitForm ? (
           <>
