@@ -24,7 +24,7 @@ const page = () => {
     {
       title: "Outdoor Activities",
       subDescription:
-        "Discover thrilling outdoor activities like badminton, archery, mountain biking, and hooping. Join the brave for haunted walks around the campsite or witness the stunning sunrise at Mussoorie's Lal Tibba. For a unique challenge, partake in a momo-eating contest and unite with fellow birdwatchers at Benog Wildlife Sanctuary. Explore numerous hikes and trails for an unforgettable adventure.",
+        "Discover thrilling outdoor activities like badminton, archery, mountain biking, and hooping. Join the brave for haunted walks around the campsite or witness the stunning sunrise at George Everest Peak, a historic vantage point near Mussoorie. For a unique challenge, partake in a momo-eating contest and unite with fellow birdwatchers at Benog Wildlife Sanctuary. Explore numerous hikes and trails for an unforgettable adventure.",
       images: [
         imgSrc + "activities/img1.webp",
         imgSrc + "activities/outdoor-activities/img1.webp",
