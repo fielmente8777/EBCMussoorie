@@ -110,7 +110,7 @@ const Navbar = () => {
               {pathname === "/ebclanding/" ? (
                 <div className="h-full hidden lg:block">
                   <div className="flex  items-start  mt-2 mb-[15px]">
-                    <Link
+                    {/* <Link
                       href={"tel:+919119001126"}
                       className="hidden xl:flex poppins italic items-center gap-2 my-auto w-max text-white"
                     >
@@ -121,9 +121,9 @@ const Navbar = () => {
                       <span className="my-auto  text-white">
                         +91-91190 01126
                       </span>
-                    </Link>
+                    </Link> */}
                   </div>
-                  <div className="w-full mt-5">
+                  <div className="w-full mt-14">
                     <hr />
                   </div>
                 </div>
@@ -170,15 +170,16 @@ const Navbar = () => {
               <div className="h-full hidden lg:block">
                 <div className="flex  items-start justify-end mb-[15px]">
                   {pathname === "/ebclanding/" ? (
-                    <button
+                    <Link
+                      href={`tel:+919119001126`}
                       className="rounded-lg Cammron flex items-center gap-2 justify-center px-6 py-2 text-[1.2rem]/[2rem] text-primary border border-white bg-white hover:bg-primary hover:text-white"
-                      onClick={() => setShowModal(!open)}
+                      // onClick={() => setShowModal(!open)}
                     >
                       <span>
                         <OutlineCall2 />
                       </span>
                       Call Now for Best Deals
-                    </button>
+                    </Link>
                   ) : (
                     <>
                       {pathname !== "/thank-you/" && (
@@ -187,8 +188,14 @@ const Navbar = () => {
                           target="_blank"
                           className="rounded-sm Cammron flex items-center justify-center w-[150px] p-2 text-[1.375rem]/[2rem] text-primary bg-white"
                         >
-                          Book Now 
-                          <Image src="/callButtonLogo.png" className="ml-2" height={24} width={24} alt="call"/>
+                          Book Now
+                          <Image
+                            src="/callButtonLogo.png"
+                            className="ml-2"
+                            height={24}
+                            width={24}
+                            alt="call"
+                          />
                         </Link>
                       )}
                     </>
