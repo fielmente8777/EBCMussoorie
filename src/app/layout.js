@@ -1,5 +1,3 @@
-import Salesiq from "@/components/Salesiq";
-import WhatsApp from "@/components/contactButton/WhatsApp";
 import { EB_Garamond } from "next/font/google";
 import Link from "next/link";
 import Script from "next/script";
@@ -9,7 +7,6 @@ import Navbar from "../components/Navbar";
 import "./globals.scss";
 const ebGaramond = EB_Garamond({ subsets: ["latin"] });
 
-import RenderChatBot from "../components/chatbot/RenderChatBot.tsx";
 
 export const metadata = {
   title: "Camping in Mussoorie | Glamping near Dehradun - EBC Mussoorie",
@@ -25,6 +22,28 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="vKQyk75wG0kfB4x60GCRAmVeErtPS9rgcM9-YNRAvLw"
         />
+        {/* Pagesense Script */}
+        <Script
+          id="pagesense-script"
+          strategy="afterInteractive"
+          src="https://cdn-in.pagesense.io/js/everestbasecamp/3adab655c63f4325a1ea20ce11472e97.js"
+        ></Script>
+
+        {/* Zoho Script */}
+        <Script id="zoho-script" strategy="afterInteractive">
+          {`window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}`}
+        </Script>
+        <Script
+          id="zsiqscript"
+          src="https://salesiq.zohopublic.in/widget?wc=siq4bc7d026b8b5ab8b6663b74417f0678eeb748dabce26466abbf4b7a2765b5550"
+        ></Script>
+        <Script
+          type="text/javascript"
+          strategy="afterInteractive"
+          id="zsiqscript"
+        >
+          {`var $zoho= $zoho ||  {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siq4bc7d026b8b5ab8b6663b74417f0678eeb748dabce26466abbf4b7a2765b5550", values:{},ready:function(){$zoho.salesiq.floatbutton.visible("hide");}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`}
+        </Script>
         {/* Clarity Script */}
         <Script
           id="clarity-script"
@@ -40,7 +59,6 @@ export default function RootLayout({ children }) {
           }}
         />
         {/* Sales iq  */}
-        <Salesiq />
         {/* Google Tag Manager */}
         {/* Google Tag Manager */}
 
@@ -81,14 +99,13 @@ export default function RootLayout({ children }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-PVZG7NGGMG');
         `,
           }}
         />
         {/* <!-- ASKSUITE CODE START --> */}
 
-          <Script id="script-infochat" src='https://cdn.asksuite.com/infochat.js?dataConfig=https://control.asksuite.com/api/companies/everest-base-camp-mussoorie'/>
+        {/* <Script id="script-infochat" src='https://cdn.asksuite.com/infochat.js?dataConfig=https://control.asksuite.com/api/companies/everest-base-camp-mussoorie'/> */}
 
         {/* <!-- ASKSUITE CODE END --> */}
         <Script
@@ -97,16 +114,25 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: `
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T36V8385');
-        `,
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-T36V8385');
+           `,
           }}
         />
       </head>
       <body className={ebGaramond.className} suppressHydrationWarning={true}>
         {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T36V8385"
+            height="0"
+            width="0"
+            title="Google Tag Manager (noscript)"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
 
         {/* End Google Tag Manager (noscript) */}
         {/* <RenderChatBot /> */}
@@ -123,15 +149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Link>
         {/* <WhatsApp /> */}
 
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-T36V8385"
-            height="0"
-            width="0"
-            title="Google Tag Manager (noscript)"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
+        
       </body>
     </html>
   );

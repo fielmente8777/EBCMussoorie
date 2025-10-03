@@ -1,14 +1,13 @@
 import Image from "next/image";
-import BannerImage from "../../../public/images/parkcafebg.jpg";
 
 import c1 from "../../../public/images/01 Picnic_11zon.jpg";
-import OurCuisine from "./OurCuisine.jsx";
-import HappyCustomers from "./HappyCustomers.jsx";
+import Card from "../../components/Card";
 import SectionHeading from "../../components/SectionHeading";
 import SliderComponentImage from "../../components/SliderComponentImage";
-import AddOnExperience from "./AddOnExperience";
 import { bookingLink, imgSrc } from "../../utils/data";
-import Card from "../../components/Card";
+import AddOnExperience from "./AddOnExperience";
+import HappyCustomers from "./HappyCustomers.jsx";
+import OurCuisine from "./OurCuisine.jsx";
 
 export const metadata = {
   title: "Best Cafe in Mussoorie | Green Restaurant Mussoorie - EBC",
@@ -175,7 +174,7 @@ function Page() {
       <div className="max-w-[1600px] w-full mx-auto relative">
         <div className="relative w-full aspect-[4/1.8] ">
           <Image
-            src={BannerImage}
+            src={"/gallery2/outsideview6.webp"}
             alt="banner"
             className="h-full w-full object-cover object-bottom-[10%]"
             fill
