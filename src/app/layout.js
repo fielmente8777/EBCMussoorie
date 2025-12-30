@@ -5,8 +5,8 @@ import { FaPhone } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./globals.scss";
+import Image from "next/image";
 const ebGaramond = EB_Garamond({ subsets: ["latin"] });
-
 
 export const metadata = {
   title: "Camping in Mussoorie | Glamping near Dehradun - EBC Mussoorie",
@@ -30,20 +30,20 @@ export default function RootLayout({ children }) {
         ></Script>
 
         {/* Zoho Script */}
-        <Script id="zoho-script" strategy="afterInteractive">
+        {/* <Script id="zoho-script" strategy="afterInteractive">
           {`window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}`}
         </Script>
         <Script
           id="zsiqscript"
           src="https://salesiq.zohopublic.in/widget?wc=siq4bc7d026b8b5ab8b6663b74417f0678eeb748dabce26466abbf4b7a2765b5550"
-        ></Script>
-        <Script
+        ></Script> */}
+        {/* <Script
           type="text/javascript"
           strategy="afterInteractive"
           id="zsiqscript"
         >
-          {`var $zoho= $zoho ||  {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siq4bc7d026b8b5ab8b6663b74417f0678eeb748dabce26466abbf4b7a2765b5550", values:{},ready:function(){$zoho.salesiq.floatbutton.visible("hide");}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`}
-        </Script>
+          {`var $zoho= $zoho ||  {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siq4bc7d026b8b5ab8b6663b74417f0678eeb748dabce26466abbf4b7a2765b5550", values:{},ready:function(){$zoho.salesiq.floatbutton.visible("");}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`}
+        </Script> */}
         {/* Clarity Script */}
         <Script
           id="clarity-script"
@@ -85,6 +85,29 @@ export default function RootLayout({ children }) {
         `,
           }}
         /> */}
+        {/* Meta Pixel Code */}
+        <Script id="fb-pixel" strategy="lazyOnload">
+          {`!function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '710265047232004');
+            fbq('track', 'PageView');
+            `}
+        </Script>
+        <noscript>
+          <Image
+            height="1"
+            width="1"
+            alt="fb-pixel"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=710265047232004&ev=PageView&noscript=1"
+          />
+        </noscript>
 
         {/* <!-- Google tag (gtag.js) --> */}
         <Script
@@ -148,8 +171,13 @@ export default function RootLayout({ children }) {
           <FaPhone className="transform" />
         </Link>
         {/* <WhatsApp /> */}
-
-        
+        <Script id="chatbot" strategy="beforeInteractive">
+          {`window.eazbotConfig = {
+            ndid: "e53a0946-ed31-455f-b278-37aa1b0c8c00",
+            hid: "56369483",
+          };`}
+        </Script>
+        <Script src="https://cb-script.dyq28lyxrazm2.amplifyapp.com/widget/lead-chatbot.js"></Script>
       </body>
     </html>
   );

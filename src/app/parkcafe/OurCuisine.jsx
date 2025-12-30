@@ -59,7 +59,9 @@ const OurCuisine = ({ images = [1, 2, 3, 4, 5], heading, para, para2 }) => {
               <p className="desc_2 font-medium text-[#29422C] neutraText">{para2}</p>
             )}
             <Link
-              href={"/"}
+              href={"/PARK CAFE MENU.pdf"}
+              target="_blank"
+              download
               className="md:px-10 md:py-3 flex items-center gap-2 Cammron px-6 py-2 w-fit mx-auto text-base md:text-lg text-white bg-[#29422C] rounded-sm border border-[#F69F2B] hover:bg-transparent  hover:text-[#29422C] duration-300 active:scale-75 hover:scale-105 "
             >
               Download Menu <span className=""><FillDownload /></span>
