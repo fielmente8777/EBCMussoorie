@@ -291,6 +291,7 @@ const Footer = () => {
                 href="https://www.fielmente.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                 className="font-bold underline"
               >
                 Fielmente
               </Link>
