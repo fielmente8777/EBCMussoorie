@@ -281,12 +281,12 @@ const Footer = () => {
               <span className="text-[#29422C]">All rights reserved</span>
               <span className="text-[#29422C]">
                 Designed & Developed by{" "}
-                // <Link
-                //   href="https://eazotel.com"
-                //   className="font-bold underline"
-                // >
-                //   Eazotel
-                // </Link>
+                 {/* <Link
+                  href="https://eazotel.com"
+                  className="font-bold underline"
+                >
+                  Eazotel
+                </Link> */}
              <Link
                 href="https://www.fielmente.com/"
                 target="_blank"
