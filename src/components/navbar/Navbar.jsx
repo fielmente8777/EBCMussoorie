@@ -1,17 +1,20 @@
 "use client";
 import React from "react";
 import { usePathname } from "next/navigation";
-import HomeNave from "./HomeNave";
 import LandingPageNav from "./LandingPageNav";
+import DesktopNav from "./DesktopNav";
 
 const Navbar = () => {
   const pathName = usePathname();
 
-  if (pathName === "/ebclanding/" || pathName === "/thank-you/") {
-    return <LandingPageNav />;
+  switch (pathName) {
+    case "/thank-you/":
+      return <LandingPageNav />;
+    case "/ebclanding/":
+      return <LandingPageNav />;
+    default:
+      return <DesktopNav />;
   }
-
-  return <HomeNave />;
 };
 
 export default Navbar;

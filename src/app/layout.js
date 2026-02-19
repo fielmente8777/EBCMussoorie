@@ -1,11 +1,12 @@
+import Navbar from "@/components/navbar/Navbar";
 import { EB_Garamond } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { FaPhone } from "react-icons/fa6";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import "./globals.scss";
-import Image from "next/image";
+import { WebProvider } from "@/contextApi/WebContext";
 const ebGaramond = EB_Garamond({ subsets: ["latin"] });
 
 export const metadata = {
@@ -157,19 +158,19 @@ export default function RootLayout({ children }) {
           ></iframe>
         </noscript>
 
-        {/* End Google Tag Manager (noscript) */}
-        {/* <RenderChatBot /> */}
-        <Navbar />
-        {children}
-        <Footer />
-        <Link
-          href={"tel:+919119001126"}
-          target="_blank"
-          className="whatsapp-button inline-block fixed bottom-12 left-[20px] w-[50px] h-[50px] bg-[#12c665] p-[12px]  rounded-full text-white z-40 text-[25px] overflow-hidden"
-        >
-          <span className="sr-only">call button</span>
-          <FaPhone className="transform" />
-        </Link>
+        <WebProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <Link
+            href={"tel:+919119001126"}
+            target="_blank"
+            className="whatsapp-button inline-block fixed bottom-12 left-[20px] w-[50px] h-[50px] bg-[#12c665] p-[12px]  rounded-full text-white z-40 text-[25px] overflow-hidden"
+          >
+            <span className="sr-only">call button</span>
+            <FaPhone className="transform" />
+          </Link>
+        </WebProvider>
         {/* <WhatsApp /> */}
         <Script id="chatbot" strategy="beforeInteractive">
           {`window.eazbotConfig = {

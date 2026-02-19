@@ -1,12 +1,12 @@
 "use client";
-import Link from "next/link";
-import Logo from "../../public/logo.svg";
+import { bookingLink } from "@/utils/data";
 import Image from "next/image";
-import { MdCall } from "react-icons/md";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { MdCall } from "react-icons/md";
+import Logo from "../../public/logo.svg";
 import {
-  BookNowIcon,
   Face,
   Insta,
   OutLineCall,
@@ -14,7 +14,6 @@ import {
   Trip,
 } from "../icons/icons.jsx";
 import PopupForm from "./PopupForm";
-import { bookingLink } from "@/utils/data";
 
 const navLinks = [
   { name: "home", href: "/" },
@@ -73,15 +72,7 @@ const Navbar = () => {
                   }}
                 >
                   {open ? (
-                    <div
-                      // style={{
-                      //   rotate: open ? "180deg" : "0deg",
-                      //   transition: "all 0.4s",
-                      // }}
-                      className="text-white font-bold text-xl"
-                    >
-                      X
-                    </div>
+                    <div className="text-white font-bold text-xl">X</div>
                   ) : (
                     <div
                       style={{
@@ -99,30 +90,10 @@ const Navbar = () => {
                   )}
                 </div>
               )}
-              {/* <Link
-                href={"tel:+919119001126"}
-                className="hidden xl:flex items-center gap-2 px-5 my-auto text-lg w-max text-[#acacac]"
-              >
-                <MdCall size={20} />
-                <span className="sr-only">call us on : +9191190 01126</span>
-                <span className="my-auto text-[#acacac]">+91-91190 01126</span>
-              </Link> */}
+
               {pathname === "/ebclanding/" ? (
                 <div className="h-full hidden lg:block">
-                  <div className="flex  items-start  mt-2 mb-[15px]">
-                    {/* <Link
-                      href={"tel:+919119001126"}
-                      className="hidden xl:flex poppins italic items-center gap-2 my-auto w-max text-white"
-                    >
-                      <OutLineCall />
-                      <span className="sr-only">
-                        call us on : +9191190 01126
-                      </span>
-                      <span className="my-auto  text-white">
-                        +91-91190 01126
-                      </span>
-                    </Link> */}
-                  </div>
+                  <div className="flex  items-start  mt-2 mb-[15px]"></div>
                   <div className="w-full mt-14">
                     <hr />
                   </div>
@@ -223,7 +194,7 @@ const Navbar = () => {
             </div>
             {pathname !== "/ebclanding/" && pathname !== "/thank-you/" ? (
               <div className="hidden xl:flex justify-center gap-1 px-5 mt-6 text-lg leading-7 text-center text-white max-md:flex-wrap max-md:mt-10">
-                {navLinks.map((link) => (
+                {/* {navLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
@@ -235,7 +206,7 @@ const Navbar = () => {
                   >
                     {link.name}
                   </Link>
-                ))}
+                ))} */}
               </div>
             ) : (
               ""
@@ -299,22 +270,9 @@ const HomeNav = () => {
             }}
           >
             {open ? (
-              <div
-                // style={{
-                //   rotate: open ? "180deg" : "0deg",
-                //   transition: "all 0.4s",
-                // }}
-                className="text-white font-bold text-xl"
-              >
-                X
-              </div>
+              <div className="text-white font-bold text-xl">X</div>
             ) : (
-              <div
-              // style={{
-              //   rotate: open ? "45deg" : "0deg",
-              //   transition: "all 0.4s",
-              // }}
-              >
+              <div>
                 <HamMenu />
               </div>
             )}

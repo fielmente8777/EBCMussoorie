@@ -8,8 +8,8 @@ import OurPartners from "../../components/HomePage/OurPartners";
 import SectionHeading from "../../components/SectionHeading";
 import SliderComponentImage from "../../components/SliderComponentImage";
 import TwoColgridCard from "../../components/TwoColgridCard";
-import { homePageData } from "./homePageData";
 import NearbyAttractions from "./components/NearbyAttractions";
+import { homePageData } from "./homePageData";
 
 const page = () => {
   return (

@@ -231,7 +231,7 @@ export const homePageData = {
       "/Surveyor Suite Room/_MG_2601.webp",
       "/Surveyor Suite Room/_MG_2602.webp",
       "/Surveyor Suite Room/_MG_2603.webp",
-      "images/DSC_6324.jpg",
+      "/images/DSC_6324.jpg",
       "/images/parkcafe.jpg",
       "/gallery2/outsideview3.webp",
     ],

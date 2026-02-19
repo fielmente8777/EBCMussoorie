@@ -26,7 +26,7 @@ const ImageSwiper = ({
 
   const swiperButtonNext = `.button-next-${buttonName}`;
   const swiperButtonPrev = `.button-prev-${buttonName}`;
-
+  images = images.length < 5 ? [...images, ...images] : images;
   return (
     <div className="w-full bg-transparent slider">
       <Swiper
