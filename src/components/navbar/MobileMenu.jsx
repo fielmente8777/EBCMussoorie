@@ -31,7 +31,7 @@ const MobileMenu = () => {
                 pathName === link.href
                   ? "border-l-4 text-white"
                   : "text-[#acacac]"
-              } ease-in-out pl-2 transition-all duration-300 text-base rounded-sm uppercase`}
+              } ease-in-out pl-2 transition-all duration-300 text-base rounded-sm capitalize`}
             >
               {link.name}
             </Link>
