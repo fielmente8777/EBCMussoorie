@@ -9,11 +9,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useWebContext } from "@/contextApi/WebContext";
 
 const Grid = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-
+  const { handleImagePopupOpen } = useWebContext();
   const gridPattern = [
     "col-span-2 row-span-2",
     "col-span-1 row-span-2",
@@ -66,10 +67,11 @@ const Grid = () => {
                 priority={true}
                 fill
                 className={`w-full h-full cursor-pointer object-cover hover:scale-110 duration-1000 transition ease-linear`}
-                onClick={() => {
-                  setShowModal(true);
-                  setSelectedImage(src);
-                }}
+                // onClick={() => {
+                //   setShowModal(true);
+                //   setSelectedImage(src);
+                // }}
+                onClick={() => handleImagePopupOpen(index, data)}
               />
             </div>
           ))}
@@ -105,10 +107,11 @@ const Grid = () => {
                     priority={true}
                     fill
                     className={`w-full h-full cursor-pointer object-cover hover:scale-110 duration-1000 transition ease-linear`}
-                    onClick={() => {
-                      setShowModal(true);
-                      setSelectedImage(src);
-                    }}
+                    // onClick={() => {
+                    //   setShowModal(true);
+                    //   setSelectedImage(src);
+                    // }}
+                    onClick={() => handleImagePopupOpen(index, data)}
                   />
                 </SwiperSlide>
               );

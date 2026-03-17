@@ -1,20 +1,17 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  EffectCoverflow,
-  Pagination,
-} from "swiper/modules";
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Image from "next/image";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import indoor1 from "../../public/activity/activity3.webp";
 import { NextButton, PrevButton } from "../icons/icons";
+import { useWebContext } from "@/contextApi/WebContext";
+
+const indoor1 = "/activity/activity3.webp";
 
 const ImageSwiper = ({
   images = [1, 2, 3, 5, 6, 7],
@@ -22,11 +19,23 @@ const ImageSwiper = ({
   btnName = "",
   paginationClass = "pagination_0",
 }) => {
+  const originalImages = images;
+
   let buttonName = index !== undefined ? index : btnName;
 
   const swiperButtonNext = `.button-next-${buttonName}`;
   const swiperButtonPrev = `.button-prev-${buttonName}`;
-  images = images.length < 5 ? [...images, ...images] : images;
+  const swiperImages = images.length < 5 ? [...images, ...images] : images;
+
+  // const { handleImagePopupOpen } = useWebContext();
+
+  // const imageHandler = (index) => {
+  //   const formattedImages = originalImages.map(
+  //     (item) => item.src || item || indoor1
+  //   );
+  //   console.log(formattedImages);
+  //   handleImagePopupOpen(formattedImages, index);
+  // };
   return (
     <div className="w-full bg-transparent slider">
       <Swiper
@@ -45,9 +54,8 @@ const ImageSwiper = ({
           el: "." + paginationClass,
           clickable: true,
         }}
-        
       >
-        {images?.map((roomImage, idx) => (
+        {swiperImages?.map((roomImage, idx) => (
           <SwiperSlide
             key={idx}
             className="w-full h-full relative lg:aspect-[4/3] aspect-[3/2.5]"
@@ -57,6 +65,7 @@ const ImageSwiper = ({
               className="h-full object-cover"
               alt={"room"}
               fill
+              sizes="100%"
             />
           </SwiperSlide>
         ))}
@@ -64,7 +73,12 @@ const ImageSwiper = ({
       <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center">
         <button
           className={`button-prev-${buttonName} text-white py-2 px-4 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
-          style={{borderRadius:"100px",height:"40px",width:"40px",background:"#29422C"}}
+          style={{
+            borderRadius: "100px",
+            height: "40px",
+            width: "40px",
+            background: "#29422C",
+          }}
         >
           <PrevButton />
         </button>
@@ -73,7 +87,12 @@ const ImageSwiper = ({
         />
         <button
           className={`button-next-${buttonName} text-white py-2 px-4 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
-          style={{borderRadius:"100px",height:"40px",width:"40px",background:"#29422C"}}
+          style={{
+            borderRadius: "100px",
+            height: "40px",
+            width: "40px",
+            background: "#29422C",
+          }}
         >
           <NextButton />
         </button>

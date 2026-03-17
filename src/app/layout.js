@@ -7,6 +7,7 @@ import { FaPhone } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import "./globals.scss";
 import { WebProvider } from "@/contextApi/WebContext";
+import ImagePopUp from "@/components/popUps/ImagePopUp";
 const ebGaramond = EB_Garamond({ subsets: ["latin"] });
 
 export const metadata = {
@@ -170,6 +171,7 @@ export default function RootLayout({ children }) {
             <span className="sr-only">call button</span>
             <FaPhone className="transform" />
           </Link>
+          <ImagePopUp />
         </WebProvider>
         {/* <WhatsApp /> */}
         <Script id="chatbot" strategy="beforeInteractive">

@@ -8,11 +8,28 @@ export const WebContext = createContext({
 
 export const WebProvider = ({ children }) => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
-  return (
-    <WebContext.Provider value={{ isOpenMobileMenu, setIsOpenMobileMenu }}>
-      {children}
-    </WebContext.Provider>
-  );
+  const [isOpenImagePopup, setIsOpenImagePopup] = useState(false);
+  const [imgCurrentIndex, setImgCurrentIndex] = useState(0);
+  const [imageArray, setImageArray] = useState([]);
+
+  const handleImagePopupOpen = (index, images) => {
+    setImgCurrentIndex(index);
+    setImageArray(images);
+    setIsOpenImagePopup(true);
+  }
+
+  const value = {
+    isOpenMobileMenu,
+    setIsOpenMobileMenu,
+    isOpenImagePopup,
+    setIsOpenImagePopup,
+    imgCurrentIndex,
+    imageArray,
+    setImgCurrentIndex,
+    setImageArray,
+    handleImagePopupOpen
+  };
+  return <WebContext.Provider value={value}>{children}</WebContext.Provider>;
 };
 
 export const useWebContext = () => {

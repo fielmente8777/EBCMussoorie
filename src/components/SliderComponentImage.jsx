@@ -19,6 +19,7 @@ const SliderComponentImage = ({
   border = false,
   newTab = false,
   descMaxWidth = false,
+  quote = false,
 }) => {
   return (
     <Section className="bg-[#ffffff]">
@@ -50,6 +51,7 @@ const SliderComponentImage = ({
             paginationClass={paginationClass}
           />
         </div>
+
         <Container>
           <div className="flex flex-col items-center justify-center gap-5 lg:mt-12 mt-4">
             {title2 && <BorderLine />}
@@ -64,6 +66,12 @@ const SliderComponentImage = ({
             {subDescription2 && (
               <p className="text-center italic font-normal lg:text-xl text-base text-[#29422C]">
                 {subDescription2}
+              </p>
+            )}
+            {quote && (
+              <p className="lg:text-xl text-base text-[#29422C] text-center italic">
+                &quot;A pet-friendly escape where your furry companions are
+                always welcome.&quot;
               </p>
             )}
             <div className="flex items-center justify-center mt-5">

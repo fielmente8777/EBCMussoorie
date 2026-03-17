@@ -16,7 +16,7 @@ const page = () => {
     <div className="">
       <Banner />
       <SectionHeading {...homePageData.sectionh1} descMaxWidth />
-      <SliderComponentImage border={true} {...homePageData.sliderImageData1} />
+      <SliderComponentImage border={true} {...homePageData.sliderImageData1} quote />
       <SectionHeading {...homePageData.sectionh2} />
       <Aminities />
       <SectionHeading {...homePageData.sectionh3} descMaxWidth />
