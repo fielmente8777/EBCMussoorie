@@ -254,7 +254,7 @@ const Footer = () => {
                           href="https://maps.app.goo.gl/fTBmqjBDoYdGdtmC9"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-10 py-3 max-w-full flex items-center justify-center font-medium  text-[22px] text-[#29422C] bg-white border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white rounded-[8px]"
+                          className="px-10 text-nowrap py-3 max-w-full flex items-center justify-center font-medium  text-[22px] text-[#29422C] bg-white border border-[#F69F2B] hover:bg-transparent hover:text-primary duration-300 active:scale-75 hover:scale-105 hover:text-white rounded-[8px]"
                         >
                           Get Direction
                           <Image

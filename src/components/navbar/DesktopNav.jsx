@@ -37,7 +37,7 @@ const DesktopNav = () => {
               <Link
                 href={bookingLink}
                 target="_blank"
-                className="rounded-sm Cammron lg:flex hidden items-center justify-center w-[150px] p-2 text-[1.375rem]/[2rem] text-primary bg-white"
+                className="rounded-sm text-nowrap Cammron lg:flex hidden items-center justify-center w-[150px] p-2 text-[1.375rem]/[2rem] text-primary bg-white"
               >
                 Book Now
                 <Image
