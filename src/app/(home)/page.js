@@ -15,8 +15,8 @@ const page = () => {
   return (
     <div className="">
       <Banner />
-      <SectionHeading {...homePageData.sectionh1} descMaxWidth />
-      <SliderComponentImage border={true} {...homePageData.sliderImageData1} quote />
+      <SectionHeading {...homePageData.sectionh1} descMaxWidth quote />
+      <SliderComponentImage border={true} {...homePageData.sliderImageData1} />
       <SectionHeading {...homePageData.sectionh2} />
       <Aminities />
       <SectionHeading {...homePageData.sectionh3} descMaxWidth />

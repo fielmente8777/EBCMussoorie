@@ -8,6 +8,7 @@ const SectionHeading = ({
   titleMaxWidth = false,
   descMaxWidth = false,
   samefontsize = false,
+  quote = false,
 }) => {
   return (
     <SectionWithContainer className="bg-[#29422C]">
@@ -40,6 +41,12 @@ const SectionHeading = ({
               {subDescription}
             </p>
           )}
+          {quote && (
+              <p className="lg:text-2xl mt-6 text-base text-white text-center italic">
+                &quot;A pet-friendly escape where your furry companions are
+                always welcome.&quot;
+              </p>
+            )}
         </div>
       </div>
     </SectionWithContainer>
